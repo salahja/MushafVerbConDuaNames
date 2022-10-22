@@ -11,6 +11,18 @@
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbarsearch" />
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="1000dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+         android:visibility="gone"
+        app:queryBackground="@drawable/bg_white_rounded"
+        app:submitBackground="@drawable/bg_white_rounded"
+        android:background="@drawable/bg_white_rounded"
+        android:clickable="true"/>
+
 
 
     <RelativeLayout

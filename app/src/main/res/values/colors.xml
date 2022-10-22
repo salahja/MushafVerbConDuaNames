@@ -479,6 +479,7 @@
     <color name="light_blue_900">#FF01579B</color>
     <color name="light_blue_A200">#FF40C4FF</color>
     <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="search_select_all_bar_bg_color">#D8E989E7</color>
 
 
 </resources>

@@ -279,6 +279,22 @@
     <item name="actionTafsir" type="id" />
     <item name="etSurahNumber" type="id" />
     <item name="numberpicker" type="id" />
+    <item name="searchView" type="id" />
+    <item name="searchIconView" type="id" />
+    <item name="rootWordContainer" type="id" />
+    <item name="rootWordView" type="id" />
+    <item name="clearAllView" type="id" />
+    <item name="restOfTheView" type="id" />
+    <item name="micImageView" type="id" />
+    <item name="jumpToContainer" type="id" />
+    <item name="searchResultsContainer" type="id" />
+    <item name="searchResultsProgressBar" type="id" />
+    <item name="searchResultsRecyclerView" type="id" />
+    <item name="emptyView" type="id" />
+    <item name="relatedWordsContainer" type="id" />
+    <item name="selectAllRelatedWordsView" type="id" />
+    <item name="relatedWordsRecyclerView" type="id" />
+    <item name="relatedWordsProgressBar" type="id" />
 
 
 </resources>

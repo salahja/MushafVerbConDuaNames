@@ -1,0 +1,271 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary">
+
+        <EditText
+            android:id="@id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="10.0dip"
+            android:background="@drawable/search_box_bg"
+
+
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingStart="65.0dip"
+            android:paddingTop="8.0dip"
+            android:paddingEnd="40.0dip"
+            android:paddingBottom="8.0dip" />
+
+        <ImageView
+            android:id="@id/searchIconView"
+            android:layout_width="25.0dip"
+            android:layout_height="25.0dip"
+            android:layout_alignEnd="@id/searchView"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10.0dip"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_tab_search"
+            app:tint="@color/dark_gray" />
+
+        <LinearLayout
+            android:id="@id/rootWordContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:background="@drawable/root_view_box_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="10.0dip"
+            android:paddingEnd="5.0dip">
+
+           <TextView
+                android:id="@id/rootWordView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center" />
+
+            <ImageView
+                android:id="@id/clearAllView"
+                android:layout_width="27.0dip"
+                android:layout_height="27.0dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8.0dip"
+                android:contentDescription="@null"
+                android:padding="3.5dip"
+                android:src="@drawable/ic_cross" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/restOfTheView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:background="@color/default_blue">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+           <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10.0dip"
+
+
+                android:textSize="12.0sp" />
+
+            <ImageView
+                android:id="@id/micImageView"
+                android:layout_width="200.0dip"
+                android:layout_height="120.0dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15.0dip"
+                android:layout_marginBottom="15.0dip"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_action_jump" />
+
+           <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8.0dip"
+                android:text="jump to "
+                android:textSize="16.0sp"
+                 />
+
+            <LinearLayout
+                android:id="@id/jumpToContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+               <TextView
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/jump_to_bg"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:padding="7.0dip"
+                    android:text="@string/chapter_no"
+                    android:textSize="14.0sp" />
+
+               <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10.0dip"
+                    android:layout_marginEnd="10.0dip"
+                    android:text=":" />
+
+               <TextView
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/jump_to_bg"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:padding="7.0dip"
+                    android:text="@string/verse_no"
+                    android:textSize="14.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@id/searchResultsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="@color/default_blue">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/relatedWordsContainer"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@id/searchResultsProgressBar"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20.0dip"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@id/searchResultsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15.0dip"
+                    android:layout_marginEnd="15.0dip"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+           <TextView
+                android:id="@id/emptyView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+
+
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@id/relatedWordsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="-7.5dip"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/search_select_all_bar_bg_color"
+                    android:paddingStart="15.0dip"
+                    android:paddingTop="5.0dip"
+                    android:paddingEnd="15.0dip"
+                    android:paddingBottom="5.0dip">
+
+                   <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+
+                        android:textSize="13.0sp" />
+
+                   <TextView
+                        android:id="@id/selectAllRelatedWordsView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                      
+                        android:paddingStart="8.0dip"
+                        android:paddingTop="3.0dip"
+                        android:paddingEnd="8.0dip"
+                        android:paddingBottom="3.0dip"
+
+                        android:textSize="13.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@id/relatedWordsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ProgressBar
+                        android:id="@id/relatedWordsProgressBar"
+                        android:layout_width="20.0dip"
+                        android:layout_height="20.0dip"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-7.5dip">
+
+                    <View
+                        style="@style/HorizontalLine3dpWidth"
+                        android:layout_centerInParent="true"
+                        android:background="@color/colorPrimary"
+                        android:layout_width="wrap_content" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="15.0dip"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@null"
+                          />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

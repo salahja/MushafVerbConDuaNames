@@ -361,5 +361,7 @@
     <string name="content_bookmark">Bookmark</string>
     <string name="page_title">Quran</string>
     <string name="en_sahi">Sahi International</string>
+    <string name="chapter_no">Chapter No</string>
+    <string name="verse_no">verse no</string>
 
 </resources>

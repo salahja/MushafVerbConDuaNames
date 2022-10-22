@@ -18,12 +18,14 @@
         app:showAsAction="always"
       />
 
+
     <item
         android:id="@+id/searchtopic"
         android:icon="@drawable/baseline_search_24"
         android:title="@string/action_search"
         android:contentDescription="@string/content_description_one"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
+
         app:showAsAction="always|collapseActionView" />
 
 

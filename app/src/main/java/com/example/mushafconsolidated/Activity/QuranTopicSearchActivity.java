@@ -140,17 +140,24 @@ FloatingActionButton  btnSelection  ;   ;
                     }
 
                 }
-              Bundle dataBundle=new Bundle();
-                if(datas.size()>0) {
-                    dataBundle.putSerializable("map", datas);
+
+              //  extracted(data, titles);
+
+                Bundle dataBundle=new Bundle();
+                if(!data.contains("null")) {
+                    if (datas.size() > 0) {
+                        dataBundle.putSerializable("map", datas);
 
 
-                    Intent intents = new Intent(QuranTopicSearchActivity.this, TopicDetailAct.class);
-                    intents.putExtras(dataBundle);
+                        Intent intents = new Intent(QuranTopicSearchActivity.this, TopicDetailAct.class);
+                        intents.putExtras(dataBundle);
 
 
-                    startActivity(intents);
+                        startActivity(intents);
 
+                    }
+                }else{
+                    Toast.makeText(QuranTopicSearchActivity.this, "Not found", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -161,7 +168,24 @@ FloatingActionButton  btnSelection  ;   ;
 
     }
 
+    private void extracted(String data, String titles) {
+        if (data.contains("null")){
+            String[] split = titles.split("-");
+            Utils utils1=new Utils(getApplicationContext());
+            ArrayList<quranexplorer> topicSearch = utils1.getTopicSearch(split[0]);
+            data ="";
+            for (quranexplorer search : topicSearch) {
+                if(!search.getAyahref().contains("null") || !search.getAyahref().contains("ref")) {
+                    data = data + search.getAyahref() + ",";
+                }
+            }
 
+
+        }
+        data = data.replaceAll("null","");
+        data = data.replaceAll(",,",",");
+        data = data.replaceAll(":,","");
+    }
 
 
     @Override

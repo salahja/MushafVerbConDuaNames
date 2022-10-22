@@ -42,6 +42,7 @@ import com.example.mushafconsolidated.Entities.lanelexicon;
 import com.example.mushafconsolidated.Entities.lughat;
 import com.example.mushafconsolidated.Entities.qurandictionary;
 import com.example.mushafconsolidated.Entities.quranexplorer;
+import com.example.mushafconsolidated.Entities.surahsummary;
 import com.example.mushafconsolidated.Entities.wbwentity;
 
 import java.util.ArrayList;
@@ -65,7 +66,11 @@ public class Utils {
         this.thiscontext = context;
 
     }
+    public ArrayList<surahsummary> getSurahSummary(int id) {
+        ArrayList<surahsummary> dua = (ArrayList<surahsummary>) database.surahsummaryDao().getSurahSummary(id);
+        return dua;
 
+    }
     public ArrayList<AllahNamesDetails> getNamesDetails(int id) {
         ArrayList<AllahNamesDetails> dua = (ArrayList<AllahNamesDetails>) database.NamesDetailsDao().ALLAH_NAMES_DETAILS_DETAILS(id);
         return dua;
