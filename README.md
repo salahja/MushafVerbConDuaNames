@@ -5,3 +5,5 @@ incorporated Hans and Lanes Dictionary around 100 words still to be update in th
 incorporated Verb Conjugation which is based on Sarf - Arabic Morphology System at https://sourceforge.net/projects/sarf/ a comprehsive software..have just adapted for the android kept the logic as is except for the Noun of time and place and have not implemented the Gerunds.Converted the xml data file in to sqlite db "v3-conjugator.db".
 well I am not a professional Programmar so be easy on me with regards to no documentation or comments and I did everthing on the fly so to speak.
 laneslexicon from https://github.com/laneslexicon/LexiconDatabase/releases
+Included Allaw(SWT) Names and Atrributes from https://myislam.org/99-names-of-allah/
+Included Quran Topic from  https://github.com/moizsiraj/QuranExplorer
