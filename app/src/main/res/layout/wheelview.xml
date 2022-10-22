@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:paddingLeft="8.0dip"
+    android:paddingTop="@dimen/space_3"
+    android:paddingRight="8.0dip"
+    android:paddingBottom="@dimen/space_3"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    android:gravity="top"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:background="?dialog_bg"
+        android:layout_gravity="top"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:layout_gravity="center"
+            android:id="@id/etSura"
+            android:gravity="center"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="4.0dip"
+            android:hint="@string/quran_sura"
+            android:layout_weight="70.0" />
+
+        <EditText
+            android:layout_gravity="end"
+            android:id="@id/etAyah"
+            android:gravity="center"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="4.0dip"
+            android:layout_marginEnd="8.0dip"
+            android:hint="@string/quran_ayah"
+            android:layout_weight="30.0"
+            android:inputType="number"
+            android:imeOptions="actionGo|flagNoFullscreen" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingTop="4.0dip"
+        android:background="?dialog_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <NumberPicker
+
+            android:layout_gravity="start"
+            android:id="@id/surahpicker"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8.0dip"
+
+            android:layout_weight="82.0" />
+
+        <NumberPicker
+
+            android:layout_gravity="end"
+            android:id="@id/ayahpicker"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="4.0dip"
+            android:layout_weight="30.0" />
+    </LinearLayout>
+</LinearLayout>

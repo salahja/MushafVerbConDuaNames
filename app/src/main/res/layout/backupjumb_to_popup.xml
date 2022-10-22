@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@drawable/border"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/topcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+
+        android:layout_marginBottom="5dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:dividerHeight="0.0px"
+
+
+        app:cardCornerRadius="2dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false"
+
+
+        app:strokeWidth="1dp">
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <EditText
+            android:id="@+id/suraIndex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="2"
+            android:inputType="number"
+            android:maxLength="3"
+
+            />
+
+        <EditText
+            android:id="@+id/ayahInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="8dp"
+
+            android:layout_toEndOf="@id/suraIndex"
+            android:hint="2"
+            android:inputType="number"
+            android:maxLength="10"
+            android:text="@string/go_to" />
+
+        <TextView
+            android:id="@+id/ayahlabel"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="22dp"
+            android:layout_toEndOf="@id/ayahInput"
+            android:hint="2"
+            android:inputType="none"
+            android:text="@string/go_to" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_below="@+id/topcard"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:dividerHeight="0.0px"
+
+
+        app:cardCornerRadius="5sp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false"
+        app:rippleColor="@color/colorAccent"
+        app:strokeColor="@color/color_primary_variant"
+        app:strokeWidth="1dp">
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Spinner
+                android:id="@+id/suras"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:id="@+id/verses"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/suras"
+
+                android:spinnerMode="dropdown" />
+
+            <Button
+                android:id="@+id/ok"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/verses"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+
+                android:elevation="@dimen/cardview_default_elevation"
+                android:hint="@string/ok"
+                android:shadowRadius="@integer/config_navAnimTime"
+
+                android:text="@string/OK"
+
+                />
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+</RelativeLayout>

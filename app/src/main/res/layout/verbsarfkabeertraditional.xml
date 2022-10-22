@@ -1,0 +1,2435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.JustJava.ZoomLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fadeScrollbars="true"
+    android:isScrollContainer="true"
+    android:singleLine="true"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbars="vertical">
+
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:stretchColumns="*">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@id/pastactive"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                        android:text="@string/faelmazi"
+                           />
+
+
+                </LinearLayout>
+            </TableRow>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TableRow
+android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:weightSum="1.0">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/humid"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center|right"
+                    android:paddingStart="5.0dip"
+                     android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                       />
+
+
+                <TextView
+                    android:id="@+id/humamid"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center|right"
+                    android:paddingStart="5.0dip"
+                    android:paddingEnd="5.0dip"
+
+                       />
+
+                <TextView
+                    android:id="@id/huaid"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center|right"
+                    android:paddingStart="5.0dip"
+                     android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                       />
+
+
+            </LinearLayout>
+        </TableRow>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/madihum"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/madhihuma"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                        android:paddingEnd="5.0dip"
+
+                           />
+
+                    <TextView
+                        android:id="@id/madhihua"
+                        android:layout_width="0.0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TableRow
+android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:weightSum="1.0">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/hunnaid"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center|right"
+                    android:paddingStart="5.0dip"
+                     android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                       />
+
+
+                <TextView
+                    android:id="@+id/humafid"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center|right"
+                    android:paddingStart="5.0dip"
+                    android:paddingEnd="5.0dip"
+                       />
+
+                <TextView
+                    android:id="@id/hiaid"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center|right"
+                    android:paddingStart="5.0dip"
+                     android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                       />
+
+            </LinearLayout>
+        </TableRow>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/madihunna"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/madhihumaf"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                        android:paddingEnd="5.0dip"
+                           />
+
+                    <TextView
+                        android:id="@id/madhihia"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TableRow
+android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:weightSum="1.0">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:id="@+id/antumid"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center|right"
+                    android:paddingStart="5.0dip"
+                     android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                       />
+
+
+                <TextView
+                    android:id="@+id/antumamid"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center|right"
+                    android:paddingStart="5.0dip"
+                     android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                       />
+
+                <TextView
+                    android:id="@id/antaid"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center|right"
+                    android:paddingStart="5.0dip"
+                     android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                       />
+
+
+            </LinearLayout>
+        </TableRow>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/madhiantum"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/madhiantuma"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+                    <TextView
+                        android:id="@id/madhianta"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+                </LinearLayout>
+
+
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TableRow
+android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:weightSum="1.0">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:id="@id/antunnaid"
+
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center|right"
+                    android:paddingStart="5.0dip"
+                     android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                       />
+
+
+                <TextView
+                    android:id="@+id/antumafid"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center|right"
+                    android:paddingStart="5.0dip"
+                     android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                       />
+
+
+                <TextView
+                    android:id="@id/antiid"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center|right"
+                    android:paddingStart="5.0dip"
+                     android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                       />
+
+
+            </LinearLayout>
+        </TableRow>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@id/madhiantunna"
+
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/madhiantumaf"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@id/madhianti"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+                </LinearLayout>
+
+
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TableRow
+android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:weightSum="1.0">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:id="@id/nahnuid"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center|right"
+                    android:paddingStart="5.0dip"
+                     android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                    android:visibility="gone"
+                       />
+
+
+                <TextView
+                    android:id="@id/anaid"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center|right"
+                    android:paddingStart="5.0dip"
+                     android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                    android:visibility="gone"
+                       />
+
+
+            </LinearLayout>
+        </TableRow>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@id/madhinahnu"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@id/madhiana"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+                </LinearLayout>
+
+
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="01dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/darker_gray" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@id/presentactive"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                        android:text="@string/faelmudhary"
+                           />
+
+
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/muzhum"
+
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/muzhuma"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@id/muzhua"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+                </LinearLayout>
+
+
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/muzhunna"
+
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/muzhumaf"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@id/muzhia"
+                        android:layout_width="0.0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+                </LinearLayout>
+
+
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/muzantum"
+
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@id/muzantuma"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+                    <TextView
+                        android:id="@id/muzanta"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+                </LinearLayout>
+
+
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/muzantunna"
+
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/muzantumaf"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@id/muzanti"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+                </LinearLayout>
+
+
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/muznahnu"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@id/muzana"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+                </LinearLayout>
+
+
+            </TableRow>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/darker_gray" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@id/pastpassive"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                        android:text="@string/faelmadimajhool"
+                           />
+
+
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/madimajhum"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/madimajhuma"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                        android:paddingEnd="5.0dip"
+
+                           />
+
+                    <TextView
+                        android:id="@id/madimajhua"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/madimajhunna"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/madimajhumaf"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                        android:paddingEnd="5.0dip"
+                           />
+
+                    <TextView
+                        android:id="@id/madimajhia"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/madimajantum"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/madimajantuma"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+                    <TextView
+                        android:id="@id/madimajanta"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@id/madimajantunna"
+
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/madimajantumaf"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@id/madimajanti"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+                </LinearLayout>
+
+
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@id/madimajnahnu"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@id/madimajana"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+                </LinearLayout>
+
+
+            </TableRow>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/darker_gray" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@id/presentpassive"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                        android:text="@string/faelmudharymajhol"
+                           />
+
+
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/muzmajhum"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/muzmajhuma"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                        android:paddingEnd="5.0dip"
+
+                           />
+
+                    <TextView
+                        android:id="@id/muzmajhua"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/muzmajhunna"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/muzmajhumaf"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                        android:paddingEnd="5.0dip"
+                           />
+
+                    <TextView
+                        android:id="@id/muzmajhia"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/muzmajantum"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/muzmajantuma"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+                    <TextView
+                        android:id="@id/muzmajanta"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@id/muzmajantunna"
+
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/muzmajantumaf"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@id/muzmajanti"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+                </LinearLayout>
+
+
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@id/muzmajnahnu"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@id/muzmajana"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+                </LinearLayout>
+
+
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="01dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/darker_gray" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@id/command"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+
+                           />
+
+
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/amrantum"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/amrantuma"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                        android:paddingEnd="5.0dip"
+
+                           />
+
+                    <TextView
+                        android:id="@id/amranta"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:clipChildren="false"
+
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/amrantunna"
+                        android:layout_width="0.0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/amrantumaf"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                        android:paddingEnd="5.0dip"
+                           />
+
+                    <TextView
+                        android:id="@id/amranti"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="01dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/darker_gray" />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp"
+            android:dividerHeight="0.0px"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            app:cardElevation="10dp">
+
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@id/negcommand"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+
+                           />
+
+
+                </LinearLayout>
+            </TableRow>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp"
+            android:dividerHeight="0.0px"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            app:cardElevation="10dp">
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/nahiamrantum"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/nahiamrantuma"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                        android:paddingEnd="5.0dip"
+
+                           />
+
+                    <TextView
+                        android:id="@id/nahiamranta"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                </LinearLayout>
+            </TableRow>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+
+            app:rippleColor="@color/colorAccent"
+            app:strokeColor="@color/color_primary_variant"
+            app:strokeWidth="1dp"
+            android:dividerHeight="0.0px"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            app:cardElevation="10dp">
+            <TableRow
+android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/nahiamrantunna"
+                        android:layout_width="0.0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                    <TextView
+                        android:id="@+id/nahiamrantumaf"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                        android:paddingEnd="5.0dip"
+                           />
+
+                    <TextView
+                        android:id="@id/nahiamranti"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center|right"
+                        android:paddingStart="5.0dip"
+                         android:paddingEnd="3.0dip"
+android:autoSizeMinTextSize="10sp"
+ android:autoSizeMaxTextSize="26sp"
+ android:autoSizeStepGranularity="6sp"
+                           />
+
+
+                </LinearLayout>
+            </TableRow>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="01dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/darker_gray" />
+
+
+    </TableLayout>
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:id="@+id/action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        app:floating_background_color="@color/background_color"
+        app:floating_left_icon="@drawable/baseline_arrow_circle_down_black_24dp"
+
+
+        app:floating_title="Back"
+        app:floating_title_color="@android:color/white" />
+
+</com.example.JustJava.ZoomLayout>

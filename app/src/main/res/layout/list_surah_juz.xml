@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/suralist"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    android:orientation="vertical"
+    android:background="?android:colorBackground"
+    app:cardBackgroundColor="@android:color/transparent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0.0dip">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_scrollFlags="enterAlwaysCollapsed|scroll">
+
+            <TextView
+
+                android:layout_width="fill_parent"
+                android:layout_height="30.0dip"
+                android:background="?odd_item_bg"
+                android:gravity="center_vertical"
+                android:paddingStart="18.0dip"
+                android:paddingEnd="18.0dip"
+                android:text="@string/bookmark_last_read"
+                app:tabTextAppearance="@style/TabTextAppearance" />
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:paddingStart="@dimen/space_2"
+                    android:paddingEnd="@dimen/space_2">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@id/lastread"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:layout_weight="1.0"
+                        android:background="?odd_item_bg"
+                        android:hint="@string/bookmark_last_read"
+                        android:textSize="12.0sp"
+                        android:visibility="visible" />
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:layout_weight="1.0"
+                        android:background="?odd_item_bg"
+                        android:textSize="16.0sp"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:layout_weight="1.0"
+                        android:background="?odd_item_bg"
+                        android:textSize="16.0sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </ScrollView>
+
+            <TextView
+                android:id="@id/tvLabelQuickLink"
+                android:layout_width="fill_parent"
+                android:layout_height="30.0dip"
+                android:background="?odd_item_bg"
+
+                android:gravity="center_vertical"
+                android:paddingStart="18.0dip"
+                android:paddingEnd="18.0dip"
+                android:text="@string/quick_links"
+                app:tabTextAppearance="@style/TabTextAppearance" />
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:fitsSystemWindows="true"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@id/llQuickLinks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:paddingStart="@dimen/space_2"
+                    android:paddingEnd="@dimen/space_2">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/kahaf"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:layout_weight="1.0"
+                        android:background="?odd_item_bg"
+                        android:text="@string/text_kahaf"
+                        android:textSize="16.0sp"
+                        app:elevation="12dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/ayatkursi"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:layout_weight="1.0"
+                        android:text="@string/text_ayatul_kursi"
+                        android:textSize="16.0sp"
+                        app:elevation="7dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:layout_weight="1.0"
+                        android:textSize="16.0sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:layout_weight="1.0"
+                        android:textSize="16.0sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:layout_weight="1.0"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal"
+                android:paddingStart="18.0dip"
+                android:paddingEnd="18.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/all"
+                    app:tabTextAppearance="@style/TabTextAppearance" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/colon_mark"
+                    app:tabTextAppearance="@style/TabTextAppearance" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:id="@+id/scrollIndicatorUp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="top"
+        android:background="?attr/colorControlHighlight"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/wordByWordRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:tooltipText="surah"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

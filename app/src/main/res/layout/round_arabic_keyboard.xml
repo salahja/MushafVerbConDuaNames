@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?android:attr/selectableItemBackground"
+
+    android:orientation="horizontal">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/toprow"
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <Button
+        
+                android:id="@+id/dal"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="د"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+
+   
+                android:id="@+id/kha"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="خ"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                 
+                android:id="@+id/ha"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ح"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                 
+                android:id="@+id/jeem"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="چ"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                 
+                android:id="@+id/tha"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ث"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                 
+                android:id="@+id/ta"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ت"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                 
+                android:id="@+id/ba"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ب"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                 
+                android:id="@+id/hamza"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ا"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/firstrow"
+            android:layout_below="@+id/toprow"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <Button
+                 
+                android:id="@+id/toay"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ط"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+
+                android:id="@+id/dhad"
+                 
+
+                android:layout_width="14dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ض"
+                android:textAllCaps="true"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <Button
+
+                android:id="@+id/suwad"
+                 
+
+                android:layout_width="14dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ص"
+                android:textSize="24sp"
+                android:textStyle="bold"
+
+                />
+
+            <Button
+                 
+                android:id="@+id/sheen"
+                android:layout_width="14dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ش"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                 
+                android:id="@+id/seen"
+                android:layout_width="14dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="س"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                 
+                android:id="@+id/zaa"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ز"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                 
+                android:id="@+id/raa"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ر"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                 
+                android:id="@+id/dhal"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ذ"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/secondrow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstrow"
+            android:gravity="top">
+
+            <Button
+                 
+                android:id="@+id/lam"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ل"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                 
+                android:id="@+id/kaf"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ك"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+
+                 
+                android:id="@+id/qaf"
+                android:layout_width="14dp"
+                android:layout_height="50dp"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:text="ق"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <Button
+
+                 
+                android:id="@+id/fa"
+                android:layout_width="9dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ف"
+                android:textSize="24sp"
+                android:textStyle="bold">
+
+            </Button>
+
+            <Button
+
+                 
+                android:id="@+id/ghain"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="غ"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+
+                 
+                android:id="@+id/ayn"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ع"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                 
+                android:id="@+id/zoay"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ظ"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/thirdrow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/secondrow"
+            android:gravity="top">
+
+            <Button
+                 
+                android:id="@+id/tamarboota"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ة"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                 
+                android:id="@+id/ya"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ي"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                 
+                android:id="@+id/waw"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="و"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+
+                 
+                android:id="@+id/haaa"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ه"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                 
+                android:id="@+id/nun"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ن"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                 
+                android:id="@+id/meem"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="م"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thirdrow"
+            android:gravity="top">
+
+
+            <Button
+                 
+                android:id="@+id/key_AC"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ac"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                 
+                android:id="@+id/key_delete"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="DEL"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                 
+                android:id="@+id/key_enter"
+                android:layout_width="8dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="ENTER"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

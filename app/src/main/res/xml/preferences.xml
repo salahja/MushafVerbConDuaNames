@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    جملة شرطية
+    <PreferenceCategory
+
+        app:key="sarfkabeer_display"
+        app:title="Sarf Kabeer Display">
+        <ListPreference
+            android:defaultValue="@string/indicative"
+            android:entries="@array/verbmoodsList"
+            android:entryValues="@array/verbmoodEntry"
+            android:summary="@string/moodsummar"
+            android:key="verbcase"
+            android:title="Verb Moods" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="sarfkabeer_format_verb"
+            android:title="Traditional-Verb Conjugation" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="sarfkabeer_format_participles"
+            android:title="Traditional-Participles etc" />
+        <ListPreference
+
+            android:defaultValue="en"
+            android:entries="@array/lang_names"
+            android:entryValues="@array/lang_codes"
+            android:key="lang"
+            android:title="@string/lang" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Functions"
+        app:iconSpaceReserved="true" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/prefs_show_root"
+        android:title="Show Root"
+        app:icon="@drawable/ic_baseline_text_fields_24" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/prefs_show_translitration"
+        android:title="Show Transliteration"
+        app:icon="@drawable/ic_baseline_text_fields_24" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/prefs_show_en_jalalayn"
+        android:title="Show English Jalalayn Tafseer" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/prefs_show_translation"
+        android:title="Show Translation" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/prefs_show_erab"
+        android:title="Show Erab" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/prefs_show_kathir"
+        android:title="Show Ibne Kathir" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/prefs_show_wordbyword"
+        android:title="Show Word by Word Transalation"
+        app:icon="@drawable/ic_baseline_translate_24" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/prefs_show_colortag"
+        android:title="Color Grammatical Words/Phrases"
+        app:icon="@drawable/ic_baseline_color_lens_24" />
+    <ListPreference
+        android:defaultValue="en"
+        android:dialogTitle="set main action"
+        android:entries="@array/wbw_action_list"
+
+        android:entryValues="@array/wbw_values"
+        android:key="@string/prefs_wbw"
+        android:title="Select WBW Language" />
+    <ListPreference
+        android:defaultValue="en_sahih"
+        android:dialogTitle="set main action"
+        android:entries="@array/translation_action"
+
+        android:entryValues="@array/translation_values"
+        android:key="@string/prefs_select_translaton"
+        android:title="Select Translation" />
+
+
+
+
+
+    <PreferenceCategory
+
+        android:title="Grmmatical Syntax" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/prefs_show_mausoof"
+        android:title="Adjectival Phrases/مرکب توصیفی" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/prefs_show_mudhaf"
+        app:summaryOn="@string/mudhafsummary"
+        android:title="إضافَة/Possessive " />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/prefs_show_harfnasb"
+        app:summaryOn="@string/harfnasbsummary"
+        android:title="Accusative/ان واخواتها" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/prefs_show_shart"
+        app:summaryOn="@string/harfnasbsummary"
+        android:title="Conditional/جملة شرطية" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/prefs_show_kana"
+        app:summaryOn="@string/harfnasbsummary"
+        android:title=" Verb kāna/كان واخواتها " />
+
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/prefs_grammar_sentence"
+        android:title="Grammitica Analysis-Sentence wise    " />
+
+
+
+
+
+    <PreferenceCategory
+        app:key="arabic_font_category"
+        app:title="Arabic Fonts">
+
+        <ListPreference
+            android:defaultValue="kitab.ttf"
+            android:entries="@array/arabicFontListArray"
+            android:entryValues="@array/arabicFontEntryArray"
+            android:key="Arabic_Font_Selection"
+            android:title="Arabic Font Selection"
+            app:icon="@drawable/ic_baseline_font_download_24" />
+
+
+        <ListPreference
+            android:defaultValue="dark"
+            android:entries="@array/themeListArray"
+            android:entryValues="@array/themeEntryArray"
+            android:key="themepref"
+            app:icon="@drawable/ic_baseline_format_paint_34"
+            app:title="Choose theme"
+            app:useSimpleSummaryProvider="true" />/>
+    </PreferenceCategory>
+
+    <SeekBarPreference
+        android:max="60"
+        app:defaultValue="22"
+        app:key="pref_font_arabic_key"
+        app:min="12"
+        app:showSeekBarValue="true"
+        app:summary="@string/seek_summary"
+        app:title="@string/seek_titles" />
+
+    <SeekBarPreference
+        android:max="60"
+        app:defaultValue="22"
+        app:key="pref_font_englsh_key"
+        app:min="12"
+        app:showSeekBarValue="true"
+        app:summary="@string/seek_summary"
+        app:title="@string/seek_title" />
+
+
+    <Preference
+        android:defaultValue="kitab.ttf"
+        android:title="Select Fonts"
+        app:fragment="com.example.mushafconsolidated.fragments.ActivitySettings$SelectQuranFronts"
+        app:icon="@drawable/ic_baseline_web_24"
+        app:key="quranFont" />
+
+
+
+
+
+
+    <Preference
+        android:defaultValue="exit"
+        android:title="Exit"
+        app:fragment="com.example.mushafconsolidated.fragments.ActivitySettings"
+        app:icon="@drawable/ic_baseline_history_pink_24"
+        app:iconSpaceReserved="true"
+
+        app:key="Exit" />
+
+</PreferenceScreen>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.mushafconsolidated">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" /> -->
+    <!-- <uses-permission android:name="android.permission.WRITE_SETTINGS"/> -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name="com.example.utility.QuranGrammarApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_quran_logo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+
+        <activity
+            android:name=".Activity.BaseActTwo"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="database.DuaGroupActivity"
+            android:parentActivityName=".Activity.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+
+
+
+        <activity
+            android:name=".Activity.TopicDetailAct"
+            android:parentActivityName=".Activity.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.QuranTopicSearchActivity"
+            android:parentActivityName=".Activity.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.TafsirFullscreenActivity"
+            android:parentActivityName=".Activity.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.SurahActivity"
+            android:parentActivityName=".Activity.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="database.DuaDetailActivity"
+            android:parentActivityName=".Activity.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="database.GridImageAct"
+            android:parentActivityName=".Activity.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.GrammarRuleDetailHostActivity"
+            android:exported="false"
+            android:label="@string/title_activity_grammarrulelist_detail_host"
+            android:resizeableActivity="true"
+            tools:targetApi="24" />
+        <activity
+            android:name=".Activity.WordOccuranceAct"
+            android:parentActivityName=".Activity.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.QuranGrammarAct"
+            android:parentActivityName=".Activity.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.QuranDIctionarySearchActivity"
+            android:parentActivityName=".Activity.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.SearchResult"
+            android:parentActivityName=".Activity.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.SearchKeyBoardAct"
+            android:parentActivityName=".Activity.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.LughatWordDetailsAct"
+            android:label="@string/title_activity_verb_conjugation"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.WordDictionaryAct"
+            android:label="@string/title_activity_verb_conjugation"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.sj.conjugator.activity.SarfSagheerActivity"
+            android:parentActivityName=".Activity.QuranGrammarAct">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="org.sj.conjugator.activity.ConjugatorTabsActivity"
+            android:parentActivityName=".Activity.QuranGrammarAct">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="org.sj.conjugator.activity.ConjugatorAct"
+            android:parentActivityName=".Activity.QuranGrammarAct">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.ActivitySettings"
+            android:parentActivityName=".Activity.QuranGrammarAct">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

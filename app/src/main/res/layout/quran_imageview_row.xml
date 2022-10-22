@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/top"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@id/chaptername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:paddingTop="3.0dip"
+            android:paddingEnd="5.0dip"
+            android:paddingBottom="3.0dip"
+            android:text="chapter"
+            android:textSize="18.0sp" />
+
+        <ImageView
+            android:id="@id/surahicon"
+            android:layout_alignEnd="@+id/chaptername"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:layout_marginStart="150dp"
+            android:layout_marginEnd="@dimen/space_5"
+            android:paddingEnd="@dimen/space_2">
+
+        </ImageView>
+    </RelativeLayout>
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:visibility="gone"
+            android:id="@+id/colorized"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:paddingBottom="10dp" />
+
+        <ImageView
+            android:id="@id/arrowforward"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:cropToPadding="true"
+
+            android:elevation="10dp"
+            android:padding="1dp"
+            android:scaleType="fitCenter"
+
+
+            app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
+
+        <ImageView
+            android:id="@id/arrowback"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:cropToPadding="true"
+            android:elevation="10dp"
+            android:padding="1dp"
+            android:scaleType="fitCenter"
+
+
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+        <ImageView
+            android:id="@id/jumpto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+
+            android:cropToPadding="true"
+            android:elevation="10dp"
+            android:padding="1dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+
+
+
+            app:srcCompat="@drawable/ic_baseline_open_in_browser_24" />
+
+
+        <ImageView
+            android:id="@id/ivHelp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+
+            android:backgroundTint="@color/white"
+
+
+            android:padding="1dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+
+            app:srcCompat="@drawable/ic_baseline_help_24" />
+
+
+
+
+        <ImageView
+            android:id="@id/ivActionOverflow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dip"
+            android:layout_gravity="end"
+            android:layout_weight="0"
+            android:backgroundTint="@color/white"
+
+            android:elevation="10dp"
+            android:padding="1dp"
+
+
+
+
+            android:visibility="visible"
+            app:srcCompat="@drawable/baseline_menu_open_24" />
+    </LinearLayout>
+</RelativeLayout>

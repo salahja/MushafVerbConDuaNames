@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/textViewMargin"
+    android:layout_marginRight="@dimen/textViewMargin"
+    android:gravity="center_horizontal"
+    android:id="@+id/chips_group"
+    android:orientation="vertical"
+    android:padding="@dimen/textViewPadding">
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/word_arabic_textView"
+
+         android:visibility="visible"
+        singleSelection="false"
+        android:checkable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/word_trans_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Small">
+
+    </TextView>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/wordlen"
+        android:text="worlen"
+        style="@style/Widget.MaterialComponents.Chip.Filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        singleSelection="false"
+        android:checkable="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small">
+
+    </com.google.android.material.chip.Chip>
+
+
+
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/wordindex"
+        android:text="wordindex"
+        android:checkable="true"
+        style="@style/Widget.MaterialComponents.Chip.Filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        singleSelection="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small">
+
+    </com.google.android.material.chip.Chip>
+
+
+</LinearLayout>
+

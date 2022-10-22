@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- This requires that our VD assets be tinted with colorControlNormal -->
+    <!-- See: https://issuetracker.google.com/issues/127454210 -->
+
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/surahnav"
+        android:icon="@drawable/ic_surah_collection"
+        android:title="Surah"
+        app:showAsAction="always"
+        app:cnb_iconColor="#FF9800"/>
+
+    <item
+        android:id="@+id/conjugationnav"
+        android:icon="@drawable/ic_baseline_construction_24"
+        android:title="Conjugator"
+        app:showAsAction="always"
+        app:cnb_iconColor="#2196F3"/>
+
+
+
+
+
+    <item
+        android:id="@+id/bookmarksnav"
+        android:icon="@drawable/ic_baseline_bookmark_add_24"
+        android:title="Bookmarks"
+        app:showAsAction="always"
+        app:cnb_iconColor="#F44336"/>
+
+
+    <item
+        android:id="@+id/grammar"
+        android:icon="@drawable/ic_baseline_open_in_browser_24"
+        app:showAsAction="always"
+        android:title="Grammar"
+        app:cnb_iconColor="#4CAF50"/>
+    <item
+        android:id="@+id/settingnav"
+        android:icon="@drawable/ic_action_setting"
+        app:showAsAction="always"
+        android:title="Settings"
+        app:cnb_iconColor="#4CAF50"/>
+
+    <item
+        android:id="@+id/Names"
+
+        android:icon="@drawable/baseline_mosque_24"
+        android:title="Dua"
+
+        app:showAsAction="collapseActionView"
+        app:cnb_iconColor="#FF9800"/>
+    <item
+        android:id="@+id/duanav"
+
+        android:icon="@drawable/baseline_anchor_24"
+        android:title="Dua"
+        app:showAsAction="collapseActionView"
+
+        app:cnb_iconColor="#FF9800"/>
+    <item
+        android:id="@+id/searchnav"
+
+        android:icon="@drawable/ic_baseline_search_36"
+        android:title="Search"
+
+        app:showAsAction="collapseActionView"
+        app:cnb_iconColor="#FF9800"/>
+
+
+</menu>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: org.ahocorasick:ahocorasick:0.6.3">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ahocorasick/ahocorasick/0.6.3/8936d1c8495892d9488a725d2f829f3ef055168d/ahocorasick-0.6.3.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ahocorasick/ahocorasick/0.6.3/f3efca7368be4a102811af9a1bbcc03fa3fefb06/ahocorasick-0.6.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ahocorasick/ahocorasick/0.6.3/d69453ed4429922cc5492da1e5ed402b7827d963/ahocorasick-0.6.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

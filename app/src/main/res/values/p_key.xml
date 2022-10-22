@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- This file will only hold preference-keys
+        (DONT TRANSLATE - DONT ADD UNRELATED STRINGS)
+     -->
+
+
+
+
+    <string translatable="false" name="prefs_show_translation">showTranslationKey</string>
+    <string translatable="false" name="prefs_show_erab">showErabKey</string>
+    <string translatable="false" name="prefs_show_wordbyword">wordByWord</string>
+
+
+
+
+</resources>

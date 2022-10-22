@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/displayayahs"
+        android:icon="@drawable/my_drawable"
+        android:title="Display Ayahs"
+        android:orderInCategory="4"
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/conjugate"
+        android:icon="@drawable/ic_action_setting"
+        android:title="Conjugate"
+        android:orderInCategory="5"
+        app:showAsAction="ifRoom|withText" />
+
+
+
+</menu>

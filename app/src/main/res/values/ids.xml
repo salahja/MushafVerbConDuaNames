@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="chapterNoView" type="id" />
+    <item name="chapterTypeView" type="id" />
+    <item name="chapterAlphaArabicNameView" type="id" />
+    <item name="chapterEnglishNameView" type="id" />
+    <item name="chapterArabicNameView" type="id" />
+
+    <item type="id" name="wordoccurance" />
+    <item type="id" name="bookmarkView" />
+    <item type="id" name="bottomSheetView" />
+    <item type="id" name="container" />
+    <item type="id" name="dismissView" />
+    <item type="id" name="divider" />
+    <item type="id" name="englishGrammarView" />
+    <item type="id" name="header" />
+    <item type="id" name="chaptername" />
+    <item type="id" name="text" />
+
+    <item type="id" name="topItemsContainer" />
+    <item type="id" name="wordByWordRecyclerView" />
+
+
+    <item name="toolbar" type="id" />
+
+
+    <item name="chapterno" type="id"></item>
+    <item name="verseno" type="id"></item>
+    <item name="referenceView" type="id" />
+    <item name="translationView" type="id" />
+    <item name="rootView" type="id" />
+    <item type="id" name="wordView" />
+    <item name="backButtonView" type="id" />
+    <item name="bottomButtonsContainer" type="id" />
+    <item name="progressBar" type="id" />
+    <item name="translationTypeIndicatorView" type="id" />
+    <item name="downloadedView" type="id" />
+    <item name="downloadedLabel" type="id" />
+    <item name="readyToDownloadView" type="id" />
+    <item name="downloadedCountView" type="id" />
+    <item name="translationDownloaded" type="id" />
+    <item name="translationReadytoDownload" type="id" />
+
+
+    <item name="overlayView" type="id" />
+
+    <item name="chapterDetailsView" type="id" />
+    <item name="overlayViewRecyclerView" type="id" />
+    <item name="overlayTypeSelectorView" type="id" />
+    <item name="chapterNameViewContainer" type="id" />
+    <item name="dropDownIconView" type="id" />
+    <item name="listingView" type="id" />
+
+    <item name="overlayTypePartView" type="id" />
+
+    <item name="devIndicatorView" type="id" />
+    <item name="chapterNameView" type="id" />
+
+    <item name="overlayTypeChapterView" type="id" />
+    <item name="jumpto" type="id" />
+    <item name="deleteAllBookmarks" type="id" />
+
+    <item name="ismalaheader" type="id" />
+
+    <item name="verbconjugationbtn" type="id" />
+    <item name="wordDetails" type="id" />
+    <item name="lemma" type="id" />
+    <item name="verbdetails" type="id" />
+    <item name="noundetails" type="id" />
+    <item name="qalamtext" type="id" />
+    <item name="mequrantext" type="id" />
+    <item name="pdmsfont" type="id" />
+    <item name="pronoundetails" type="id" />
+    <item name="mushafview" type="id" />
+    <item name="isone" type="id" />
+    <item name="isfour" type="id" />
+    <item name="isseven" type="id" />
+    <item name="ismfemone" type="id" />
+    <item name="ismfemfour" type="id" />
+    <item name="ismfemeight" type="id" />
+    <item name="ismfemseven" type="id" />
+    <item name="imafone" type="id" />
+    <item name="imaffour" type="id" />
+    <item name="imafseven" type="id" />
+    <item name="imafoolfemone" type="id" />
+    <item name="imafoolfemfour" type="id" />
+    <item name="imafoolfemseven" type="id" />
+    <item name="nahiamranta" type="id" />
+    <item name="nahiamranti" type="id" />
+
+    <item name="babno" type="id" />
+    <item name="weaknesstype" type="id" />
+    <item name="zarftable" type="id" />
+    <item name="weknessname" type="id" />
+
+    <item name="muzhumaf" type="id" />
+    <item name="muzantuma" type="id" />
+    <item name="muznahnu" type="id" />
+
+
+    <item name="madimajhua" type="id" />
+    <item name="madimajhuma" type="id" />
+    <item name="madimajhum" type="id" />
+    <item name="madimajhia" type="id" />
+    <item name="madimajhumaf" type="id" />
+    <item name="madimajhunna" type="id" />
+    <item name="madimajanta" type="id" />
+    <item name="madimajantuma" type="id" />
+    <item name="madimajantum" type="id" />
+    <item name="madimajanti" type="id" />
+    <item name="madimajantumaf" type="id" />
+    <item name="madimajantunna" type="id" />
+    <item name="madimajana" type="id" />
+
+    <item name="madimajnahnu" type="id" />
+
+
+
+
+
+    <item name="muzmajhua" type="id" />
+    <item name="muzmajhuma" type="id" />
+    <item name="muzmajhum" type="id" />
+    <item name="muzmajhia" type="id" />
+    <item name="muzmajhumaf" type="id" />
+    <item name="muzmajhunna" type="id" />
+    <item name="muzmajanta" type="id" />
+    <item name="muzmajantuma" type="id" />
+    <item name="muzmajantum" type="id" />
+    <item name="muzmajanti" type="id" />
+    <item name="muzmajantumaf" type="id" />
+    <item name="muzmajantunna" type="id" />
+    <item name="muzmajana" type="id" />
+
+    <item name="muzmajnahnu" type="id" />
+    <item name="wazan" type="id" />
+    <item name="madhihua" type="id" />
+    <item name="madhihia" type="id" />
+    <item name="madhiana" type="id" />
+    <item name="madhinahnu" type="id" />
+    <item name="madhianti" type="id" />
+    <item name="madhiantunna" type="id" />
+    <item name="muzanta" type="id" />
+    <item name="muzanti" type="id" />
+    <item name="amranti" type="id" />
+    <item name="muzhua" type="id" />
+    <item name="muzana" type="id" />
+    <item name="muzhia" type="id" />
+    <item name="amranta" type="id" />
+    <item name="ismfail" type="id" />
+    <item name="masdar" type="id" />
+    <item name="mumaroof" type="id" />
+    <item name="mamaroof" type="id" />
+    <item name="ismmafool" type="id" />
+    <item name="masdar2" type="id" />
+    <item name="mumajhool" type="id" />
+    <item name="mamajhool" type="id" />
+    <item name="nahiamr" type="id" />
+    <item name="amr" type="id" />
+    <item name="conjugateall" type="id" />
+
+    <item name="verb" type="id" />
+    <item name="pastactive" type="id" />
+    <item name="negcommand" type="id" />
+    <item name="command" type="id" />
+    <item name="presentpassive" type="id" />
+    <item name="pastpassive" type="id" />
+    <item name="presentactive" type="id" />
+    <item name="huaid" type="id" />
+    <item name="humid" type="id" />
+    <item name="hiaid" type="id" />
+    <item name="humamid" type="id" />
+    <item name="humafid" type="id" />
+    <item name="hunnaid" type="id" />
+    <item name="antaid" type="id" />
+    <item name="antumamid" type="id" />
+    <item name="antumid" type="id" />
+    <item name="antiid" type="id" />
+    <item name="antumafid" type="id" />
+    <item name="antunnaid" type="id" />
+    <item name="nahnuid" type="id" />
+    <item name="anaid" type="id" />
+    <item name="pronouns" type="id" />
+    <item name="madhianta" type="id" />
+    <item name="mafalunseven" type="id" />
+    <item name="zarffemseven" type="id" />
+    <item name="zarffemfour" type="id" />
+    <item name="zarffemone" type="id" />
+    <item name="mafalunone" type="id" />
+    <item name="zarfmafalunone" type="id" />
+    <item name="zarfmafalunfour" type="id" />
+    <item name="zarfmafaluneight" type="id" />
+    <item name="zarfmafalunseven" type="id" />
+    <item name="mafalunfour" type="id" />
+    <item name="mifaalseven" type="id" />
+    <item name="mifaalfour" type="id" />
+    <item name="mifaalone" type="id" />
+    <item name="mifalatunseven" type="id" />
+    <item name="mifalatuneight" type="id" />
+    <item name="mifalatunfour" type="id" />
+    <item name="mifalatunone" type="id" />
+    <item name="mifalseven" type="id" />
+    <item name="mifalfour" type="id" />
+    <item name="mifalone" type="id" />
+    <item name="verboccurance" type="id" />
+    <item name="chapterverse" type="id" />
+    <item name="arabicword" type="id" />
+    <item name="gendernumber" type="id" />
+    <item name="meaning" type="id" />
+    <item name="tense" type="id" />
+    <item name="containertop" type="id" />
+    <item name="nounname" type="id" />
+    <item name="cases" type="id" />
+    <item name="participles" type="id" />
+    <item name="ayah" type="id" />
+    <item name="translation" type="id" />
+    <item name="harftv" type="id" />
+    <item name="stringlength" type="id" />
+    <item name="lengths" type="id" />
+    <item name="RecyclerView" type="id" />
+    <item name="surahpicker" type="id" />
+    <item name="llQuickLinks" type="id" />
+    <item name="tvLabelQuickLink" type="id" />
+    <item name="tvArabic" type="id" />
+    <item name="tvSuraright" type="id" />
+    <item name="surahicon" type="id" />
+    <item name="makkimadaniicon" type="id" />
+    <item name="quranverseShart" type="id" />
+    <item name="spannableverse" type="id" />
+    <item name="wordDictionary" type="id" />
+    <item name="wordDictionaryUrdu" type="id" />
+    <item name="rootward" type="id" />
+    <item name="rootdetails" type="id" />
+    <item name="paradigm" type="id" />
+    <item name="triroot" type="id" />
+    <item name="wazanlist" type="id" />
+    <item name="rdtwo" type="id" />
+    <item name="kahaf" type="id" />
+    <item name="tvSura" type="id" />
+    <item name="ivSurahIcon" type="id" />
+    <item name="linearLayout4" type="id" />
+    <item name="ivBismillah" type="id" />
+    <item name="tvVerses" type="id" />
+    <item name="tvSerial" type="id" />
+    <item name="tvRukus" type="id" />
+    <item name="tvHeader" type="id" />
+    <item name="ivLocationmadani" type="id" />
+    <item name="ivLocationmakki" type="id" />
+    <item name="tvNumber" type="id" />
+    <item name="ivActionOverflow" type="id" />
+    <item name="tabLayout" type="id" />
+    <item name="mazeedmeaning" type="id" />
+    <item name="emphasized" type="id" />
+    <item name="rootword" type="id" />
+    <item name="tvKovNumber" type="id" />
+    <item name="tvKovName" type="id" />
+    <item name="subjunctive" type="id" />
+    <item name="rdsubjunctive" type="id" />
+    <item name="rdjussive" type="id" />
+    <item name="lastread" type="id" />
+    <item name="grammarrule_detail_nav_container" type="id" />
+    <item name="babnos" type="id" />
+    <item name="moodrules" type="id" />
+    <item name="ivHelp" type="id" />
+    <item name="arrowforward" type="id" />
+    <item name="arrowback" type="id" />
+    <item name="mafoolat" type="id" />
+    <item name="haliya" type="id" />
+    <item name="txtReference_duaDetail" type="id" />
+    <item name="dua_detail_autofit_actionbar_title" type="id" />
+    <item name="imgview" type="id" />
+    <item name="tiSura" type="id" />
+    <item name="tiPage" type="id" />
+    <item name="tiJuz" type="id" />
+    <item name="lastreads" type="id" />
+    <item name="tvenglish" type="id" />
+    <item name="ayahpicker" type="id" />
+    <item name="actionTafsir" type="id" />
+    <item name="etSurahNumber" type="id" />
+    <item name="numberpicker" type="id" />
+
+
+</resources>
