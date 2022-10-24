@@ -4,16 +4,11 @@ package com.example.mushafconsolidated.Activity;
 import static android.text.TextUtils.concat;
 import static com.example.Constant.AYAHNUMBER;
 import static com.example.Constant.AYAH_ID;
-import static com.example.Constant.QURAN_VERB_ROOT;
 import static com.example.Constant.SURAH_ARABIC_NAME;
 import static com.example.Constant.SURAH_ID;
 
-import android.app.SearchManager;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
-import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -28,31 +23,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mushafconsolidated.Adapters.FlowAyahWordAdapterPassage;
 import com.example.mushafconsolidated.Adapters.TopicFlowAyahWordAdapter;
-import com.example.mushafconsolidated.Entities.BadalErabNotesEnt;
 import com.example.mushafconsolidated.Entities.BookMarks;
-import com.example.mushafconsolidated.Entities.ChaptersAnaEntity;
 import com.example.mushafconsolidated.Entities.CorpusExpandWbwPOJO;
-import com.example.mushafconsolidated.Entities.HalEnt;
-import com.example.mushafconsolidated.Entities.LiajlihiEnt;
-import com.example.mushafconsolidated.Entities.MafoolBihi;
-import com.example.mushafconsolidated.Entities.MafoolMutlaqEnt;
-import com.example.mushafconsolidated.Entities.QuranEntity;
-import com.example.mushafconsolidated.Entities.TameezEnt;
 import com.example.mushafconsolidated.R;
 import com.example.mushafconsolidated.Utils;
 import com.example.mushafconsolidated.fragments.GrammerFragmentsBottomSheet;
@@ -60,82 +42,44 @@ import com.example.mushafconsolidated.fragments.WordAnalysisBottomSheet;
 import com.example.mushafconsolidated.intrface.OnItemClickListenerOnLong;
 import com.example.mushafconsolidated.model.CorpusAyahWord;
 import com.example.mushafconsolidated.model.CorpusWbwWord;
-import com.example.utility.QuranGrammarApplication;
-import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Set;
 
 //import com.example.mushafconsolidated.Entities.JoinVersesTranslationDataTranslation;
 
 public class TopicDetailAct extends BaseActivity implements  OnItemClickListenerOnLong   {
-    private static final String TAG = "fragment";
-    private final ArrayList<String> det = new ArrayList<>();
-    FloatingActionButton btnBottomSheet;
-    String surahArabicName;
-    boolean jumptostatus = false;
-    int surah_id = 0;
-    int verseNumber, suraNumber;
-    int rukucount;
-    String surahname;
-    int mudhafColoragainstBlack, mausofColoragainstBlack, sifatColoragainstBlack, brokenPlurarColoragainstBlack, shartagainstback;
-    int surahorpart = 0;
 
-    int currentSelectSurah;
 
-    int versescount = 0;
-    boolean chapterorpart;
-    // --Commented out by Inspection (14/08/21, 7:26 PM):ChipNavigationBar chipNavigationBar;
-    int verse_no = 0;
+    // --Commented out by Inspection (24/10/22, 10:04 PM):int mudhafColoragainstBlack, // --Commented out by Inspection (24/10/22, 10:04 PM):mausofColoragainstBlack, sifatColoragainstBlack, // --Commented out by Inspection (24/10/22, 10:03 PM):brokenPlurarColoragainstBlack, shartagainstback;
 
-    private NavigationView navigationView;
 
-    private MaterialToolbar materialToolbar;
-    private TopicFlowAyahWordAdapter flowAyahWordAdapter;
-    private FlowAyahWordAdapterPassage flowAyahWordAdapterpassage;
+    // --Commented out by Inspection (24/10/22, 10:04 PM):private NavigationView navigationView;
 
-    private boolean mausoof, mudhaf, harfnasb, shart;
-    private ArrayList<ChaptersAnaEntity> soraList;
-    private boolean kana;
-    private SharedPreferences shared;
+    // --Commented out by Inspection (24/10/22, 10:04 PM):private MaterialToolbar materialToolbar;
+    // --Commented out by Inspection (24/10/22, 10:03 PM):private FlowAyahWordAdapterPassage flowAyahWordAdapterpassage;
 
     private ArrayList<CorpusAyahWord> corpusayahWordArrayList;
-    private LinkedHashMap<Integer, ArrayList<CorpusWbwWord>> passage = new LinkedHashMap<>();
 
 
-
-    private int chapterno;
-
+    // --Commented out by Inspection (24/10/22, 10:04 PM):private int chapterno;
 
 
-    public void setSurah_id(int surah_id) {
-        this.surah_id = surah_id;
-    }
-
-    public int getVersescount() {
-        return versescount;
-    }
-
-    public void setVersescount(int versescount) {
-        this.versescount = versescount;
-    }
+    // --Commented out by Inspection START (24/10/22, 10:03 PM):
+//    public int getVersescount() {
+//        return versescount;
+//    }
+// --Commented out by Inspection STOP (24/10/22, 10:03 PM)
 
 
-    public int getChapterno() {
-        return chapterno;
-    }
+// --Commented out by Inspection START (24/10/22, 10:03 PM):
+//    public int getChapterno() {
+//        return chapterno;
+//    }
+// --Commented out by Inspection STOP (24/10/22, 10:03 PM)
 
-    public void setChapterno(int chapterno) {
-        this.chapterno = chapterno;
-    }
 
 
 
@@ -144,10 +88,6 @@ public class TopicDetailAct extends BaseActivity implements  OnItemClickListener
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_dua_group, menu);
-
-        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
-        MenuItem jumpitem = menu.findItem(R.id.jumpto);
 
         return true;
     }
@@ -162,8 +102,6 @@ public class TopicDetailAct extends BaseActivity implements  OnItemClickListener
 
         int id = item.getItemId();
         if (id == R.id.action_bookmarks) {
-            //   Intent intent = new Intent(this, BookmarksGroupActivity.class);
-            //  this.startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -171,8 +109,8 @@ public class TopicDetailAct extends BaseActivity implements  OnItemClickListener
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        shared =
-                androidx.preference.PreferenceManager.getDefaultSharedPreferences(TopicDetailAct.this);
+        // --Commented out by Inspection (24/10/22, 10:04 PM):private boolean kana;
+        SharedPreferences shared = androidx.preference.PreferenceManager.getDefaultSharedPreferences(TopicDetailAct.this);
 
         String preferences = shared.getString("themePref", "dark");
         switch (preferences) {
@@ -206,52 +144,19 @@ public class TopicDetailAct extends BaseActivity implements  OnItemClickListener
         setContentView(R.layout.topic_search_main);
 
        Toolbar toolbar = findViewById(R.id.toolbar);
-       View mToolbarShadow = findViewById(R.id.view_toolbar_shadow);
+
        setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(QuranGrammarApplication.getContext());
-        if (preferences.equals("dark") || preferences.equals("blue") || preferences.equals("white")) {
-            shartagainstback = prefs.getInt("shartback", Color.GREEN);
-            mausofColoragainstBlack = prefs.getInt("mausoofblack", Color.RED);
-            mudhafColoragainstBlack = prefs.getInt("mudhafblack", Color.CYAN);
-            sifatColoragainstBlack = prefs.getInt("sifatblack", Color.YELLOW);
-            brokenPlurarColoragainstBlack = prefs.getInt("brokenblack", Color.GREEN);
 
-
-        } else {
-            shartagainstback = prefs.getInt("shartback", Color.DKGRAY);
-            mudhafColoragainstBlack = prefs.getInt("mausoofwhite", 0xFF000000);
-            mausofColoragainstBlack = prefs.getInt("mudhafwhite", 0xFF000000);
-            sifatColoragainstBlack = prefs.getInt("sifatwhite", 0xFF000000);
-            brokenPlurarColoragainstBlack = prefs.getInt("brokenwhite", 0xFF000000);
-
-
-        }
-
-
-
-
-        Resources.Theme theme = getTheme();
-        try {
-            int themeResource = getPackageManager().getActivityInfo(getComponentName(), 0).getThemeResource();
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
 
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
 
-        mausoof = shared.getBoolean("mausoof", true);
-        mudhaf = shared.getBoolean("mudhaf", true);
-        harfnasb = shared.getBoolean("harfnasb", true);
-        shart = shared.getBoolean("shart", true);
-        kana = shared.getBoolean("kana", true);
 
 
        Intent bundle = getIntent();
-       Bundle bundlesextra = getIntent().getExtras();
 
         if (!(bundle.getExtras() == null)) {
             Bundle bundles = getIntent().getExtras();
@@ -279,7 +184,6 @@ public class TopicDetailAct extends BaseActivity implements  OnItemClickListener
 
 
             //  getwbwy(aref);
-            String lastread = bundles.getString(QURAN_VERB_ROOT);
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
             OnItemClickListenerOnLong listener=this;
             TopicFlowAyahWordAdapter flowAyahWordAdapter = new TopicFlowAyahWordAdapter(corpusayahWordArrayList,listener);
@@ -313,11 +217,9 @@ public class TopicDetailAct extends BaseActivity implements  OnItemClickListener
 
         //  CorpusWbwWord word = new CorpusWbwWord();
         CorpusAyahWord ayahWord = new CorpusAyahWord();
-        int verseglobal = ayah;
 
         ArrayList<CorpusWbwWord> wordArrayList = new ArrayList<>();
         ArrayList<CorpusExpandWbwPOJO> wbw = utils.getCorpusWbwBySurahAyahtopic(suraid, ayah);
-        int verseno = 0;
 
 
         //    final Object o6 = wbwa.get(verseglobal).get(0);
@@ -379,8 +281,6 @@ public class TopicDetailAct extends BaseActivity implements  OnItemClickListener
             word.setWordcount((pojo.getWordcount()));
 
 
-            verseno = pojo.getAyah();
-
             ayahWord.setAr_irab_two((pojo.getAr_irab_two()));
             ayahWord.setTafsir_kathir((pojo.getTafsir_kathir()));
             //  ayahWord.setSpannableverse(SpannableStringBuilder.valueOf(pojo.getQuranverses()));
@@ -441,8 +341,6 @@ public class TopicDetailAct extends BaseActivity implements  OnItemClickListener
 
     @Override
     public void onItemClick(View view, int position) {
-        //   popupMenu(view);
-        //   popupWindow(view);
         qurangrammarmenu(view, position);
 
 
@@ -450,7 +348,6 @@ public class TopicDetailAct extends BaseActivity implements  OnItemClickListener
 
     void qurangrammarmenu(View view, int position) {
         Object tag = view.getTag();
-        QuranEntity quranEntity;
         View bookmarkview = null;
         View overflow = view.findViewById(R.id.ivActionOverflow);
 
@@ -490,7 +387,7 @@ public class TopicDetailAct extends BaseActivity implements  OnItemClickListener
 
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             WindowManager.LayoutParams wmlp = dialog.getWindow().getAttributes();
-            wmlp.gravity = Gravity.TOP | Gravity.LEFT;
+            wmlp.gravity = Gravity.TOP | Gravity.START;
             wmlp.x = location[0];   //x position
             wmlp.y = location[1];  //y position
 
@@ -570,7 +467,6 @@ public class TopicDetailAct extends BaseActivity implements  OnItemClickListener
         //     Utils utils = new Utils(ReadingSurahPartActivity.this);
         Utils utils = new Utils(this);
         utils.insertBookMark(en);
-        View view = findViewById(R.id.bookmark);
         Snackbar snackbar = Snackbar
                 .make(bookmarkview, "BookMark Created", Snackbar.LENGTH_LONG);
         snackbar.setActionTextColor(Color.BLUE);
