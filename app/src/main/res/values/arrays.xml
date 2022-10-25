@@ -458,7 +458,7 @@
         <item>me_quran</item>
         <item>Mirza</item>
         <item>kalpurush</item>
-
+        <item>Noore Huda</item>
     </string-array>
 
     <string-array name="arabicFontEntryArray">
@@ -467,6 +467,7 @@
         <item>me_quran.ttf</item>
         <item>Mirza-Medium.ttf</item>
         <item>Kalpurush.ttf</item>
+        <item>noor_e_huda.ttf</item>
 
     </string-array>
 

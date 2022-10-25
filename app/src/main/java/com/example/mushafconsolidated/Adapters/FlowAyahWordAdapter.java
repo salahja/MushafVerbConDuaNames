@@ -247,7 +247,7 @@ public class FlowAyahWordAdapter extends RecyclerView.Adapter<FlowAyahWordAdapte
         public TextView quran_jalalaynnote;
         public TextView erab_textViewnote;
         public TextView translate_textViewnote;
-        public ImageView bookmark, jumpto, makkimadaniicon;
+        public ImageView bookmark, jumpto, makkimadaniicon,ivSummary;
         public ImageView expandImageButton, ivBismillah, erabexpand, erab_notes_expand;
         //   RelativeLayout colllayout;
         CardView erabnotescardView, kahteercardview;
@@ -280,6 +280,9 @@ public class FlowAyahWordAdapter extends RecyclerView.Adapter<FlowAyahWordAdapte
                 //   arrowback = view.findViewById(R.id.arrowback);
                 //   colorize = view.findViewById(R.id.colorized);
                 //   bookmark = view.findViewById(R.id.bookmark);
+                ivSummary=view.findViewById(R.id.ivSumarry);
+                ivSummary.setTag("summary");
+                ivSummary.setOnClickListener(this);
                 jumpto = view.findViewById(R.id.jumpto);
                 ivhelp = view.findViewById(R.id.ivHelp);
                 ivoverflow = view.findViewById(R.id.ivActionOverflow);
@@ -1234,7 +1237,7 @@ if (SharedPref.themePreferences().equals("dark")) {
         }
 
         holder.surah_info.setText(surahInfo);
-        holder.surah_info.setTextSize(arabicfontSize);
+        holder.surah_info.setTextSize(16);
         //  holder.surah_info.setTextColor(context.getResources().getColor(R.color.colorOnPrimary));
 
 

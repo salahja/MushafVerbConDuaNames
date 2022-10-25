@@ -1665,7 +1665,25 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
         boolean colortag = shared.getBoolean("colortag", true);
 
         View qurantext = view.findViewById(R.id.quran_textView);
-        if (tag.equals("arrowforward")) {
+        if(tag.equals("summary")){
+            int chapter_no = corpusayahWordArrayList.get(position-1).getWord().get(0).getSurahId();
+            int verse = corpusayahWordArrayList.get(position-1).getWord().get(0).getVerseId();
+            String name = getSurahArabicName();
+            Bundle dataBundle = new Bundle();
+            dataBundle.putInt(SURAH_ID, chapter_no);
+            SurahSummary item=new SurahSummary();
+
+
+
+            item.setArguments(dataBundle);
+            int data = (chapter_no);
+            //  FragmentTransaction transactions = fragmentManager.beginTransaction().setCustomAnimations(R.anim.abc_slide_in_top, android.R.anim.fade_out);
+            //   transactions.show(item);
+            SurahSummary.newInstance(data).show(getSupportFragmentManager(), NamesDetail.TAG);
+
+
+        }
+    else     if (tag.equals("arrowforward")) {
             int currentsurah = quranEntity.getSurah();
             if (currentsurah != 114) {
                 soraList = utils.getSingleChapter(currentsurah + 1);
@@ -1740,7 +1758,7 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
             View bookmarkview = view.findViewById(R.id.bookmark);
             SwitchCompat colorized = view.findViewById(R.id.colorized);
             View helpview = view.findViewById(R.id.help);
-            View surahsummary = view.findViewById(R.id.surahsummary);
+          //  View surahsummary = view.findViewById(R.id.surahsummary);
             builder.setView(view);
             colorized.setChecked(colortag);
 
@@ -1781,25 +1799,7 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
                 ParticleColorScheme.newInstance(data).show(QuranGrammarAct.this.getSupportFragmentManager(), WordAnalysisBottomSheet.TAG);
 
             });
-            surahsummary.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    int chapter_no = corpusayahWordArrayList.get(position-1).getWord().get(0).getSurahId();
-                    int verse = corpusayahWordArrayList.get(position-1).getWord().get(0).getVerseId();
-                    String name = getSurahArabicName();
-                    Bundle dataBundle = new Bundle();
-                    dataBundle.putInt(SURAH_ID, chapter_no);
-                    SurahSummary item=new SurahSummary();
 
-
-
-                    item.setArguments(dataBundle);
-                    int data = (chapter_no);
-                    //  FragmentTransaction transactions = fragmentManager.beginTransaction().setCustomAnimations(R.anim.abc_slide_in_top, android.R.anim.fade_out);
-                    //   transactions.show(item);
-                    SurahSummary.newInstance(data).show(getSupportFragmentManager(), NamesDetail.TAG);
-                }
-            });
 
             tafsirtag.setOnClickListener(new View.OnClickListener() {
                 @Override

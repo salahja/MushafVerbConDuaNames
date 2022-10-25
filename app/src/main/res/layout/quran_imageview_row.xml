@@ -27,7 +27,7 @@
             android:paddingEnd="5.0dip"
             android:paddingBottom="3.0dip"
             android:text="chapter"
-            android:textSize="18.0sp" />
+            android:textSize="16sp" />
 
         <ImageView
             android:id="@id/surahicon"
@@ -36,10 +36,46 @@
             android:layout_marginTop="10dp"
             android:layout_width="0dp"
             android:layout_height="20dp"
+            android:visibility="gone"
             android:layout_weight="1"
             android:layout_marginStart="150dp"
             android:layout_marginEnd="@dimen/space_5"
             android:paddingEnd="@dimen/space_2">
+
+        </ImageView>
+        <ImageView
+            android:id="@+id/ivSumarry"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:background="?attr/selectableItemBackground"
+            android:paddingStart="@dimen/space_1"
+            android:paddingEnd="@dimen/space_1"
+            android:scaleType="fitCenter"
+            android:layout_weight="0"
+
+            android:visibility="visible"
+            app:srcCompat="@drawable/baseline_summarize_24"/>
+            <ImageView
+                android:id="@id/ivActionOverflow"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/ivSumarry"
+                android:layout_marginStart="20dip"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackground"
+                android:paddingStart="@dimen/space_1"
+                android:paddingEnd="@dimen/space_1"
+
+                android:backgroundTint="@color/white"
+
+                android:elevation="10dp"
+                android:padding="1dp"
+                android:layout_weight="1"
+
+
+
+                android:visibility="visible"
+                app:srcCompat="@drawable/baseline_menu_open_24" >
 
         </ImageView>
     </RelativeLayout>
@@ -124,22 +160,6 @@
 
 
 
-        <ImageView
-            android:id="@id/ivActionOverflow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dip"
-            android:layout_gravity="end"
-            android:layout_weight="0"
-            android:backgroundTint="@color/white"
 
-            android:elevation="10dp"
-            android:padding="1dp"
-
-
-
-
-            android:visibility="visible"
-            app:srcCompat="@drawable/baseline_menu_open_24" />
     </LinearLayout>
 </RelativeLayout>
