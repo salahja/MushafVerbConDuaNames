@@ -436,7 +436,7 @@
 
 
     <string-array name="themeListArray">
-        <item>White</item>
+        <item>Purple Dark</item>
         <item>Dark Black</item>
         <item>Dark Blue</item>
         <item>Green</item>
@@ -445,7 +445,7 @@
     </string-array>
 
     <string-array name="themeEntryArray">
-        <item>white</item>
+        <item>purple</item>
         <item>dark</item>
         <item>blue</item>
         <item>green</item>

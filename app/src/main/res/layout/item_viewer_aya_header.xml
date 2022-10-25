@@ -19,7 +19,7 @@
         android:layout_gravity="left"
         android:gravity="left"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="?attr/textColorLight"
+
         android:textStyle="bold" />
 
     <LinearLayout
@@ -53,5 +53,5 @@
         android:scaleType="fitCenter"
         android:visibility="gone"
         app:srcCompat="@drawable/ic_more_horiz_black_24dp"
-        app:tint="?attr/textColorLight" />
+         />
 </LinearLayout>

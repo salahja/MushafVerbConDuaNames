@@ -9,15 +9,17 @@
     tools:showIn="@layout/new_fragment_reading">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbarmain"
         android:layout_width="match_parent"
-        android:layout_height="48.0dip"
-        app:layout_scrollFlags="scroll|enterAlways|snap"
 
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        android:layout_height="?attr/actionBarSize"
         android:animateLayoutChanges="true"
         android:layout_alignParentTop="true"
+        app:menu="@menu/menu_dua_group"
         android:background="?colorPrimarySurface"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:navigationIcon="@drawable/baseline_menu_24"
+        android:theme="@style/Theme.Material3.Dark.NoActionBar"
         app:elevation="4.0dip" />
 
 </com.google.android.material.appbar.AppBarLayout>

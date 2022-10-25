@@ -1,5 +1,9 @@
 package com.example.mushafconsolidated;
 
+import static androidx.webkit.WebSettingsCompat.FORCE_DARK_OFF;
+import static androidx.webkit.WebSettingsCompat.FORCE_DARK_ON;
+
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.view.LayoutInflater;
@@ -9,6 +13,8 @@ import android.webkit.WebView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.webkit.WebSettingsCompat;
+import androidx.webkit.WebViewFeature;
 
 import com.example.mushafconsolidated.Entities.QuranEntity;
 import com.example.mushafconsolidated.Entities.surahsummary;
@@ -56,6 +62,18 @@ public class SurahSummary extends BottomSheetDialogFragment {
 View view=inflater.inflate(R.layout.namesadapter, container, false);
 
         Bundle bundle = this.getArguments();
+        WebView webView = (WebView) view.findViewById(R.id.title);
+        //  WebSettingsCompat.setForceDark(webView.settings, FORCE_DARK_ON);
+
+        if (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK)) {
+            WebSettingsCompat.setForceDark(webView.getSettings(),
+                    WebSettingsCompat.FORCE_DARK_ON);
+        }else{
+
+            WebSettingsCompat.setForceDark(webView.getSettings(),
+                    FORCE_DARK_OFF);
+
+        }
   String html="<html>\n" +
           "<head>\n" +
           "<style type=\"text/css\">\n" +
@@ -162,7 +180,8 @@ View view=inflater.inflate(R.layout.namesadapter, container, false);
         }
         ayah.append("</div>");
 
-        WebView title = (WebView) view.findViewById(R.id.title);
+
+
         String title1 = surahSummary.get(0).getTitle();
         title1=      title1.replaceAll("<title>","<h1>");
         title1=      title1.replaceAll("</title>","</h1>");
@@ -176,7 +195,7 @@ View view=inflater.inflate(R.layout.namesadapter, container, false);
 
 
 
-        title.loadDataWithBaseURL(null,     concat, "text/html", "utf-8", null);
+        webView.loadDataWithBaseURL(null,     concat, "text/html", "utf-8", null);
 
          return   view;
 

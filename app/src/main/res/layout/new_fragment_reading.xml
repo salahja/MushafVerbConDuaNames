@@ -34,7 +34,7 @@
                 android:id="@+id/overlayViewRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingTop="60sp">
+                android:paddingTop="100sp">
 
             </androidx.recyclerview.widget.RecyclerView>
 

@@ -485,8 +485,8 @@ public class FlowAyahWordAdapter extends RecyclerView.Adapter<FlowAyahWordAdapte
 
         if (position % 2 == 1) {
 
-            if (isNightmode.equals("green")|| isNightmode.equals("white")) {
-                holder.itemView.setBackgroundColor(context.getResources().getColor(R.color.bg_white));
+            if (isNightmode.equals("green")|| isNightmode.equals("purple")) {
+                holder.itemView.setBackgroundColor(context.getResources().getColor(R.color.md_theme_dark_inverseOnSurface));
             }else    if (isNightmode.equals("brown")) {
                 holder.itemView.setBackgroundColor(context.getResources().getColor(R.color.bg_brown));
             } else if (isNightmode.equals("dark")) {
@@ -497,8 +497,8 @@ public class FlowAyahWordAdapter extends RecyclerView.Adapter<FlowAyahWordAdapte
             }
             //  holder.imageView.setBackgroundColor(Color.parseColor("#FFFFFF"));
         } else {
-            if (isNightmode.equals("green")|| isNightmode.equals("white")) {
-                holder.itemView.setBackgroundColor(context.getResources().getColor(R.color.odd_item_bg_white));
+            if (isNightmode.equals("green")|| isNightmode.equals("purple")) {
+                holder.itemView.setBackgroundColor(context.getResources().getColor(R.color.md_theme_dark_surface));
             }else
             if (isNightmode.equals("brown")) {
                 holder.itemView.setBackgroundColor(context.getResources().getColor(R.color.odd_item_bg_brown));
@@ -538,7 +538,7 @@ public class FlowAyahWordAdapter extends RecyclerView.Adapter<FlowAyahWordAdapte
             holder.ivSurahIcon.setImageDrawable(drawable);
 
 
-            if (isNightmode.equals("dark") || isNightmode.equals("blue") || isNightmode.equals("white")) {
+            if (isNightmode.equals("dark") || isNightmode.equals("blue") || isNightmode.equals("purple")) {
                 headercolor = Color.YELLOW;
                 holder.ivLocationmakki.setColorFilter(Color.CYAN);
                 holder.ivSurahIcon.setColorFilter(Color.CYAN);

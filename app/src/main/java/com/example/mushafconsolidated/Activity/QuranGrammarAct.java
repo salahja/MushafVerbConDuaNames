@@ -57,6 +57,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.SwitchCompat;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -308,22 +309,12 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
         }
         super.onCreate(savedInstanceState);
 
-     /*
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-      */
         setContentView(R.layout.new_fragment_reading);
-    /*
-        suralistlayout=  findViewById(R.id.list_surah_juz);
-        suralistlayout.setVisibility(View.VISIBLE);
+        materialToolbar = findViewById(R.id.toolbarmain);
+        setSupportActionBar(materialToolbar);
 
-        surahRecView =  findViewById(R.id.wordByWordRecyclerView);
-     */
-        MaterialToolbar toolbar = findViewById(R.id.toolbar);
-        View mToolbarShadow = findViewById(R.id.view_toolbar_shadow);
-        setSupportActionBar(toolbar);
+     // setSupportActionBar(toolbar);
+
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(QuranGrammarApplication.getContext());
         if (preferences.equals("dark") || preferences.equals("blue") || preferences.equals("white")) {
@@ -519,7 +510,7 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
         btnBottomSheet = findViewById(R.id.fab);
         drawerLayout = findViewById(R.id.drawer);
         navigationView = findViewById(R.id.navigationView);
-        materialToolbar = findViewById(R.id.toolbar);
+
         bottomNavigationView = findViewById(R.id.bottomNavView);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, materialToolbar, (R.string.drawer_open), (R.string.drawer_close));
 
