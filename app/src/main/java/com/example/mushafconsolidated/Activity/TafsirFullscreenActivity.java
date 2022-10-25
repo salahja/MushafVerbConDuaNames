@@ -95,7 +95,7 @@ public class TafsirFullscreenActivity extends BaseActivity {
   int ayah=      bundle.getInt(AYAH_ID);
      String surahname=   bundle.getString(SURAH_ARABIC_NAME);
         Utils utils=new Utils(this);
-        MaterialToolbar materialToolbar = findViewById(R.id.toolbar);
+        MaterialToolbar materialToolbar = findViewById(R.id.toolbarmain);
         setSupportActionBar(materialToolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

@@ -68,12 +68,7 @@ View view=inflater.inflate(R.layout.namesadapter, container, false);
         if (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK)) {
             WebSettingsCompat.setForceDark(webView.getSettings(),
                     WebSettingsCompat.FORCE_DARK_ON);
-        }else{
-
-            WebSettingsCompat.setForceDark(webView.getSettings(),
-                    FORCE_DARK_OFF);
-
-        }
+        } 
   String html="<html>\n" +
           "<head>\n" +
           "<style type=\"text/css\">\n" +
@@ -96,11 +91,11 @@ View view=inflater.inflate(R.layout.namesadapter, container, false);
           "h1,h2,h2 { \n" +
           "\n" +
           "  text-align: center;\n" +
-          "  font-size: 40px;\n" +
+          "  font-size: 25px;\n" +
           "}\n" +
           "\n" +
           ".ayah{color:#330000;" +
-          "font-size:30px;" +
+          "font-size:25px;" +
           "font-family:IndoPak,arial;}"+
 
 
@@ -131,9 +126,9 @@ View view=inflater.inflate(R.layout.namesadapter, container, false);
         String[] split = versesrange.split(",");
         for (String s : split) {
             String[] split1 = s.split("-");
-            int s1 = Integer.parseInt(split1[0]);
-            int from = Integer.parseInt(split1[0]);
-            int s2 = Integer.parseInt(split1[1]);
+            int s1 = Integer.parseInt(split1[0].trim());
+            int from = Integer.parseInt(split1[0].trim());
+            int s2 = Integer.parseInt(split1[1].trim());
 
             for(;s1<=s2;s1++){
 
@@ -143,6 +138,16 @@ View view=inflater.inflate(R.layout.namesadapter, container, false);
                 wbwentities.get(0).setErabspnabble(SpannableStringBuilder.valueOf(header));
 
                 wb.add(wbwentities);
+         /*
+                try{
+                    wbwentities.get(0).setErabspnabble(SpannableStringBuilder.valueOf(header));
+
+                    wb.add(wbwentities);
+                }catch (IndexOutOfBoundsException e){
+
+                }
+
+          */
 
             }
 
@@ -187,6 +192,7 @@ View view=inflater.inflate(R.layout.namesadapter, container, false);
         title1=      title1.replaceAll("</title>","</h1>");
 
         String sum= surahSummary.get(0).getSummary();
+        sum=sum.replaceAll("God","Allah(SWT)");
         String odiv="<div>";String cdiv="</div>";
         sum=sum.replaceAll("\\.","<br>");
         odiv=odiv.concat(sum).concat(cdiv);
