@@ -4,26 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?android:colorBackground"
-    app:cardBackgroundColor="@android:color/transparent"
     android:baselineAligned="false"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    app:cardBackgroundColor="@android:color/transparent">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
+
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/my_action_bar"
             android:layout_width="match_parent"
             android:layout_height="48.0dip"
 
 
-
-            android:animateLayoutChanges="true"
             android:layout_alignParentTop="true"
+            android:animateLayoutChanges="true"
             android:background="?colorPrimarySurface"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:elevation="4.0dip"/>
+            app:elevation="4.0dip" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout

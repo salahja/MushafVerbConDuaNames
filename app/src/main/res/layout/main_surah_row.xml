@@ -31,6 +31,7 @@
             android:layout_weight="1.0"
             android:padding="@dimen/space_1"
             android:textSize="18.0sp" />
+
         <TextView
             android:id="@id/tvenglish"
             android:layout_width="0.0dip"

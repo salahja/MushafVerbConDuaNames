@@ -13,14 +13,14 @@
 
     <TextView
         android:id="@+id/ivActionOverflow"
-        app:srcCompat="@drawable/baseline_menu_open_24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:gravity="left"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
 
-        android:textStyle="bold" />
+        app:srcCompat="@drawable/baseline_menu_open_24" />
 
     <LinearLayout
         android:id="@+id/header"
@@ -36,13 +36,13 @@
 
     <TextView
         android:id="@+id/headers"
-        android:layout_gravity="center_horizontal"
-        android:textStyle="bold"
-        android:textSize="20dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:textStyle="bold">
 
     </TextView>
 
-         />
+    />
 </LinearLayout>

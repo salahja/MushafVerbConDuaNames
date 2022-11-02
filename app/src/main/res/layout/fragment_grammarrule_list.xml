@@ -15,6 +15,5 @@
         android:layout_height="match_parent"
 
         app:layoutManager="LinearLayoutManager"
-        tools:context="com.example.mushafconsolidated.Activity.GrammarRuleDetailHostActivity"
-        />
+        tools:context="com.example.mushafconsolidated.Activity.GrammarRuleDetailHostActivity" />
 </androidx.constraintlayout.widget.ConstraintLayout>

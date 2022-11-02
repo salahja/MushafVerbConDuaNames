@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/media/anons/linuxtwo/Android/Sdk/icons/material/materialicons/summarize/baseline_summarize_24.xml" />
+                                      <entry key="url" value="file:$PROJECT_DIR$/../../Android/Sdk/icons/material/materialicons/search/baseline_search_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,7 +28,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="baseline_summarize_24" />
+                            <entry key="outputName" value="baseline_search_36" />
                           </map>
                         </option>
                       </PersistentState>

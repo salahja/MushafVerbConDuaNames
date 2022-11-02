@@ -11,11 +11,11 @@
         android:layout_height="wrap_content"
 
         android:gravity="center"
-        android:text="Word Color Scheme"  />
+        android:text="Word Color Scheme" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/colorrecview"
-        android:layout_below="@+id/Colortv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Colortv" />
 </RelativeLayout>

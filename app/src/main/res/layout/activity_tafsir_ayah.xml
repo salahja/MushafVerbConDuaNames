@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
 
     android:orientation="vertical">
 
@@ -13,22 +12,23 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorSurface"
         android:orientation="horizontal">
+
         <Button
-            android:textAppearance="?android:attr/textAppearanceMedium"
-
-            android:layout_marginTop="50dp"
             android:id="@+id/detailsbutton"
-            android:textSize="30sp"
-            android:textStyle="bold"
-
-            android:gravity="center"
-            android:text="details"
-
 
             android:layout_width="match_parent"
-            android:layout_height="50dp">
-        </Button>
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+
+            android:text="details"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+
+            android:textSize="30sp"
+            android:textStyle="bold"></Button>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +37,6 @@
 
         <TextView
             android:id="@+id/tvSourceLabel"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -48,8 +47,9 @@
             android:paddingEnd="@dimen/space_3"
             android:paddingBottom="@dimen/space_2"
             android:text="@string/_text_arabic"
+            android:textAppearance="?android:attr/textAppearanceLarge"
 
-             />
+            />
 
         <TextView
             android:id="@+id/tvArrow"
@@ -60,8 +60,7 @@
             android:layout_marginRight="@dimen/space_2"
             android:alpha="0.5"
             android:gravity="center"
-            android:text="@string/symbol_arrow_down"
-              />
+            android:text="@string/symbol_arrow_down" />
     </LinearLayout>
 
     <TextView
@@ -73,7 +72,6 @@
         android:padding="@dimen/space_3"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textIsSelectable="true" />
-
 
 
     <LinearLayout
@@ -94,8 +92,7 @@
             android:paddingEnd="@dimen/space_3"
             android:paddingBottom="@dimen/space_2"
             android:text="@string/_text_translation"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-          />
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
             android:id="@+id/tvTranslationArrow"
@@ -106,8 +103,7 @@
             android:layout_marginRight="@dimen/space_2"
             android:alpha="0.5"
             android:gravity="center"
-            android:text="@string/symbol_arrow_down"
-           />
+            android:text="@string/symbol_arrow_down" />
     </LinearLayout>
 
     <TextView
@@ -139,8 +135,7 @@
             android:paddingEnd="@dimen/space_3"
             android:paddingBottom="@dimen/space_2"
             android:text="@string/_text_tafsir"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-          />
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
             android:id="@+id/tvTafsirarrow"
@@ -154,7 +149,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             app:srcCompat="@drawable/arrow_down"
 
-         />
+            />
     </LinearLayout>
 
     <TextView

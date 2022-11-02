@@ -7,19 +7,19 @@
     <item name="chapterEnglishNameView" type="id" />
     <item name="chapterArabicNameView" type="id" />
 
-    <item type="id" name="wordoccurance" />
-    <item type="id" name="bookmarkView" />
-    <item type="id" name="bottomSheetView" />
-    <item type="id" name="container" />
-    <item type="id" name="dismissView" />
-    <item type="id" name="divider" />
-    <item type="id" name="englishGrammarView" />
-    <item type="id" name="header" />
-    <item type="id" name="chaptername" />
-    <item type="id" name="text" />
+    <item name="wordoccurance" type="id" />
+    <item name="bookmarkView" type="id" />
+    <item name="bottomSheetView" type="id" />
+    <item name="container" type="id" />
+    <item name="dismissView" type="id" />
+    <item name="divider" type="id" />
+    <item name="englishGrammarView" type="id" />
+    <item name="header" type="id" />
+    <item name="chaptername" type="id" />
+    <item name="text" type="id" />
 
-    <item type="id" name="topItemsContainer" />
-    <item type="id" name="wordByWordRecyclerView" />
+    <item name="topItemsContainer" type="id" />
+    <item name="wordByWordRecyclerView" type="id" />
 
 
     <item name="toolbar" type="id" />
@@ -30,7 +30,7 @@
     <item name="referenceView" type="id" />
     <item name="translationView" type="id" />
     <item name="rootView" type="id" />
-    <item type="id" name="wordView" />
+    <item name="wordView" type="id" />
     <item name="backButtonView" type="id" />
     <item name="bottomButtonsContainer" type="id" />
     <item name="progressBar" type="id" />
@@ -114,9 +114,6 @@
     <item name="madimajana" type="id" />
 
     <item name="madimajnahnu" type="id" />
-
-
-
 
 
     <item name="muzmajhua" type="id" />

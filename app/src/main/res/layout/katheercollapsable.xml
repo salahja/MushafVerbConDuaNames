@@ -10,11 +10,11 @@
 
     <com.google.android.material.card.MaterialCardView
 
-        android:visibility="visible"
         android:id="@+id/katheer_base_cardview"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="05dp"
+        android:visibility="visible"
         app:cardCornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,11 +82,11 @@
 
             <ImageView
                 android:id="@+id/showkatheer"
-                android:visibility="visible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:padding="4dp"
+                android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="@+id/erabnotes"
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -106,15 +106,15 @@
                 app:layout_constraintTop_toBottomOf="@+id/erabnotes" />
 
             <TextView
-                android:visibility="visible"
                 android:id="@+id/katheer_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:layout_marginTop="05dp"
-
+                android:layout_marginEnd="20dp"
                 android:textSize="12sp"
+
+                android:visibility="visible"
                 app:layout_constraintStart_toStartOf="@+id/guideline1"
                 app:layout_constraintTop_toBottomOf="@+id/view3" />
 
@@ -132,37 +132,24 @@
             <TextView
 
 
-
-
                 android:id="@+id/directobject"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@android:drawable/presence_invisible"
-                app:tint="@color/redhot"
                 android:layout_marginTop="12dp"
-
-
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
 
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textDirection="anyRtl"
 
-
                 android:textSize="12sp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+
                 app:layout_constraintStart_toEndOf="@+id/imageView9"
-                app:layout_constraintTop_toBottomOf="@+id/katheer_textview" />
-
-
-
-
-
-
-
-
-
-
-
+                app:layout_constraintTop_toBottomOf="@+id/katheer_textview"
+                app:srcCompat="@android:drawable/presence_invisible"
+                app:tint="@color/redhot" />
 
 
             <androidx.constraintlayout.widget.Group

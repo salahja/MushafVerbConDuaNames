@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?android:colorBackground"
-    app:cardBackgroundColor="@android:color/transparent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    app:cardBackgroundColor="@android:color/transparent">
 
     <include
         android:id="@+id/my_detail_action_bar"
@@ -23,8 +23,8 @@
             android:divider="@null"
             android:footerDividersEnabled="true"
             android:headerDividersEnabled="true"
-            android:paddingBottom="10dp"
             android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:scrollbarStyle="outsideOverlay" />
 
         <View

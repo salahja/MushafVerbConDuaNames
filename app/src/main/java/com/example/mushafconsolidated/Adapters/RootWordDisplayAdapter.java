@@ -1129,7 +1129,7 @@ public class RootWordDisplayAdapter extends RecyclerView.Adapter<RootWordDisplay
             ifverborpart=view.findViewById(R.id.ifverborpart);
             moodrules= itemView.findViewById(R.id.moodrules);
             mazeedmeaning = itemView.findViewById(R.id.mazeedmeaning);
-            darkThemeBacground = itemView.findViewById(R.id.grammar);
+            darkThemeBacground = itemView.findViewById(R.id.jumptoverse);
             rdone = view.findViewById(R.id.rdone);
             rdtwo = view.findViewById(R.id.rdtwo);
             rdthree = view.findViewById(R.id.rdthree);

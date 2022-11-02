@@ -4,9 +4,6 @@
     tools:context=".activity.MainActivity">
 
 
-
-
-
     <item
         android:id="@+id/bookmark"
         android:icon="@drawable/baseline_bookmarks_teal_700_36dp"
@@ -15,17 +12,17 @@
 
 
     <item
-        android:id="@+id/grammar"
+        android:id="@+id/jumptoverse"
         android:icon="@drawable/ic_baseline_open_in_browser_24"
-        app:showAsAction="always"
         android:title="Grammar"
-        app:cnb_iconColor="#4CAF50"/>
+        app:cnb_iconColor="#4CAF50"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/search"
+        android:contentDescription="@string/content_description_one"
         android:icon="@drawable/baseline_search_24"
         android:title="@string/action_search"
-        android:contentDescription="@string/content_description_one"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="always|collapseActionView" />
 
@@ -35,7 +32,7 @@
         android:icon="@drawable/ic_action_setting"
         android:title="@string/action_settings"
 
-        app:showAsAction="always|collapseActionView" />
+        app:showAsAction="always" />
 
 
 </menu>

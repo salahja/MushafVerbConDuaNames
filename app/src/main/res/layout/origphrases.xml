@@ -6,11 +6,11 @@
     android:layout_height="wrap_content"
     android:layout_gravity="top"
 
+    android:background="@color/color_background"
     android:orientation="vertical"
     android:paddingStart="6.0dip"
     android:paddingEnd="6.0dip"
     app:behavior_hideable="true"
-    android:background="@color/color_background"
     app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
 
     <androidx.core.widget.NestedScrollView
@@ -61,7 +61,6 @@
                     android:layout_height="wrap_content"
 
 
-
                     android:orientation="horizontal">
 
                     <TextView
@@ -85,7 +84,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
-
 
 
                     android:orientation="horizontal"
@@ -119,14 +117,15 @@
                         android:textSize="16.0sp"
 
                         android:visibility="visible" />
+
                     <com.example.utility.FlowLayout
-                       android:layout_below="@+id/ayah"
-                        android:maxLines="1"
-                        android:elevation="8dp"
-                        android:text="Word"
                         android:id="@+id/flow_word_by_word"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
+                        android:layout_below="@+id/ayah"
+                        android:elevation="8dp"
+                        android:maxLines="1"
+                        android:text="Word"
                         android:visibility="visible" />
 
                     <TextView
@@ -225,7 +224,6 @@
                         android:layout_weight="1"
 
 
-
                         android:textSize="16.0sp"
                         android:visibility="gone" />
 
@@ -238,7 +236,6 @@
                         android:layout_gravity="top"
                         android:layout_marginTop="20.0dip"
                         android:layout_weight="1"
-
 
 
                         android:textSize="16.0sp" />

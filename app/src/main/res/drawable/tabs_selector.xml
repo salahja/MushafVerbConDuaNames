@@ -7,8 +7,9 @@
         android:top="6dp">
 
         <shape android:shape="rectangle">
-            <solid android:color="@color/CadetBlue" />
+            <solid android:color="@color/background_color_light_darkBlue" />
             <corners android:radius="6dp" />
+
         </shape>
 
     </item>

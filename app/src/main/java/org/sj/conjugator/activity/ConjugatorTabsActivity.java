@@ -27,6 +27,7 @@ import com.example.mushafconsolidated.R;
 import ru.dimorinny.floatingtextbutton.FloatingTextButton;
 
 public class ConjugatorTabsActivity extends BaseActivity {
+
     private static final int NUM_PAGES_THULATHI = 5;
     private static final int NUM_PAGES_MAZEED = 3;
     private boolean ismujarrad;

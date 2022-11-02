@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <integer-array name="cat_img">
 
+        <item>@drawable/ic_gratitude</item>sleep"
+        <item>@drawable/ic_morning_evening</item>70163"
+        <item>@drawable/ic_family</item>70163"
+        <item>@drawable/ic_social_manners</item>70163"
+        <item>@drawable/ic_fasting</item>70163"
+        <item>@drawable/ic_hajj</item>70168"
+        <item>@drawable/ic_purification</item>70168"
+        <item>@drawable/ic_prayer</item>7016a"
+        <item>@drawable/ic_food_drink</item>7016a"
+        <item>@drawable/ic_possession_rizq</item>7016a"
+
+        <item>@drawable/ic_travel</item>70162"
+        <item>@drawable/ic_nature</item>70162"
+
+        <item>@drawable/ic_gratitude</item>70162"
+        <item>@drawable/ic_illness</item>70160"
+        <item>@drawable/ic_refuge</item>70160"
+        <item>@drawable/ic_quranic</item>70169"
+        <item>@drawable/ic_ruqyah</item>70160"
+
+        <item>@drawable/ic_clothes</item>70166"
+
+
+    </integer-array>
     <string-array name="verbliststhulathienglish">
         <item>Thulathi-Selection</item>
         <item>1.Thulathi Regular</item>
@@ -708,9 +733,6 @@
         <item>1</item>
         <item>1</item>
         <item>1</item>
-
-
-
 
 
     </integer-array>

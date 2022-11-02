@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.example.JustJava.ZoomLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:fadeScrollbars="true"
     android:isScrollContainer="true"
-    android:singleLine="true"
     android:orientation="vertical"
     android:scrollbarAlwaysDrawVerticalTrack="true"
-    android:scrollbars="vertical">
+    android:scrollbars="vertical"
+    android:singleLine="true">
 
 
     <TableLayout
@@ -33,9 +32,9 @@
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -51,14 +50,13 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                        android:text="@string/faelmazi"
-                           />
+                        android:paddingEnd="3.0dip"
+                        android:text="@string/faelmazi" />
 
 
                 </LinearLayout>
@@ -81,9 +79,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -99,9 +97,9 @@ android:layout_weight="1"
         </com.google.android.material.card.MaterialCardView>
 
         <TableRow
-android:layout_weight="1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:gravity="center_vertical"
             android:visibility="gone"
             android:weightSum="1.0">
@@ -117,13 +115,12 @@ android:layout_weight="1"
                     android:layout_width="0.0dip"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
+                    android:autoSizeMaxTextSize="26sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="6sp"
                     android:gravity="center|right"
                     android:paddingStart="5.0dip"
-                     android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                       />
+                    android:paddingEnd="3.0dip" />
 
 
                 <TextView
@@ -135,20 +132,19 @@ android:autoSizeMinTextSize="10sp"
                     android:paddingStart="5.0dip"
                     android:paddingEnd="5.0dip"
 
-                       />
+                    />
 
                 <TextView
                     android:id="@id/huaid"
                     android:layout_width="0.0dip"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
+                    android:autoSizeMaxTextSize="26sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="6sp"
                     android:gravity="center|right"
                     android:paddingStart="5.0dip"
-                     android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                       />
+                    android:paddingEnd="3.0dip" />
 
 
             </LinearLayout>
@@ -169,9 +165,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -187,13 +183,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -205,20 +200,19 @@ android:autoSizeMinTextSize="10sp"
                         android:paddingStart="5.0dip"
                         android:paddingEnd="5.0dip"
 
-                           />
+                        />
 
                     <TextView
                         android:id="@id/madhihua"
                         android:layout_width="0.0dip"
                         android:layout_height="match_parent"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                 </LinearLayout>
@@ -226,9 +220,9 @@ android:autoSizeMinTextSize="10sp"
         </com.google.android.material.card.MaterialCardView>
 
         <TableRow
-android:layout_weight="1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:gravity="center_vertical"
             android:visibility="gone"
             android:weightSum="1.0">
@@ -244,13 +238,12 @@ android:layout_weight="1"
                     android:layout_width="0.0dip"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
+                    android:autoSizeMaxTextSize="26sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="6sp"
                     android:gravity="center|right"
                     android:paddingStart="5.0dip"
-                     android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                       />
+                    android:paddingEnd="3.0dip" />
 
 
                 <TextView
@@ -260,21 +253,19 @@ android:autoSizeMinTextSize="10sp"
                     android:layout_weight="0.2"
                     android:gravity="center|right"
                     android:paddingStart="5.0dip"
-                    android:paddingEnd="5.0dip"
-                       />
+                    android:paddingEnd="5.0dip" />
 
                 <TextView
                     android:id="@id/hiaid"
                     android:layout_width="0.0dip"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
+                    android:autoSizeMaxTextSize="26sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="6sp"
                     android:gravity="center|right"
                     android:paddingStart="5.0dip"
-                     android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                       />
+                    android:paddingEnd="3.0dip" />
 
             </LinearLayout>
         </TableRow>
@@ -294,9 +285,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -312,13 +303,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -328,21 +318,19 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_weight="0.2"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                        android:paddingEnd="5.0dip"
-                           />
+                        android:paddingEnd="5.0dip" />
 
                     <TextView
                         android:id="@id/madhihia"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                 </LinearLayout>
@@ -350,9 +338,9 @@ android:autoSizeMinTextSize="10sp"
         </com.google.android.material.card.MaterialCardView>
 
         <TableRow
-android:layout_weight="1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:gravity="center_vertical"
             android:visibility="gone"
             android:weightSum="1.0">
@@ -367,13 +355,12 @@ android:layout_weight="1"
                     android:layout_width="0.0dip"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
+                    android:autoSizeMaxTextSize="26sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="6sp"
                     android:gravity="center|right"
                     android:paddingStart="5.0dip"
-                     android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                       />
+                    android:paddingEnd="3.0dip" />
 
 
                 <TextView
@@ -381,26 +368,24 @@ android:autoSizeMinTextSize="10sp"
                     android:layout_width="0.0dip"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
+                    android:autoSizeMaxTextSize="26sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="6sp"
                     android:gravity="center|right"
                     android:paddingStart="5.0dip"
-                     android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                       />
+                    android:paddingEnd="3.0dip" />
 
                 <TextView
                     android:id="@id/antaid"
                     android:layout_width="0.0dip"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
+                    android:autoSizeMaxTextSize="26sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="6sp"
                     android:gravity="center|right"
                     android:paddingStart="5.0dip"
-                     android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                       />
+                    android:paddingEnd="3.0dip" />
 
 
             </LinearLayout>
@@ -421,9 +406,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -441,13 +426,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -455,26 +439,24 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
                     <TextView
                         android:id="@id/madhianta"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
                 </LinearLayout>
 
 
@@ -482,9 +464,9 @@ android:autoSizeMinTextSize="10sp"
         </com.google.android.material.card.MaterialCardView>
 
         <TableRow
-android:layout_weight="1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:gravity="center_vertical"
             android:visibility="gone"
             android:weightSum="1.0">
@@ -500,13 +482,12 @@ android:layout_weight="1"
                     android:layout_width="0.0dip"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
+                    android:autoSizeMaxTextSize="26sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="6sp"
                     android:gravity="center|right"
                     android:paddingStart="5.0dip"
-                     android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                       />
+                    android:paddingEnd="3.0dip" />
 
 
                 <TextView
@@ -514,13 +495,12 @@ android:autoSizeMinTextSize="10sp"
                     android:layout_width="0.0dip"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
+                    android:autoSizeMaxTextSize="26sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="6sp"
                     android:gravity="center|right"
                     android:paddingStart="5.0dip"
-                     android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                       />
+                    android:paddingEnd="3.0dip" />
 
 
                 <TextView
@@ -528,13 +508,12 @@ android:autoSizeMinTextSize="10sp"
                     android:layout_width="0.0dip"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
+                    android:autoSizeMaxTextSize="26sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="6sp"
                     android:gravity="center|right"
                     android:paddingStart="5.0dip"
-                     android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                       />
+                    android:paddingEnd="3.0dip" />
 
 
             </LinearLayout>
@@ -555,9 +534,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -575,13 +554,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -589,13 +567,12 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -603,13 +580,12 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
                 </LinearLayout>
 
@@ -619,9 +595,9 @@ android:autoSizeMinTextSize="10sp"
 
 
         <TableRow
-android:layout_weight="1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:gravity="center_vertical"
             android:weightSum="1.0">
 
@@ -635,14 +611,13 @@ android:layout_weight="1"
                     android:layout_width="0.0dip"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
+                    android:autoSizeMaxTextSize="26sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="6sp"
                     android:gravity="center|right"
                     android:paddingStart="5.0dip"
-                     android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                    android:visibility="gone"
-                       />
+                    android:paddingEnd="3.0dip"
+                    android:visibility="gone" />
 
 
                 <TextView
@@ -650,14 +625,13 @@ android:autoSizeMinTextSize="10sp"
                     android:layout_width="0.0dip"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"
+                    android:autoSizeMaxTextSize="26sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="6sp"
                     android:gravity="center|right"
                     android:paddingStart="5.0dip"
-                     android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                    android:visibility="gone"
-                       />
+                    android:paddingEnd="3.0dip"
+                    android:visibility="gone" />
 
 
             </LinearLayout>
@@ -678,9 +652,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -696,13 +670,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -710,13 +683,12 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
                 </LinearLayout>
 
@@ -746,9 +718,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -764,14 +736,13 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                        android:text="@string/faelmudhary"
-                           />
+                        android:paddingEnd="3.0dip"
+                        android:text="@string/faelmudhary" />
 
 
                 </LinearLayout>
@@ -793,9 +764,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -813,13 +784,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -827,13 +797,12 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -841,13 +810,12 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
                 </LinearLayout>
 
@@ -870,9 +838,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -890,13 +858,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -904,13 +871,12 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -918,13 +884,12 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="match_parent"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
                 </LinearLayout>
 
@@ -947,9 +912,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -967,13 +932,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -981,26 +945,24 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
                     <TextView
                         android:id="@id/muzanta"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
                 </LinearLayout>
 
@@ -1023,9 +985,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -1043,13 +1005,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -1057,13 +1018,12 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -1071,13 +1031,12 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
                 </LinearLayout>
 
@@ -1100,9 +1059,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -1119,13 +1078,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -1133,13 +1091,12 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
                 </LinearLayout>
 
@@ -1169,9 +1126,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -1187,14 +1144,13 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                        android:text="@string/faelmadimajhool"
-                           />
+                        android:paddingEnd="3.0dip"
+                        android:text="@string/faelmadimajhool" />
 
 
                 </LinearLayout>
@@ -1216,9 +1172,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -1234,13 +1190,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -1252,20 +1207,19 @@ android:autoSizeMinTextSize="10sp"
                         android:paddingStart="5.0dip"
                         android:paddingEnd="5.0dip"
 
-                           />
+                        />
 
                     <TextView
                         android:id="@id/madimajhua"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                 </LinearLayout>
@@ -1287,9 +1241,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -1305,13 +1259,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -1321,21 +1274,19 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_weight="0.2"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                        android:paddingEnd="5.0dip"
-                           />
+                        android:paddingEnd="5.0dip" />
 
                     <TextView
                         android:id="@id/madimajhia"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                 </LinearLayout>
@@ -1357,9 +1308,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -1375,13 +1326,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -1389,26 +1339,24 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
                     <TextView
                         android:id="@id/madimajanta"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
                 </LinearLayout>
             </TableRow>
         </com.google.android.material.card.MaterialCardView>
@@ -1428,9 +1376,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -1448,13 +1396,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -1462,13 +1409,12 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -1476,13 +1422,12 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
                 </LinearLayout>
 
@@ -1505,9 +1450,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -1524,13 +1469,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -1538,13 +1482,12 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
                 </LinearLayout>
 
@@ -1574,9 +1517,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -1592,14 +1535,13 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                        android:text="@string/faelmudharymajhol"
-                           />
+                        android:paddingEnd="3.0dip"
+                        android:text="@string/faelmudharymajhol" />
 
 
                 </LinearLayout>
@@ -1621,9 +1563,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -1653,9 +1595,9 @@ android:layout_weight="1"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -1671,13 +1613,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -1689,20 +1630,19 @@ android:autoSizeMinTextSize="10sp"
                         android:paddingStart="5.0dip"
                         android:paddingEnd="5.0dip"
 
-                           />
+                        />
 
                     <TextView
                         android:id="@id/muzmajhua"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                 </LinearLayout>
@@ -1724,9 +1664,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -1742,13 +1682,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -1758,21 +1697,19 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_weight="0.2"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                        android:paddingEnd="5.0dip"
-                           />
+                        android:paddingEnd="5.0dip" />
 
                     <TextView
                         android:id="@id/muzmajhia"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                 </LinearLayout>
@@ -1794,9 +1731,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -1812,13 +1749,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -1826,26 +1762,24 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
                     <TextView
                         android:id="@id/muzmajanta"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
                 </LinearLayout>
             </TableRow>
         </com.google.android.material.card.MaterialCardView>
@@ -1865,9 +1799,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -1885,13 +1819,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -1899,13 +1832,12 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -1913,13 +1845,12 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
                 </LinearLayout>
 
@@ -1942,9 +1873,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -1961,13 +1892,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -1975,13 +1905,12 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
                 </LinearLayout>
 
@@ -2011,9 +1940,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -2029,14 +1958,14 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
+                        android:paddingEnd="3.0dip"
 
-                           />
+                        />
 
 
                 </LinearLayout>
@@ -2058,9 +1987,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -2090,9 +2019,9 @@ android:layout_weight="1"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -2108,13 +2037,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -2126,20 +2054,19 @@ android:autoSizeMinTextSize="10sp"
                         android:paddingStart="5.0dip"
                         android:paddingEnd="5.0dip"
 
-                           />
+                        />
 
                     <TextView
                         android:id="@id/amranta"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                 </LinearLayout>
@@ -2161,9 +2088,9 @@ android:autoSizeMinTextSize="10sp"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -2179,13 +2106,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="match_parent"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -2195,21 +2121,19 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_weight="0.2"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                        android:paddingEnd="5.0dip"
-                           />
+                        android:paddingEnd="5.0dip" />
 
                     <TextView
                         android:id="@id/amranti"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                 </LinearLayout>
@@ -2222,24 +2146,25 @@ android:autoSizeMinTextSize="10sp"
             android:layout_height="01dp"
             android:layout_alignParentBottom="true"
             android:background="@android:color/darker_gray" />
+
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
-            app:cardCornerRadius="12dp"
+            android:clipChildren="false"
 
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
             app:rippleColor="@color/colorAccent"
             app:strokeColor="@color/color_primary_variant"
-            app:strokeWidth="1dp"
-            android:dividerHeight="0.0px"
-            android:clipToPadding="false"
-            android:clipChildren="false"
-            app:cardElevation="10dp">
+            app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -2255,14 +2180,14 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
+                        android:paddingEnd="3.0dip"
 
-                           />
+                        />
 
 
                 </LinearLayout>
@@ -2274,19 +2199,20 @@ android:autoSizeMinTextSize="10sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
-            app:cardCornerRadius="12dp"
+            android:clipChildren="false"
 
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
             app:rippleColor="@color/colorAccent"
             app:strokeColor="@color/color_primary_variant"
-            app:strokeWidth="1dp"
-            android:dividerHeight="0.0px"
-            android:clipToPadding="false"
-            android:clipChildren="false"
-            app:cardElevation="10dp">
+            app:strokeWidth="1dp">
+
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -2302,13 +2228,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -2320,20 +2245,19 @@ android:autoSizeMinTextSize="10sp"
                         android:paddingStart="5.0dip"
                         android:paddingEnd="5.0dip"
 
-                           />
+                        />
 
                     <TextView
                         android:id="@id/nahiamranta"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                 </LinearLayout>
@@ -2345,19 +2269,20 @@ android:autoSizeMinTextSize="10sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
-            app:cardCornerRadius="12dp"
+            android:clipChildren="false"
 
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
             app:rippleColor="@color/colorAccent"
             app:strokeColor="@color/color_primary_variant"
-            app:strokeWidth="1dp"
-            android:dividerHeight="0.0px"
-            android:clipToPadding="false"
-            android:clipChildren="false"
-            app:cardElevation="10dp">
+            app:strokeWidth="1dp">
+
             <TableRow
-android:layout_weight="1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -2373,13 +2298,12 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="match_parent"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                     <TextView
@@ -2389,21 +2313,19 @@ android:autoSizeMinTextSize="10sp"
                         android:layout_weight="0.2"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                        android:paddingEnd="5.0dip"
-                           />
+                        android:paddingEnd="5.0dip" />
 
                     <TextView
                         android:id="@id/nahiamranti"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
+                        android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
-                         android:paddingEnd="3.0dip"
-android:autoSizeMinTextSize="10sp"
- android:autoSizeMaxTextSize="26sp"
- android:autoSizeStepGranularity="6sp"
-                           />
+                        android:paddingEnd="3.0dip" />
 
 
                 </LinearLayout>

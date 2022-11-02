@@ -6,26 +6,26 @@
     android:layout_height="wrap_content"
     android:fadeScrollbars="true"
     android:isScrollContainer="true"
-    android:singleLine="true"
     android:orientation="vertical"
     android:scrollbarAlwaysDrawVerticalTrack="true"
-    android:scrollbars="vertical">
+    android:scrollbars="vertical"
+    android:singleLine="true">
 
 
-
-<androidx.recyclerview.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
     </androidx.recyclerview.widget.RecyclerView>
+
     <RelativeLayout
         android:id="@+id/topPanel"
         android:layout_width="wrap_content"
         android:layout_height="match_parent">
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/grammar"
+            android:id="@+id/jumptoverse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
@@ -35,7 +35,7 @@
             app:cardMaxElevation="12dp"
             app:cardPreventCornerOverlap="false"
             app:cardUseCompatPadding="false">
-<!--  android:background="@color/background_color_light_darkBlue"  -->
+            <!--  android:background="@color/background_color_light_darkBlue"  -->
 
             <LinearLayout
                 android:id="@id/container"
@@ -43,10 +43,8 @@
                 android:layout_height="match_parent"
 
 
-
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
-
 
 
                 <TextView
@@ -57,20 +55,17 @@
                     android:textDirection="ltr"
 
 
-
-
                     android:textSize="24.0sp" />
 
 
                 <com.example.mushafconsolidated.Adapters.TweakedWebView
                     android:id="@id/wordDictionary"
-                    android:paddingStart="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15.0dip"
-                    android:textDirection="ltr"
                     android:lineSpacingExtra="10dp"
-
+                    android:paddingStart="20dp"
+                    android:textDirection="ltr"
 
 
                     android:textSize="24.0sp" />
@@ -83,24 +78,14 @@
                     android:textDirection="rtl"
 
 
-
-
                     android:textSize="24.0sp" />
-
-
-
-
-
 
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
 
-
     </RelativeLayout>
-
-
 
 
 </org.sj.conjugator.utilities.ZoomLayout>

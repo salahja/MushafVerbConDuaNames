@@ -51,6 +51,9 @@ import java.util.List;
 import database.entity.AllahNames;
 import database.entity.DuaDetails;
 import database.entity.DuaGroup;
+import sj.hisnul.entity.hcategory;
+import sj.hisnul.entity.hduadetails;
+import sj.hisnul.entity.hduanames;
 
 //import com.example.mushafconsolidated.Entities.JoinVersesTranslationDataTranslation;
 
@@ -1073,6 +1076,54 @@ public class Utils {
     }
 
 
+
+    public int updateFav( int fav,String id) {
+        int updadateRoots = database.hDuaNamesDao().updateFav(fav,id);
+
+        return updadateRoots;
+    }
+
+    public static ArrayList<hduanames> getAllList() {
+        ArrayList<hduanames> duat = (ArrayList<hduanames>) database.hDuaNamesDao().getDuanames();
+        return duat;
+
+    }
+
+
+    public static ArrayList<hcategory> getHcategory() {
+        ArrayList<hcategory> duat = (ArrayList<hcategory>) database.hDuaCategoryDao().getcatetory();
+        return duat;
+
+    }
+
+
+    public  ArrayList<hduanames> getDunamesbyid(String id) {
+        ArrayList<hduanames> dua = (ArrayList<hduanames>) database.hDuaNamesDao().getDuanamesid(id);
+        return dua;
+
+    }
+    public  ArrayList<hduanames> getDuanamesDetails(String id) {
+        ArrayList<hduanames> duas = (ArrayList<hduanames>) database.hDuaNamesDao().getDuanamesByID(id);
+        return duas;
+
+    }
+
+    public  ArrayList<hduanames> getBookmarked( int id) {
+        ArrayList<hduanames> duas = (ArrayList<hduanames>) database.hDuaNamesDao().getBookmarked(id);
+        return duas;
+
+    }
+
+    public  ArrayList<hduanames> getIsmarked(String id) {
+        ArrayList<hduanames> duas = (ArrayList<hduanames>) database.hDuaNamesDao().isBookmarked(id);
+        return duas;
+
+    }
+    public  ArrayList<hduadetails> gethDuadetailsitems(String id) {
+        ArrayList<hduadetails> duay = (ArrayList<hduadetails>) database.hDuaItemDao().getDitem(id);
+        return duay;
+
+    }
 
 }
 

@@ -4,15 +4,15 @@
     android:id="@+id/suralist"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-
-    android:orientation="vertical"
+    app:cardBackgroundColor="@android:color/transparent"
     android:background="?android:colorBackground"
-    app:cardBackgroundColor="@android:color/transparent">
+    android:orientation="vertical"
+  >
 
     <com.google.android.material.appbar.AppBarLayout
-        android:layout_marginTop="40dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:background="@android:color/transparent"
         app:elevation="0.0dip">
 
@@ -26,12 +26,11 @@
 
                 android:layout_width="fill_parent"
                 android:layout_height="40.0dip"
-               android:visibility="visible"
                 android:gravity="center_vertical"
                 android:paddingStart="18.0dip"
                 android:paddingEnd="18.0dip"
                 android:text="@string/bookmark_last_read"
-                />
+                android:visibility="visible" />
 
             <ScrollView
                 android:layout_width="wrap_content"
@@ -138,27 +137,27 @@
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:contentDescription="@string/_text_tafsir"
                         android:layout_margin="5.0dip"
                         android:layout_weight="1.0"
+                        android:contentDescription="@string/_text_tafsir"
                         android:textSize="16.0sp" />
 
                     <com.google.android.material.button.MaterialButton
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:contentDescription="@string/_text_tafsir"
                         android:layout_margin="5.0dip"
                         android:layout_weight="1.0"
+                        android:contentDescription="@string/_text_tafsir"
                         android:textSize="16.0sp" />
 
                     <com.google.android.material.button.MaterialButton
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:contentDescription="@string/_text_tafsir"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5.0dip"
                         android:layout_weight="1.0"
+                        android:contentDescription="@string/_text_tafsir"
                         android:textSize="16.0sp" />
                 </LinearLayout>
             </ScrollView>

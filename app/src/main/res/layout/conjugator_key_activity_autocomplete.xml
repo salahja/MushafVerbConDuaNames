@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:orientation="horizontal"
     android:background="?selectableItemBackground"
+    android:orientation="horizontal"
     tools:context="org.sj.conjugator.activity.ConjugatorAct">
+
     <FrameLayout
         android:id="@+id/frame_container"
         android:layout_width="match_parent"
@@ -384,16 +385,12 @@
             android:foregroundGravity="bottom"
 
 
-
+            app:floating_background_color="@color/color_surface"
             app:floating_left_icon="@drawable/baseline_history_black_48dp"
             app:floating_title="Back    "
+
+
             app:floating_title_color="@color/colorOnPrimary"
-
-
-            app:floating_background_color="@color/color_surface"
-
-
-
 
 
             app:layout_constraintEnd_toEndOf="parent"
@@ -401,9 +398,9 @@
             app:layout_constraintTop_toBottomOf="@+id/mazeedsecondrow" />
 
         <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-
             android:id="@+id/mujarradbtn"
+
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -412,15 +409,15 @@
             app:layout_constraintTop_toBottomOf="@+id/mazeedsecondrow" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_margin="5.0dip"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:id="@+id/mazeedbtn"
-            app:elevation="7dp"
-
-
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
+
+            android:layout_margin="5.0dip"
             android:hint="@string/mazeed_listing"
+            app:elevation="7dp"
             app:layout_constraintEnd_toStartOf="@+id/mujarradbtn"
             app:layout_constraintTop_toBottomOf="@+id/mazeedsecondrow" />
 
@@ -438,8 +435,8 @@
             app:layout_constraintTop_toBottomOf="@+id/mazeedsecondrow"
             app:srcCompat="@android:drawable/btn_plus" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <include layout="@layout/conjugator_bottom_menu" />
 
+    <include layout="@layout/conjugator_bottom_menu" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

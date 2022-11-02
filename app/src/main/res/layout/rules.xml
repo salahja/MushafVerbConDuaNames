@@ -27,6 +27,7 @@
 
         app:strokeColor="@color/color_primary_variant"
         app:strokeWidth="1dp">
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -52,9 +53,6 @@
                 android:layout_weight="1.0"
                 android:padding="@dimen/space_1"
                 android:textSize="12.0sp" />
-
-
-
 
 
         </LinearLayout>

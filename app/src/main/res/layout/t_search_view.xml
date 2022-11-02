@@ -56,7 +56,7 @@
             android:paddingStart="10.0dip"
             android:paddingEnd="5.0dip">
 
-           <TextView
+            <TextView
                 android:id="@id/rootWordView"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -87,7 +87,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-           <TextView
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -106,14 +106,13 @@
                 android:contentDescription="@null"
                 android:src="@drawable/ic_action_jump" />
 
-           <TextView
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="8.0dip"
                 android:text="jump to "
-                android:textSize="16.0sp"
-                 />
+                android:textSize="16.0sp" />
 
             <LinearLayout
                 android:id="@id/jumpToContainer"
@@ -122,7 +121,7 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-               <TextView
+                <TextView
                     android:layout_width="100.0dip"
                     android:layout_height="wrap_content"
                     android:background="@drawable/jump_to_bg"
@@ -132,14 +131,14 @@
                     android:text="@string/chapter_no"
                     android:textSize="14.0sp" />
 
-               <TextView
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10.0dip"
                     android:layout_marginEnd="10.0dip"
                     android:text=":" />
 
-               <TextView
+                <TextView
                     android:layout_width="100.0dip"
                     android:layout_height="wrap_content"
                     android:background="@drawable/jump_to_bg"
@@ -181,7 +180,7 @@
                     android:visibility="gone" />
             </LinearLayout>
 
-           <TextView
+            <TextView
                 android:id="@id/emptyView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -207,7 +206,7 @@
                     android:paddingEnd="15.0dip"
                     android:paddingBottom="5.0dip">
 
-                   <TextView
+                    <TextView
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -216,13 +215,13 @@
 
                         android:textSize="13.0sp" />
 
-                   <TextView
+                    <TextView
                         android:id="@id/selectAllRelatedWordsView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                      
+
                         android:paddingStart="8.0dip"
                         android:paddingTop="3.0dip"
                         android:paddingEnd="8.0dip"
@@ -254,16 +253,15 @@
 
                     <View
                         style="@style/HorizontalLine3dpWidth"
+                        android:layout_width="wrap_content"
                         android:layout_centerInParent="true"
-                        android:background="@color/colorPrimary"
-                        android:layout_width="wrap_content" />
+                        android:background="@color/colorPrimary" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="15.0dip"
                         android:layout_centerInParent="true"
-                        android:contentDescription="@null"
-                          />
+                        android:contentDescription="@null" />
                 </RelativeLayout>
             </LinearLayout>
         </RelativeLayout>

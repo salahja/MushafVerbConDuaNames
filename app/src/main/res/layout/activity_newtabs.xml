@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     >
     <!--style="@style/RoundedTabLayoutStyle"-->
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -11,12 +12,12 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
 
             <com.google.android.material.tabs.TabLayout
-
                 android:id="@id/tabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -27,14 +28,11 @@
                 tools:ignore="SpeakableTextPresentCheck" />
 
 
-
-
-
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/pager"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_width="match_parent"/>
+                android:layout_weight="1" />
             <!--Typography-->
             <!-- app:floating_background_color="@color/background_color"-->
             <ru.dimorinny.floatingtextbutton.FloatingTextButton
@@ -48,7 +46,6 @@
                 android:background="?selectableItemBackground"
 
                 app:floating_left_icon="@drawable/baseline_arrow_circle_down_black_24dp"
-
 
 
                 app:floating_title="Back    "

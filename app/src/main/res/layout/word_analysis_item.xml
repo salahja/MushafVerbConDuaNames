@@ -6,7 +6,6 @@
     android:orientation="vertical">
 
 
-
     <WebView
         android:id="@+id/expandedListItem"
 
@@ -16,6 +15,7 @@
         android:paddingStart="?android:attr/expandableListPreferredChildPaddingLeft"
         android:textDirection="anyRtl"
         android:textSize="23sp" />
+
     <WebView
         android:id="@+id/expandedListItemverb"
 

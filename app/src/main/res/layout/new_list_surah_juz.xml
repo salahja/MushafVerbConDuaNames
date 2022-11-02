@@ -100,10 +100,10 @@
                     <com.google.android.material.button.MaterialButton
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_width="wrap_content"
-                        android:background="?odd_item_bg"
                         android:layout_height="wrap_content"
                         android:layout_margin="5.0dip"
                         android:layout_weight="1.0"
+                        android:background="?odd_item_bg"
                         android:text="@string/text_ayatul_kursi"
                         android:textSize="12.0sp" />
 
@@ -120,27 +120,27 @@
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:contentDescription="Enter How Much Cookies You Want"
                         android:layout_margin="5.0dip"
                         android:layout_weight="1.0"
+                        android:contentDescription="Enter How Much Cookies You Want"
                         android:textSize="12.0sp" />
 
                     <com.google.android.material.button.MaterialButton
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:contentDescription="Enter How Much Cookies You Want"
                         android:layout_margin="5.0dip"
                         android:layout_weight="1.0"
+                        android:contentDescription="Enter How Much Cookies You Want"
                         android:textSize="12.0sp" />
 
                     <com.google.android.material.button.MaterialButton
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:contentDescription="Enter How Much Cookies You Want"
                         android:layout_margin="5.0dip"
                         android:layout_weight="1.0"
+                        android:contentDescription="Enter How Much Cookies You Want"
                         android:textSize="12.0sp" />
                 </LinearLayout>
             </HorizontalScrollView>

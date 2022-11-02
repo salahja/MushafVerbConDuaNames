@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="?android:colorBackground"
-    app:cardBackgroundColor="@android:color/transparent"
-
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
 
-    android:orientation="vertical">
+    android:background="?android:colorBackground"
+    android:orientation="vertical"
+
+    app:cardBackgroundColor="@android:color/transparent">
 
 
     <include layout="@layout/quran_imageview_row" />
@@ -28,7 +27,6 @@
 
     <TextView
         android:id="@+id/arabic_textView"
-        android:background="?android:attr/activatedBackgroundIndicator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
@@ -36,6 +34,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
+        android:background="?android:attr/activatedBackgroundIndicator"
         android:focusable="false"
         android:layoutDirection="rtl"
         android:textDirection="rtl"
@@ -65,10 +64,6 @@
     <include
         layout="@layout/quran_tranlation_rows"
         android:visibility="visible" />
-
-
-
-
 
 
 </LinearLayout>

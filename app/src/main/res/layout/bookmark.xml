@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+
+
+    android:paddingTop="@dimen/gridrow_padding"
+    android:paddingBottom="@dimen/gridrow_paddingdouble">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/circle"
+            android:text="12"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/chapter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/id"
+            android:paddingTop="@dimen/gridrow_padding"
+
+            android:text="when waking up"
+            android:textSize="@dimen/gridrow_cattxt_textsize" />
+
+        <ImageView
+            android:id="@+id/ivdelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="131dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/chapter"
+            android:background="@drawable/baseline_delete_forever_36"
+            android:paddingTop="@dimen/gridrow_padding"
+            android:textSize="@dimen/gridrow_cattxt_textsize" />
+
+        <TextView
+            android:id="@+id/duaname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/ivdelete"
+            android:gravity="center"
+            android:paddingTop="@dimen/gridrow_padding"
+            android:textSize="@dimen/gridrow_cattxt_textsize"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

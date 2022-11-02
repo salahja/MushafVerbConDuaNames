@@ -6,13 +6,9 @@
      -->
 
 
-
-
-    <string translatable="false" name="prefs_show_translation">showTranslationKey</string>
-    <string translatable="false" name="prefs_show_erab">showErabKey</string>
-    <string translatable="false" name="prefs_show_wordbyword">wordByWord</string>
-
-
+    <string name="prefs_show_translation" translatable="false">showTranslationKey</string>
+    <string name="prefs_show_erab" translatable="false">showErabKey</string>
+    <string name="prefs_show_wordbyword" translatable="false">wordByWord</string>
 
 
 </resources>

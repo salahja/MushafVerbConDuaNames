@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:padding="16dp"
-    android:gravity="center"
+    android:layout_height="wrap_content"
     android:background="@drawable/border"
-    android:layout_height="wrap_content">
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/topcard"
@@ -29,47 +29,49 @@
 
 
         app:strokeWidth="1dp">
+
         <RelativeLayout
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-        <EditText
-            android:id="@+id/suraIndex"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="2"
-            android:inputType="number"
-            android:maxLength="3"
 
-            />
+            <EditText
+                android:id="@+id/suraIndex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="2"
+                android:inputType="number"
+                android:maxLength="3"
 
-        <EditText
-            android:id="@+id/ayahInput"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+                />
 
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="8dp"
+            <EditText
+                android:id="@+id/ayahInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-            android:layout_toEndOf="@id/suraIndex"
-            android:hint="2"
-            android:inputType="number"
-            android:maxLength="10"
-            android:text="@string/go_to" />
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="8dp"
 
-        <TextView
-            android:id="@+id/ayahlabel"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="22dp"
-            android:layout_toEndOf="@id/ayahInput"
-            android:hint="2"
-            android:inputType="none"
-            android:text="@string/go_to" />
+                android:layout_toEndOf="@id/suraIndex"
+                android:hint="2"
+                android:inputType="number"
+                android:maxLength="10"
+                android:text="@string/go_to" />
+
+            <TextView
+                android:id="@+id/ayahlabel"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="22dp"
+                android:layout_toEndOf="@id/ayahInput"
+                android:hint="2"
+                android:inputType="none"
+                android:text="@string/go_to" />
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -141,8 +143,6 @@
 
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
-
-
 
 
 </RelativeLayout>

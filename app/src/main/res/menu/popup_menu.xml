@@ -6,15 +6,15 @@
     <item
         android:id="@id/actionTafsir"
         android:icon="@drawable/tafsir"
-        app:showAsAction="always"
-        android:title="@string/popup_tafsir_ibn_kathir" />
+        android:title="@string/popup_tafsir_ibn_kathir"
+        app:showAsAction="always" />
     <item
         android:id="@+id/bookmark"
         android:icon="@drawable/ic_baseline_bookmark_add_24"
         android:title="Bookmark"
+        app:cnb_backgroundColor="@color/DeepPink"
         app:cnb_iconColor="@color/DarkGreen"
         app:cnb_iconTintMode="src_in"
-        app:cnb_backgroundColor="@color/DeepPink"
         app:showAsAction="always" />
     <item
         android:id="@+id/jumpto"
@@ -24,13 +24,12 @@
 
     <item
         android:id="@+id/colorized"
-        app:actionViewClass="androidx.appcompat.widget.SwitchCompat"
-        android:icon="@drawable/ic_baseline_color_lens_24"
         android:enabled="true"
-
+        android:icon="@drawable/ic_baseline_color_lens_24"
         android:title="@string/colorize"
-        app:showAsAction="always" />
 
+        app:actionViewClass="androidx.appcompat.widget.SwitchCompat"
+        app:showAsAction="always" />
 
 
 </menu>

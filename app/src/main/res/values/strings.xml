@@ -31,6 +31,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
 
+    <string name="tab_text_1">BookMarks</string>
+    <string name="tab_text_2">Categories</string>
+    <string name="tab_text_3">All Duas</string>
     <!-- Shrine backdrop menu labels -->
     <string name="header_msg" translatable="false">\"بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ\"</string>
 
@@ -363,5 +366,10 @@
     <string name="en_sahi">Sahi International</string>
     <string name="chapter_no">Chapter No</string>
     <string name="verse_no">verse no</string>
+    <string name="share_app">Share</string>
+    <string name="str_bookmark">Book</string>
+    <string name="search">search</string>
+    <string name="search_title">Search</string>
+    <string name="back">◀ </string>
 
 </resources>

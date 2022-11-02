@@ -6,9 +6,9 @@
 
     <TextView
         android:id="@+id/text"
-        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:text="TextView" />
 
     <RadioGroup
@@ -31,9 +31,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/header"
-            android:textSize="30sp"
             android:layout_toEndOf="@+id/qalam"
-            android:text="Qalam font">
+            android:text="Qalam font"
+            android:textSize="30sp">
 
         </TextView>
 
@@ -50,18 +50,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/qalamtext"
-            android:textSize="30sp"
-
             android:layout_toEndOf="@+id/mequran"
-            android:text="Me quran font" />
+
+            android:text="Me quran font"
+            android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/rdpdms"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pdms"
             android:layout_below="@id/mequran"
-            />
+            android:text="Pdms" />
 
         <TextView
             android:id="@id/pdmsfont"
@@ -69,10 +68,10 @@
             android:layout_height="match_parent"
 
             android:layout_below="@id/mequrantext"
-            android:textSize="30sp"
-
             android:layout_toEndOf="@+id/pdms"
-            android:text="Pdms Font" />
+
+            android:text="Pdms Font"
+            android:textSize="30sp" />
     </RadioGroup>
 
 

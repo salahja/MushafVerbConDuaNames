@@ -7,23 +7,22 @@
         android:id="@+id/surahnav"
         android:icon="@drawable/baseline_home_24"
         android:title="Surah"
-        app:showAsAction="always"
-        app:cnb_iconColor="#FF9800"/>
+        app:cnb_iconColor="#FF9800"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/conjugationnav"
         android:icon="@drawable/ic_baseline_construction_24"
-        android:title="Conjugator"
         android:iconTint="@color/white"
-        app:showAsAction="always"
-      />
+        android:title="Conjugator"
+        app:showAsAction="always" />
 
 
     <item
         android:id="@+id/searchtopic"
+        android:contentDescription="@string/content_description_one"
         android:icon="@drawable/baseline_search_24"
         android:title="@string/action_search"
-        android:contentDescription="@string/content_description_one"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
 
         app:showAsAction="always|collapseActionView" />
@@ -31,22 +30,16 @@
 
     <item
         android:id="@+id/Names"
-        android:orderInCategory="100"
         android:icon="@drawable/ic_name"
-        android:title="Allah(SWT)-Names"
-        />
+        android:orderInCategory="100"
+        android:title="Allah(SWT)-Names" />
 
 
     <item
         android:id="@+id/dua"
-        android:orderInCategory="100"
         android:icon="@drawable/dua"
-        android:title="Dua"
-        />
-
-
-
-
+        android:orderInCategory="100"
+        android:title="Dua" />
 
 
 </menu>

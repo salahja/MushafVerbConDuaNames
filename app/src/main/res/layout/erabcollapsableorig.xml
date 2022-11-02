@@ -101,14 +101,14 @@
                 app:layout_constraintTop_toBottomOf="@+id/erabnotes" />
 
             <TextView
-                android:visibility="gone"
                 android:id="@+id/katheer_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_marginTop="05dp"
 
                 android:textSize="12sp"
+
+                android:visibility="gone"
                 app:layout_constraintStart_toStartOf="@+id/guideline1"
                 app:layout_constraintTop_toBottomOf="@+id/view3" />
 
@@ -127,21 +127,21 @@
                 android:id="@+id/directobject"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@android:drawable/presence_invisible"
-                app:tint="@color/redhot"
                 android:layout_marginTop="12dp"
-
-
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
 
-                android:textDirection="anyRtl"
-                android:text="Mafools"
 
-                android:textSize="12sp"
+                android:text="Mafools"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+                android:textDirection="anyRtl"
+                android:textSize="12sp"
+
                 app:layout_constraintStart_toEndOf="@+id/imageView9"
-                app:layout_constraintTop_toBottomOf="@+id/katheer_textview" />
+                app:layout_constraintTop_toBottomOf="@+id/katheer_textview"
+                app:srcCompat="@android:drawable/presence_invisible"
+                app:tint="@color/redhot" />
 
             <ImageView
                 android:id="@+id/imageView10"
@@ -158,10 +158,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="12dp"
-                android:text="Jumla Haliya"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginRight="15dp"
+                android:text="Jumla Haliya"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@+id/imageView10"
                 app:layout_constraintTop_toBottomOf="@+id/directobject" />
@@ -187,7 +187,6 @@
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@+id/imageView11"
                 app:layout_constraintTop_toBottomOf="@+id/hal" />
-
 
 
             <View
@@ -223,6 +222,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintStart_toEndOf="@+id/imageView12"
                 app:layout_constraintTop_toBottomOf="@+id/view4" />
+
             <ImageView
                 android:id="@+id/imageView13"
                 android:layout_width="wrap_content"
@@ -248,6 +248,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintStart_toEndOf="@+id/imageView13"
                 app:layout_constraintTop_toBottomOf="@+id/badal" />
+
             <androidx.constraintlayout.widget.Group
                 android:id="@+id/card_group"
                 android:layout_width="wrap_content"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.appbar.AppBarLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="48.0dip"
@@ -12,15 +12,15 @@
         android:id="@+id/toolbarmain"
         android:layout_width="match_parent"
 
-        app:layout_scrollFlags="scroll|enterAlways|snap"
         android:layout_height="?attr/actionBarSize"
-        android:animateLayoutChanges="true"
         android:layout_alignParentTop="true"
-        app:menu="@menu/menu_dua_group"
+        android:animateLayoutChanges="true"
         android:background="?colorPrimarySurface"
-        app:navigationIcon="@drawable/baseline_menu_24"
         android:theme="@style/Theme.Material3.Dark.NoActionBar"
-        app:elevation="4.0dip" />
+        app:elevation="4.0dip"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        app:menu="@menu/menu_dua_group"
+        app:navigationIcon="@drawable/baseline_menu_24" />
 
 </com.google.android.material.appbar.AppBarLayout>
 

@@ -2,6 +2,12 @@
 
     <!-- Default screen margins, per the Android Design guidelines. -->
 
+
+    <dimen name="gridrow_padding">2dp</dimen>
+    <dimen name="gridrow_paddingdouble">5dp</dimen>
+    <dimen name="appbar_padding">16dp</dimen>
+
+
     <!-- Dimens for staggered asymmetric grid layout cards-->
     <dimen name="list_item_spacing_half">8dp</dimen>
 
@@ -50,14 +56,17 @@
     <dimen name="text_size_16">16sp</dimen>
     <dimen name="text_size_20">20sp</dimen>
     <dimen name="toolbar_height">48dp</dimen>
-<dimen name="padding_10">80dp</dimen>
-<dimen name="padding_19">152dp</dimen>
-<dimen name="padding_2">16dp</dimen>
-<dimen name="padding_3">24dp</dimen>
-<dimen name="padding_4">32dp</dimen>
-<dimen name="padding_5">40dp</dimen>
-<dimen name="padding_6">48dp</dimen>
-<dimen name="padding_7">56dp</dimen>
-<dimen name="padding_8">64dp</dimen>
+    <dimen name="padding_10">80dp</dimen>
+    <dimen name="padding_19">152dp</dimen>
+    <dimen name="padding_2">16dp</dimen>
+    <dimen name="padding_3">24dp</dimen>
+    <dimen name="padding_4">32dp</dimen>
+    <dimen name="padding_5">40dp</dimen>
+    <dimen name="padding_6">48dp</dimen>
+    <dimen name="padding_7">56dp</dimen>
+    <dimen name="padding_8">64dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="gridrow_cattxt_textsize">20sp</dimen>
 
 </resources>

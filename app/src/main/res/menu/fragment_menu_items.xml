@@ -4,17 +4,16 @@
     <item
         android:id="@+id/displayayahs"
         android:icon="@drawable/my_drawable"
-        android:title="Display Ayahs"
         android:orderInCategory="4"
+        android:title="Display Ayahs"
         app:showAsAction="ifRoom|withText" />
 
     <item
         android:id="@+id/conjugate"
         android:icon="@drawable/ic_action_setting"
-        android:title="Conjugate"
         android:orderInCategory="5"
+        android:title="Conjugate"
         app:showAsAction="ifRoom|withText" />
-
 
 
 </menu>

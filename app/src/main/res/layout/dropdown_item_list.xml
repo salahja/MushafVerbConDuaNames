@@ -2,12 +2,11 @@
     android:id="@android:id/text1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:minHeight="?android:attr/listPreferredItemHeight"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:textColor="?android:attr/textColorAlertDialogListItem"
+    android:ellipsize="marquee"
     android:gravity="center_vertical"
-    android:textSize="30sp"
+    android:minHeight="?android:attr/listPreferredItemHeight"
     android:paddingStart="14dip"
     android:paddingEnd="15dip"
-    android:ellipsize="marquee"
-    />
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:textColor="?android:attr/textColorAlertDialogListItem"
+    android:textSize="30sp" />

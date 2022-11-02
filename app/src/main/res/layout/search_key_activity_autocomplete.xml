@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:orientation="horizontal"
     android:background="?selectableItemBackground"
+    android:orientation="horizontal"
     tools:context="org.sj.conjugator.activity.ConjugatorAct">
+
     <FrameLayout
         android:id="@+id/frame_container"
         android:layout_width="match_parent"
@@ -24,19 +25,17 @@
             android:id="@+id/autoCompleteTextView"
             android:layout_width="200dp"
             android:layout_height="210dp"
-            android:textSize="30sp"
             android:layout_marginTop="20dp"
-           />
+            android:textSize="30sp" />
 
 
         <ListView
-            android:layout_gravity="end"
             android:id="@+id/list_item"
-            android:textSize="30sp"
             android:layout_width="200dp"
             android:layout_height="210dp"
+            android:layout_gravity="end"
             android:layout_marginTop="5dp"
-            />
+            android:textSize="30sp" />
 
         <org.sj.conjugator.CustomKeyboard.OvalCustomKeyboard
 
@@ -51,7 +50,6 @@
 
 
     <RelativeLayout
-        android:visibility="visible"
         android:id="@+id/firstrow"
         android:layout_width="match_parent"
         android:layout_height="600dp"
@@ -59,8 +57,9 @@
         android:layout_marginVertical="100dp"
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
+        android:paddingTop="3dp"
 
-        android:paddingTop="3dp">
+        android:visibility="visible">
 
         <org.sj.conjugator.utilities.MovableFloatingActionButton
             android:id="@+id/fab"
@@ -78,7 +77,7 @@
             android:layout_width="94dp"
             android:layout_height="40dp"
             android:layout_below="@+id/fab"
-           android:layout_alignParentBottom="true"
+            android:layout_alignParentBottom="true"
             android:layout_gravity="start|bottom|center"
 
 
@@ -101,8 +100,8 @@
 
 
     </RelativeLayout>
-    <include layout="@layout/conjugator_bottom_menu" />
 
+    <include layout="@layout/conjugator_bottom_menu" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

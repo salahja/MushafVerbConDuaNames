@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer"
-    android:background="?android:colorBackground"
-    app:cardBackgroundColor="@android:color/transparent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    app:cardBackgroundColor="@android:color/transparent"
     android:fitsSystemWindows="true"
-    >
+   >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -25,8 +25,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="0dp"
-            android:layout_marginBottom="0dp" >
-
+            android:layout_marginBottom="0dp">
 
 
             <androidx.recyclerview.widget.RecyclerView
@@ -52,9 +51,6 @@
                 app:menu="@menu/bottom_nav_menu" />
 
 
-
-
-
             <com.example.utility.MovableFloatingActionButton
                 android:id="@+id/fab"
                 android:layout_width="wrap_content"
@@ -65,7 +61,8 @@
                 android:layout_marginTop="@dimen/fab_margin"
                 android:layout_marginEnd="@dimen/fab_margin"
                 android:layout_marginBottom="@dimen/fab_margin"
-                app:srcCompat="@android:drawable/btn_plus" />
+                app:srcCompat="@android:drawable/btn_plus"
+                tools:ignore="MissingClass" />
 
 
         </FrameLayout>
@@ -74,25 +71,24 @@
     </RelativeLayout>
 
 
-
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        style="@style/Widget.Design.NavigationView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/navigationView"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/navigation_drawer_menu"
-        app:itemTextColor="@color/drawable_selector_drawer_item"
-        style="@style/Widget.Design.NavigationView"
-
-
         android:layout_gravity="start"
         android:clipToPadding="false"
+        android:fitsSystemWindows="true"
         android:paddingBottom="68dp"
-        app:elevation="5dp"
 
+
+        app:elevation="5dp"
+        app:headerLayout="@layout/nav_header_main"
         app:itemIconTint="?attr/colorPrimary"
-        app:itemTextAppearance="@style/TextAppearance.MaterialComponents.Body2">
+        app:itemTextAppearance="@style/TextAppearance.MaterialComponents.Body2"
+
+        app:itemTextColor="@color/drawable_selector_drawer_item"
+        app:menu="@menu/navigation_drawer_menu">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -158,15 +154,7 @@
         </LinearLayout>
 
 
-
-
     </com.google.android.material.navigation.NavigationView>
-
-
-
-
-
-
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -57,7 +57,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.SwitchCompat;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -117,6 +116,7 @@ import java.util.concurrent.Executors;
 
 import database.DuaGroupActivity;
 import database.GridImageAct;
+import sj.hisnul.activity.HisnulMainAct;
 
 //import com.example.mushafconsolidated.Entities.JoinVersesTranslationDataTranslation;
 
@@ -592,7 +592,7 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
                     break;
                 case R.id.dua:
                     materialToolbar.setTitle("Hisnul Muslim-Dua;s");
-                    Intent searchintent = new Intent(this, DuaGroupActivity.class);
+                    Intent searchintent = new Intent(this, HisnulMainAct.class);
 
                     startActivity(searchintent);
                 /*
@@ -614,8 +614,8 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
 
                 case R.id.Names:
                     materialToolbar.setTitle("Aallah(SWT) Namess");
-                    Intent searchintents = new Intent(this, GridImageAct.class);
-
+                  //  Intent searchintents = new Intent(this, GridImageAct.class);
+                    Intent searchintents = new Intent(this, DuaGroupActivity.class);
                     startActivity(searchintents);
                     navigationView.setCheckedItem(R.id.Names);
                     break;
@@ -655,7 +655,7 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
                     //  startActivity(intents);
 
                     break;
-                case R.id.grammar:
+                case R.id.jumptoverse:
 
                     drawerLayout.closeDrawers();
 

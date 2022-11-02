@@ -73,10 +73,17 @@ import database.Dao.NamesDao;
 import database.entity.AllahNames;
 import database.entity.DuaDetails;
 import database.entity.DuaGroup;
+import sj.hisnul.Dao.hDuaCategoryDao;
+import sj.hisnul.Dao.hDuaItemDao;
+import sj.hisnul.Dao.hDuaNamesDao;
+import sj.hisnul.entity.hcategory;
+import sj.hisnul.entity.hduadetails;
+import sj.hisnul.entity.hduanames;
 
 
 //@Database(entities= {VerseEntit.class,ErabEntity.class,ChaptersAnaEntity.class},version= 1)
-@Database(entities = {surahsummary.class,quranexplorer.class,AllahNamesDetails.class,AllahNames.class,DuaGroup.class, DuaDetails.class,   MafoolMutlaqEnt.class,BadalErabNotesEnt.class, HalEnt.class,MafoolBihi.class,LiajlihiEnt.class,TameezEnt.class,GrammarRules.class,hanslexicon.class, qurandictionary.class,lanelexicon.class, lughat.class,NewNasbEntity.class,NewShartEntity.class, NewKanaEntity.class, NewMudhafEntity.class,   SifaEntity.class,   wbwentity.class,NounCorpus.class,VerbCorpus.class,QuranEntity.class, CorpusEntity.class,BookMarks.class,      ChaptersAnaEntity.class }, version = 1)
+@Database(entities = {hcategory.class, hduadetails.class, hduanames.class,surahsummary.class,quranexplorer.class,AllahNamesDetails.class,AllahNames.class,DuaGroup.class, DuaDetails.class,   MafoolMutlaqEnt.class,BadalErabNotesEnt.class, HalEnt.class,MafoolBihi.class,LiajlihiEnt.class,TameezEnt.class,GrammarRules.class,hanslexicon.class, qurandictionary.class,lanelexicon.class, lughat.class,NewNasbEntity.class,NewShartEntity.class, NewKanaEntity.class, NewMudhafEntity.class,   SifaEntity.class,   wbwentity.class,NounCorpus.class,VerbCorpus.class,QuranEntity.class, CorpusEntity.class,BookMarks.class,      ChaptersAnaEntity.class }, version = 1)
+
 public abstract class QuranAppDatabase extends RoomDatabase {
 
     public static QuranAppDatabase quranAppDatabaseInstance;
@@ -105,6 +112,12 @@ public abstract class QuranAppDatabase extends RoomDatabase {
 
 
 
+
+
+
+
+
+
 /*
 
  quranAppDatabaseInstanceasset = Room.databaseBuilder(context, QuranAppDatabase.class, "qurangrammar.db")
@@ -114,12 +127,7 @@ public abstract class QuranAppDatabase extends RoomDatabase {
                     .allowMainThreadQueries()
               //   .openHelperFactory(factory)
                      .build();
-
  */
-
-
-
-
 
 
 
@@ -153,7 +161,7 @@ public abstract class QuranAppDatabase extends RoomDatabase {
 
         }
     return quranAppDatabaseInstance;
-   //return quranAppDatabaseInstanceasset;
+ // return quranAppDatabaseInstanceasset;
     }
 
 
@@ -219,5 +227,9 @@ public abstract class QuranAppDatabase extends RoomDatabase {
    public abstract NamesDetailsDao NamesDetailsDao();
     public abstract QuranExplorerDao QuranExplorerDao();
     public abstract surahsummaryDao surahsummaryDao();
+
+    public  abstract hDuaItemDao hDuaItemDao();
+    public  abstract hDuaNamesDao hDuaNamesDao();
+    public  abstract hDuaCategoryDao hDuaCategoryDao();
 
 }

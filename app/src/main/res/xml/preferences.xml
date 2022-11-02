@@ -11,8 +11,8 @@
             android:defaultValue="@string/indicative"
             android:entries="@array/verbmoodsList"
             android:entryValues="@array/verbmoodEntry"
-            android:summary="@string/moodsummar"
             android:key="verbcase"
+            android:summary="@string/moodsummar"
             android:title="Verb Moods" />
         <SwitchPreference
             android:defaultValue="true"
@@ -95,9 +95,6 @@
         android:title="Select Translation" />
 
 
-
-
-
     <PreferenceCategory
 
         android:title="Grmmatical Syntax" />
@@ -109,34 +106,31 @@
     <SwitchPreference
         android:defaultValue="true"
         android:key="@string/prefs_show_mudhaf"
-        app:summaryOn="@string/mudhafsummary"
-        android:title="إضافَة/Possessive " />
+        android:title="إضافَة/Possessive "
+        app:summaryOn="@string/mudhafsummary" />
     <SwitchPreference
         android:defaultValue="false"
         android:key="@string/prefs_show_harfnasb"
-        app:summaryOn="@string/harfnasbsummary"
-        android:title="Accusative/ان واخواتها" />
+        android:title="Accusative/ان واخواتها"
+        app:summaryOn="@string/harfnasbsummary" />
 
     <SwitchPreference
         android:defaultValue="false"
         android:key="@string/prefs_show_shart"
-        app:summaryOn="@string/harfnasbsummary"
-        android:title="Conditional/جملة شرطية" />
+        android:title="Conditional/جملة شرطية"
+        app:summaryOn="@string/harfnasbsummary" />
 
     <SwitchPreference
         android:defaultValue="false"
         android:key="@string/prefs_show_kana"
-        app:summaryOn="@string/harfnasbsummary"
-        android:title=" Verb kāna/كان واخواتها " />
+        android:title=" Verb kāna/كان واخواتها "
+        app:summaryOn="@string/harfnasbsummary" />
 
 
     <SwitchPreference
         android:defaultValue="false"
         android:key="@string/prefs_grammar_sentence"
         android:title="Grammitica Analysis-Sentence wise    " />
-
-
-
 
 
     <PreferenceCategory
@@ -187,10 +181,6 @@
         app:fragment="com.example.mushafconsolidated.fragments.ActivitySettings$SelectQuranFronts"
         app:icon="@drawable/ic_baseline_web_24"
         app:key="quranFont" />
-
-
-
-
 
 
     <Preference

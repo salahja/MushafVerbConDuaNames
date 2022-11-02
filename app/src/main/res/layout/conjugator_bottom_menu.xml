@@ -15,7 +15,6 @@
 
     <Button
         android:id="@+id/conjugationnav"
-         android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -27,9 +26,10 @@
         android:autoSizeTextType="none"
         android:elevation="10dp"
         android:gravity="center_horizontal"
-
         android:text="@string/mujarradlist"
+
         android:textStyle="bold"
+        android:visibility="gone"
         app:chipCornerRadius="15dp"
         app:chipIcon="@drawable/ic_action_setting" />
 
@@ -37,12 +37,11 @@
         android:id="@+id/mazeedlist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:layout_marginStart="5dp"
         android:layout_marginBottom="680dp"
         android:layout_toEndOf="@+id/conjugationnav"
-
         android:autoSizeMaxTextSize="30sp"
+
         android:autoSizeMinTextSize="17sp"
         android:autoSizeStepGranularity="2sp"
         android:autoSizeTextType="none"
@@ -50,27 +49,29 @@
         android:gravity="center_horizontal"
         android:text="@string/mazeed_list"
         android:textStyle="bold"
+        android:visibility="gone"
         app:chipCornerRadius="15dp"
         app:chipIcon="@drawable/ic_tab_search" />
 
     <Button
         android:id="@+id/conjugatorsetting"
 
-        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="680dp"
         android:layout_toEndOf="@+id/mazeedlist"
-        android:layout_weight="0"         android:autoSizeMaxTextSize="30sp"
+        android:layout_weight="0"
+        android:autoSizeMaxTextSize="30sp"
         android:autoSizeMinTextSize="17sp"
         android:autoSizeStepGranularity="2sp"
         android:autoSizeTextType="none"
-
         android:elevation="10dp"
+
         android:foreground="@drawable/bottom_app_bar_title_foreground"
         android:gravity="center_horizontal"
         android:text="@string/settings_conjugator"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.017"
@@ -78,13 +79,12 @@
 
     <Button
         android:id="@+id/conjugator"
-        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="680dp"
         android:layout_toEndOf="@+id/conjugatorsetting"
-
         android:autoSizeMaxTextSize="30sp"
+
         android:autoSizeMinTextSize="17sp"
         android:autoSizeStepGranularity="2sp"
         android:autoSizeTextType="none"
@@ -92,7 +92,8 @@
         android:foreground="@drawable/bottom_app_bar_title_foreground"
         android:gravity="center_horizontal"
         android:text="@string/conjugator"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/qurangrammar"

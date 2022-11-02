@@ -11,12 +11,12 @@
     android:paddingEnd="6.0dip"
     app:behavior_hideable="true"
     app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
     <FrameLayout
         android:id="@+id/sheet"
         android:layout_width="wrap_content"
         android:layout_height="450dp"
-        app:layout_behavior="@string/bottom_sheet_behavior"/>
-
+        app:layout_behavior="@string/bottom_sheet_behavior" />
 
 
     <RelativeLayout
@@ -25,7 +25,7 @@
         android:layout_height="match_parent">
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/grammar"
+            android:id="@+id/jumptoverse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
@@ -71,27 +71,24 @@
                         android:text="message"
                         android:textSize="18.0sp" />
                 </RelativeLayout>
+
                 <TextView
                     android:id="@id/quranverseShart"
-                    android:ellipsize="start"
-
                     android:layout_width="wrap_content"
+
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15.0dip"
-
-
-
+                    android:ellipsize="start"
 
 
                     android:textSize="24.0sp" />
+
                 <TextView
                     android:id="@id/spannableverse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
                     android:layout_marginTop="15.0dip"
-
-
 
 
                     android:textSize="24.0sp" />
@@ -104,9 +101,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15.0dip"
                     android:lines="1"
-                    android:text="wordview"
-          
                     android:onClick="onClick"
+
+                    android:text="wordview"
                     android:textSize="24.0sp"
                     android:tooltipText="Click for Vocabulary"
 
@@ -121,7 +118,6 @@
                     android:lines="1"
 
 
-
                     android:textSize="18.0sp" />
 
                 <TextView
@@ -131,47 +127,50 @@
                     android:layout_marginTop="15.0dip"
 
 
-
-
                     android:textSize="18.0sp" />
+
                 <TextView
                     android:id="@id/verbdetails"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15.0dip"
 
-                    android:visibility="visible"
+                    android:textSize="18.0sp"
 
 
-                    android:textSize="18.0sp" />
+                    android:visibility="visible" />
+
                 <TextView
                     android:id="@id/noundetails"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15.0dip"
 
-                    android:visibility="visible"
+                    android:textSize="18.0sp"
 
-                    android:textSize="18.0sp" />
+                    android:visibility="visible" />
+
                 <TextView
                     android:id="@id/pronoundetails"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15.0dip"
 
-                    android:visibility="visible"
+                    android:textSize="18.0sp"
 
-                    android:textSize="18.0sp" />
+                    android:visibility="visible" />
+
                 <TextView
                     android:id="@id/lemma"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15.0dip"
 
-                    android:visibility="visible"
+                    android:textSize="30.0sp"
 
 
-                    android:textSize="30.0sp" />
+                    android:visibility="visible" />
+
                 <TextView
                     android:id="@id/rootView"
                     android:layout_width="wrap_content"
@@ -192,10 +191,9 @@
                     android:layout_marginEnd="20.0dip"
 
                     android:text="Word Occurancer"
-                    app:icon="@drawable/ic_action_jump"
+                    android:textSize="18.0sp"
 
-                    android:textSize="18.0sp" />
-
+                    app:icon="@drawable/ic_action_jump" />
 
 
                 <com.google.android.material.button.MaterialButton
@@ -203,14 +201,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20.0dip"
-                    android:visibility="gone"
                     android:layout_marginEnd="20.0dip"
-
-
                     android:text="Click for Verb Occurance"
-                    app:icon="@drawable/ic_action_jump"
 
-                    android:textSize="18.0sp" />
+
+                    android:textSize="18.0sp"
+                    android:visibility="gone"
+
+                    app:icon="@drawable/ic_action_jump" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@id/verbconjugationbtn"
@@ -224,15 +222,14 @@
                     app:icon="@drawable/ic_action_jump" />
 
 
-
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
 
-            android:layout_below="@+id/grammar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_below="@+id/jumptoverse">
 
 
             <TableLayout
@@ -245,10 +242,10 @@
 
 
                 <TableRow
-android:layout_weight="1"
-
                     android:layout_width="fill_parent"
+
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:weightSum="1.0">
 
@@ -301,9 +298,9 @@ android:layout_weight="1"
                 </TableRow>
 
                 <TableRow
-android:layout_weight="1"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:weightSum="1.0">
 
@@ -387,9 +384,9 @@ android:layout_weight="1"
 
 
                 <TableRow
-android:layout_weight="1"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:weightSum="1.0">
 
@@ -458,10 +455,10 @@ android:layout_weight="1"
                 </TableRow>
 
                 <TableRow
-android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5.0dip">
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="1">
 
                     <RelativeLayout
                         android:layout_width="wrap_content"
@@ -501,10 +498,10 @@ android:layout_weight="1"
                 </TableRow>
 
                 <TableRow
-android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5.0dip">
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="1">
 
                     <RelativeLayout
                         android:layout_width="wrap_content"
@@ -544,9 +541,9 @@ android:layout_weight="1"
                 </TableRow>
 
                 <TableRow
-android:layout_weight="1"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:weightSum="1.0">
 
@@ -591,9 +588,9 @@ android:layout_weight="1"
                 </TableRow>
 
                 <TableRow
-android:layout_weight="1"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:weightSum="1.0">
 
@@ -609,9 +606,9 @@ android:layout_weight="1"
                 </TableRow>
 
                 <TableRow
-android:layout_weight="1"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -643,7 +640,6 @@ android:layout_weight="1"
         </com.google.android.material.card.MaterialCardView>
 
     </RelativeLayout>
-
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -7,14 +7,13 @@
         android:orderInCategory="100"
         android:title="@string/action_search"
 
-        app:showAsAction="ifRoom|collapseActionView"
-        app:actionViewClass="androidx.appcompat.widget.SearchView">
-    </item>
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView"></item>
     <item
         android:id="@+id/backButtonView"
         android:icon="@drawable/ic_baseline_arrow_back_24"
-        app:showAsAction="always"
-        android:title="Back">
+        android:title="Back"
+        app:showAsAction="always">
 
     </item>
 

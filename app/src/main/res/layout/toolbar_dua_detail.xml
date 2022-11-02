@@ -5,8 +5,7 @@
     android:background="?selectableItemBackground"
 
     android:elevation="8dp"
-    android:minHeight="?attr/actionBarSize"
-  >
+    android:minHeight="?attr/actionBarSize">
 
     <!--TextView
         android:id="@+id/txtReference_duaDetail"
@@ -23,10 +22,10 @@
     <TextView
         android:id="@+id/txtReference_duaDetail"
         android:layout_width="wrap_content"
-        android:minWidth="40dp"
         android:layout_height="40dp"
         android:fontFamily="sans-serif"
         android:gravity="center"
+        android:minWidth="40dp"
         android:text="1"
 
         android:textSize="26sp"
@@ -34,14 +33,14 @@
 
     <View
         android:layout_width="8dp"
-        android:layout_height="?attr/actionBarSize"/>
+        android:layout_height="?attr/actionBarSize" />
 
     <TextView
         android:id="@+id/dua_detail_autofit_actionbar_title"
 
-        android:text="Testing titles over here with long text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:text="Testing titles over here with long text"
         app:autoSizeTextType="uniform" />
 
     <!--<me.grantland.widget.AutofitTextView-->

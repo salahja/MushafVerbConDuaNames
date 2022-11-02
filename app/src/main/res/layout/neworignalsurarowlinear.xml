@@ -29,7 +29,6 @@
                 android:visibility="gone" />
 
 
-
             <TextView
                 android:id="@+id/tvArabic"
                 android:layout_width="match_parent"

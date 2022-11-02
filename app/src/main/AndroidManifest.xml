@@ -29,7 +29,7 @@
 
         <activity
             android:name=".Activity.BaseActTwo"
-            android:exported="false">
+            android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -42,6 +42,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mushafconsolidated.Activity.MainActivity" />
         </activity>
+        <activity
+            android:name="sj.hisnul.activity.HisnulMainAct"
+            android:parentActivityName=".Activity.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+
 
 
 
@@ -95,12 +104,13 @@
         </activity>
         <activity
             android:name=".Activity.GrammarRuleDetailHostActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_activity_grammarrulelist_detail_host"
             android:resizeableActivity="true"
             tools:targetApi="24" />
         <activity
             android:name=".Activity.WordOccuranceAct"
+            android:exported="true"
             android:parentActivityName=".Activity.MainActivity"
             android:screenOrientation="portrait">
             <meta-data
@@ -109,6 +119,7 @@
         </activity>
         <activity
             android:name=".Activity.QuranGrammarAct"
+            android:exported="true"
             android:parentActivityName=".Activity.MainActivity"
             android:screenOrientation="portrait">
             <meta-data
@@ -117,6 +128,7 @@
         </activity>
         <activity
             android:name=".Activity.QuranDIctionarySearchActivity"
+            android:exported="true"
             android:parentActivityName=".Activity.MainActivity"
             android:screenOrientation="portrait">
             <meta-data
@@ -125,6 +137,7 @@
         </activity>
         <activity
             android:name=".Activity.SearchResult"
+            android:exported="true"
             android:parentActivityName=".Activity.MainActivity"
             android:screenOrientation="portrait">
             <meta-data
@@ -133,6 +146,7 @@
         </activity>
         <activity
             android:name=".Activity.SearchKeyBoardAct"
+            android:exported="true"
             android:parentActivityName=".Activity.MainActivity"
             android:screenOrientation="portrait">
             <meta-data
@@ -141,6 +155,7 @@
         </activity>
         <activity
             android:name=".Activity.LughatWordDetailsAct"
+            android:exported="true"
             android:label="@string/title_activity_verb_conjugation"
             android:screenOrientation="portrait">
             <meta-data
@@ -149,6 +164,7 @@
         </activity>
         <activity
             android:name=".Activity.WordDictionaryAct"
+            android:exported="true"
             android:label="@string/title_activity_verb_conjugation"
             android:screenOrientation="portrait">
             <meta-data
@@ -157,6 +173,7 @@
         </activity>
         <activity
             android:name=".Activity.MainActivity"
+            android:exported="true"
             android:label="@string/title_activity_main"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -193,6 +210,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mushafconsolidated.Activity.MainActivity" />
         </activity>
+        <activity
+            android:name="sj.hisnul.activity.NewExpandAct"
+            android:parentActivityName="sj.hisnul.activity.HisnulMainAct">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mushafconsolidated.Activity.MainActivity" />
+        </activity>
+
+
     </application>
 
 </manifest>

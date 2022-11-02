@@ -8,6 +8,7 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
+
 import com.example.mushafconsolidated.databinding.FragmentItemBinding;
 
 import database.entity.DuaGroup;

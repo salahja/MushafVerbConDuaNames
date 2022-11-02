@@ -33,12 +33,11 @@
 
 
             <TableRow
-android:layout_weight="1"
-
-                
-
                 android:layout_width="fill_parent"
+
+
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
 
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
@@ -54,8 +53,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -71,8 +70,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
 
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
@@ -86,8 +85,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -100,8 +99,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -114,8 +113,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -128,8 +127,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -144,8 +143,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -177,13 +176,11 @@ android:layout_weight="1"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
-
-
-
-
                 android:layout_width="fill_parent"
+
+
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -199,8 +196,8 @@ android:layout_weight="1"
                         android:layout_weight="0.2"
 
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -215,8 +212,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -228,14 +225,13 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                        app:autoSizeTextType="none"
-                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
                         android:paddingEnd="3.0dip"
-                     />
+                        app:autoSizeTextType="none" />
 
 
                     <TextView
@@ -243,8 +239,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -257,8 +253,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -272,8 +268,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -285,8 +281,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -313,13 +309,11 @@ android:layout_weight="1"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
-
-
-
-                
                 android:layout_width="fill_parent"
+
+
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -335,15 +329,13 @@ android:layout_weight="1"
                         android:layout_weight="0.2"
 
 
-
-                        app:autoSizePresetSizes="@array/autosize_text_sizes"
-
-                        app:autoSizeTextType="none"
                         android:gravity="center|right"
+
                         android:paddingStart="5.0dip"
                         android:paddingEnd="3.0dip"
                         android:textSize="20sp"
-                    >
+                        app:autoSizePresetSizes="@array/autosize_text_sizes"
+                        app:autoSizeTextType="none">
 
                     </TextView>
 
@@ -352,8 +344,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -366,22 +358,21 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
-                        app:autoSizeTextType="none"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="2sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
                         android:paddingEnd="3.0dip"
-                         />
+                        app:autoSizeTextType="none" />
 
                     <TextView
                         android:id="@+id/madimajhuma"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -394,8 +385,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -407,8 +398,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -420,8 +411,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -448,12 +439,11 @@ android:layout_weight="1"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
-
-
-
                 android:layout_width="fill_parent"
+
+
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:weightSum="1.0">
 
@@ -469,8 +459,8 @@ android:layout_weight="1"
                         android:layout_weight="0.2"
 
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -496,14 +486,13 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
-                        app:autoSizeTextType="none"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
                         android:paddingEnd="3.0dip"
-                         />
+                        app:autoSizeTextType="none" />
 
 
                     <TextView
@@ -511,8 +500,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -525,8 +514,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -538,8 +527,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -551,8 +540,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -577,11 +566,11 @@ android:layout_weight="1"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
-
-
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -596,14 +585,14 @@ android:layout_weight="1"
                         android:layout_weight="0.2"
 
 
-                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="30sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
                         android:paddingEnd="3.0dip"
 
-                      >
+                        >
 
                     </TextView>
 
@@ -613,30 +602,28 @@ android:layout_weight="1"
                         android:layout_weight="0.2"
 
 
-                        app:autoSizePresetSizes="@array/autosize_text_sizes"
-                        app:autoSizeTextType="none"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
                         android:paddingEnd="3.0dip"
-                         />
+                        app:autoSizePresetSizes="@array/autosize_text_sizes"
+                        app:autoSizeTextType="none" />
 
                     <TextView
                         android:id="@id/muzmajhia"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                       
 
-                        app:autoSizeTextType="none"
+
+                        android:autoSizeMaxTextSize="26sp"
 
                         android:autoSizeMinTextSize="24sp"
-                        android:autoSizeMaxTextSize="26sp"
                         android:autoSizeStepGranularity="6sp"
-
                         android:gravity="center|right"
+
                         android:paddingStart="5.0dip"
                         android:paddingEnd="3.0dip"
-                         />
+                        app:autoSizeTextType="none" />
 
 
                     <TextView
@@ -645,8 +632,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -659,8 +646,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -673,8 +660,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -686,8 +673,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -715,11 +702,11 @@ android:layout_weight="1"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
-
-
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -734,8 +721,8 @@ android:layout_weight="1"
                         android:layout_weight="0.2"
 
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -750,8 +737,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -764,8 +751,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -779,8 +766,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -793,8 +780,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -807,8 +794,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -820,8 +807,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -850,11 +837,11 @@ android:layout_weight="1"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
-
-
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -869,8 +856,8 @@ android:layout_weight="1"
                         android:layout_weight="0.2"
 
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -883,8 +870,8 @@ android:layout_weight="1"
                         android:layout_weight="0.2"
 
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -897,8 +884,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -911,8 +898,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -925,8 +912,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -939,8 +926,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -952,8 +939,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -981,11 +968,11 @@ android:layout_weight="1"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
-
-
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -1000,8 +987,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1014,8 +1001,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1028,8 +1015,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1042,8 +1029,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1056,8 +1043,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1070,8 +1057,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="match_parent"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1083,8 +1070,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="match_parent"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1114,11 +1101,11 @@ android:layout_weight="1"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
-
-
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -1134,8 +1121,8 @@ android:layout_weight="1"
                         android:layout_weight="0.2"
 
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1148,8 +1135,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1162,8 +1149,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1176,8 +1163,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1190,8 +1177,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1204,8 +1191,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1217,8 +1204,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1246,11 +1233,11 @@ android:layout_weight="1"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
-
-
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -1265,8 +1252,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1279,8 +1266,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1294,8 +1281,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1309,8 +1296,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1323,8 +1310,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1337,8 +1324,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1350,8 +1337,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1379,11 +1366,11 @@ android:layout_weight="1"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
-
-
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -1398,8 +1385,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1412,8 +1399,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1426,8 +1413,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1440,8 +1427,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1454,8 +1441,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1468,8 +1455,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1481,8 +1468,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1510,11 +1497,11 @@ android:layout_weight="1"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
-
-
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -1529,8 +1516,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1543,8 +1530,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1558,8 +1545,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1573,8 +1560,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1587,8 +1574,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1601,8 +1588,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1614,8 +1601,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1643,11 +1630,11 @@ android:layout_weight="1"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
-
-
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -1662,8 +1649,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1678,8 +1665,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1692,8 +1679,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1707,8 +1694,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1721,8 +1708,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1735,8 +1722,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1748,8 +1735,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1778,11 +1765,11 @@ android:layout_weight="1"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
-
-
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -1797,8 +1784,8 @@ android:layout_weight="1"
                         android:layout_weight="0.2"
 
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1812,8 +1799,8 @@ android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1827,8 +1814,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1841,8 +1828,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1855,8 +1842,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1868,8 +1855,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1897,11 +1884,11 @@ android:layout_weight="1"
             app:strokeWidth="1dp">
 
             <TableRow
-android:layout_weight="1"
-
-
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -1916,8 +1903,8 @@ android:layout_weight="1"
                         android:layout_weight="0.2"
 
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1930,8 +1917,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1945,8 +1932,8 @@ android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
 
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1959,8 +1946,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1973,8 +1960,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"
@@ -1986,8 +1973,8 @@ android:layout_weight="1"
                         android:layout_width="0.0dip"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
-                          android:autoSizeMinTextSize="24sp"
                         android:autoSizeMaxTextSize="26sp"
+                        android:autoSizeMinTextSize="24sp"
                         android:autoSizeStepGranularity="6sp"
                         android:gravity="center|right"
                         android:paddingStart="5.0dip"

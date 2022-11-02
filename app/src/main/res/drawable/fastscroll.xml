@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true">
         <layer-list>
             <item>
-                <shape android:tint="?attr/colorControlActivated" android:shape="rectangle">
-                    <solid android:color="?attr/colorPrimary"/>
-                    <size android:height="48dp" android:width="8dp"/>
+                <shape android:shape="rectangle" android:tint="?attr/colorControlActivated">
+                    <solid android:color="?attr/colorPrimary" />
+                    <size android:width="8dp" android:height="48dp" />
                 </shape>
             </item>
         </layer-list>
@@ -13,9 +13,9 @@
     <item>
         <layer-list>
             <item>
-                <shape android:tint="?attr/colorControlNormal" android:shape="rectangle">
-                    <solid android:color="@android:color/darker_gray"/>
-                    <size android:height="48dp" android:width="8dp"/>
+                <shape android:shape="rectangle" android:tint="?attr/colorControlNormal">
+                    <solid android:color="@android:color/darker_gray" />
+                    <size android:width="8dp" android:height="48dp" />
                 </shape>
             </item>
         </layer-list>

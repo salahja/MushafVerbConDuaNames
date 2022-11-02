@@ -60,20 +60,7 @@ public class DuaGroupActivity extends BaseActivity {
             public void onItemClick(View v, int position) {
                 DuaItemFragment item=new DuaItemFragment();
           DuaGroup dua= (DuaGroup) mAdapter.getItem(position);
-           /*
-               Bundle dataBundle=new Bundle();
-              //  dataBundle.putString(QURAN_VERB_WAZAN, verbform);
-             dataBundle.putInt("id", dua.get_id());
-                item.setArguments(dataBundle);
-                StringBuilder sb=new StringBuilder();
-                sb.append(dua.get_id());
-              Integer[] data = {dua.get_id()};
 
-                getSupportFragmentManager().beginTransaction()
-                        .setReorderingAllowed(true)
-                        .replace(R.id.frame_container, DuaItemFragment.class, dataBundle)
-                        .commit();
-            */
                 Intent intent;
                 intent = new Intent(getBaseContext(),
                         DuaDetailActivity.class);

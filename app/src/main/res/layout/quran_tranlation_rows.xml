@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <RelativeLayout
+        android:id="@+id/erabnotesexpand"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-          android:id="@+id/erabnotesexpand"
         android:layout_marginTop="20dp">
 
         <TextView
-            android:visibility="gone"
             android:id="@+id/erab_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -19,46 +18,43 @@
             android:padding="@dimen/textViewPadding"
             android:text="Erab Notes"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-          />
+            android:visibility="gone" />
 
         <TextView
-            android:visibility="gone"
             android:id="@+id/erab_notes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/arabic_font_style"
             android:lineSpacingExtra="@dimen/lineSpacingExtra"
             android:padding="@dimen/textViewPadding"
-            android:hint="@string/arabic_font_style"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-             />
+            android:visibility="gone" />
 
         <ImageView
-            android:rotation="0.0"
             android:id="@+id/erab_img"
             android:layout_width="30dp"
             android:layout_height="20dp"
-
-android:visibility="gone"
             android:layout_alignParentEnd="true"
+
             android:layout_centerInParent="false"
             android:layout_marginEnd="5dp"
             android:adjustViewBounds="true"
             android:contentDescription="@null"
-
+            android:rotation="0.0"
             android:scaleType="fitCenter"
+
             android:tooltipText="@string/Alert"
+            android:visibility="gone"
             app:srcCompat="@drawable/ic_baseline_double_arrow_24" />
-
-
 
 
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/translationView"
-        android:layout_below="@+id/erabnotesexpand"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/erabnotesexpand"
         android:orientation="horizontal">
 
         <TextView
@@ -66,43 +62,41 @@ android:visibility="gone"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sahiah International"
             android:lineSpacingExtra="@dimen/lineSpacingExtra"
             android:padding="@dimen/textViewPadding"
+            android:text="Sahiah International"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:visibility="gone" />
 
 
-
-
         <TextView
             android:id="@+id/translate_textView"
-            android:hint="translation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/translate_textViewnote"
             android:alpha="0.7"
+            android:hint="translation"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra"
+            android:padding="@dimen/textViewPadding"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:paddingBottom="8dp"
-                      android:textSize="16sp"
-            android:lineSpacingExtra="@dimen/lineSpacingExtra"
-            android:padding="@dimen/textViewPadding"/>
+            android:textSize="16sp" />
 
     </RelativeLayout>
 
 
     <RelativeLayout
-        android:layout_below="@+id/translationView"
         android:id="@+id/jalalalaynview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/translationView">
 
         <TextView
             android:id="@+id/quran_jalalaynnote"
-            android:hint="jalalayn header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="jalalayn header"
             android:lineSpacingExtra="@dimen/lineSpacingExtra"
             android:padding="@dimen/textViewPadding"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -121,10 +115,10 @@ android:visibility="gone"
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_below="@+id/jalalalaynview"
         android:id="@+id/literationview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jalalalaynview">
 
         <TextView
             android:id="@+id/quran_transliterationnote"
@@ -155,8 +149,6 @@ android:visibility="gone"
         android:layout_below="@+id/literationview">
 
 
-
-
     </RelativeLayout>
 
     <RelativeLayout
@@ -167,16 +159,16 @@ android:visibility="gone"
 
 
         <ImageView
-            android:rotation="0.0"
             android:id="@+id/erabexpand"
             android:layout_width="30dp"
             android:layout_height="20dp"
-
             android:layout_alignParentEnd="true"
+
             android:layout_centerInParent="false"
             android:layout_marginEnd="5dp"
             android:adjustViewBounds="true"
             android:contentDescription="@null"
+            android:rotation="0.0"
 
             android:scaleType="fitCenter"
             android:tooltipText="@string/Alert"
@@ -190,9 +182,9 @@ android:visibility="gone"
             android:lineSpacingExtra="@dimen/lineSpacingExtra"
             android:padding="@dimen/textViewPadding"
             android:text="Erab"
-            app:srcCompat="@drawable/ic_baseline_double_arrow_24"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:visibility="gone" />
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_baseline_double_arrow_24" />
 
         <TextView
             android:id="@+id/erab_textView"
