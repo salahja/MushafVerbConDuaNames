@@ -29,22 +29,7 @@
 
 
     </ExpandableListView>
-    <ExpandableListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
 
-
-
-
-        android:childDivider="@android:color/transparent"
-        android:divider="@android:color/holo_red_dark"
-
-        android:dividerHeight="1dp"
-
-        android:textDirection="rtl">
-
-
-    </ExpandableListView>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"

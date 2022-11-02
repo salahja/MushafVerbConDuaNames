@@ -77,6 +77,7 @@ import database.entity.DuaGroup;
 
 //@Database(entities= {VerseEntit.class,ErabEntity.class,ChaptersAnaEntity.class},version= 1)
 @Database(entities = {surahsummary.class,quranexplorer.class,AllahNamesDetails.class,AllahNames.class,DuaGroup.class, DuaDetails.class,   MafoolMutlaqEnt.class,BadalErabNotesEnt.class, HalEnt.class,MafoolBihi.class,LiajlihiEnt.class,TameezEnt.class,GrammarRules.class,hanslexicon.class, qurandictionary.class,lanelexicon.class, lughat.class,NewNasbEntity.class,NewShartEntity.class, NewKanaEntity.class, NewMudhafEntity.class,   SifaEntity.class,   wbwentity.class,NounCorpus.class,VerbCorpus.class,QuranEntity.class, CorpusEntity.class,BookMarks.class,      ChaptersAnaEntity.class }, version = 1)
+
 public abstract class QuranAppDatabase extends RoomDatabase {
 
     public static QuranAppDatabase quranAppDatabaseInstance;

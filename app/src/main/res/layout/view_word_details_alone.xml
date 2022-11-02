@@ -30,7 +30,7 @@
         android:layout_height="match_parent">
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/grammar"
+            android:id="@+id/jumptoverse"
             android:layout_width="match_parent"
             android:layout_height="436dp"
             android:layout_marginStart="1dp"

@@ -32,7 +32,7 @@
 
             <com.google.android.material.card.MaterialCardView
 
-                android:id="@+id/grammar"
+                android:id="@+id/jumptoverse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="1dp"
@@ -377,7 +377,7 @@
                 android:id="@+id/ifverborpart"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/grammar">
+                android:layout_below="@+id/jumptoverse">
 
 
                 <TableLayout

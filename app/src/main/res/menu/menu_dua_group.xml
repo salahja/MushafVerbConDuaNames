@@ -24,7 +24,12 @@
         app:showAsAction="always"
         android:contentDescription="@string/content_description_one"
         android:title="Back"/>
-
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_action_setting"
+        app:showAsAction="always"
+        android:contentDescription="@string/content_description_one"
+        android:title="Setting"/>
 
     <!--item
         android:id="@+id/action_night_mode"

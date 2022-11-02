@@ -57,7 +57,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.SwitchCompat;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -655,7 +654,7 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
                     //  startActivity(intents);
 
                     break;
-                case R.id.grammar:
+                case R.id.jumptoverse:
 
                     drawerLayout.closeDrawers();
 

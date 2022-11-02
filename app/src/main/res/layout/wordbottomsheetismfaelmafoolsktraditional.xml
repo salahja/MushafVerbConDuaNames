@@ -50,7 +50,7 @@
             app:strokeWidth="1dp">
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/grammar"
+                android:id="@+id/jumptoverse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"

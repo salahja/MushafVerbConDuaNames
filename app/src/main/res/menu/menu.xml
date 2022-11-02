@@ -30,7 +30,7 @@
 
 
     <item
-        android:id="@+id/grammar"
+        android:id="@+id/jumptoverse"
         android:icon="@drawable/ic_baseline_open_in_browser_24"
         app:showAsAction="always"
         android:title="Grammar"
