@@ -13,7 +13,7 @@
     <item
         android:id="@+id/conjugationnav"
         android:icon="@drawable/ic_baseline_construction_24"
-        android:iconTint="@color/white"
+
         android:title="Conjugator"
         app:showAsAction="always" />
 
@@ -21,7 +21,7 @@
     <item
         android:id="@+id/searchtopic"
         android:contentDescription="@string/content_description_one"
-        android:icon="@drawable/baseline_search_24"
+        android:icon="@drawable/baseline_search_36"
         android:title="@string/action_search"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
 

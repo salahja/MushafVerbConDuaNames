@@ -114,9 +114,8 @@ import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import database.DuaGroupActivity;
 import database.GridImageAct;
-import sj.hisnul.activity.HisnulMainAct;
+import sj.hisnul.activity.HisnulBottomACT;
 
 //import com.example.mushafconsolidated.Entities.JoinVersesTranslationDataTranslation;
 
@@ -266,12 +265,18 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
-        if (id == R.id.action_bookmarks) {
+        if (id == R.id.bookmark) {
             //   Intent intent = new Intent(this, BookmarksGroupActivity.class);
             //  this.startActivity(intent);
         } else if (id == R.id.jumpto) {
 
             SurahAyahPicker();
+        }else if(id==R.id.settings){
+
+            Intent settingint = new Intent(this, ActivitySettings.class);
+
+            startActivity(settingint);
+            navigationView.setCheckedItem(R.id.Names);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -592,7 +597,8 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
                     break;
                 case R.id.dua:
                     materialToolbar.setTitle("Hisnul Muslim-Dua;s");
-                    Intent searchintent = new Intent(this, HisnulMainAct.class);
+            //        Intent searchintent = new Intent(this, HisnulMainAct.class);
+                    Intent searchintent = new Intent(this, HisnulBottomACT.class);
 
                     startActivity(searchintent);
                 /*
@@ -614,8 +620,8 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
 
                 case R.id.Names:
                     materialToolbar.setTitle("Aallah(SWT) Namess");
-                  //  Intent searchintents = new Intent(this, GridImageAct.class);
-                    Intent searchintents = new Intent(this, DuaGroupActivity.class);
+                 Intent searchintents = new Intent(this, GridImageAct.class);
+
                     startActivity(searchintents);
                     navigationView.setCheckedItem(R.id.Names);
                     break;

@@ -201,6 +201,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/wordByWordRecyclerView"
+        android:layoutAnimation="@anim/layout_flyincenter"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:tooltipText="surah"

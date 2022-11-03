@@ -22,7 +22,7 @@
 
             app:layout_scrollFlags="scroll|enterAlways|snap"
             android:layout_height="?attr/actionBarSize"
-            android:animateLayoutChanges="true"
+            android:animateLayoutChanges="false"
             android:layout_alignParentTop="true"
             app:menu="@menu/menu_search"
 
@@ -32,44 +32,39 @@
 
 
     </com.google.android.material.appbar.AppBarLayout>
-
-    <ExpandableListView
-        android:id="@+id/expandableListView"
-        android:layout_marginTop="70dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:animateLayoutChanges="true"
-
-        style="@style/TextAppearance.Design.CollapsingToolbar.Expanded"
-
-        android:childDivider="@android:color/transparent"
-        android:divider="@android:color/holo_red_dark"
-
-        android:dividerHeight="1dp"
-
-        >
-
-
-    </ExpandableListView>
-
     <FrameLayout
         android:id="@+id/frame_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_marginTop="190dp"
+            android:layout_marginTop="140dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/recview" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="5dp"
-            />
 
         <!-- res/layout/example_activity.xml -->
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_marginTop="140dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="false"
 
+            style="@style/TextAppearance.Design.CollapsingToolbar.Expanded"
+
+            android:childDivider="@android:color/transparent"
+            android:divider="@android:color/holo_red_dark"
+
+            android:dividerHeight="1dp"
+
+            >
+
+
+        </ExpandableListView>
     </FrameLayout>
+
+
 
 
 

@@ -1004,6 +1004,16 @@ public class Utils {
         return (ArrayList<TameezPOJO>) database.RawDao().gettameezversescount(query);
 
     }
+    public  ArrayList<hduanames> getDuaCATNAMES(String tid) {
+        String verb=String.format("select * from hduanames where (category = '%s'   or category like '%%,%s'   or category like '%s, %% 'or category like '%%,%s,%%'"+
+        "",tid,tid,tid,tid );
+        String fs=verb.concat(")");
+
+        SimpleSQLiteQuery query = new SimpleSQLiteQuery(fs);
+
+        return (ArrayList<hduanames>) database.RawDao().getDuaCATNAMES(query);
+
+    }
 
 
 
@@ -1077,7 +1087,7 @@ public class Utils {
 
 
 
-    public int updateFav( int fav,String id) {
+    public int updateFav( int fav,int id) {
         int updadateRoots = database.hDuaNamesDao().updateFav(fav,id);
 
         return updadateRoots;
@@ -1085,6 +1095,12 @@ public class Utils {
 
     public static ArrayList<hduanames> getAllList() {
         ArrayList<hduanames> duat = (ArrayList<hduanames>) database.hDuaNamesDao().getDuanames();
+        return duat;
+
+    }
+
+    public static ArrayList<hduanames> getdualistbychapter(int cid) {
+        ArrayList<hduanames> duat = (ArrayList<hduanames>) database.hDuaNamesDao().getdualistbychapter( cid);
         return duat;
 
     }
@@ -1102,6 +1118,19 @@ public class Utils {
         return dua;
 
     }
+    public  ArrayList<hduanames> getDunamesbyCatId(String id) {
+        ArrayList<hduanames> dua = (ArrayList<hduanames>) database.hDuaNamesDao().getDunamesbyCatId(id);
+        return dua;
+
+    }
+
+    public  ArrayList<hduanames> getDunamesbyCatIdnew(String id) {
+        ArrayList<hduanames> dua = (ArrayList<hduanames>) database.hDuaNamesDao().getDunamesbyCatIdnew(id);
+        return dua;
+
+    }
+
+
     public  ArrayList<hduanames> getDuanamesDetails(String id) {
         ArrayList<hduanames> duas = (ArrayList<hduanames>) database.hDuaNamesDao().getDuanamesByID(id);
         return duas;

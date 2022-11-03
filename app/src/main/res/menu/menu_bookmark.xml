@@ -2,20 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_bookmark"
-        android:icon="@drawable/baseline_star_border_36"
+        android:id="@+id/bookmark"
+        android:icon="@drawable/ic_baseline_bookmark_add_36"
         android:title="@string/str_bookmark"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_share"
-        android:icon="@drawable/baseline_share_24"
+        android:icon="@drawable/baseline_share_36"
         android:title="@string/share_app"
         app:showAsAction="always" />
-
     <item
-        android:id="@+id/action_search"
-        android:icon="@drawable/baseline_search_36"
-        android:title="@string/search"
-        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:id="@+id/backup"
+        android:icon="@drawable/baseline_arrow_back_36"
+        android:title="@string/back"
         app:showAsAction="always" />
+
+
 </menu>

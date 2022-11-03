@@ -101,7 +101,7 @@ public class TopicDetailAct extends BaseActivity implements  OnItemClickListener
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
-        if (id == R.id.action_bookmarks) {
+        if (id ==R.id.bookmark) {
         }
         return super.onOptionsItemSelected(item);
     }

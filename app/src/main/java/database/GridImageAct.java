@@ -156,7 +156,7 @@ public class GridImageAct extends BaseActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_dua_group, menu);
+        getMenuInflater().inflate(R.menu.mainsearch, menu);
 
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
@@ -187,7 +187,7 @@ public class GridImageAct extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
-           if (id == R.id.action_bookmarks) {
+           if (id == R.id.bookmark) {
          //   Intent intent = new Intent(this, BookmarksGroupActivity.class);
           //  this.startActivity(intent);
         }

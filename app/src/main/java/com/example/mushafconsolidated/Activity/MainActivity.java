@@ -22,12 +22,10 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.window.layout.WindowMetrics;
 import androidx.window.layout.WindowMetricsCalculator;
 
 import com.example.mushafconsolidated.R;
-import com.example.mushafconsolidated.fragments.BookmarkFragment;
 import com.example.utility.QuranGrammarApplication;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -47,7 +45,6 @@ import java.util.concurrent.Executors;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-import database.DuaGroupActivity;
 import database.GridImageAct;
 
 
@@ -289,15 +286,6 @@ public class MainActivity extends BaseActivity {
         {
             Fragment fragment;
             switch (item.getItemId()) {
-                case R.id.dua:
-                    drawerLayout.closeDrawers();
-                    Intent searchintent = new Intent(this, DuaGroupActivity.class);
-
-
-
-                    startActivity(searchintent);
-                    navigationView.setCheckedItem(R.id.duanav);
-                    break;
 
 
                 case R.id.Names:

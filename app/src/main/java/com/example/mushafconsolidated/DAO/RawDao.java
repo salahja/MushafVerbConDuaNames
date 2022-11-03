@@ -25,6 +25,8 @@ import com.example.mushafconsolidated.Entities.VerbCorpusBreakup;
 
 import java.util.List;
 
+import sj.hisnul.entity.hduanames;
+
 //import com.example.mushafconsolidated.Entities.JoinVersesTranslationDataTranslation;
 
 @Dao
@@ -82,6 +84,7 @@ public interface RawDao {
     List<TameezPOJO> gettameezversescount(SupportSQLiteQuery query);
     @RawQuery
     List<CorpusExpandWbwPOJO> getCorpusWbwfortameez(SupportSQLiteQuery query);
-
+    @RawQuery
+    List <hduanames> getDuaCATNAMES(SupportSQLiteQuery query);
 
 }

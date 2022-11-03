@@ -8,10 +8,7 @@
         app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="collapseActionView|ifRoom" />
 
-    <item
-        android:id="@+id/backup"
-        android:orderInCategory="100"
-        android:title="@string/back"
-        app:icon="@drawable/baseline_arrow_back_36"
-        app:showAsAction="always" />
+
+
+
 </menu>

@@ -166,61 +166,7 @@ public class BookmarkFragment extends Fragment implements AdapterView.OnItemClic
                 readingintent.putExtra(SURAH_ARABIC_NAME, bmark.getSurahname());
                 readingintent.putExtra(WBW, true);
                 startActivity(readingintent);
-                /*
-                 if (dataBundle != null) {
 
-
-                    if (header.equals(MUFRADHEADER)) {
-                        Intent mufradintent = new Intent(getActivity(), ReadingSurahPartActivity.class);
-
-                        mufradintent.putExtra(MUFRADATFRAGTAG, true);
-                        dataBundle.putInt(CHAPTER, Integer.parseInt(bmark.getChapterno()));
-                        dataBundle.putInt(AYAHNUMBER, Integer.parseInt(bmark.getVerseno()));
-
-                        dataBundle.putString(SURAH_ARABIC_NAME, bmark.getSurahname());
-
-                    } else if (header.equals(WBWSURAHHEADER)) {
-                        Intent readingintent = new Intent(getActivity(), ReadingSurahPartActivity.class);
-                        readingintent.putExtra(MUFRADATFRAGTAG, false);
-                        readingintent.putExtra(CHAPTER, Integer.parseInt(bmark.getChapterno()));
-                        readingintent.putExtra(AYAHNUMBER, Integer.parseInt(bmark.getVerseno()));
-                        readingintent.putExtra(CHAPTERORPART, true);
-                        readingintent.putExtra(SURAH_ARABIC_NAME, bmark.getSurahname());
-                        readingintent.putExtra(WBW,true);
-                        startActivity(readingintent);
-
-                    } else if (header.equals(WBWPARTHEADER)) {
-                        Intent readingintent = new Intent(getActivity(), ReadingSurahPartActivity.class);
-                        readingintent.putExtra(MUFRADATFRAGTAG, false);
-                        readingintent.putExtra(CHAPTER, Integer.parseInt(bmark.getChapterno()));
-                        readingintent.putExtra(AYAHNUMBER, Integer.parseInt(bmark.getVerseno()));
-                        readingintent.putExtra(CHAPTERORPART, false);
-                        readingintent.putExtra(SURAH_ARABIC_NAME, bmark.getSurahname());
-                        readingintent.putExtra(WBW,false);
-                        startActivity(readingintent);
-
-                    }else if (header.equals(NOWBWSURAHHEADER)) {
-                        Intent readingintent = new Intent(getActivity(), ReadingSurahPartActivity.class);
-                        readingintent.putExtra(MUFRADATFRAGTAG, false);
-                        readingintent.putExtra(CHAPTER, Integer.parseInt(bmark.getChapterno()));
-                        readingintent.putExtra(AYAHNUMBER, Integer.parseInt(bmark.getVerseno()));
-                        readingintent.putExtra(CHAPTERORPART, true);
-                        readingintent.putExtra(SURAH_ARABIC_NAME, bmark.getSurahname());
-                        readingintent.putExtra(WBW,false);
-                        startActivity(readingintent);
-                    }else if (header.equals(WBWPARTHEADER)) {
-                        Intent readingintent = new Intent(getActivity(), ReadingSurahPartActivity.class);
-                        readingintent.putExtra(MUFRADATFRAGTAG, false);
-                        readingintent.putExtra(CHAPTER, Integer.parseInt(bmark.getChapterno()));
-                        readingintent.putExtra(AYAHNUMBER, Integer.parseInt(bmark.getVerseno()));
-                        readingintent.putExtra(CHAPTERORPART, false);
-                        readingintent.putExtra(SURAH_ARABIC_NAME, bmark.getSurahname());
-                        readingintent.putExtra(WBW,false);
-                        startActivity(readingintent);
-                    }
-
-                }
-                 */
 
             }
         });
