@@ -24,7 +24,7 @@ import sj.hisnul.entity.hduadetails;
 
 
 public class SelectedDuaViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    ArrayList<ArrayList<hduadetails>>  duadetailsitems;
+    ArrayList<ArrayList<hduadetails>> duadetailsitems;
     private int VIEW_ITEM = 0;
     private int VIEW_PROG = 1;
     private static final int TYPE_HEADER = 0;
@@ -38,14 +38,14 @@ public class SelectedDuaViewAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 
     //    private final Integer arabicTextColor;
     Context mycontext;
- String header;
-ArrayList<String> subheaders=new ArrayList<>();
+    String header;
+    ArrayList<String> subheaders = new ArrayList<>();
 
     public SelectedDuaViewAdapter(ArrayList<ArrayList<hduadetails>> duaItems, Context context, String name, ArrayList<String> subheaders) {
         this.duadetailsitems = duaItems;
         this.context = context;
-        this.header=name;
-        this.subheaders=subheaders;
+        this.header = name;
+        this.subheaders = subheaders;
     }
 
 
@@ -78,16 +78,17 @@ ArrayList<String> subheaders=new ArrayList<>();
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-     ;String myToolbarTitle="this";
+        ;
+        String myToolbarTitle = "this";
         if (holder instanceof HeaderViewHolder) {
             ArrayList<hduadetails> items = duadetailsitems.get(position);
             HeaderViewHolder headerHolder = (HeaderViewHolder) holder;
 
             headerHolder.headerTitle.setText("Header View");
-            if (!items.get(0).getTop().isEmpty()){
+            if (!items.get(0).getTop().isEmpty()) {
                 headerHolder.headerTitle.setText(items.get(0).getBottom());
                 headerHolder.headerTitle.setVisibility(View.VISIBLE);
-            }else{
+            } else {
                 headerHolder.headerTitle.setVisibility(View.GONE);
             }
             headerHolder.headerTitle.setOnClickListener(new View.OnClickListener() {
@@ -109,7 +110,7 @@ ArrayList<String> subheaders=new ArrayList<>();
         } else if (holder instanceof ViewHolder) {
             //   try {
             ArrayList<hduadetails> items = duadetailsitems.get(position - 1);
-          String str=   subheaders.get(position-1);
+            String str = subheaders.get(position - 1);
             ViewHolder itemViewHolder = (ViewHolder) holder;
 
 
@@ -124,19 +125,53 @@ ArrayList<String> subheaders=new ArrayList<>();
             //  holder.title.setTextSize(18);
             itemViewHolder.tvDuaNumber.setTextSize(18);
             itemViewHolder.duaheader.setTextSize(24);
-            itemViewHolder.tvDuaArabic.setText(items.get(0).getArabic());
-            itemViewHolder.tvDuaArabic.setTextSize(24);
-            itemViewHolder.tvDuaTranslation.setText(items.get(0).getTranslations());
-            if (!items.get(0).getTransliteration().isEmpty()){
+
+
+            if (!items.get(0).getTop().isEmpty()) {
+                itemViewHolder.top.setText(items.get(0).getTop());
+                itemViewHolder.top.setTextSize(24);
+
+                itemViewHolder.top.setVisibility(View.VISIBLE);
+
+            } else {
+                itemViewHolder.top.setVisibility(View.GONE);
+
+            }
+            if (!items.get(0).getArabic().isEmpty()) {
+                itemViewHolder.tvDuaArabic.setText(items.get(0).getArabic());
+                itemViewHolder.tvDuaArabic.setTextSize(24);
+
+                itemViewHolder.tvDuaArabic.setVisibility(View.VISIBLE);
+            } else {
+                itemViewHolder.tvDuaArabic.setVisibility(View.GONE);
+            }
+            if (!items.get(0).getArabic().isEmpty()) {
+                itemViewHolder.tvDuaTranslation.setText(items.get(0).getTranslations());
+                itemViewHolder.tvDuaTranslation.setTextSize(24);
+
+                itemViewHolder.tvDuaTranslation.setVisibility(View.VISIBLE);
+            } else {
+                itemViewHolder.tvDuaTranslation.setVisibility(View.GONE);
+            }
+
+
+
+
+
+            if (!items.get(0).getTransliteration().isEmpty()) {
 
                 itemViewHolder.tvliteration.setText(Html.fromHtml(items.get(0).getTransliteration()));
                 itemViewHolder.tvliteration.setTextSize(24);
-            itemViewHolder.tvliteration.setVisibility(View.VISIBLE);
-        }
-            if (!items.get(0).getBottom().isEmpty()){
+                itemViewHolder.tvliteration.setVisibility(View.VISIBLE);
+            }else {
+                itemViewHolder.tvliteration.setVisibility(View.GONE);
+            }
+            if (!items.get(0).getBottom().isEmpty()) {
                 itemViewHolder.tvbottom.setText(items.get(0).getBottom());
                 itemViewHolder.tvbottom.setVisibility(View.VISIBLE);
                 itemViewHolder.tvbottom.setTextSize(24);
+            } else {
+                itemViewHolder.tvbottom.setVisibility(View.GONE);
             }
             itemViewHolder.tvDuaReference.setText(items.get(0).getReference());
             itemViewHolder.sharebtn.setOnClickListener(new View.OnClickListener() {
@@ -216,16 +251,15 @@ ArrayList<String> subheaders=new ArrayList<>();
         TextView tvDuaReference;
         TextView tvDuaTranslation;
         TextView tvliteration;
-        TextView tvbottom,duaheader,sharebtn;
-
-
+        TextView tvbottom, duaheader, sharebtn, top, bottom;
 
 
         public ViewHolder(View view) {
             super(view);
             view.setTag(this);
-            sharebtn=view.findViewById(R.id.sharebtn);
-            duaheader=view.findViewById(R.id.       duaheader);
+            top = view.findViewById(R.id.top);
+            sharebtn = view.findViewById(R.id.sharebtn);
+            duaheader = view.findViewById(R.id.duaheader);
             tvDuaNumber = view.findViewById(R.id.txtDuaNumber);
             tvDuaArabic = (TextView) view.findViewById(R.id.txtDuaArabic);
 

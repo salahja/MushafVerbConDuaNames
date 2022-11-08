@@ -84,13 +84,22 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="Top"
+
+                android:textSize="16sp" />
+            <TextView
                 android:id="@+id/txtDuaArabic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="15dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-
+                    android:text="Dua arabic"
                 android:textSize="24sp" />
 
             <View
@@ -99,6 +108,7 @@
                 android:layout_marginLeft="1dp"
                 android:layout_marginRight="1dp"
                 android:background="@color/bg_green" />
+
 
 
             <TextView
@@ -117,7 +127,7 @@
                 android:layout_height="match_parent"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
-                android:text="Dua Reference"
+                android:text="Dua Translation"
 
                 android:textSize="16sp" />
 
@@ -127,7 +137,7 @@
                 android:layout_height="match_parent"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
-                android:text="Dua Reference"
+                android:text="text Bottom"
                 android:textSize="16sp"
 
                 android:visibility="gone" />
