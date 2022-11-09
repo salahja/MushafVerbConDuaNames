@@ -23,7 +23,7 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Material3.Dark.NoActionBar"
+        android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
         android:usesCleartextTraffic="true"
         tools:replace="android:allowBackup">
 

@@ -14,7 +14,7 @@
         android:id="@+id/alldua"
         android:icon="@drawable/dua"
 
-        android:title="List"
+        android:title="Dua Lists"
         app:showAsAction="always" />
 
 
@@ -31,7 +31,7 @@
         android:id="@+id/exitact"
         android:contentDescription="@string/content_description_one"
         android:icon="@drawable/baseline_exit_to_app_36"
-        android:title="@string/bookmarks"
+        android:title="@string/exit"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
 
         app:showAsAction="always|always" />

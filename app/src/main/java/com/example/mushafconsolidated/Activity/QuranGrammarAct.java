@@ -527,22 +527,22 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
         final int color = ContextCompat.getColor(this, R.color.color_background_overlay);
         final int colorsurface = ContextCompat.getColor(this, R.color.color_surface);
         final int coloronbackground = ContextCompat.getColor(this, R.color.neutral0);
-  /*
+
         if (isNightmode.equals("dark") || isNightmode.equals("blue")) {
             bottomNavigationView.setBackgroundColor(coloronbackground);
             bottomNavigationView.setBackgroundColor(color);
         } else {
             bottomNavigationView.setBackgroundColor(colorsurface);
         }
-   */
-       /*
+
+
         if (isNightmode.equals("dark") || isNightmode.equals("blue")) {
             materialToolbar.setBackgroundColor(coloronbackground);
             materialToolbar.setBackgroundColor(color);
         } else {
             materialToolbar.setBackgroundColor(colorsurface);
         }
-        */
+
         btnBottomSheet.setOnClickListener(v -> {
             toggleBottomSheets();
             //  toggleHideSeek();
@@ -666,7 +666,7 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
                     drawerLayout.closeDrawers();
 
 
-                    materialToolbar.setTitle("Setting");
+               //     materialToolbar.setTitle("Setting");
                     //  Intent conjugatorintent = new Intent(newreadactivity.this, VerbConjugationAct.class);
                     Intent grammar = new Intent(this, GrammarRuleDetailHostActivity.class);
                     //   Intent conjugatorintent = new Intent(newreadactivity.this, VerbConjugationAct.class);
@@ -674,6 +674,7 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
 
                     //    finish();
                     startActivity(grammar);
+                    break;
                 case R.id.search:
 
                     drawerLayout.closeDrawers();
