@@ -1,14 +1,16 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.hamza.ein.passive;
 
-import java.util.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.TrilateralRoot;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
-import org.sj.verbConjugation.trilateral.*;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class RaaPastMahmouz extends SubstitutionsApplier implements IAugmentedTrilateralModifier {
-    private List substitutions = new ArrayList();
+    private final List substitutions = new ArrayList();
 
     public RaaPastMahmouz() {
         substitutions.add(new InfixSubstitution("ْءِ", "ِ")); // EX: (أُرِيتُ، أُرِيَ)

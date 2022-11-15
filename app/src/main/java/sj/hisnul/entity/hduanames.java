@@ -5,15 +5,11 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 //primaryKeys ={"translation_id","verse_id"}
 
-
 @Entity(tableName = "hduanames")
 public class hduanames {
-
-
     @PrimaryKey(autoGenerate = true)
     @NonNull
     private int dua_global_id;
-
     @NonNull
     private int book_id;
     @NonNull
@@ -29,6 +25,19 @@ public class hduanames {
     private String category;
     @NonNull
     private int fav;
+
+    public hduanames(int dua_global_id, int book_id, int chap_id, String dua_id, String chapname, @NonNull String duaname, String tags, @NonNull String ID, @NonNull String category, int fav) {
+        this.dua_global_id = dua_global_id;
+        this.book_id = book_id;
+        this.chap_id = chap_id;
+        this.dua_id = dua_id;
+        this.chapname = chapname;
+        this.duaname = duaname;
+        this.tags = tags;
+        this.ID = ID;
+        this.category = category;
+        this.fav = fav;
+    }
 
     public int getDua_global_id() {
         return dua_global_id;
@@ -110,19 +119,6 @@ public class hduanames {
     }
 
     public void setFav(int fav) {
-        this.fav = fav;
-    }
-
-    public hduanames(int dua_global_id, int book_id, int chap_id, String dua_id, String chapname, @NonNull String duaname, String tags, @NonNull String ID, @NonNull String category, int fav) {
-        this.dua_global_id = dua_global_id;
-        this.book_id = book_id;
-        this.chap_id = chap_id;
-        this.dua_id = dua_id;
-        this.chapname = chapname;
-        this.duaname = duaname;
-        this.tags = tags;
-        this.ID = ID;
-        this.category = category;
         this.fav = fav;
     }
 }

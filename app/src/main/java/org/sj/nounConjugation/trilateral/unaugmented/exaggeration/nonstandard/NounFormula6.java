@@ -1,9 +1,9 @@
 package org.sj.nounConjugation.trilateral.unaugmented.exaggeration.nonstandard;
 
-import org.sj.verbConjugation.trilateral.unaugmented.*;
-import org.sj.verbConjugation.util.*;
-import org.sj.nounConjugation.trilateral.unaugmented.exaggeration.NonStandardExaggerationNounFormula;
 import org.sj.nounConjugation.GenericNounSuffixContainer;
+import org.sj.nounConjugation.trilateral.unaugmented.exaggeration.NonStandardExaggerationNounFormula;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+import org.sj.verbConjugation.util.ArabCharUtil;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -17,8 +17,7 @@ import org.sj.nounConjugation.GenericNounSuffixContainer;
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
-public class NounFormula6 extends NonStandardExaggerationNounFormula{
-
+public class NounFormula6 extends NonStandardExaggerationNounFormula {
     public NounFormula6(UnaugmentedTrilateralRoot root, String suffixNo) {
         super(root, suffixNo);
         if (this.suffixNo == 7 && GenericNounSuffixContainer.getInstance().isInDefiniteMode()) {
@@ -33,12 +32,11 @@ public class NounFormula6 extends NonStandardExaggerationNounFormula{
 
     public String form() {
         switch (suffixNo) {
-        case 1:
-        case 7:
-        case 13:
-            return root.getC1()+ArabCharUtil.FATHA+root.getC2()+ArabCharUtil.SHADDA+ArabCharUtil.FATHA+ArabCharUtil.Aleph+root.getC3()+ArabCharUtil.FATHA+"ة"+suffix;
+            case 1:
+            case 7:
+            case 13:
+                return root.getC1() + ArabCharUtil.FATHA + root.getC2() + ArabCharUtil.SHADDA + ArabCharUtil.FATHA + ArabCharUtil.Aleph + root.getC3() + ArabCharUtil.FATHA + "ة" + suffix;
         }
-
         return "";
     }
 

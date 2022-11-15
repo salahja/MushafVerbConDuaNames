@@ -1,10 +1,13 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.lafif.separeted;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionSuffixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,7 +23,7 @@ import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
  */
 public class WawiPassivePresentVocalizer extends SubstitutionsApplier implements IUnaugmentedTrilateralModifier {
 
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public WawiPassivePresentVocalizer() {
         substitutions.add(new ExpressionSuffixSubstitution("ْC2َيُ", "C2َى")); // EX: (يُوقَى)
@@ -29,7 +32,7 @@ public class WawiPassivePresentVocalizer extends SubstitutionsApplier implements
         substitutions.add(new ExpressionInfixSubstitution("ْC2َيْ", "C2َيْ")); // EX: (أنتن تُوقينَ)
         substitutions.add(new ExpressionInfixSubstitution("ْC2َيَ", "C2َيَ")); // EX: (أنتما تُوقَيَان)
         substitutions.add(new ExpressionInfixSubstitution("ْC2َيِي", "C2َيْ")); // EX: (أنتِ تُوقَيْنَ)
-        substitutions.add(new ExpressionInfixSubstitution("ْC2َيِن","C2َيِن"));// EX: (أنتِ تُوقَيِنَّ)
+        substitutions.add(new ExpressionInfixSubstitution("ْC2َيِن", "C2َيِن"));// EX: (أنتِ تُوقَيِنَّ)
         substitutions.add(new ExpressionInfixSubstitution("ْC2َيُو", "C2َوْ")); // EX: (أنتم تُوقَوْنَ)
         substitutions.add(new ExpressionInfixSubstitution("ْC2َيُن", "C2َوُن")); // EX: (أنتم تُوقَوُنَّ)
 

@@ -1,10 +1,14 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.elative;
 
-import java.util.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.elative.vocalizer.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
 import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.elative.vocalizer.WawiLafifNakesVocalizer;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.elative.vocalizer.YaeiLafifNakesVocalizer;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -19,7 +23,7 @@ import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
  * @version 1.0
  */
 public class Vocalizer {
-    private List modifiers = new LinkedList();
+    private final List modifiers = new LinkedList();
 
     public Vocalizer() {
         modifiers.add(new WawiLafifNakesVocalizer());

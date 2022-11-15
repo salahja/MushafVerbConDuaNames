@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.preference.PreferenceManager;
-import android.text.SpannableStringBuilder;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,11 +23,9 @@ import java.util.LinkedHashMap;
 import java.util.List;
 
 public class WordAnalysisListAdapter extends BaseExpandableListAdapter {
-
     private final HashMap<String, List<String>> expandableListDetail;
-    private Context context;
-    private List<String> expandableListTitle;
-
+    private final Context context;
+    private final List<String> expandableListTitle;
 
     public WordAnalysisListAdapter(Context context, List<String> expandableListTitle,
                                    LinkedHashMap<String, List<String>> expandableListDetail) {
@@ -59,12 +56,10 @@ public class WordAnalysisListAdapter extends BaseExpandableListAdapter {
             convertView = layoutInflater.inflate(R.layout.word_analysis_item, null);
         }
         Typeface mequran = Typeface.createFromAsset(QuranGrammarApplication.getContext().getAssets(), "Roboto.ttf");
-
         WebView expandedListTextView = (WebView) convertView.findViewById(R.id.expandedListItem);
-        expandedListTextView.loadDataWithBaseURL(null, expandedListText.toString(), "text/html", "utf-8", null);
+        expandedListTextView.loadDataWithBaseURL(null, expandedListText, "text/html", "utf-8", null);
         // holder. wordDictionary.loadDataWithBaseURL(null, data.toString(), "text/html", "utf-8", null);
         //  expandedListTextView.setText(expandedListText);
-
         //    expandedListTextView.setTypeface(mequran);
         return convertView;
     }
@@ -94,8 +89,6 @@ public class WordAnalysisListAdapter extends BaseExpandableListAdapter {
     public View getGroupView(int listPosition, boolean isExpanded,
                              View convertView, ViewGroup parent) {
         String listTitle = (String) getGroup(listPosition);
-
-
         if (convertView == null) {
             LayoutInflater layoutInflater = (LayoutInflater) this.context.
                     getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -103,7 +96,6 @@ public class WordAnalysisListAdapter extends BaseExpandableListAdapter {
         }
         TextView listTitleTextView = (TextView) convertView
                 .findViewById(R.id.listTitle);
-
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(QuranGrammarApplication.getContext());
         String preferences = prefs.getString("theme", "dark");
         if (preferences.equals("dark") || preferences.equals("blue")) {
@@ -113,12 +105,9 @@ public class WordAnalysisListAdapter extends BaseExpandableListAdapter {
 
         }
         listTitleTextView.setTypeface(null, Typeface.BOLD);
-
         listTitleTextView.setText(listTitle);
-
         return convertView;
     }
-
 
     @Override
     public boolean hasStableIds() {

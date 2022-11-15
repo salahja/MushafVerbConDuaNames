@@ -1,13 +1,14 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier;
 
 import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
-import java.util.Map;
-import java.util.HashMap;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
-import org.sj.verbConjugation.util.*;
-import java.util.List;
-import java.util.LinkedList;
+import org.sj.verbConjugation.util.SystemConstants;
+
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -22,7 +23,7 @@ import java.util.Iterator;
  * @version 1.0
  */
 public class HamzaModifier {
-    private Map modifiersMap = new HashMap();
+    private final Map modifiersMap = new HashMap();
 
     public HamzaModifier() {
         List activePastList = new LinkedList();
@@ -86,17 +87,18 @@ public class HamzaModifier {
     /**
      * تطبيق تغيير  الهمزة حسب الصيغة ماضي أو مضارع أو أمر للمعلوم أو لمجهول
      * قد لا يطبق أي نوع
-     * @param tense String
-     * @param active boolean
+     *
+     * @param tense      String
+     * @param active     boolean
      * @param conjResult ConjugationResult
      */
     public void apply(String tense, boolean active, ConjugationResult conjResult) {
-        List modifiers = (List) modifiersMap.get(tense+active);
+        List modifiers = (List) modifiersMap.get(tense + active);
         Iterator iter = modifiers.iterator();
         while (iter.hasNext()) {
             IUnaugmentedTrilateralModifier modifier = (IUnaugmentedTrilateralModifier) iter.next();
             if (modifier.isApplied(conjResult)) {
-                ((SubstitutionsApplier)modifier).apply(conjResult.getFinalResult(), conjResult.getRoot());
+                ((SubstitutionsApplier) modifier).apply(conjResult.getFinalResult(), conjResult.getRoot());
                 break;
             }
         }

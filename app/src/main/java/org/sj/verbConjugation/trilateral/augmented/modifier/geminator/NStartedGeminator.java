@@ -1,24 +1,23 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.geminator;
 
-import java.util.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
-
+import java.util.LinkedList;
+import java.util.List;
 
 public class NStartedGeminator extends SubstitutionsApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public NStartedGeminator() {
-        substitutions.add(new InfixSubstitution("نْن","نّ"));// EX: (انَّمَسَ)
+        substitutions.add(new InfixSubstitution("نْن", "نّ"));// EX: (انَّمَسَ)
     }
 
     public boolean isApplied(MazeedConjugationResult mazeedConjugationResult) {
         int kov = mazeedConjugationResult.getKov();
         int formulaNo = mazeedConjugationResult.getFormulaNo();
-
         return (mazeedConjugationResult.getRoot().getC1() == 'ن') && kov == 1 && formulaNo == 4;
     }
 

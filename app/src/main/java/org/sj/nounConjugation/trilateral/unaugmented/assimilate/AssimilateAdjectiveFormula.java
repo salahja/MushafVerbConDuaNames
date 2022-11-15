@@ -28,24 +28,48 @@ public class AssimilateAdjectiveFormula {
         return adj1;
     }
 
+    public void setAdj1(String adj1) {
+        this.adj1 = adj1;
+    }
+
     public String getAdj2() {
         return adj2;
+    }
+
+    public void setAdj2(String adj2) {
+        this.adj2 = adj2;
     }
 
     public String getAdj3() {
         return adj3;
     }
 
+    public void setAdj3(String adj3) {
+        this.adj3 = adj3;
+    }
+
     public char getC1() {
         return c1;
+    }
+
+    public void setC1(char c1) {
+        this.c1 = c1;
     }
 
     public char getC2() {
         return c2;
     }
 
+    public void setC2(char c2) {
+        this.c2 = c2;
+    }
+
     public char getC3() {
         return c3;
+    }
+
+    public void setC3(char c3) {
+        this.c3 = c3;
     }
 
     public String getConjugation() {
@@ -54,29 +78,5 @@ public class AssimilateAdjectiveFormula {
 
     public void setConjugation(String conjugation) {
         this.conjugation = conjugation;
-    }
-
-    public void setC3(char c3) {
-        this.c3 = c3;
-    }
-
-    public void setC2(char c2) {
-        this.c2 = c2;
-    }
-
-    public void setC1(char c1) {
-        this.c1 = c1;
-    }
-
-    public void setAdj3(String adj3) {
-        this.adj3 = adj3;
-    }
-
-    public void setAdj2(String adj2) {
-        this.adj2 = adj2;
-    }
-
-    public void setAdj1(String adj1) {
-        this.adj1 = adj1;
     }
 }

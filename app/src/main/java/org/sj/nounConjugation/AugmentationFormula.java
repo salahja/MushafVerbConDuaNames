@@ -1,6 +1,5 @@
 package org.sj.nounConjugation;
 
-
 /**
  * <p>Title: Sarf</p>
  *
@@ -14,25 +13,25 @@ package org.sj.nounConjugation;
  * @version 1.0
  */
 public class AugmentationFormula {
-  private int formulaNo;
-  private char transitive;
+    private int formulaNo;
+    private char transitive;
 
-  public AugmentationFormula() {
-  }
+    public AugmentationFormula() {
+    }
 
-  public char getTransitive() {
-    return transitive;
-  }
+    public char getTransitive() {
+        return transitive;
+    }
 
-  public int getFormulaNo() {
-    return formulaNo;
-  }
+    public void setTransitive(char transitive) {
+        this.transitive = transitive;
+    }
 
-  public void setFormulaNo(int formulaNo) {
-    this.formulaNo = formulaNo;
-  }
+    public int getFormulaNo() {
+        return formulaNo;
+    }
 
-  public void setTransitive(char transitive) {
-    this.transitive = transitive;
-  }
+    public void setFormulaNo(int formulaNo) {
+        this.formulaNo = formulaNo;
+    }
 }

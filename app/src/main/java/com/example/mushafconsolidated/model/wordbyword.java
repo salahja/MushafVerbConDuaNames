@@ -7,10 +7,7 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class wordbyword {
-
-
     private int word_no;
-
     private int chapter_no;
     private int verse_no;
     private String root;
@@ -20,7 +17,8 @@ public class wordbyword {
     @NonNull
     private int word_by_word_translationID;
     private String word;
-@Ignore
+
+    @Ignore
     public wordbyword(int word_no, int chapter_no, int verse_no, String root, String translation, int verse_tbl_id, int word_by_word_translationID, String word) {
         this.word_no = word_no;
         this.chapter_no = chapter_no;

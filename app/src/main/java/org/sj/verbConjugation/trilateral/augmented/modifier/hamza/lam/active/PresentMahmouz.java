@@ -1,14 +1,14 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.hamza.lam.active;
 
-import java.util.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
+import org.sj.verbConjugation.trilateral.augmented.modifier.hamza.lam.AbstractLamMahmouz;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.hamza.lam.*;
+import java.util.LinkedList;
+import java.util.List;
 
-   
 public class PresentMahmouz extends AbstractLamMahmouz {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public PresentMahmouz() {
         substitutions.add(new SuffixSubstitution("يءُ", "يءُ")); // EX: (يُسِيءُ، )

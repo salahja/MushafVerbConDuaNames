@@ -1,9 +1,10 @@
 package org.sj.nounConjugation.trilateral.augmented.modifier.passiveparticiple.hamza;
 
-import java.util.*;
+import org.sj.nounConjugation.trilateral.augmented.modifier.AbstractEinMahmouz;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.augmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -33,9 +34,7 @@ public class EinMahmouz extends AbstractEinMahmouz {
         substitutions.add(new InfixSubstitution("َءَّ", "َأَّ")); // EX: (مُرَأَّسٌ، مُتَرَأَّفٌ)
         substitutions.add(new InfixSubstitution("َءًّ", "َأًّ")); // EX: (مُرَأًّى)
 
-
     }
-
 
     public List getSubstitutions() {
         return substitutions;

@@ -1,35 +1,20 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import android.text.SpannableStringBuilder;
 
 import androidx.room.Ignore;
 //primaryKeys ={"translation_id","verse_id"}
 
-
-
 public class SifaEntityPojo {
-
-
-
-    private  int surah;
-
-    private  int ayah;
-
-    private  int wordno;
-
-
-    private  int startindex;
-
-    private  int endindex;
-
+    private int surah;
+    private int ayah;
+    private int wordno;
+    private int startindex;
+    private int endindex;
     private String phrasetype;
-
-
     private String qurantext;
-@Ignore
+    @Ignore
     private SpannableStringBuilder spannedVerse;
-
     private String translation;
 
     public SifaEntityPojo(int surah, int ayah, int wordno, int startindex, int endindex, String phrasetype, String qurantext, String translation) {

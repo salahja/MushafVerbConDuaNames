@@ -1,18 +1,19 @@
-
 package org.sj.verbConjugation.trilateral.augmented.active.present;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.augmented.*;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedPresentVerb;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
 import org.sj.verbConjugation.util.AugmentationFormula;
 import org.sj.verbConjugation.util.PresentConjugationDataContainer;
 
-
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 public class AbstractAugmentedPresentConjugator {
-
-    private List lastDprList;
-    private List connectedPronounList;
+    private final List lastDprList;
+    private final List connectedPronounList;
 
     public AbstractAugmentedPresentConjugator(List lastDprList, List connectedPronounList) {
         this.lastDprList = lastDprList;
@@ -23,14 +24,12 @@ public class AbstractAugmentedPresentConjugator {
         String cp = PresentConjugationDataContainer.getInstance().getCp(pronounIndex);
         String lastDpr = (String) lastDprList.get(pronounIndex);
         String connectedPronoun = (String) connectedPronounList.get(pronounIndex);
-        String formulaClassName = getClass().getPackage().getName()+".formula."+"AugmentedPresentVerb"+formulaNo;
-        Object [] parameters = {root, cp, lastDpr, connectedPronoun};
-
+        String formulaClassName = getClass().getPackage().getName() + ".formula." + "AugmentedPresentVerb" + formulaNo;
+        Object[] parameters = {root, cp, lastDpr, connectedPronoun};
         try {
             AugmentedPresentVerb verb = (AugmentedPresentVerb) Class.forName(formulaClassName).getConstructors()[0].newInstance(parameters);
             return verb;
-        }
-        catch (Exception ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
         return null;
@@ -42,7 +41,6 @@ public class AbstractAugmentedPresentConjugator {
             AugmentedPresentVerb verb = createVerb(root, i, formulaNo);
             result.add(verb);
         }
-
         return result;
     }
 
@@ -52,7 +50,7 @@ public class AbstractAugmentedPresentConjugator {
         while (iter.hasNext()) {
             AugmentationFormula formula = (AugmentationFormula) iter.next();
             List formulaVerbList = createVerbList(root, formula.getFormulaNo());
-            result.put(formula.getFormulaNo()+"", formulaVerbList);
+            result.put(formula.getFormulaNo() + "", formulaVerbList);
         }
         return result;
     }

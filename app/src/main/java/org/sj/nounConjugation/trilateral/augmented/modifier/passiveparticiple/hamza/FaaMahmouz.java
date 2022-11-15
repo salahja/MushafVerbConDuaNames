@@ -1,9 +1,10 @@
 package org.sj.nounConjugation.trilateral.augmented.modifier.passiveparticiple.hamza;
 
-import java.util.*;
+import org.sj.nounConjugation.trilateral.augmented.modifier.AbstractFaaMahmouz;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.augmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -22,13 +23,12 @@ public class FaaMahmouz extends AbstractFaaMahmouz {
 
     public FaaMahmouz() {
         substitutions.add(new InfixSubstitution("َءَا", "َآ")); // EX: (مُتآكَلٌ)
-        substitutions.add(new InfixSubstitution("ْءَا","ْآ"));// EX: (مُنْآد)
+        substitutions.add(new InfixSubstitution("ْءَا", "ْآ"));// EX: (مُنْآد)
         substitutions.add(new InfixSubstitution("َءَ", "َأَ")); // EX: (مُتأكَّد)
         substitutions.add(new InfixSubstitution("َءْ", "َأْ")); // EX: (مُستَأْمَر)
         substitutions.add(new InfixSubstitution("ْءَ", "ْأَ")); // EX: (مُنْأَطَرٌ)
         substitutions.add(new InfixSubstitution("ُء", "ُؤ")); // EX: (مُؤْثَرٌ، مُؤَثَّرٌ، مُؤَاجَرٌ)
     }
-
 
     public List getSubstitutions() {
         return substitutions;

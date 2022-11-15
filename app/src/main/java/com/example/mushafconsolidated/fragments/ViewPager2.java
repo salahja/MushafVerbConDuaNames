@@ -20,7 +20,6 @@ import java.util.ArrayList;
  * create an instance of this fragment.
  */
 public class ViewPager2 extends Fragment {
-
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -39,7 +38,6 @@ public class ViewPager2 extends Fragment {
     public ViewPager2() {
         // Required empty public constructor
     }
-
 
     // TODO: Rename and change types and number of parameters
     public static ViewPager2 newInstance(String param1, String param2) {
@@ -65,14 +63,11 @@ public class ViewPager2 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         super.onCreate(savedInstanceState);
-
         View view = inflater.inflate(R.layout.fragment_view_pager2, container, false);
         viewPagertwo = view.findViewById(R.id.view_pagers);
 //
         util = new Utils(context);
         ArrayList<ChaptersAnaEntity> surahArrayList = util.getAllAnaChapters();
-
-
 // viewPager2.setAdapter(new OrignalPager(this, list, viewPager2));
 //  viewPager2.setAdapter(new ViewPagerAdapter(this, list, viewPager2));
         //   viewPagertwo.setAdapter(new ViewPagerAdapter((MainActivity) context, surahArrayList, viewPagertwo));

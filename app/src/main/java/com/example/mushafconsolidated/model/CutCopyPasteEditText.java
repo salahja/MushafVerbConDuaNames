@@ -1,40 +1,24 @@
 package com.example.mushafconsolidated.model;
 
-
 import android.content.Context;
 import android.util.AttributeSet;
 
 /**
  * Original:
  * An EditText, which notifies when something was cut/copied/pasted inside it.
+ *
  * @author Lukas Knuth
- * @version 1.0
- *
- * Update:
- * Added a OnCutCopyPasteListener so this class can be used as a plug&play component
  * @author Guillermo Muntaner on 14/01/16.
- *
+ * <p>
  * Source & discussion:
  * https://stackoverflow.com/questions/14980227/android-intercept-paste-copy-cut-on-edittext
+ * @version 1.0
+ * <p>
+ * Update:
+ * Added a OnCutCopyPasteListener so this class can be used as a plug&play component
  */
-
 public class CutCopyPasteEditText extends androidx.appcompat.widget.AppCompatEditText {
-
-    public interface OnCutCopyPasteListener {
-        void onCut();
-        void onCopy();
-        void onPaste();
-    }
-
     private OnCutCopyPasteListener mOnCutCopyPasteListener;
-
-    /**
-     * Set a OnCutCopyPasteListener.
-     * @param listener
-     */
-    public void setOnCutCopyPasteListener(OnCutCopyPasteListener listener) {
-        mOnCutCopyPasteListener = listener;
-    }
 
     /*
         Just the constructors to create a new EditText...
@@ -52,9 +36,19 @@ public class CutCopyPasteEditText extends androidx.appcompat.widget.AppCompatEdi
     }
 
     /**
+     * Set a OnCutCopyPasteListener.
+     *
+     * @param listener
+     */
+    public void setOnCutCopyPasteListener(OnCutCopyPasteListener listener) {
+        mOnCutCopyPasteListener = listener;
+    }
+
+    /**
      * <p>This is where the "magic" happens.</p>
      * <p>The menu used to cut/copy/paste is a normal ContextMenu, which allows us to
-     *  overwrite the consuming method and react on the different events.</p>
+     * overwrite the consuming method and react on the different events.</p>
+     *
      * @see <a href="http://grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/2.3_r1/android/widget/TextView.java#TextView.onTextContextMenuItem%28int%29">Original Implementation</a>
      */
     @Override
@@ -62,7 +56,7 @@ public class CutCopyPasteEditText extends androidx.appcompat.widget.AppCompatEdi
         // Do your thing:
         boolean consumed = super.onTextContextMenuItem(id);
         // React:
-        switch (id){
+        switch (id) {
             case android.R.id.cut:
                 onCut();
                 break;
@@ -78,30 +72,33 @@ public class CutCopyPasteEditText extends androidx.appcompat.widget.AppCompatEdi
     /**
      * Text was cut from this EditText.
      */
-    public void onCut(){
-        if(mOnCutCopyPasteListener!=null)
+    public void onCut() {
+        if (mOnCutCopyPasteListener != null)
             mOnCutCopyPasteListener.onCut();
     }
 
     /**
      * Text was copied from this EditText.
      */
-    public void onCopy(){
-        if(mOnCutCopyPasteListener!=null)
+    public void onCopy() {
+        if (mOnCutCopyPasteListener != null)
             mOnCutCopyPasteListener.onCopy();
     }
 
     /**
      * Text was pasted into the EditText.
      */
-    public void onPaste(){
-        if(mOnCutCopyPasteListener!=null)
+    public void onPaste() {
+        if (mOnCutCopyPasteListener != null)
             mOnCutCopyPasteListener.onPaste();
     }
 
+    public interface OnCutCopyPasteListener {
+        void onCut();
 
+        void onCopy();
 
-
-
+        void onPaste();
+    }
 
 }

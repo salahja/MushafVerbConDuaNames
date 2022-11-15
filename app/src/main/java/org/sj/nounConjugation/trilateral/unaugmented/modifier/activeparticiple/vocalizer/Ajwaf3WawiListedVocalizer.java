@@ -1,10 +1,13 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.vocalizer;
 
-import java.util.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
 import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.AbstractAjwafWawiListedVocalizer;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -18,22 +21,23 @@ import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
-public class Ajwaf3WawiListedVocalizer extends AbstractAjwafWawiListedVocalizer implements IUnaugmentedTrilateralNounModificationApplier{
-    private List substitutions = new LinkedList();
+public class Ajwaf3WawiListedVocalizer extends AbstractAjwafWawiListedVocalizer implements IUnaugmentedTrilateralNounModificationApplier {
+    protected static List appliedProunounsIndecies = new ArrayList(18);
+
+    static {
+        for (int i = 0; i < 18; i++) {
+            appliedProunounsIndecies.add(i + 1 + "");
+        }
+    }
+
+    private final List substitutions = new LinkedList();
 
     public Ajwaf3WawiListedVocalizer() {
-        substitutions.add(new InfixSubstitution("اوِ","ائِ"));// EX: (قائِمٌ)
+        substitutions.add(new InfixSubstitution("اوِ", "ائِ"));// EX: (قائِمٌ)
     }
 
     public List getSubstitutions() {
         return substitutions;
-    }
-
-    protected static List appliedProunounsIndecies = new ArrayList(18);
-    static {
-        for (int i=0; i<18; i++) {
-            appliedProunounsIndecies.add(i+1 +"");
-        }
     }
 
     protected List getAppliedPronounsIndecies() {

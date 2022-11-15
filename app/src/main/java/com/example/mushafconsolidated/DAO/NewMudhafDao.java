@@ -7,7 +7,6 @@ import com.example.mushafconsolidated.Entities.NewMudhafEntity;
 
 import java.util.List;
 
-
 @Dao
 public interface NewMudhafDao {
     @Query("SELECT * FROM newmudhaf ORDER BY surah,ayah")
@@ -17,14 +16,10 @@ public interface NewMudhafDao {
     List<NewMudhafEntity> getMudhafSurah(int id);
 
     @Query("SELECT * FROM newmudhaf where surah=:id and ayah=:aid ORDER BY surah,ayah")
-    List<NewMudhafEntity> getMudhafSurahAyah(int id,int aid);
+    List<NewMudhafEntity> getMudhafSurahAyah(int id, int aid);
 
     @Query("SELECT * FROM newmudhaf where surah=:id and ayah=:aid and wordfrom=:wordno ORDER BY surah,ayah")
-    List<NewMudhafEntity> getMudhafSurahAyahWord(int id,int aid,int wordno);
-
-
-
-
+    List<NewMudhafEntity> getMudhafSurahAyahWord(int id, int aid, int wordno);
 
 }
 

@@ -478,21 +478,35 @@
     </string-array>
 
     <string-array name="arabicFontListArray">
-        <item>IndoPak</item>
-        <item>hafs</item>
+        <item>Quranic</item>
+
         <item>me_quran</item>
-        <item>Mirza</item>
-        <item>kalpurush</item>
-        <item>Noore Huda</item>
+
+        <item>Qalam</item>
+        <item>Noto Naskh Arabic Huda</item>
     </string-array>
 
     <string-array name="arabicFontEntryArray">
-        <item>IndoPak.ttf</item>
-        <item>hafs.otf</item>
+        <item>quranicfontregular.ttf</item>
+        <item>DejaVuSans.ttf</item>
+        <item>me_quran.ttf</item>
+        <item>qalam.ttf</item>
+        <item>NotoNaskhArabic-VariableFont_wght.ttf</item>
+
+    </string-array>
+    <string-array name="quranwordlistarray">
+
+        <item>DejaVuSans.ttf</item>
+        <item>Mirza</item>
+     </string-array>
+
+    <string-array name="quranwordentryarray">
+        <item>quranicfontregular.ttf</item>
+        <item>DejaVuSans.ttf</item>
         <item>me_quran.ttf</item>
         <item>Mirza-Medium.ttf</item>
-        <item>Kalpurush.ttf</item>
-        <item>noor_e_huda.ttf</item>
+        <item>qalam.ttf</item>
+        <item>NotoNaskhArabic-VariableFont_wght.ttf</item>
 
     </string-array>
 

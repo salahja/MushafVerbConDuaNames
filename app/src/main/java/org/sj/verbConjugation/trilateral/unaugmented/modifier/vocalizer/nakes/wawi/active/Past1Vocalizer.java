@@ -1,10 +1,13 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.nakes.wawi.active;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,13 +23,12 @@ import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
  */
 public class Past1Vocalizer extends SubstitutionsApplier implements IUnaugmentedTrilateralModifier {
 
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public Past1Vocalizer() {
-        substitutions.add(new SuffixSubstitution("َوَ","َا"));// EX: (غزا، أسا، عثا)
-        substitutions.add(new InfixSubstitution("َوُوا","َوْا"));// EX: (غزَوْا، أسوا، عَثَوْا)
-        substitutions.add(new InfixSubstitution("َوَت","َت"));// EX: (غَزَتْ، غَزَتَا، أسَتْ، أسَتَا، عَثَتْ، عَثَتَا)
-
+        substitutions.add(new SuffixSubstitution("َوَ", "َا"));// EX: (غزا، أسا، عثا)
+        substitutions.add(new InfixSubstitution("َوُوا", "َوْا"));// EX: (غزَوْا، أسوا، عَثَوْا)
+        substitutions.add(new InfixSubstitution("َوَت", "َت"));// EX: (غَزَتْ، غَزَتَا، أسَتْ، أسَتَا، عَثَتْ، عَثَتَا)
 
 
     }

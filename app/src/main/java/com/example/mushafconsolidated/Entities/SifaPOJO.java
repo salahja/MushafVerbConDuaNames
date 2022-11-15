@@ -1,6 +1,5 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import android.text.SpannableStringBuilder;
 
 import androidx.annotation.NonNull;
@@ -9,41 +8,32 @@ import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 //primaryKeys ={"translation_id","verse_id"}
 
-
 @Entity(tableName = "sifa")
 public class SifaPOJO {
-
-
+    @Ignore
+    SpannableStringBuilder spannedverse;
     @NonNull
     private int surah;
     @NonNull
     private int ayah;
     @NonNull
     private int wordno;
-
     @NonNull
     private int startindex;
     @NonNull
     private int endindex;
-
-
     @NonNull
     private String phrasetype;
     @NonNull
     private int ismousufconnected;
-
     private String comment;
     @PrimaryKey(autoGenerate = true)
     @NonNull
     private int id;
-
     @NonNull
     private String qurantext;
     @NonNull
     private String translation;
-
-@Ignore
-SpannableStringBuilder spannedverse;
 
     public SifaPOJO(int surah, int ayah, int wordno, int startindex, int endindex, @NonNull String phrasetype, int ismousufconnected, String comment, int id, @NonNull String qurantext, @NonNull String translation) {
         this.surah = surah;
@@ -58,7 +48,6 @@ SpannableStringBuilder spannedverse;
         this.qurantext = qurantext;
         this.translation = translation;
     }
-
 
     public int getSurah() {
         return surah;

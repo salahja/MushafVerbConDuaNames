@@ -1,22 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
-    android:background="?android:colorBackground"
-    android:orientation="vertical"
-
-    app:cardBackgroundColor="@android:color/transparent">
-
+    android:orientation="vertical">
 
     <include layout="@layout/quran_imageview_row" />
 
-    <include layout="@layout/item_viewer_aya_header" />
-
-
     <com.example.utility.FlowLayout
-
         android:id="@+id/flow_word_by_word"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -24,29 +15,22 @@
         android:maxLines="1"
         android:visibility="visible" />
 
-
     <TextView
         android:id="@+id/arabic_textView"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="?android:attr/activatedBackgroundIndicator"
-        android:focusable="false"
-        android:layoutDirection="rtl"
-        android:textDirection="rtl"
-        android:textSize="20sp"
-        android:visibility="gone" />
+        android:layout_marginBottom="5.0dip"
+        android:fontFamily="cursive"
+        android:paddingStart="5.0dip"
+        android:paddingEnd="5.0dip"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="16.0sp" />
 
     <TextView
         android:id="@+id/quran_textView"
-
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="cursive"
         android:hint="@string/arabic_font_style"
         android:lineSpacingExtra="@dimen/lineSpacingExtra"
         android:padding="@dimen/textViewPadding"
@@ -65,5 +49,8 @@
         layout="@layout/quran_tranlation_rows"
         android:visibility="visible" />
 
-
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/lineWidth"
+        android:background="@android:color/darker_gray" />
 </LinearLayout>

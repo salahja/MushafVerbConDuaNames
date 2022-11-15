@@ -5,16 +5,12 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
-
 @Entity(tableName = "nouncorpus")
 public class NounCorpus {
-
     @Ignore
     private int count;
     private String root_a;
-
     private String lemma_a;
-
     private String araword;
     @NonNull
     private int surah;
@@ -24,8 +20,6 @@ public class NounCorpus {
     private int wordno;
     @NonNull
     private int token;
-
-
     private String words;
     @NonNull
     private String tag;
@@ -40,9 +34,54 @@ public class NounCorpus {
     @NonNull
     @PrimaryKey(autoGenerate = true)
     private int id;
-
     @NonNull
     private String details;
+
+    public NounCorpus(String root_a, String lemma_a, String araword, int surah, int ayah, int wordno, int token, String words, @NonNull String tag, String propone, String proptwo, String form, String lemma, String root, String gendernumber, String type, String cases, int id, @NonNull String details) {
+        this.root_a = root_a;
+        this.lemma_a = lemma_a;
+        this.araword = araword;
+        this.surah = surah;
+        this.ayah = ayah;
+        this.wordno = wordno;
+        this.token = token;
+        this.words = words;
+        this.tag = tag;
+        this.propone = propone;
+        this.proptwo = proptwo;
+        this.form = form;
+        this.lemma = lemma;
+        this.root = root;
+        this.gendernumber = gendernumber;
+        this.type = type;
+        this.cases = cases;
+        this.id = id;
+        this.details = details;
+    }
+
+    @Ignore
+    public NounCorpus(int count, String root_a, String lemma_a, String araword, int surah, int ayah, int wordno, int token, String words, @NonNull String tag, String propone, String proptwo, String form, String lemma, String root, String gendernumber, String type, String cases, int id, @NonNull String details) {
+        this.count = count;
+        this.root_a = root_a;
+        this.lemma_a = lemma_a;
+        this.araword = araword;
+        this.surah = surah;
+        this.ayah = ayah;
+        this.wordno = wordno;
+        this.token = token;
+        this.words = words;
+        this.tag = tag;
+        this.propone = propone;
+        this.proptwo = proptwo;
+        this.form = form;
+        this.lemma = lemma;
+        this.root = root;
+        this.gendernumber = gendernumber;
+        this.type = type;
+        this.cases = cases;
+        this.id = id;
+        this.details = details;
+    }
 
     public String getRoot_a() {
         return root_a;
@@ -198,57 +237,11 @@ public class NounCorpus {
         this.details = details;
     }
 
-    public NounCorpus(String root_a, String lemma_a, String araword, int surah, int ayah, int wordno, int token, String words, @NonNull String tag, String propone, String proptwo, String form, String lemma, String root, String gendernumber, String type, String cases, int id, @NonNull String details) {
-        this.root_a = root_a;
-        this.lemma_a = lemma_a;
-        this.araword = araword;
-        this.surah = surah;
-        this.ayah = ayah;
-        this.wordno = wordno;
-        this.token = token;
-        this.words = words;
-        this.tag = tag;
-        this.propone = propone;
-        this.proptwo = proptwo;
-        this.form = form;
-        this.lemma = lemma;
-        this.root = root;
-        this.gendernumber = gendernumber;
-        this.type = type;
-        this.cases = cases;
-        this.id = id;
-        this.details = details;
-    }
-
     public int getCount() {
         return count;
     }
 
     public void setCount(int count) {
         this.count = count;
-    }
-
-@Ignore
-    public NounCorpus(int count, String root_a, String lemma_a, String araword, int surah, int ayah, int wordno, int token, String words, @NonNull String tag, String propone, String proptwo, String form, String lemma, String root, String gendernumber, String type, String cases, int id, @NonNull String details) {
-        this.count = count;
-        this.root_a = root_a;
-        this.lemma_a = lemma_a;
-        this.araword = araword;
-        this.surah = surah;
-        this.ayah = ayah;
-        this.wordno = wordno;
-        this.token = token;
-        this.words = words;
-        this.tag = tag;
-        this.propone = propone;
-        this.proptwo = proptwo;
-        this.form = form;
-        this.lemma = lemma;
-        this.root = root;
-        this.gendernumber = gendernumber;
-        this.type = type;
-        this.cases = cases;
-        this.id = id;
-        this.details = details;
     }
 }

@@ -1,29 +1,27 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.vocalizer.lafif.connected.passive;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
-import org.sj.verbConjugation.trilateral.augmented.*;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
-   
+import java.util.LinkedList;
+import java.util.List;
+
 public class Present1Vocalizer extends SubstitutionsApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public Present1Vocalizer() {
-        substitutions.add(new SuffixSubstitution("َيُ","َا"));// EX: (يُحْيَا، يحيَّا، يحايَا، يزديَا، يتحَايَا، يتحيَّا، يُستحيَا)
-        substitutions.add(new SuffixSubstitution("َيَ","َا"));// EX: (لن يُحْيَا، يحيَّا، يحايَا، يزديَا، يتحَايَا، يتحيَّا، يُستحيَا)
-        substitutions.add(new SuffixSubstitution("يْ",""));// EX: (لم يُحْيَ، يحيَّ، يحايَ، يزديَ، يتحَايَ، يتحيَّ، يُستحيَ)
-        substitutions.add(new InfixSubstitution("يِي","يْ"));// EX: (أنتِ تُحْيَيْنَ، تُحَيَّيْنَ، تحايَيْنَ، تزديَيْنَ، تتحايَيْنَ، تتحيَّيْنَ، تستحيَيْنَ)
-        substitutions.add(new InfixSubstitution("يُو","وْ"));// EX: (أنتم تُحْيَوْنَ، تُحَيَّوْنَ، تُحايَوْنَ، تزدَيَوْنَ، تتحايَوْنَ، تتحيَّوْنَ، تستحيَوْنَ)
-        substitutions.add(new InfixSubstitution("يُن","وُن"));// EX: (أنتم تُحْيَوُنَّ، تُحَيَّوُنَّ، تحايَوُنَّ تزديَوُنَّ، تُتَحَايَوُنَّ، تُتَحَيَّوُنَّ، تستحيَوُنَّ)
-
+        substitutions.add(new SuffixSubstitution("َيُ", "َا"));// EX: (يُحْيَا، يحيَّا، يحايَا، يزديَا، يتحَايَا، يتحيَّا، يُستحيَا)
+        substitutions.add(new SuffixSubstitution("َيَ", "َا"));// EX: (لن يُحْيَا، يحيَّا، يحايَا، يزديَا، يتحَايَا، يتحيَّا، يُستحيَا)
+        substitutions.add(new SuffixSubstitution("يْ", ""));// EX: (لم يُحْيَ، يحيَّ، يحايَ، يزديَ، يتحَايَ، يتحيَّ، يُستحيَ)
+        substitutions.add(new InfixSubstitution("يِي", "يْ"));// EX: (أنتِ تُحْيَيْنَ، تُحَيَّيْنَ، تحايَيْنَ، تزديَيْنَ، تتحايَيْنَ، تتحيَّيْنَ، تستحيَيْنَ)
+        substitutions.add(new InfixSubstitution("يُو", "وْ"));// EX: (أنتم تُحْيَوْنَ، تُحَيَّوْنَ، تُحايَوْنَ، تزدَيَوْنَ، تتحايَوْنَ، تتحيَّوْنَ، تستحيَوْنَ)
+        substitutions.add(new InfixSubstitution("يُن", "وُن"));// EX: (أنتم تُحْيَوُنَّ، تُحَيَّوُنَّ، تحايَوُنَّ تزديَوُنَّ، تُتَحَايَوُنَّ، تُتَحَيَّوُنَّ، تستحيَوُنَّ)
 
     }
-
-
 
     public List getSubstitutions() {
         return substitutions;
@@ -45,7 +43,6 @@ public class Present1Vocalizer extends SubstitutionsApplier implements IAugmente
                     return true;
             }
         }
-
         return false;
     }
 }

@@ -1,11 +1,12 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration.vocalizer;
 
-import java.util.*;
+import org.sj.nounConjugation.TrilateralNounSubstitutionApplier;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
 
-import org.sj.nounConjugation.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -23,9 +24,8 @@ public class B1Vocalizer extends TrilateralNounSubstitutionApplier implements IU
     List substitutions = new LinkedList();
 
     public B1Vocalizer() {
-        substitutions.add(new InfixSubstitution("ُوو","ُوّ"));// EX: (عَفُوّ)
+        substitutions.add(new InfixSubstitution("ُوو", "ُوّ"));// EX: (عَفُوّ)
     }
-
 
     public List getSubstitutions() {
         return substitutions;
@@ -35,7 +35,6 @@ public class B1Vocalizer extends TrilateralNounSubstitutionApplier implements IU
         String nounFormula = conjugationResult.getNounFormula();
         int kov = conjugationResult.getKov();
         int noc = Integer.parseInt(conjugationResult.getRoot().getConjugation());
-
         return nounFormula.equals("فَعُول") && (kov == 23 && (noc == 1 || noc == 3 || noc == 5));
     }
 

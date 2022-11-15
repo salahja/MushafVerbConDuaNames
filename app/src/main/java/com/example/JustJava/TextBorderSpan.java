@@ -8,12 +8,7 @@ import android.text.style.LineBackgroundSpan;
 
 public class TextBorderSpan implements LineBackgroundSpan {
     private Path mPath;
-
-
     private int mWidth;
-
-
-
 
     private int getSize(Paint paint, CharSequence text, int start, int end, Paint.FontMetricsInt fm) {
         //return text with relative to the Paint
@@ -23,7 +18,7 @@ public class TextBorderSpan implements LineBackgroundSpan {
 
     @Override
     public void drawBackground(Canvas canvas, Paint paint, int left, int right, int top, int baseline, int bottom, CharSequence charSequence, int start, int end, int lnum) {
-        if(mPath == null) {
+        if (mPath == null) {
             mPath = new Path();
             mPath.setLastPoint(left, top);
             mPath.lineTo(right, top);
@@ -31,7 +26,6 @@ public class TextBorderSpan implements LineBackgroundSpan {
             mPath.lineTo(left, bottom);
             mPath.lineTo(left, top);
         }
-
         Paint.Style oldStyle = paint.getStyle();
         float oldStroke = paint.getStrokeWidth();
         paint.setStrokeWidth(3);

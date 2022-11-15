@@ -1,10 +1,10 @@
 package org.sj.nounConjugation.trilateral.unaugmented.elative.nonstandard;
 
+import org.sj.nounConjugation.INounSuffixContainer;
 import org.sj.nounConjugation.NounFormula;
-import org.sj.verbConjugation.trilateral.unaugmented.*;
-import org.sj.verbConjugation.util.*;
-import org.sj.nounConjugation.trilateral.unaugmented.elative.*;
-import org.sj.nounConjugation.*;
+import org.sj.nounConjugation.trilateral.unaugmented.elative.ElativeSuffixContainer;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+import org.sj.verbConjugation.util.ArabCharUtil;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -19,7 +19,6 @@ import org.sj.nounConjugation.*;
  * @version 1.0
  */
 public class NounFormula1 extends NounFormula {
-
     public NounFormula1(UnaugmentedTrilateralRoot root, String suffixNo) {
         this.root = root;
         this.suffixNo = Integer.parseInt(suffixNo) + 1;
@@ -41,6 +40,5 @@ public class NounFormula1 extends NounFormula {
     protected INounSuffixContainer getNounSuffixContainer() {
         return ElativeSuffixContainer.getInstance();
     }
-
 
 }

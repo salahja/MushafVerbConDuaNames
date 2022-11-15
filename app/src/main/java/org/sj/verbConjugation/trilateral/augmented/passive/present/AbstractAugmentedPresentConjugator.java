@@ -1,16 +1,16 @@
-
 package org.sj.verbConjugation.trilateral.augmented.passive.present;
 
-import java.util.*;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedPresentVerb;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
+import org.sj.verbConjugation.util.AugmentationFormula;
+import org.sj.verbConjugation.util.PresentConjugationDataContainer;
 
-import org.sj.verbConjugation.trilateral.augmented.*;
-import org.sj.verbConjugation.util.*;
-
+import java.util.LinkedList;
+import java.util.List;
 
 public class AbstractAugmentedPresentConjugator {
-
-    private List lastDprList;
-    private List connectedPronounList;
+    private final List lastDprList;
+    private final List connectedPronounList;
 
     public AbstractAugmentedPresentConjugator(List lastDprList, List connectedPronounList) {
         this.lastDprList = lastDprList;
@@ -21,14 +21,12 @@ public class AbstractAugmentedPresentConjugator {
         String cp = PresentConjugationDataContainer.getInstance().getCp(pronounIndex);
         String lastDpr = (String) lastDprList.get(pronounIndex);
         String connectedPronoun = (String) connectedPronounList.get(pronounIndex);
-        String formulaClassName = getClass().getPackage().getName()+".formula."+"AugmentedPresentVerb"+formulaNo;
-        Object [] parameters = {root, cp, lastDpr, connectedPronoun};
-
+        String formulaClassName = getClass().getPackage().getName() + ".formula." + "AugmentedPresentVerb" + formulaNo;
+        Object[] parameters = {root, cp, lastDpr, connectedPronoun};
         try {
             AugmentedPresentVerb verb = (AugmentedPresentVerb) Class.forName(formulaClassName).getConstructors()[0].newInstance(parameters);
             return verb;
-        }
-        catch (Exception ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
         return null;
@@ -36,19 +34,15 @@ public class AbstractAugmentedPresentConjugator {
 
     public List createVerbList(AugmentedTrilateralRoot root, int formulaNo) {
         AugmentationFormula augmentationFormula = root.getAugmentationFormula(formulaNo);
-        if(formulaNo==29){
-
-      //   if (augmentationFormula.getTransitive() == 'ل') {
+        if (formulaNo == 29) {
+            //   if (augmentationFormula.getTransitive() == 'ل') {
             return createLazzemVerbList(root, formulaNo);
-        }
-        else {
-
+        } else {
             List result = new LinkedList();
             for (int i = 0; i < 13; i++) {
                 AugmentedPresentVerb verb = createVerb(root, i, formulaNo);
                 result.add(verb);
             }
-
             return result;
         }
     }
@@ -60,13 +54,11 @@ public class AbstractAugmentedPresentConjugator {
             if (i == 7 || i == 8) {
                 AugmentedPresentVerb verb = createVerb(root, i, formulaNo);
                 result.add(verb);
-            }
-            else {
+            } else {
                 result.add(null);
             }
         }
         return result;
     }
-
 
 }

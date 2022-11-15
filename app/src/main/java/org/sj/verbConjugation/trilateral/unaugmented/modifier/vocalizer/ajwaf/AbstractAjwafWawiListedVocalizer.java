@@ -1,8 +1,9 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf;
 
 import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ListedVocalizer;
-import java.util.List;
+
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -19,7 +20,7 @@ import java.util.LinkedList;
  * @version 1.0
  */
 public abstract class AbstractAjwafWawiListedVocalizer extends ListedVocalizer {
-    private List appliedRoots = new LinkedList();
+    private final List appliedRoots = new LinkedList();
 
     public AbstractAjwafWawiListedVocalizer() {
         appliedRoots.add("بوه");

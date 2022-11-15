@@ -1,9 +1,11 @@
 package org.sj.nounConjugation.trilateral.augmented.modifier.passiveparticiple.hamza;
 
-import java.util.*;
+import org.sj.nounConjugation.trilateral.augmented.modifier.AbstractLamMahmouz;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.augmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -21,10 +23,9 @@ public class LamMahmouz extends AbstractLamMahmouz {
     List substitutions = new LinkedList();
 
     public LamMahmouz() {
-
-        substitutions.add(new SuffixSubstitution("اءَ","اءَ"));// EX: (مستاءَ)
-        substitutions.add(new SuffixSubstitution("اءُ","اءُ"));// EX: (مستاءُ)
-        substitutions.add(new SuffixSubstitution("اءِ","اءِ"));// EX: (مستاءِ)
+        substitutions.add(new SuffixSubstitution("اءَ", "اءَ"));// EX: (مستاءَ)
+        substitutions.add(new SuffixSubstitution("اءُ", "اءُ"));// EX: (مستاءُ)
+        substitutions.add(new SuffixSubstitution("اءِ", "اءِ"));// EX: (مستاءِ)
         substitutions.add(new InfixSubstitution("َءٌ", "َأٌ")); // EX: (مُجْزَأٌ، مُستَهْزَأٌ)
         substitutions.add(new InfixSubstitution("َءًا", "َأً")); // EX: (مُجْزَأً، مُستَهْزَأً)
         substitutions.add(new InfixSubstitution("اءًا", "اءً")); // EX: (مُداءً)

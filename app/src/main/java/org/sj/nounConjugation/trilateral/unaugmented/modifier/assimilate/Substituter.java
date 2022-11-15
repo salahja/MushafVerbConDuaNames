@@ -1,11 +1,12 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.assimilate;
 
-import java.util.*;
-
-import org.sj.nounConjugation.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import org.sj.nounConjugation.TrilateralNounSubstitutionApplier;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
 import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -23,18 +24,15 @@ public class Substituter extends TrilateralNounSubstitutionApplier implements IU
     List substitutions = new LinkedList();
 
     public Substituter() {
-        substitutions.add(new InfixSubstitution("اءَا","اوَا"));// EX: (عَمْياوان)
-        substitutions.add(new InfixSubstitution("اءَي","اوَي"));// EX: (عَمْياوين)
+        substitutions.add(new InfixSubstitution("اءَا", "اوَا"));// EX: (عَمْياوان)
+        substitutions.add(new InfixSubstitution("اءَي", "اوَي"));// EX: (عَمْياوين)
     }
-
 
     public List getSubstitutions() {
         return substitutions;
     }
 
     public boolean isApplied(ConjugationResult conjugationResult) {
-        if (conjugationResult.getNounFormula().equals("فَعْلان"))
-            return true;
-        return false;
+        return conjugationResult.getNounFormula().equals("فَعْلان");
     }
 }

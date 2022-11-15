@@ -1,13 +1,14 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier;
 
-import org.sj.verbConjugation.trilateral.unaugmented.*;
-import java.util.*;
+import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+import org.sj.verbConjugation.util.VerbLamAlefModifier;
 
-import org.sj.verbConjugation.util.*;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
- *المعالجة
+ * المعالجة
  * <p>Description: يقوم بفحص واجراء التعديلات المناسبة على الأفعال الثلاثية المجردة
  * بما فيها الاعلال والابدال والهمزة
  * حسب الصيغة ماضي أو مضارع او أمر
@@ -21,15 +22,14 @@ import org.sj.verbConjugation.util.*;
  * @version 1.0
  */
 public class UnaugmentedTrilateralModifier {
-    private Geminator geminator = new Geminator();
-    private Vocalizer vocalizer = new Vocalizer();
-    private HamzaModifier hamzaModifier = new HamzaModifier();
-    private PostHamzaModifier postHamzaModifier = new PostHamzaModifier();
+    private static final UnaugmentedTrilateralModifier instance = new UnaugmentedTrilateralModifier();
+    private final Geminator geminator = new Geminator();
+    private final Vocalizer vocalizer = new Vocalizer();
+    private final HamzaModifier hamzaModifier = new HamzaModifier();
+    private final PostHamzaModifier postHamzaModifier = new PostHamzaModifier();
 
     private UnaugmentedTrilateralModifier() {
     }
-
-    private static UnaugmentedTrilateralModifier instance = new UnaugmentedTrilateralModifier();
 
     public static UnaugmentedTrilateralModifier getInstance() {
         return instance;
@@ -38,10 +38,11 @@ public class UnaugmentedTrilateralModifier {
     /**
      * اخراج قائمة الأفعال بعد التعديلات
      * البدء بالادغام
-     * @param root UnaugmentedTrilateralRoot
-     * @param kov int
+     *
+     * @param root         UnaugmentedTrilateralRoot
+     * @param kov          int
      * @param conjugations List
-     * @param tense String (From SystemConstans class the values are stored)  ماضي أو مضارع او أمر
+     * @param tense        String (From SystemConstans class the values are stored)  ماضي أو مضارع او أمر
      * @return ConjugationResult
      */
     public ConjugationResult build(UnaugmentedTrilateralRoot root, int kov, List conjugations, String tense, boolean active) {

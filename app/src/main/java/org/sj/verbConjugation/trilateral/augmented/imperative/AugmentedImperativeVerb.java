@@ -1,10 +1,8 @@
 package org.sj.verbConjugation.trilateral.augmented.imperative;
 
-import org.sj.verbConjugation.trilateral.augmented.*;
-
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
 
 public abstract class AugmentedImperativeVerb {
-
     protected AugmentedTrilateralRoot root;
     protected String lastDim;
     protected String connectedPronoun;

@@ -1,14 +1,13 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.hamza.ein.passive;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
 import org.sj.verbConjugation.trilateral.augmented.modifier.hamza.ein.AbstractEinMahmouz;
 
+import java.util.LinkedList;
+import java.util.List;
 
 public class PresentMahmouz extends AbstractEinMahmouz {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public PresentMahmouz() {
         substitutions.add(new InfixSubstitution("يْءَ", "يْئَ")); // EX: (يُسْتَيْئَسُ، )
@@ -20,8 +19,6 @@ public class PresentMahmouz extends AbstractEinMahmouz {
         substitutions.add(new InfixSubstitution("َّءَ", "َّأَ")); // EX: (يُتَّأدُ، )
         substitutions.add(new InfixSubstitution("اءَ", "اءَ")); // EX: (يُلاءَمُ، يُتَساءَلُ، )
     }
-
-
 
     public List getSubstitutions() {
         return substitutions;

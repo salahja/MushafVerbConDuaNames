@@ -62,10 +62,11 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="cursive"
             android:lineSpacingExtra="@dimen/lineSpacingExtra"
             android:padding="@dimen/textViewPadding"
             android:text="Sahiah International"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:visibility="gone" />
 
 
@@ -75,6 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/translate_textViewnote"
             android:alpha="0.7"
+            android:fontFamily="@font/work_sans_semibold"
             android:hint="translation"
             android:lineSpacingExtra="@dimen/lineSpacingExtra"
             android:padding="@dimen/textViewPadding"

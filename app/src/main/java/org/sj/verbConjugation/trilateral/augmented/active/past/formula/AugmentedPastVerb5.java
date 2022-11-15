@@ -1,11 +1,10 @@
 package org.sj.verbConjugation.trilateral.augmented.active.past.formula;
 
-import org.sj.verbConjugation.trilateral.augmented.*;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedPastVerb;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
 import org.sj.verbConjugation.util.ArabCharUtil;
 
-
 public class AugmentedPastVerb5 extends AugmentedPastVerb {
-
     public AugmentedPastVerb5(AugmentedTrilateralRoot root, String lastDpa, String connectedPronoun) {
         super(root, lastDpa, connectedPronoun);
     }
@@ -15,12 +14,17 @@ public class AugmentedPastVerb5 extends AugmentedPastVerb {
      *
      * @return String
      * @todo Implement this sarf.trilingual.augmented.past.AugmentedPastVerb
-     *   method
+     * method
      */
     public String form() {
-
-    //    return "�"+root.getC1()+ArabCharUtil.SKOON+"�"+ArabCharUtil.FATHA+root.getC2()+ArabCharUtil.FATHA+root.getC3()+lastDpa+connectedPronoun;
-        return "ا"+root.getC1()+ArabCharUtil.SKOON+"ت"+ArabCharUtil.FATHA+root.getC2()+ArabCharUtil.FATHA+root.getC3()+lastDpa+connectedPronoun;
-
+        String s="";
+        //  return "�"+root.getC1()+ArabCharUtil.SKOON+"�"+ArabCharUtil.FATHA+root.getC2()+ArabCharUtil.FATHA+root.getC3()+lastDpa+connectedPronoun;
+        Character c1 = root.getC1();
+        if (c1.toString().equals("ء")) {
+            s = "اِ" +"ت" + ArabCharUtil.SHADDA +  ArabCharUtil.FATHA + root.getC2() + ArabCharUtil.FATHA + root.getC3() + lastDpa + connectedPronoun;
+        } else {
+            s= "ا" + root.getC1() + ArabCharUtil.SKOON + "ت" + ArabCharUtil.FATHA + root.getC2() + ArabCharUtil.FATHA + root.getC3() + lastDpa + connectedPronoun;
+        }
+        return s;
     }
 }

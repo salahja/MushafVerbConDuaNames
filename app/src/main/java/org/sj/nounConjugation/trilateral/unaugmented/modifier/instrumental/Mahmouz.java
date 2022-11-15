@@ -1,10 +1,15 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.instrumental;
 
-import java.util.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.instrumental.hamza.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
 import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.instrumental.hamza.EinMahmouz;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.instrumental.hamza.FaaMahmouz;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.instrumental.hamza.LamMahmouz;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -19,7 +24,7 @@ import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
  * @version 1.0
  */
 public class Mahmouz {
-    private List modifiers = new LinkedList();
+    private final List modifiers = new LinkedList();
 
     public Mahmouz() {
         modifiers.add(new FaaMahmouz());
@@ -36,10 +41,9 @@ public class Mahmouz {
                 break;
             }
         }
-
         //الأفعال الثلاثية المجردة المهموزة الفاء والمهموزة اللام (وهي: أبأ، أثأ، أجأ، أزأ، أكأ)
         if (conjResult.getRoot().getC3() == 'ء')
-            ((SubstitutionsApplier)modifiers.get(2)).apply(conjResult.getFinalResult(), conjResult.getRoot());
+            ((SubstitutionsApplier) modifiers.get(2)).apply(conjResult.getFinalResult(), conjResult.getRoot());
 
     }
 }

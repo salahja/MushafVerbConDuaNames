@@ -1,7 +1,6 @@
 package com.example.utility;
 
 public interface CorpusConstants {
-
     interface Nominals {
         String N = "Noun(اسم)",
                 PN = "Proper Noun(اسم علم)",
@@ -14,6 +13,7 @@ public interface CorpusConstants {
                 T = "Time Adverb(ظرف زمان)",
                 LOC = "Location Adverb(ظرف مكان)";
     }
+
     interface NominalsEnglish {
         String N = "Noun ",
                 PN = "Proper Noun ",
@@ -29,10 +29,9 @@ public interface CorpusConstants {
 
     interface NominalsProp {
         String ACT = "Active ",
-           PCPL="PCPL",
+                PCPL = "PCPL",
                 PASS = "Passive ",
-
-                ACTPCPL = "Active participle(اسم فاعل) ",
+        ACTPCPL = "Active participle(اسم فاعل) ",
                 PASSPCPL = "Passive participle(سم مفعول) ",
                 VN = "Verbal noun(مصدر)",
                 INDEF = "Indefinite(نكرة)",
@@ -45,7 +44,6 @@ public interface CorpusConstants {
     }
 
     interface Particles {
-
         String P = "Prepositions(حرف جر)",
                 DET = "determiner()",
                 EMPH = "Emphatic lām prefix(لام التوكيد) ",
@@ -84,7 +82,6 @@ public interface CorpusConstants {
     }
 
     interface verbfeaturesenglisharabic {
-
         String PERF = "Perfect verb(فعل ماض)",
                 IMPF = "Imperfect verb(فعل مضارع)",
                 IMPV = "	Imperative verb(فعل أمر )",
@@ -92,13 +89,12 @@ public interface CorpusConstants {
                 SUBJ = "	Subjunctive mood(منصوب)",
                 JUS = "	Jussive mood(مجزوم)",
                 ACT = "	Active voice(مبني للمعلوم)",
-               V="Verb(فعل)",
+                V = "Verb(فعل)",
                 PASS = "	Passive voice(مبني للمجهول)";
 
-
     }
-    interface verbfeaturesenglish {
 
+    interface verbfeaturesenglish {
         String PERF = "Perfect ",
                 IMPF = "Imperfect",
                 IMPV = "Imperative",
@@ -108,10 +104,9 @@ public interface CorpusConstants {
                 ACT = "	Active",
                 PASS = "Passive";
 
-
     }
-    interface png {
 
+    interface png {
         String one = "First person ",
                 two = "Second Person ",
                 three = "Third Person ",
@@ -123,14 +118,12 @@ public interface CorpusConstants {
     }
 
     interface thulathi {
-
         String NASARA = "نصر",
                 ZARABA = "ضرب",
                 FATAH = "فتح",  //  A-A // FATHA-YAFTAHU
                 SAMIA = "سمح",   //  I-A  //SAMIA-YASMAHU
                 KARUMU = "كرم",   //   U-U  //KARUMA-YAKRUMU
                 HASIBA = "حسب";    //  I-I  //HASIBA-YAHSIU
-
 
     }
 

@@ -4,18 +4,33 @@ import android.text.SpannableString;
 
 import java.util.ArrayList;
 
-
 public class CorpusAyahWord {
     private ArrayList<CorpusWbwWord> word;
-
     private boolean hasProstration;
     private String quranArabic;
     private String quranTranslate;
-
     private SpannableString spannableverse;
     private String ar_irab_two;
     private String tafsir_kathir;
     private String topictitle;
+    private String has_prostration;
+    private String en_transliteration;
+    private String en_jalalayn;
+    private String en_arberry;
+    private String ur_jalalayn;
+    private String ur_junagarhi;
+    private int passage_no;
+
+    public CorpusAyahWord() {
+    }
+
+    public CorpusAyahWord(ArrayList<CorpusWbwWord> word, boolean hasProstration, String quranArabic, String quranTranslate, SpannableString spannableverse) {
+        this.word = word;
+        this.hasProstration = hasProstration;
+        this.quranArabic = quranArabic;
+        this.quranTranslate = quranTranslate;
+        this.spannableverse = spannableverse;
+    }
 
     public String getTopictitle() {
         return topictitle;
@@ -73,19 +88,6 @@ public class CorpusAyahWord {
         this.ur_junagarhi = ur_junagarhi;
     }
 
-    private String has_prostration;
-
-      private String en_transliteration ;
-      private String en_jalalayn ;
-      private String en_arberry ;
-
-      private String ur_jalalayn ;
-      private String ur_junagarhi;
-
-
-
-
-
     public String getAr_irab_two() {
         return ar_irab_two;
     }
@@ -102,10 +104,6 @@ public class CorpusAyahWord {
         this.tafsir_kathir = tafsir_kathir;
     }
 
-    public CorpusAyahWord() {
-
-    }
-
     public int getPassage_no() {
         return passage_no;
     }
@@ -114,7 +112,6 @@ public class CorpusAyahWord {
         this.passage_no = passage_no;
     }
 
-    private int passage_no;
     public ArrayList<CorpusWbwWord> getWord() {
         return word;
     }
@@ -152,14 +149,6 @@ public class CorpusAyahWord {
     }
 
     public void setSpannableverse(SpannableString spannableverse) {
-        this.spannableverse = spannableverse;
-    }
-
-    public CorpusAyahWord(ArrayList<CorpusWbwWord> word, boolean hasProstration, String quranArabic, String quranTranslate, SpannableString spannableverse) {
-        this.word = word;
-        this.hasProstration = hasProstration;
-        this.quranArabic = quranArabic;
-        this.quranTranslate = quranTranslate;
         this.spannableverse = spannableverse;
     }
 }

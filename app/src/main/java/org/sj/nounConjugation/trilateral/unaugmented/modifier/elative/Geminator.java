@@ -1,9 +1,10 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.elative;
 
-import java.util.*;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.AbstractGeminator;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -24,7 +25,6 @@ public class Geminator extends AbstractGeminator {
         substitutions.add(new ExpressionInfixSubstitution("ْC3َC3", "َC3ّ")); // EX: (أحَرّ)
         substitutions.add(new ExpressionInfixSubstitution("ُC3ْC3", "ُC3ّ")); // EX: (حُرَّى)
     }
-
 
     public List getSubstitutions() {
         return substitutions;

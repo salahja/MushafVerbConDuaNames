@@ -5,22 +5,16 @@ import static com.example.Constant.SURAH_ARABIC_NAME;
 import static com.example.Constant.SURAH_ID;
 
 import android.annotation.SuppressLint;
-
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
-
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowInsets;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
 
 import com.example.mushafconsolidated.Entities.QuranEntity;
 import com.example.mushafconsolidated.R;
@@ -40,13 +34,11 @@ public class TafsirFullscreenActivity extends BaseActivity {
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
      */
     private static final boolean AUTO_HIDE = true;
-
     /**
      * If {@link #AUTO_HIDE} is set, the number of milliseconds to wait after
      * user interaction before hiding the system UI.
      */
     private static final int AUTO_HIDE_DELAY_MILLIS = 3000;
-
     /**
      * Some older devices needs a small delay between UI widget updates
      * and a change of the status and navigation bar.
@@ -76,14 +68,11 @@ public class TafsirFullscreenActivity extends BaseActivity {
         }
     };
     private View mControlsView;
-
-
     /**
      * Touch listener to use for in-layout UI controls to delay hiding the
      * system UI. This is to prevent the jarring behavior of controls going away
      * while interacting with activity UI.
      */
-
     private ActivityTafsirFullscreenBinding binding;
 
     @Override
@@ -91,51 +80,40 @@ public class TafsirFullscreenActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tafsir_fullscreen);
         Bundle bundle = getIntent().getExtras();
-    int sura=    bundle.getInt(SURAH_ID);
-  int ayah=      bundle.getInt(AYAH_ID);
-     String surahname=   bundle.getString(SURAH_ARABIC_NAME);
-        Utils utils=new Utils(this);
+        int sura = bundle.getInt(SURAH_ID);
+        int ayah = bundle.getInt(AYAH_ID);
+        String surahname = bundle.getString(SURAH_ARABIC_NAME);
+        Utils utils = new Utils(this);
         MaterialToolbar materialToolbar = findViewById(R.id.toolbarmain);
         setSupportActionBar(materialToolbar);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         if (materialToolbar != null) {
             setSupportActionBar(materialToolbar);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
-
         List<QuranEntity> list = Utils.getsurahayahVerses(sura, ayah);
         binding = ActivityTafsirFullscreenBinding.inflate(getLayoutInflater());
-
         ActionBar actionBar = getSupportActionBar();
-      //  actionBar.show();
-
-      //  mControlsView = binding.fullscreenContentControls;
-       // mContentView = binding.fullscreenContent;
+        //  actionBar.show();
+        //  mControlsView = binding.fullscreenContentControls;
+        // mContentView = binding.fullscreenContent;
         TextView sourcelable = findViewById(R.id.tvSourceLabel);
         TextView tafsir = findViewById(R.id.tvTafsir);
         TextView translation = findViewById(R.id.tvTranslation);
         TextView tvaryah = findViewById(R.id.tvData);
         Button button = findViewById(R.id.detailsbutton);
-        StringBuilder sb=new StringBuilder();
-        sb.append(sura).append(":").append(ayah).append(" ").append(surahname);
-        button.setText(sb.toString());
-
-
+        button.setText(sura + ":" + ayah + " " + surahname);
         sourcelable.setText("Arabic Ayah");
         String tafsir_kathir = list.get(0).getTafsir_kathir();
-     String   tafsir_kathirs=tafsir_kathir.replace("<b>","");;
-        String   tafsir_kathissr=tafsir_kathirs.replace("</b>","");;
+        String tafsir_kathirs = tafsir_kathir.replace("<b>", "");
+        String tafsir_kathissr = tafsir_kathirs.replace("</b>", "");
         tafsir.setText(tafsir_kathissr);
-         translation.setText(list.get(0).getTranslation());
+        translation.setText(list.get(0).getTranslation());
         tvaryah.setText(list.get(0).getQurantext());
         // Set up the user interaction to manually show or hide the system UI.
-
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-
     }
-
 
 }

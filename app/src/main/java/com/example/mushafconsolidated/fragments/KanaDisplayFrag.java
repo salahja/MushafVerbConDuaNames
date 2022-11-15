@@ -1,6 +1,5 @@
 package com.example.mushafconsolidated.fragments;
 
-
 import static com.example.Constant.BYELLOW;
 import static com.example.Constant.GOLD;
 import static com.example.Constant.GREENDARK;
@@ -31,24 +30,18 @@ import com.example.mushafconsolidated.intrface.OnItemClickListener;
 
 import java.util.ArrayList;
 
-
 public class KanaDisplayFrag extends DialogFragment implements IOnBackPressed {
-
-
+    ArrayList<SpannableStringBuilder> sharts = new ArrayList<>();
     private RecyclerView recyclerView;
     //   private RecyclerView.Adapter ParentAdapter;
     private KanaAdapter kanaAdapter;
     //  SurahDisplayAdapter ParentAdapter;
-
     private OnItemClickListener mItemClickListener;
     private RecyclerView.LayoutManager layoutManager;
-    ArrayList<SpannableStringBuilder> sharts = new ArrayList<>();
-
 
     public KanaDisplayFrag() {
         // Required empty public constructor
     }
-
 
     /**
      * Use this factory method to create a new instance of
@@ -60,7 +53,6 @@ public class KanaDisplayFrag extends DialogFragment implements IOnBackPressed {
     public static KanaDisplayFrag newInstance() {
         KanaDisplayFrag fragment = new KanaDisplayFrag();
         Bundle args = new Bundle();
-
         fragment.setArguments(args);
         return fragment;
     }
@@ -75,85 +67,50 @@ public class KanaDisplayFrag extends DialogFragment implements IOnBackPressed {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
         View view = inflater.inflate(R.layout.reccylerview, container, false);
         Utils utils = new Utils(getContext());
-
-
         final ArrayList<KanaPOJO> sifabySurahAll = utils.getKanaPojo();
-
         for (KanaPOJO shart : sifabySurahAll) {
             SpannableStringBuilder spannableverse = new SpannableStringBuilder(shart.getQurantext());
             int shartAyah = shart.getAyah();
-
-
             try {
-
-
                 spannableverse.setSpan(new ForegroundColorSpan(GOLD), shart.getIndexstart(), shart.getIndexend(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 shart.setSpannedverse(spannableverse);
-
-
                 spannableverse.setSpan(new ForegroundColorSpan(BYELLOW), shart.getKhabarstart(), shart.getKhabarend(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 shart.setSpannedverse(spannableverse);
-
-
                 spannableverse.setSpan(new ForegroundColorSpan(GREENDARK), shart.getIsmkanastart(), shart.getIsmkanaend(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 shart.setSpannedverse(spannableverse);
-
 
             } catch (IndexOutOfBoundsException e) {
                 System.out.println(e.getMessage());
             }
 
-
         }
-
-
         setRecyclerView(view.findViewById(R.id.RecyclerView));
         getRecyclerView().setHasFixedSize(true);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-
-
         getRecyclerView().setLayoutManager(getLayoutManager());
         setKanaAdapter(new KanaAdapter(getContext(), sifabySurahAll));
-
-
         getRecyclerView().setAdapter(getKanaAdapter());
         return view;
     }
 
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-
         getRecyclerView().setAdapter(getKanaAdapter());
-
         setRecyclerView(view.findViewById(R.id.RecyclerView));
         getRecyclerView().setHasFixedSize(true);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-
         Utils utils = new Utils(getContext());
         final ArrayList<KanaPOJO> all = utils.getKanaPojo();
-
         for (KanaPOJO shart : all) {
             SpannableStringBuilder spannableverse = new SpannableStringBuilder(shart.getQurantext());
-
-
             try {
-
-
                 spannableverse.setSpan(new ForegroundColorSpan(GOLD), shart.getIndexstart(), shart.getIndexend(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 shart.setSpannedverse(spannableverse);
-
-
                 spannableverse.setSpan(new ForegroundColorSpan(BYELLOW), shart.getKhabarstart(), shart.getKhabarend(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 shart.setSpannedverse(spannableverse);
-
-
                 spannableverse.setSpan(new ForegroundColorSpan(GREENDARK), shart.getIsmkanastart(), shart.getIsmkanaend(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 shart.setSpannedverse(spannableverse);
 
@@ -161,33 +118,19 @@ public class KanaDisplayFrag extends DialogFragment implements IOnBackPressed {
                 System.out.println(e.getMessage());
             }
 
-
         }
-
-
         setRecyclerView(view.findViewById(R.id.RecyclerView));
         getRecyclerView().setHasFixedSize(true);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-
-
         getRecyclerView().setLayoutManager(getLayoutManager());
         setKanaAdapter(new KanaAdapter(getContext(), all));
-
-
         getRecyclerView().setAdapter(getKanaAdapter());
-
         getRecyclerView().setLayoutManager(getLayoutManager());
-
-
         getKanaAdapter().SetOnItemClickListener((v, position) -> {
             //   Toast.makeText(getActivity(), "clicked", Toast.LENGTH_SHORT).show();
-
-
         });
 
-
     }
-
 
     public RecyclerView getRecyclerView() {
         return recyclerView;
@@ -221,13 +164,11 @@ public class KanaDisplayFrag extends DialogFragment implements IOnBackPressed {
         this.layoutManager = layoutManager;
     }
 
-
     @Override
     public boolean onBackPressed() {
         Intent in = new Intent(getActivity(), QuranGrammarAct.class);
         startActivity(in);
         return true;
-
 
     }
 }

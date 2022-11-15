@@ -15,42 +15,41 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.mushafconsolidated.R;
 import com.example.utility.QuranGrammarApplication;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import org.sj.conjugator.activity.ConjugatorAct;
 import org.sj.conjugator.activity.BaseActivity;
+import org.sj.conjugator.activity.ConjugatorAct;
 import org.sj.conjugator.fragments.SettingsFragmentVerb;
 import org.sj.conjugator.utilities.SharedPref;
 
-import com.example.mushafconsolidated.R;
-
-
 public class MainActivity extends BaseActivity {
-    int mazeedform;
+    public static final String TAG = "bottom";
     private static final int PERMISSION_REQUEST_CODE = 100;
-    Button mujarradListingbtn, mazeedlistingbtn,  conjugatorbtn,
-          settingbtn,qurangrammarbtn;
+    static String lang;
+    int mazeedform;
+    Button mujarradListingbtn, mazeedlistingbtn, conjugatorbtn,
+            settingbtn, qurangrammarbtn;
     FloatingActionButton btnBottomSheet;
     RelativeLayout layoutBottomSheet;
     BottomSheetBehavior sheetBehavior;
+    SharedPreferences sharedPreferences;
+
     public int getMazeedform() {
         return mazeedform;
     }
-    public static final String TAG = "bottom";
+
     public void setMazeedform(int mazeedform) {
         this.mazeedform = mazeedform;
     }
 
-    static String lang;
-    SharedPreferences sharedPreferences;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         SharedPreferences shared =
-              androidx.preference.PreferenceManager.getDefaultSharedPreferences(this);
+                androidx.preference.PreferenceManager.getDefaultSharedPreferences(this);
         String preferences = shared.getString("theme", "dark");
         if (preferences.equals("light")) {
             switchTheme("light");
@@ -60,28 +59,15 @@ public class MainActivity extends BaseActivity {
         } else if (preferences.equals("blue")) {
             switchTheme("blue");
 
-
         } else if (preferences.equals("brown")) {
             switchTheme("brown");
 
-
-
-
-
         }
-
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-         setContentView(R.layout.activity_verb_conjugation);
-      //  setContentView(R.layout.main_activity);
-
-
-
-
-
+        setContentView(R.layout.activity_verb_conjugation);
+        //  setContentView(R.layout.main_activity);
         if (isFirstTime()) {
-
-
             SettingsFragmentVerb fragment = new SettingsFragmentVerb();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction()
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
@@ -89,11 +75,10 @@ public class MainActivity extends BaseActivity {
             transaction.commit();
 
         }
-
         initView();
-      SetupBOttomMenu();
-      //  DatabaseUtils utils = new DatabaseUtils(this);
-      //  ArrayList<Mazeed> mazeedAll = utils.getMazeedAll();
+        SetupBOttomMenu();
+        //  DatabaseUtils utils = new DatabaseUtils(this);
+        //  ArrayList<Mazeed> mazeedAll = utils.getMazeedAll();
         //   createFile();
 /*
         MujarradVerbList fragments = new MujarradVerbList(MainActivity.this);
@@ -106,21 +91,13 @@ public class MainActivity extends BaseActivity {
         // finish();
         startActivity(conjugatorintent);
 
-
-
-
-
     }
-
-
-
-
-
 
     private boolean checkPermission() {
         int result = ContextCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
         return result == PackageManager.PERMISSION_GRANTED;
     }
+
     private void requestPermission() {
         if (ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
             Toast.makeText(QuranGrammarApplication.getContext(), "Write External Storage permission allows us to create files. Please allow this permission in App Settings.", Toast.LENGTH_LONG).show();
@@ -128,17 +105,14 @@ public class MainActivity extends BaseActivity {
             ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
         }
     }
+
     private void SetupBOttomMenu() {
-
-
         settingbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 SettingsFragmentVerb fragments = new SettingsFragmentVerb();
                 FragmentTransaction transactions = getSupportFragmentManager().beginTransaction()
-                      .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 transactions.replace(R.id.frame_container, fragments).addToBackStack("mujarrad");
                 transactions.commit();
 
@@ -153,61 +127,42 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-
-
     }
-
-
 
     private boolean isFirstTime() {
         SharedPreferences preferences = getPreferences(MODE_PRIVATE);
         boolean ranBefore = preferences.getBoolean("RanBefore", false);
         if (!ranBefore) {
-
             // first time
             SharedPreferences.Editor editor = preferences.edit();
             editor.putBoolean("RanBefore", true);
             editor.apply();
         }
-
         return !ranBefore;
     }
 
-
-
-
-
     private void initView() {
-
         btnBottomSheet = findViewById(R.id.fab);
-       mazeedlistingbtn = findViewById(R.id.mazeedlist);
+        mazeedlistingbtn = findViewById(R.id.mazeedlist);
         mujarradListingbtn = findViewById(R.id.conjugationnav);
-       settingbtn = findViewById(R.id.conjugatorsetting);
-       conjugatorbtn = findViewById(R.id.conjugator);
-
+        settingbtn = findViewById(R.id.conjugatorsetting);
+        conjugatorbtn = findViewById(R.id.conjugator);
         layoutBottomSheet = findViewById(R.id.bottom_sheet);
-      sheetBehavior = BottomSheetBehavior.from(layoutBottomSheet);
-       //   navigationView = findViewById(R.id.navigationView);
+        sheetBehavior = BottomSheetBehavior.from(layoutBottomSheet);
+        //   navigationView = findViewById(R.id.navigationView);
         MaterialToolbar materialToolbar = findViewById(R.id.toolbar);
-
-      //  BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavView);
+        //  BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavView);
         //    recyclerView = findViewById(R.id.sarfrecview);
         //   materialToolbar = findViewById(R.id.toolbar);
-
         if (materialToolbar != null) {
             setSupportActionBar(materialToolbar);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
-      //  materialToolbar.setNavigationIcon(R.mipmap.ic_ac_foreground);
-      //  CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbarLayout);
-
+        //  materialToolbar.setNavigationIcon(R.mipmap.ic_ac_foreground);
+        //  CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbarLayout);
         //   setSupportActionBar(materialToolbar);
         //   getSupportActionBar().setTitle("");
         SharedPref pref = new SharedPref(this);
-
-
-
-
         btnBottomSheet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -249,16 +204,9 @@ public class MainActivity extends BaseActivity {
 
             @Override
             public void onSlide(@NonNull View bottomSheet, float slideOffset) {
-
             }
         });
 
-
-
-
-
-
     }
-
 
 }

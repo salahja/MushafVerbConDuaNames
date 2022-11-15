@@ -1,9 +1,8 @@
 package org.sj.nounConjugation.trilateral.augmented.modifier;
 
-import org.sj.nounConjugation.*;
+import org.sj.nounConjugation.TrilateralNounSubstitutionApplier;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
-
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -18,20 +17,18 @@ import org.sj.verbConjugation.trilateral.augmented.modifier.*;
  * @version 1.0
  */
 public abstract class AbstractFaaMahmouz extends TrilateralNounSubstitutionApplier implements IAugmentedTrilateralModifier {
-
     public boolean isApplied(MazeedConjugationResult mazeedConjugationResult) {
         int kov = mazeedConjugationResult.getKov();
-
         switch (kov) {
-        case 3:
-        case 4:
-        case 5:
-        case 15:
-        case 18:
-        case 21:
-        case 24:
-        case 27:
-            return true;
+            case 3:
+            case 4:
+            case 5:
+            case 15:
+            case 18:
+            case 21:
+            case 24:
+            case 27:
+                return true;
         }
         return false;
     }

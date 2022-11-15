@@ -1,14 +1,16 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier;
 
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.geminator.*;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.geminator.GenericGeminator;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.geminator.NGeminator;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.geminator.TGeminator;
 
 /**
  * <p>Title: Sarf Program</p>
  *
  * <p>Description: This is the facade for gemination subsystem
  * هو الصف المسؤول عن عملية الادغام بكل حالاتها
- *حيث يتخاطب مع الصفوف الموجودة في حزمة الادغام
+ * حيث يتخاطب مع الصفوف الموجودة في حزمة الادغام
  * </p>
  *
  * <p>Copyright: Copyright (c) 2006</p>
@@ -20,11 +22,11 @@ import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
  */
 public class Geminator {
     //ادغام العام
-    private GenericGeminator genericGeminator = new GenericGeminator();
+    private final GenericGeminator genericGeminator = new GenericGeminator();
     //ادغام المنتهي بحرف النون
-    private NGeminator nGeminator = new NGeminator();
+    private final NGeminator nGeminator = new NGeminator();
     //ادغام المنتهي بحرف التاء
-    private TGeminator tGeminator = new TGeminator();
+    private final TGeminator tGeminator = new TGeminator();
 
     public Geminator() {
     }
@@ -32,8 +34,9 @@ public class Geminator {
     /**
      * تطبيق الادغام حسب الصيغة ماضي أو مضارع أو أمر للمعلوم أو لمجهول
      * قد لا يطبق أي نوع من الادغام
-     * @param tense String
-     * @param active boolean
+     *
+     * @param tense      String
+     * @param active     boolean
      * @param conjResult ConjugationResult
      */
     public void apply(String tense, boolean active, ConjugationResult conjResult) {

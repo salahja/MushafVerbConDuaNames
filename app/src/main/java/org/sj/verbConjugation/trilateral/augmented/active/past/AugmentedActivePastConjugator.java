@@ -1,19 +1,21 @@
-
 package org.sj.verbConjugation.trilateral.augmented.active.past;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.augmented.*;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedPastVerb;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
 import org.sj.verbConjugation.util.AugmentationFormula;
 import org.sj.verbConjugation.util.PastConjugationDataContainer;
 
-
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 public class AugmentedActivePastConjugator {
+    private static final AugmentedActivePastConjugator instance = new AugmentedActivePastConjugator();
+
     private AugmentedActivePastConjugator() {
     }
-
-    private static AugmentedActivePastConjugator instance = new AugmentedActivePastConjugator();
 
     public static AugmentedActivePastConjugator getInstance() {
         return instance;
@@ -22,14 +24,12 @@ public class AugmentedActivePastConjugator {
     public AugmentedPastVerb createVerb(AugmentedTrilateralRoot root, int pronounIndex, int formulaNo) {
         String lastDpa = PastConjugationDataContainer.getInstance().getLastDpa(pronounIndex);
         String connectedPronoun = PastConjugationDataContainer.getInstance().getConnectedPronoun(pronounIndex);
-        String formulaClassName = getClass().getPackage().getName()+".formula."+"AugmentedPastVerb"+formulaNo;
-        Object [] parameters = {root, lastDpa, connectedPronoun};
-
+        String formulaClassName = getClass().getPackage().getName() + ".formula." + "AugmentedPastVerb" + formulaNo;
+        Object[] parameters = {root, lastDpa, connectedPronoun};
         try {
             AugmentedPastVerb verb = (AugmentedPastVerb) Class.forName(formulaClassName).getConstructors()[0].newInstance(parameters);
             return verb;
-        }
-        catch (Exception ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
         return null;
@@ -41,7 +41,6 @@ public class AugmentedActivePastConjugator {
             AugmentedPastVerb verb = createVerb(root, i, formulaNo);
             result.add(verb);
         }
-
         return result;
 
     }
@@ -52,7 +51,7 @@ public class AugmentedActivePastConjugator {
         while (iter.hasNext()) {
             AugmentationFormula formula = (AugmentationFormula) iter.next();
             List formulaVerbList = createVerbList(root, formula.getFormulaNo());
-            result.put(formula.getFormulaNo()+"", formulaVerbList);
+            result.put(formula.getFormulaNo() + "", formulaVerbList);
         }
         return result;
     }

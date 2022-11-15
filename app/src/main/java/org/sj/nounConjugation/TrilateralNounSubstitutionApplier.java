@@ -1,8 +1,9 @@
 package org.sj.nounConjugation;
 
-import java.util.*;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -17,11 +18,11 @@ import org.sj.verbConjugation.trilateral.Substitution.*;
  * @version 1.0
  */
 public abstract class TrilateralNounSubstitutionApplier extends SubstitutionsApplier {
-
     protected static List appliedProunounsIndecies = new ArrayList(18);
+
     static {
-        for (int i=0; i<18; i++) {
-            appliedProunounsIndecies.add(i+1 +"");
+        for (int i = 0; i < 18; i++) {
+            appliedProunounsIndecies.add(i + 1 + "");
         }
     }
 

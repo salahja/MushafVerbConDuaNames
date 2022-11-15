@@ -1,20 +1,15 @@
 package com.example.mushafconsolidated.model;
 
-
 public class SarfSagheerPOJO {
-
-
     private String mamaroof;//((CharSequence) toArray[0]);
     private String mumaroof;
     private String ismfail;//((CharSequence) toArray[2]);
     private String mamajhool;//((CharSequence) toArray[3]);
     private String mumajhool;//((CharSequence) toArray[4]);
     private String ismmafool;//((CharSequence) toArray[5]);
-
     private String amrone;
     private String amrtwo;
     private String amrthree;
-
     private String nahiamrthree;//(nahiamr);
     private String nahiamrone;//(nahiamr);
     private String nahiamrtwo;//(nahiamr);
@@ -22,12 +17,9 @@ public class SarfSagheerPOJO {
     private String ismzarftwo;//(zarfheader);
     private String ismzarfthree;//(zarfheader);
     private String ismalaone;//(alaheader);
-
-
     private String ismalatwo;//(ismala);
     private String ismalathree;//(ismala);
     private String masdar;
-
     private String rootword;//((CharSequence) toArray[19]);
     private String babname;//((CharSequence) toArray[20]);
     private String weaknessname;//((CharSequence) toArray[21]);

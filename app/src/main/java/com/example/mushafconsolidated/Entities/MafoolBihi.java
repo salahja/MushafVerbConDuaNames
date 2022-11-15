@@ -1,29 +1,23 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 //primaryKeys ={"translation_id","verse_id"}
 
-
 @Entity(tableName = "mafoolbihi")
 public class MafoolBihi {
-
-
-
     @NonNull
-    private int     surah ;
+    private int surah;
     @NonNull
-    private int     ayah;
+    private int ayah;
     @NonNull
-    private int      wordno  ;
-
+    private int wordno;
     @NonNull
-    private String    word ;
+    private String word;
     private String objectpronoun;
     @NonNull
-    private String    comment ;
+    private String comment;
     @PrimaryKey(autoGenerate = true)
     @NonNull
     private int id;
@@ -70,7 +64,6 @@ public class MafoolBihi {
     public void setWord(@NonNull String word) {
         this.word = word;
     }
-
 
     public String getObjectpronoun() {
         return objectpronoun;

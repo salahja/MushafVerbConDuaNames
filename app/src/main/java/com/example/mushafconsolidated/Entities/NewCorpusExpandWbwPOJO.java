@@ -1,13 +1,10 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import androidx.annotation.NonNull;
 import androidx.room.PrimaryKey;
 //primaryKeys ={"translation_id","verse_id"}
 
-
 public class NewCorpusExpandWbwPOJO {
-
     private String root_a;
     private int surah;
     private int ayah;
@@ -15,15 +12,6 @@ public class NewCorpusExpandWbwPOJO {
     private int wordcount;
     private String translation;
     private String ur_junagarhi;
-
-    public String getUr_junagarhi() {
-        return ur_junagarhi;
-    }
-
-    public void setUr_junagarhi(String ur_junagarhi) {
-        this.ur_junagarhi = ur_junagarhi;
-    }
-
     private String araone;
     private String aratwo;
     private String arathree;
@@ -34,29 +22,68 @@ public class NewCorpusExpandWbwPOJO {
     private String rootarathree;
     private String rootarafour;
     private String rootarafive;
-    private String  lemaraone     ;
-    private String  lemaratwo     ;
-    private String  lemrathree    ;
-    private String  lemarafour    ;
-    private String  lemarafive    ;
-
-
-    private String  form_one      ;
-    private String   form_two      ;
-    private String   form_three    ;
-    private String   form_four     ;
-    private String  form_five     ;
+    private String lemaraone;
+    private String lemaratwo;
+    private String lemrathree;
+    private String lemarafour;
+    private String lemarafive;
+    private String form_one;
+    private String form_two;
+    private String form_three;
+    private String form_four;
+    private String form_five;
     private String tagone;
     private String tagtwo;
     private String tagthree;
     private String tagfour;
     private String tagfive;
-
     private String detailsone;
     private String detailstwo;
     private String detailsthree;
     private String detailsfour;
     private String detailsfive;
+    private String en;
+    private String bn;
+    private String in;
+    private String qurantext;
+    @PrimaryKey(autoGenerate = true)
+    @NonNull
+    private int id;
+    public NewCorpusExpandWbwPOJO(String root_a, int surah, int ayah, int wordno, int wordcount, String translation, String ur_junagarhi, String araone, String aratwo, String arathree, String arafour, String arafive, String tagone, String tagtwo, String tagthree, String tagfour, String tagfive, String detailsone, String detailstwo, String detailsthree, String detailsfour, String detailsfive, String en, String bn, String in) {
+        this.root_a = root_a;
+        this.surah = surah;
+        this.ayah = ayah;
+        this.wordno = wordno;
+        this.wordcount = wordcount;
+        this.translation = translation;
+        this.ur_junagarhi = ur_junagarhi;
+        this.araone = araone;
+        this.aratwo = aratwo;
+        this.arathree = arathree;
+        this.arafour = arafour;
+        this.arafive = arafive;
+        this.tagone = tagone;
+        this.tagtwo = tagtwo;
+        this.tagthree = tagthree;
+        this.tagfour = tagfour;
+        this.tagfive = tagfive;
+        this.detailsone = detailsone;
+        this.detailstwo = detailstwo;
+        this.detailsthree = detailsthree;
+        this.detailsfour = detailsfour;
+        this.detailsfive = detailsfive;
+        this.en = en;
+        this.bn = bn;
+        this.in = in;
+    }
+
+    public String getUr_junagarhi() {
+        return ur_junagarhi;
+    }
+
+    public void setUr_junagarhi(String ur_junagarhi) {
+        this.ur_junagarhi = ur_junagarhi;
+    }
 
     public String getQurantext() {
         return qurantext;
@@ -65,11 +92,6 @@ public class NewCorpusExpandWbwPOJO {
     public void setQurantext(String qurantext) {
         this.qurantext = qurantext;
     }
-
-    private String en;
-    private String bn;
-    private String in;
-    private String qurantext;
 
     public String getLemaraone() {
         return lemaraone;
@@ -191,44 +213,12 @@ public class NewCorpusExpandWbwPOJO {
         this.rootarafive = rootarafive;
     }
 
-    @PrimaryKey(autoGenerate = true)
-    @NonNull
-    private int id;
-
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public NewCorpusExpandWbwPOJO(String root_a, int surah, int ayah, int wordno, int wordcount, String translation,String ur_junagarhi, String araone, String aratwo, String arathree, String arafour, String arafive, String tagone, String tagtwo, String tagthree, String tagfour, String tagfive, String detailsone, String detailstwo, String detailsthree, String detailsfour, String detailsfive, String en, String bn, String in) {
-        this.root_a = root_a;
-        this.surah = surah;
-        this.ayah = ayah;
-        this.wordno = wordno;
-        this.wordcount = wordcount;
-        this.translation = translation;
-this.ur_junagarhi=ur_junagarhi;
-        this.araone = araone;
-        this.aratwo = aratwo;
-        this.arathree = arathree;
-        this.arafour = arafour;
-        this.arafive = arafive;
-        this.tagone = tagone;
-        this.tagtwo = tagtwo;
-        this.tagthree = tagthree;
-        this.tagfour = tagfour;
-        this.tagfive = tagfive;
-        this.detailsone = detailsone;
-        this.detailstwo = detailstwo;
-        this.detailsthree = detailsthree;
-        this.detailsfour = detailsfour;
-        this.detailsfive = detailsfive;
-        this.en = en;
-        this.bn = bn;
-        this.in = in;
     }
 
     public String getRoot_a() {
@@ -278,7 +268,6 @@ this.ur_junagarhi=ur_junagarhi;
     public void setTranslation(String translation) {
         this.translation = translation;
     }
-
 
     public String getAraone() {
         return araone;

@@ -1,10 +1,13 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.lafif.separeted;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionSuffixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,15 +23,15 @@ import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
  */
 public class Imperative1Vocalizer extends SubstitutionsApplier implements IUnaugmentedTrilateralModifier {
 
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public Imperative1Vocalizer() {
 
-        substitutions.add(new ExpressionSuffixSubstitution("ايْC2ِيْ","C2ِ"));// EX: (دِ)
-        substitutions.add(new ExpressionInfixSubstitution("ايْC2ِيِ","C2ِ"));// EX: (أنتِ دِي)
-        substitutions.add(new ExpressionInfixSubstitution("ايْC2ِيْ","C2ِي"));// EX: (أنتن دِينَ)
-        substitutions.add(new ExpressionInfixSubstitution("ايْC2ِيُ","C2ُ"));// EX: (أنتم دُوا)
-        substitutions.add(new ExpressionInfixSubstitution("ايْC2ِيَ","C2ِيَ"));// EX: (أنتما دِيا)
+        substitutions.add(new ExpressionSuffixSubstitution("ايْC2ِيْ", "C2ِ"));// EX: (دِ)
+        substitutions.add(new ExpressionInfixSubstitution("ايْC2ِيِ", "C2ِ"));// EX: (أنتِ دِي)
+        substitutions.add(new ExpressionInfixSubstitution("ايْC2ِيْ", "C2ِي"));// EX: (أنتن دِينَ)
+        substitutions.add(new ExpressionInfixSubstitution("ايْC2ِيُ", "C2ُ"));// EX: (أنتم دُوا)
+        substitutions.add(new ExpressionInfixSubstitution("ايْC2ِيَ", "C2ِيَ"));// EX: (أنتما دِيا)
 
     }
 
@@ -40,7 +43,7 @@ public class Imperative1Vocalizer extends SubstitutionsApplier implements IUnaug
     public boolean isApplied(ConjugationResult conjugationResult) {
         int kov = conjugationResult.getKov();
         int noc = Integer.parseInt(conjugationResult.getRoot().getConjugation());
-        return (conjugationResult.getRoot().getC1()=='ي' && kov == 30 && noc == 2);
+        return (conjugationResult.getRoot().getC1() == 'ي' && kov == 30 && noc == 2);
     }
 
 }

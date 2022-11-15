@@ -1,10 +1,13 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.lafif.separeted;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionSuffixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,16 +23,16 @@ import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
  */
 public class ActivePresent1Vocalizer extends SubstitutionsApplier implements IUnaugmentedTrilateralModifier {
 
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public ActivePresent1Vocalizer() {
-        substitutions.add(new ExpressionSuffixSubstitution("َيْC2ِيُ","َC2ِي"));// EX: (يَدِي)
-        substitutions.add(new ExpressionSuffixSubstitution("َيْC2ِيْ","َC2ِ"));// EX: (لم يَدِ)
-        substitutions.add(new ExpressionInfixSubstitution("َيْC2ِيِن","َC2ِن"));// EX: (أنتِ تَدِنَّ)
-        substitutions.add(new ExpressionInfixSubstitution("َيْC2ِيِ","َC2ِ"));// EX: (أنتِ تَدِينَ)
-        substitutions.add(new ExpressionInfixSubstitution("َيْC2ِيْ","َC2ِي"));// EX: (أنتن تَدِينَ)
-        substitutions.add(new ExpressionInfixSubstitution("َيْC2ِيُ","َC2ُ"));// EX: (أنتم تَدُونَ)
-        substitutions.add(new ExpressionInfixSubstitution("َيْC2ِيَ","َC2ِيَ"));// EX: (أنتما تَدِيان)
+        substitutions.add(new ExpressionSuffixSubstitution("َيْC2ِيُ", "َC2ِي"));// EX: (يَدِي)
+        substitutions.add(new ExpressionSuffixSubstitution("َيْC2ِيْ", "َC2ِ"));// EX: (لم يَدِ)
+        substitutions.add(new ExpressionInfixSubstitution("َيْC2ِيِن", "َC2ِن"));// EX: (أنتِ تَدِنَّ)
+        substitutions.add(new ExpressionInfixSubstitution("َيْC2ِيِ", "َC2ِ"));// EX: (أنتِ تَدِينَ)
+        substitutions.add(new ExpressionInfixSubstitution("َيْC2ِيْ", "َC2ِي"));// EX: (أنتن تَدِينَ)
+        substitutions.add(new ExpressionInfixSubstitution("َيْC2ِيُ", "َC2ُ"));// EX: (أنتم تَدُونَ)
+        substitutions.add(new ExpressionInfixSubstitution("َيْC2ِيَ", "َC2ِيَ"));// EX: (أنتما تَدِيان)
 
     }
 
@@ -41,6 +44,6 @@ public class ActivePresent1Vocalizer extends SubstitutionsApplier implements IUn
     public boolean isApplied(ConjugationResult conjugationResult) {
         int kov = conjugationResult.getKov();
         int noc = Integer.parseInt(conjugationResult.getRoot().getConjugation());
-        return (conjugationResult.getRoot().getC1()=='ي' && kov == 30 && noc == 2);
+        return (conjugationResult.getRoot().getC1() == 'ي' && kov == 30 && noc == 2);
     }
 }

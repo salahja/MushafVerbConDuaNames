@@ -5,15 +5,10 @@ import android.text.SpannableString;
 import androidx.annotation.NonNull;
 import androidx.room.Ignore;
 
-
 public class NounCorpusBreakup {
-
-
     private int count;
     private String root_a;
-
     private String lemma_a;
-
     private String araword;
     @NonNull
     private int surah;
@@ -24,18 +19,8 @@ public class NounCorpusBreakup {
     @NonNull
     private int token;
     @Ignore
-private SpannableString spannedWord;
-
+    private SpannableString spannedWord;
     private String words;
-
-    public SpannableString getSpannedWord() {
-        return spannedWord;
-    }
-
-    public void setSpannedWord(SpannableString spannedWord) {
-        this.spannedWord = spannedWord;
-    }
-
     @NonNull
     private String tag;
     private String propone;
@@ -46,7 +31,34 @@ private SpannableString spannedWord;
     private String gendernumber;
     private String type;
     private String cases;
+    public NounCorpusBreakup(int count, String root_a, String lemma_a, String araword, int surah, int ayah, int wordno, int token, String words, @NonNull String tag, String propone, String proptwo, String form, String lemma, String root, String gendernumber, String type, String cases) {
+        this.count = count;
+        this.root_a = root_a;
+        this.lemma_a = lemma_a;
+        this.araword = araword;
+        this.surah = surah;
+        this.ayah = ayah;
+        this.wordno = wordno;
+        this.token = token;
+        this.words = words;
+        this.tag = tag;
+        this.propone = propone;
+        this.proptwo = proptwo;
+        this.form = form;
+        this.lemma = lemma;
+        this.root = root;
+        this.gendernumber = gendernumber;
+        this.type = type;
+        this.cases = cases;
+    }
 
+    public SpannableString getSpannedWord() {
+        return spannedWord;
+    }
+
+    public void setSpannedWord(SpannableString spannedWord) {
+        this.spannedWord = spannedWord;
+    }
 
     public int getCount() {
         return count;
@@ -190,27 +202,6 @@ private SpannableString spannedWord;
     }
 
     public void setCases(String cases) {
-        this.cases = cases;
-    }
-
-    public NounCorpusBreakup(int count, String root_a, String lemma_a, String araword, int surah, int ayah, int wordno, int token, String words, @NonNull String tag, String propone, String proptwo, String form, String lemma, String root, String gendernumber, String type, String cases) {
-        this.count = count;
-        this.root_a = root_a;
-        this.lemma_a = lemma_a;
-        this.araword = araword;
-        this.surah = surah;
-        this.ayah = ayah;
-        this.wordno = wordno;
-        this.token = token;
-        this.words = words;
-        this.tag = tag;
-        this.propone = propone;
-        this.proptwo = proptwo;
-        this.form = form;
-        this.lemma = lemma;
-        this.root = root;
-        this.gendernumber = gendernumber;
-        this.type = type;
         this.cases = cases;
     }
 }

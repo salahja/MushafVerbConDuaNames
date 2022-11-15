@@ -1,27 +1,27 @@
 package sj.hisnul.entity;
 
-
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-
 @Entity(tableName = "hduadetails")
 public class hduadetails {
-
-
-    @NonNull private int  book_id         ;
-    @NonNull  private int  dua_global_id   ;
-    @NonNull  private String   ID              ;
-    @NonNull    private int dua_segment_id  ;
-    private String   top            ;
-    private String   arabic_diacless;
-    private String  arabic         ;
-    private String   transliteration;
-    private String  translations   ;
-    private String  bottom         ;
-    private String   reference      ;
-    private String   app_reference   ;
+    @NonNull
+    private int book_id;
+    @NonNull
+    private int dua_global_id;
+    @NonNull
+    private String ID;
+    @NonNull
+    private int dua_segment_id;
+    private String top;
+    private String arabic_diacless;
+    private String arabic;
+    private String transliteration;
+    private String translations;
+    private String bottom;
+    private String reference;
+    private String app_reference;
     @PrimaryKey(autoGenerate = true)
     @NonNull
     private int pid;

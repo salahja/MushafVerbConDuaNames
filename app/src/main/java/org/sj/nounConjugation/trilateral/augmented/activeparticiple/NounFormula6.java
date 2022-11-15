@@ -28,6 +28,6 @@ public class NounFormula6 extends AugmentedTrilateralNoun {
      * @todo Implement this sarf.noun.trilateral.TrilateralNoun method
      */
     public String form() {
-        return ArabCharUtil.MEEM+ArabCharUtil.DAMMA+root.getC1()+ArabCharUtil.SKOON+root.getC2()+ArabCharUtil.FATHA+root.getC3()+ArabCharUtil.KASRA+root.getC3()+suffix;
+        return ArabCharUtil.MEEM + ArabCharUtil.DAMMA + root.getC1() + ArabCharUtil.SKOON + root.getC2() + ArabCharUtil.FATHA + root.getC3() + ArabCharUtil.KASRA + root.getC3() + suffix;
     }
 }

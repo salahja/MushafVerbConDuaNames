@@ -1,10 +1,13 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.lafif.separeted;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionSuffixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,14 +23,14 @@ import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
  */
 public class YaeiPassivePresentVocalizer extends SubstitutionsApplier implements IUnaugmentedTrilateralModifier {
 
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public YaeiPassivePresentVocalizer() {
         substitutions.add(new ExpressionSuffixSubstitution("يْC2َيُ", "وC2َى")); // EX: (يُودَى)
         substitutions.add(new ExpressionSuffixSubstitution("يْC2َيَ", "وC2َى")); // EX: (لن يُودَى)
-        substitutions.add(new ExpressionInfixSubstitution("يْC2َيَ","وC2َيَ"));// EX: (يُودَيانِ)
+        substitutions.add(new ExpressionInfixSubstitution("يْC2َيَ", "وC2َيَ"));// EX: (يُودَيانِ)
         substitutions.add(new ExpressionSuffixSubstitution("يْC2َيْ", "وC2َ")); // EX: (لم يُودَ)
-        substitutions.add(new ExpressionInfixSubstitution("يْC2َيْ","وC2َيْ"));// EX: (يُودَيْنَانِّ)
+        substitutions.add(new ExpressionInfixSubstitution("يْC2َيْ", "وC2َيْ"));// EX: (يُودَيْنَانِّ)
         substitutions.add(new ExpressionInfixSubstitution("يْC2َيِي", "وC2َيْ")); // EX: (أنتِ تُودَيْنَ)
         substitutions.add(new ExpressionInfixSubstitution("يْC2َيُو", "وC2َوْ")); // EX: (أنتم تُودَوْنَ)
         substitutions.add(new ExpressionInfixSubstitution("يْC2َيُن", "وC2َوُن")); // EX: (أنتم تُودَوُنَّ)

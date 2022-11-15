@@ -7,7 +7,6 @@ import com.example.mushafconsolidated.Entities.ChaptersAnaEntity;
 
 import java.util.List;
 
-
 @Dao
 public interface AnaQuranChapterDao {
     @Query("SELECT * FROM chaptersana ORDER BY chapterid")
@@ -15,8 +14,6 @@ public interface AnaQuranChapterDao {
 
     @Query("SELECT * FROM chaptersana where chapterid=:id")
     List<ChaptersAnaEntity> getSingleChapters(int id);
-
-
 
 }
 

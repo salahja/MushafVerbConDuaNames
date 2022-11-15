@@ -1,11 +1,14 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.mithal;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
 import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -21,10 +24,10 @@ import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
  */
 public class ActivePrenentVocalizer extends SubstitutionsApplier implements IUnaugmentedTrilateralModifier {
 
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
-    private List acceptList = new LinkedList();
-    private List declineList = new LinkedList();
+    private final List acceptList = new LinkedList();
+    private final List declineList = new LinkedList();
 
     public ActivePrenentVocalizer() {
         acceptList.add("وذر");
@@ -37,7 +40,7 @@ public class ActivePrenentVocalizer extends SubstitutionsApplier implements IUna
         declineList.add("وسع");
         declineList.add("وهل");
 
-        substitutions.add(new InfixSubstitution("َوْ","َ"));
+        substitutions.add(new InfixSubstitution("َوْ", "َ"));
 
     }
 
@@ -48,6 +51,7 @@ public class ActivePrenentVocalizer extends SubstitutionsApplier implements IUna
 
     /**
      * فحص أحد ثلاثة احتمالات
+     *
      * @param conjugationResult ConjugationResult
      * @return boolean
      */
@@ -56,8 +60,8 @@ public class ActivePrenentVocalizer extends SubstitutionsApplier implements IUna
         int noc = Integer.parseInt(conjugationResult.getRoot().getConjugation());
         return (kov == 9 || kov == 10 || kov == 11) &&
                 ((noc == 2 || noc == 6)  //احمال1
-                || isApplied1(conjugationResult) //احتمال2
-                || isApplied2(conjugationResult)); // احتمال 3
+                        || isApplied1(conjugationResult) //احتمال2
+                        || isApplied2(conjugationResult)); // احتمال 3
 
     }
 

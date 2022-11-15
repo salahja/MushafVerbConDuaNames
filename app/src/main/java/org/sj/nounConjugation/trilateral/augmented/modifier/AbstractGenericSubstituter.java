@@ -1,9 +1,8 @@
 package org.sj.nounConjugation.trilateral.augmented.modifier;
 
+import org.sj.nounConjugation.TrilateralNounSubstitutionApplier;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
-
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
-import org.sj.nounConjugation.*;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -27,21 +26,19 @@ public abstract class AbstractGenericSubstituter extends TrilateralNounSubstitut
         if (formulaNo != 5) {
             return false;
         }
-
         switch (kov) {
-        case 1:
-        case 2:
-        case 6:
-        case 7:
-        case 16:
-        case 17:
-        case 20:
-        case 23:
-        case 26:
-        case 28:
-            return true;
+            case 1:
+            case 2:
+            case 6:
+            case 7:
+            case 16:
+            case 17:
+            case 20:
+            case 23:
+            case 26:
+            case 28:
+                return true;
         }
-
         return false;
     }
 }

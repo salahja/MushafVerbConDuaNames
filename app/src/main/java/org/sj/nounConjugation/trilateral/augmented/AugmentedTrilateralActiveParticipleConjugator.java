@@ -1,15 +1,14 @@
 package org.sj.nounConjugation.trilateral.augmented;
 
-import java.util.Map;
-import java.util.HashMap;
-
 import org.sj.nounConjugation.AugmentationFormula;
-import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
-import java.util.List;
-import java.util.LinkedList;
-import java.util.Iterator;
-
 import org.sj.nounConjugation.GenericNounSuffixContainer;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -24,10 +23,10 @@ import org.sj.nounConjugation.GenericNounSuffixContainer;
  * @version 1.0
  */
 public class AugmentedTrilateralActiveParticipleConjugator {
+    private static final AugmentedTrilateralActiveParticipleConjugator instance = new AugmentedTrilateralActiveParticipleConjugator();
+
     private AugmentedTrilateralActiveParticipleConjugator() {
     }
-
-    private static AugmentedTrilateralActiveParticipleConjugator instance = new AugmentedTrilateralActiveParticipleConjugator();
 
     public static AugmentedTrilateralActiveParticipleConjugator getInstance() {
         return instance;
@@ -35,14 +34,12 @@ public class AugmentedTrilateralActiveParticipleConjugator {
 
     public AugmentedTrilateralNoun createNoun(AugmentedTrilateralRoot root, int suffixIndex, int formulaNo) {
         String suffix = GenericNounSuffixContainer.getInstance().get(suffixIndex);
-        String formulaClassName = getClass().getPackage().getName()+".activeparticiple."+"NounFormula"+formulaNo;
-        Object [] parameters = {root, suffix};
-
+        String formulaClassName = getClass().getPackage().getName() + ".activeparticiple." + "NounFormula" + formulaNo;
+        Object[] parameters = {root, suffix};
         try {
             AugmentedTrilateralNoun noun = (AugmentedTrilateralNoun) Class.forName(formulaClassName).getConstructors()[0].newInstance(parameters);
             return noun;
-        }
-        catch (Exception ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
         return null;
@@ -54,7 +51,6 @@ public class AugmentedTrilateralActiveParticipleConjugator {
             AugmentedTrilateralNoun noun = createNoun(root, i, formulaNo);
             result.add(noun);
         }
-
         return result;
 
     }
@@ -65,7 +61,7 @@ public class AugmentedTrilateralActiveParticipleConjugator {
         while (iter.hasNext()) {
             AugmentationFormula formula = (AugmentationFormula) iter.next();
             List formulaVerbList = createNounList(root, formula.getFormulaNo());
-            result.put(formula.getFormulaNo()+"", formulaVerbList);
+            result.put(formula.getFormulaNo() + "", formulaVerbList);
         }
         return result;
     }

@@ -1,25 +1,25 @@
 package org.sj.verbConjugation.util;
 
 public class AugmentationFormula {
-  private int formulaNo;
-  private char verbtype;
+    private int formulaNo;
+    private char verbtype;
 
-  public AugmentationFormula() {
-  }
+    public AugmentationFormula() {
+    }
 
-  public char getVerbtype() {
-    return verbtype;
-  }
+    public char getVerbtype() {
+        return verbtype;
+    }
 
-  public int getFormulaNo() {
-    return formulaNo;
-  }
+    public void setVerbtype(char verbtype) {
+        this.verbtype = verbtype;
+    }
 
-  public void setFormulaNo(int formulaNo) {
-    this.formulaNo = formulaNo;
-  }
+    public int getFormulaNo() {
+        return formulaNo;
+    }
 
-  public void setVerbtype(char verbtype) {
-    this.verbtype = verbtype;
-  }
+    public void setFormulaNo(int formulaNo) {
+        this.formulaNo = formulaNo;
+    }
 }

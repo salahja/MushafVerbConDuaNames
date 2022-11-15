@@ -1,6 +1,5 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -8,22 +7,16 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "qurandictionary")
 public class qurandictionary {
-
-
     @NonNull
-    private int    surah    ;
+    private int surah;
     @NonNull
-    private int     ayah      ;
-
+    private int ayah;
     @NonNull
-    private int     wordno     ;
+    private int wordno;
     @NonNull
-    private String      rootarabic  ;
-
+    private String rootarabic;
     @NonNull
-    private String     rootbuckwater;
-
-
+    private String rootbuckwater;
     @PrimaryKey(autoGenerate = true)
     @NonNull
     private int id;

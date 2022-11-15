@@ -9,21 +9,20 @@ public class ExpressionInfixSubstitution extends Substitution {
     }
 
     public String apply(String word, TrilateralRoot root) {
-      if(word.length()>0)
-      {
-          ////System.out.printf(word);
-      }
+        if (word.length() > 0) {
+            ////System.out.printf(word);
+        }
         ////System.out.println(segment+","+result);
-        String wordSegment = segment.replaceAll("C1",root.getC1()+"");
-        wordSegment = wordSegment.replaceAll("C2",root.getC2()+"");
-        wordSegment = wordSegment.replaceAll("C3",root.getC3()+"");
+        String wordSegment = segment.replaceAll("C1", root.getC1() + "");
+        wordSegment = wordSegment.replaceAll("C2", root.getC2() + "");
+        wordSegment = wordSegment.replaceAll("C3", root.getC3() + "");
         ////System.out.println(wordSegment+","+result);
         if (word.indexOf(wordSegment) == -1) return null;
 
-        String replacedResult = result.replaceAll("C1",root.getC1()+"");
-        replacedResult = replacedResult.replaceAll("C2",root.getC2()+"");
-        replacedResult = replacedResult.replaceAll("C3",root.getC3()+"");
+        String replacedResult = result.replaceAll("C1", root.getC1() + "");
+        replacedResult = replacedResult.replaceAll("C2", root.getC2() + "");
+        replacedResult = replacedResult.replaceAll("C3", root.getC3() + "");
 
-        return word.replaceAll(wordSegment,replacedResult);
+        return word.replaceAll(wordSegment, replacedResult);
     }
 }

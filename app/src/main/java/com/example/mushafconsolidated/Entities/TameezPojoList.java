@@ -1,33 +1,33 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import android.text.SpannableStringBuilder;
 
 import androidx.annotation.NonNull;
 import androidx.room.Ignore;
 //primaryKeys ={"translation_id","verse_id"}
 
-
 public class TameezPojoList {
-
-
-
-
-    @NonNull
-    private int     surah ;
-    @NonNull
-    private int     ayah;
-    @NonNull
-    private int      wordno  ;
-
-
-    @NonNull
-    private String    word ;
-    private String qurantext;
-    private String translation;
     @Ignore
     SpannableStringBuilder spannedverse;
+    @NonNull
+    private int surah;
+    @NonNull
+    private int ayah;
+    @NonNull
+    private int wordno;
+    @NonNull
+    private String word;
+    private String qurantext;
+    private String translation;
 
+    public TameezPojoList(int surah, int ayah, int wordno, @NonNull String word, String qurantext, String translation) {
+        this.surah = surah;
+        this.ayah = ayah;
+        this.wordno = wordno;
+        this.word = word;
+        this.qurantext = qurantext;
+        this.translation = translation;
+    }
 
     public int getSurah() {
         return surah;
@@ -84,14 +84,5 @@ public class TameezPojoList {
 
     public void setSpannedverse(SpannableStringBuilder spannedverse) {
         this.spannedverse = spannedverse;
-    }
-
-    public TameezPojoList(int surah, int ayah, int wordno, @NonNull String word, String qurantext, String translation) {
-        this.surah = surah;
-        this.ayah = ayah;
-        this.wordno = wordno;
-        this.word = word;
-        this.qurantext = qurantext;
-        this.translation = translation;
     }
 }

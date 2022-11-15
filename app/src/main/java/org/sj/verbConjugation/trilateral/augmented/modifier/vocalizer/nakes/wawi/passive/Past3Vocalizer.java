@@ -1,15 +1,15 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.vocalizer.nakes.wawi.passive;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
-   
+import java.util.LinkedList;
+import java.util.List;
+
 public class Past3Vocalizer extends SubstitutionsApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public Past3Vocalizer() {
         substitutions.add(new InfixSubstitution("وْ", "ي")); // EX: (أنا ارعُوِيتُ)
@@ -18,7 +18,6 @@ public class Past3Vocalizer extends SubstitutionsApplier implements IAugmentedTr
 
     }
 
-
     public List getSubstitutions() {
         return substitutions;
     }
@@ -26,7 +25,6 @@ public class Past3Vocalizer extends SubstitutionsApplier implements IAugmentedTr
     public boolean isApplied(MazeedConjugationResult mazeedConjugationResult) {
         int kov = mazeedConjugationResult.getKov();
         int formulaNo = mazeedConjugationResult.getFormulaNo();
-
         return kov == 23 && formulaNo == 6;
     }
 }

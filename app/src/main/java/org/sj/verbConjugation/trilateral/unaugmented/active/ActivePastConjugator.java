@@ -1,9 +1,10 @@
 package org.sj.verbConjugation.trilateral.unaugmented.active;
 
-import java.util.List;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+import org.sj.verbConjugation.util.PastConjugationDataContainer;
+
 import java.util.LinkedList;
-import org.sj.verbConjugation.trilateral.unaugmented.*;
-import org.sj.verbConjugation.util.*;
+import java.util.List;
 
 /**
  * <p>Title: Sarf</p>
@@ -18,19 +19,20 @@ import org.sj.verbConjugation.util.*;
  * @version 1.0
  */
 public class ActivePastConjugator {
+    private static final ActivePastConjugator instance = new ActivePastConjugator();
+
     private ActivePastConjugator() {
     }
-
-    private static ActivePastConjugator instance = new ActivePastConjugator();
 
     public static ActivePastConjugator getInstance() {
         return instance;
     }
 
     /**
-    *  إنشاء الفعل حسب الضمير
+     * إنشاء الفعل حسب الضمير
+     *
      * @param pronounIndex int
-     * @param root UnaugmentedTrilateralRoot
+     * @param root         UnaugmentedTrilateralRoot
      * @return PastConjugation
      */
     public ActivePastVerb createVerb(int pronounIndex, UnaugmentedTrilateralRoot root) {
@@ -41,13 +43,14 @@ public class ActivePastConjugator {
     }
 
     /**
-     *  إنشاء  قائمة تحتوي الأفعال مع الضمائر الثلاثة عشر
+     * إنشاء  قائمة تحتوي الأفعال مع الضمائر الثلاثة عشر
+     *
      * @param root UnaugmentedTrilateralRoot
      * @return List
      */
     public List createVerbList(UnaugmentedTrilateralRoot root) {
         List result = new LinkedList();
-        for (int i=0; i<13; i++) {
+        for (int i = 0; i < 13; i++) {
             boolean add = result.add(createVerb(i, root));
         }
         ////System.out.println(result);
@@ -56,13 +59,11 @@ public class ActivePastConjugator {
 
     public List createVerbHua(UnaugmentedTrilateralRoot root) {
         List result = new LinkedList();
-        for (int i=0; i<1; i++) {
+        for (int i = 0; i < 1; i++) {
             boolean add = result.add(createVerb(i, root));
         }
         ////System.out.println(result);
         return result;
     }
-
-
 
 }

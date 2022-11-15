@@ -5,12 +5,25 @@ import java.util.ArrayList;
 /**
  * Created by sana on 26/7/18.
  */
-
 public class ParentItem {
     private String name;
     private String title;
     private String activeFilter;
     private int chapterid;
+    private ArrayList<ChildItem> childList = new ArrayList<ChildItem>();
+
+    public ParentItem() {
+    }
+
+    public ParentItem(String title, String activeFilter) {
+        this.title = title;
+        this.activeFilter = activeFilter;
+    }
+
+    public ParentItem(String name, ArrayList<ChildItem> childList) {
+        this.name = name;
+        this.childList = childList;
+    }
 
     public int getChapterid() {
         return chapterid;
@@ -18,17 +31,6 @@ public class ParentItem {
 
     public void setChapterid(int chapterid) {
         this.chapterid = chapterid;
-    }
-
-    private ArrayList<ChildItem> childList = new ArrayList<ChildItem>();
-
-    public ParentItem() {
-
-    }
-
-    public ParentItem(String title, String activeFilter) {
-        this.title = title;
-        this.activeFilter = activeFilter;
     }
 
     public String getTitle() {
@@ -47,26 +49,19 @@ public class ParentItem {
         this.activeFilter = activeFilter;
     }
 
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public ParentItem(String name, ArrayList<ChildItem> childList) {
+    public void setName(String name) {
         this.name = name;
-        this.childList = childList;
     }
 
-    public void setChildList(ArrayList<ChildItem> childList)
-    {
-        this.childList = childList;
-    }
-    public ArrayList<ChildItem> getChildList()
-    {
+    public ArrayList<ChildItem> getChildList() {
         return childList;
+    }
+
+    public void setChildList(ArrayList<ChildItem> childList) {
+        this.childList = childList;
     }
 }

@@ -1,10 +1,11 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier;
 
 import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
-import java.util.Map;
-import java.util.HashMap;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
-import org.sj.verbConjugation.util.*;
+import org.sj.verbConjugation.util.SystemConstants;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -19,7 +20,7 @@ import org.sj.verbConjugation.util.*;
  * @version 1.0
  */
 public class PostHamzaModifier {
-    private Map modifiersMap = new HashMap();
+    private final Map modifiersMap = new HashMap();
 
     public PostHamzaModifier() {
         //خمس أنواع  أساسية  للمهموز للمعلوم والمبني لمجهول في الماضي والمضارع والأمر
@@ -29,22 +30,23 @@ public class PostHamzaModifier {
         modifiersMap.put(SystemConstants.EMPHASIZED_IMPERATIVE_TENSE + "true", new org.sj.verbConjugation.trilateral.unaugmented.modifier.hamza.lam.ImperativeMahmouz());
         modifiersMap.put(SystemConstants.PAST_TENSE + "false", new org.sj.verbConjugation.trilateral.unaugmented.modifier.hamza.lam.PassivePastMahmouz());
         modifiersMap.put(SystemConstants.PRESENT_TENSE + "false", new org.sj.verbConjugation.trilateral.unaugmented.modifier.hamza.lam.PassivePresentMahmouz());
-     }
+    }
 
     /**
      * تطبيق تغيير  الهمزة حسب الصيغة ماضي أو مضارع أو أمر للمعلوم أو لمجهول
      * قد لا يطبق أي نوع
-     * @param tense String
-     * @param active boolean
+     *
+     * @param tense      String
+     * @param active     boolean
      * @param conjResult ConjugationResult
      */
     public void apply(String tense, boolean active, ConjugationResult conjResult) {
         if (conjResult.getKov() != 4)
             return;
 
-        IUnaugmentedTrilateralModifier modifier = (IUnaugmentedTrilateralModifier) modifiersMap.get(tense+active);
+        IUnaugmentedTrilateralModifier modifier = (IUnaugmentedTrilateralModifier) modifiersMap.get(tense + active);
         if (modifier.isApplied(conjResult)) {
-            ((SubstitutionsApplier)modifier).apply(conjResult.getFinalResult(), conjResult.getRoot());
+            ((SubstitutionsApplier) modifier).apply(conjResult.getFinalResult(), conjResult.getRoot());
         }
     }
 

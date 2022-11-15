@@ -1,10 +1,13 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.nakes.wawi.active;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,25 +23,25 @@ import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
  */
 public class PresentVocalizer extends SubstitutionsApplier implements IUnaugmentedTrilateralModifier {
 
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public PresentVocalizer() {
 
-        substitutions.add(new SuffixSubstitution("ُوُ","ُو"));// EX: (يغزو، يَمْؤُو، يأسو، يسرو، يأمو )
-        substitutions.add(new SuffixSubstitution("ُوْ","ُ"));// EX: (لم يَغْزُ، لم يَمْءُ، يَأْسُ، يَسْرُ، يأمُ)
-        substitutions.add(new InfixSubstitution("ُوِ","ِ"));// EX: (أنتِ تغزين، تأمين، تأسين، تَسرِين، تَغْزِنَّ)
-        substitutions.add(new InfixSubstitution("ُوْن","ُون"));// EX: (أنتن تغزون، تأمون، تأسون، تسرون، تأمون)
-        substitutions.add(new InfixSubstitution("ُوُو","ُو"));// EX: (أنتم تغزون، تأمون، تأسون، تسرون، تأمون )
-        substitutions.add(new InfixSubstitution("ُوُن","ُن"));// EX: (أنتم تَغْزُنَّ )
-        substitutions.add(new SuffixSubstitution("َوُ","َى"));// EX: (يرضى، يزهى، يجأى )
-        substitutions.add(new SuffixSubstitution("َوَ","َى"));// EX: (لن يرضى، لن يزهى، لن يجأى )
-        substitutions.add(new SuffixSubstitution("َوْ","َ"));// EX: (لم يرضَ، لم يَزْهَ، لم يَجْأَ)
-        substitutions.add(new InfixSubstitution("َوَا","َيَا"));// EX: (ترضيان، تَزْهَيَان، لن تزهيا، لم تزهيا، تجأيان )
-        substitutions.add(new InfixSubstitution("َوِي","َيْ"));// EX: (أنتِ ترضين، تَزْهَيْنَ، لن تَزْهَيْ، لم تَزْهَيْ، تَجْأَيْنَ )
-        substitutions.add(new InfixSubstitution("َوِن","َيِن"));// EX: (أنتِ ترضينَّ، تَزْهَيِنَّ،)
-        substitutions.add(new InfixSubstitution("َوْن","َيْن"));// EX: (أنتن ترضَيْن، تَزْهَيْنَ، لن تزهَين، لم تزهين، تجأين)
-        substitutions.add(new InfixSubstitution("َوُو","َوْ"));// EX: (أنتم ترضَوْنَ، تَزْهَوْنَ، لن تزهَوْا، لم تزهَوْا، تجأون )
-        substitutions.add(new InfixSubstitution("َوَن","َيَن"));// EX: (أنتَ ترضيَنَّ، )
+        substitutions.add(new SuffixSubstitution("ُوُ", "ُو"));// EX: (يغزو، يَمْؤُو، يأسو، يسرو، يأمو )
+        substitutions.add(new SuffixSubstitution("ُوْ", "ُ"));// EX: (لم يَغْزُ، لم يَمْءُ، يَأْسُ، يَسْرُ، يأمُ)
+        substitutions.add(new InfixSubstitution("ُوِ", "ِ"));// EX: (أنتِ تغزين، تأمين، تأسين، تَسرِين، تَغْزِنَّ)
+        substitutions.add(new InfixSubstitution("ُوْن", "ُون"));// EX: (أنتن تغزون، تأمون، تأسون، تسرون، تأمون)
+        substitutions.add(new InfixSubstitution("ُوُو", "ُو"));// EX: (أنتم تغزون، تأمون، تأسون، تسرون، تأمون )
+        substitutions.add(new InfixSubstitution("ُوُن", "ُن"));// EX: (أنتم تَغْزُنَّ )
+        substitutions.add(new SuffixSubstitution("َوُ", "َى"));// EX: (يرضى، يزهى، يجأى )
+        substitutions.add(new SuffixSubstitution("َوَ", "َى"));// EX: (لن يرضى، لن يزهى، لن يجأى )
+        substitutions.add(new SuffixSubstitution("َوْ", "َ"));// EX: (لم يرضَ، لم يَزْهَ، لم يَجْأَ)
+        substitutions.add(new InfixSubstitution("َوَا", "َيَا"));// EX: (ترضيان، تَزْهَيَان، لن تزهيا، لم تزهيا، تجأيان )
+        substitutions.add(new InfixSubstitution("َوِي", "َيْ"));// EX: (أنتِ ترضين، تَزْهَيْنَ، لن تَزْهَيْ، لم تَزْهَيْ، تَجْأَيْنَ )
+        substitutions.add(new InfixSubstitution("َوِن", "َيِن"));// EX: (أنتِ ترضينَّ، تَزْهَيِنَّ،)
+        substitutions.add(new InfixSubstitution("َوْن", "َيْن"));// EX: (أنتن ترضَيْن، تَزْهَيْنَ، لن تزهَين، لم تزهين، تجأين)
+        substitutions.add(new InfixSubstitution("َوُو", "َوْ"));// EX: (أنتم ترضَوْنَ، تَزْهَوْنَ، لن تزهَوْا، لم تزهَوْا، تجأون )
+        substitutions.add(new InfixSubstitution("َوَن", "َيَن"));// EX: (أنتَ ترضيَنَّ، )
 
 
     }

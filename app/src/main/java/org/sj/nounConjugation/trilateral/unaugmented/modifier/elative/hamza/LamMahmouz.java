@@ -1,9 +1,11 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.elative.hamza;
 
-import java.util.*;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.AbstractLamMahmouz;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -21,16 +23,15 @@ public class LamMahmouz extends AbstractLamMahmouz {
     List substitutions = new LinkedList();
 
     public LamMahmouz() {
-        substitutions.add(new SuffixSubstitution("َءُ","َأُ"));// EX: (هو الأجرأُ، )
-        substitutions.add(new SuffixSubstitution("َءِ","َأِ"));// EX: (كالأجرأِ، )
-        substitutions.add(new InfixSubstitution("وْءَ","وءَ"));// EX: (السُّوءَى، )
-        substitutions.add(new InfixSubstitution("َءَا","َآ"));// EX: (الأجرآن، )
-        substitutions.add(new InfixSubstitution("َءُو","َؤُو"));// EX: (الأجرؤون، )
-        substitutions.add(new InfixSubstitution("َءَ","َأَ"));// EX: (رأيتُ الأجرأَ، )
-        substitutions.add(new InfixSubstitution("ْءَ","ْأَ"));// EX: (الجُرْأَى، )
-        substitutions.add(new InfixSubstitution("َءِ","َئِ"));// EX: (الأجرئِينَ، )
+        substitutions.add(new SuffixSubstitution("َءُ", "َأُ"));// EX: (هو الأجرأُ، )
+        substitutions.add(new SuffixSubstitution("َءِ", "َأِ"));// EX: (كالأجرأِ، )
+        substitutions.add(new InfixSubstitution("وْءَ", "وءَ"));// EX: (السُّوءَى، )
+        substitutions.add(new InfixSubstitution("َءَا", "َآ"));// EX: (الأجرآن، )
+        substitutions.add(new InfixSubstitution("َءُو", "َؤُو"));// EX: (الأجرؤون، )
+        substitutions.add(new InfixSubstitution("َءَ", "َأَ"));// EX: (رأيتُ الأجرأَ، )
+        substitutions.add(new InfixSubstitution("ْءَ", "ْأَ"));// EX: (الجُرْأَى، )
+        substitutions.add(new InfixSubstitution("َءِ", "َئِ"));// EX: (الأجرئِينَ، )
     }
-
 
     public List getSubstitutions() {
         return substitutions;

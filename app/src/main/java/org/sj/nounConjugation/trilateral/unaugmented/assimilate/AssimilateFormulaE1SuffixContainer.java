@@ -1,8 +1,8 @@
 package org.sj.nounConjugation.trilateral.unaugmented.assimilate;
 
-import java.util.*;
+import org.sj.nounConjugation.INounSuffixContainer;
 
-import org.sj.nounConjugation.*;
+import java.util.ArrayList;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -16,19 +16,18 @@ import org.sj.nounConjugation.*;
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
-public class AssimilateFormulaE1SuffixContainer implements INounSuffixContainer{
-    private static AssimilateFormulaE1SuffixContainer instance = new AssimilateFormulaE1SuffixContainer();
+public class AssimilateFormulaE1SuffixContainer implements INounSuffixContainer {
+    private static final AssimilateFormulaE1SuffixContainer instance = new AssimilateFormulaE1SuffixContainer();
     //حالة النكرة
-    private ArrayList indefiniteSuffixList = new ArrayList(18);
+    private final ArrayList indefiniteSuffixList = new ArrayList(18);
     //حالة المعرفة
-    private ArrayList definiteSuffixList = new ArrayList(18);
+    private final ArrayList definiteSuffixList = new ArrayList(18);
     //حالة الاضافة
-    private ArrayList annexedSuffixList = new ArrayList(18);
-
+    private final ArrayList annexedSuffixList = new ArrayList(18);
     //تكون لها قيمة عندما تكون الحالة هي معرفة
     private String prefix = "";
     //يمثل القائمة المختارة تبعاً للحالة
-    private ArrayList currentSuffixList = indefiniteSuffixList ;
+    private ArrayList currentSuffixList = indefiniteSuffixList;
 
     private AssimilateFormulaE1SuffixContainer() {
         indefiniteSuffixList.add("ُ");
@@ -49,8 +48,6 @@ public class AssimilateFormulaE1SuffixContainer implements INounSuffixContainer{
         indefiniteSuffixList.add("َ تَيْنِ");
         indefiniteSuffixList.add("");
         indefiniteSuffixList.add("");
-
-
         definiteSuffixList.add("ُ");
         definiteSuffixList.add("َ ةُ");
         definiteSuffixList.add("َ انِ");
@@ -69,8 +66,6 @@ public class AssimilateFormulaE1SuffixContainer implements INounSuffixContainer{
         definiteSuffixList.add("َ تَيْنِ");
         definiteSuffixList.add("");
         definiteSuffixList.add("");
-
-
         annexedSuffixList.add("ُ");
         annexedSuffixList.add("َ ةُ");
         annexedSuffixList.add("َ ا");
@@ -92,10 +87,13 @@ public class AssimilateFormulaE1SuffixContainer implements INounSuffixContainer{
 
     }
 
+    public static AssimilateFormulaE1SuffixContainer getInstance() {
+        return instance;
+    }
+
     public void selectDefiniteMode() {
         prefix = "ال";
         currentSuffixList = definiteSuffixList;
-
         if (AssimilateFormulaE2SuffixContainer.getInstance().getCurrentSuffixList() != AssimilateFormulaE2SuffixContainer.getInstance().getDefiniteSuffixList())
             AssimilateFormulaE2SuffixContainer.getInstance().selectDefiniteMode();
     }
@@ -103,7 +101,6 @@ public class AssimilateFormulaE1SuffixContainer implements INounSuffixContainer{
     public void selectInDefiniteMode() {
         prefix = "";
         currentSuffixList = indefiniteSuffixList;
-
         if (AssimilateFormulaE2SuffixContainer.getInstance().getCurrentSuffixList() != AssimilateFormulaE2SuffixContainer.getInstance().getIndefiniteSuffixList())
             AssimilateFormulaE2SuffixContainer.getInstance().selectInDefiniteMode();
     }
@@ -111,13 +108,8 @@ public class AssimilateFormulaE1SuffixContainer implements INounSuffixContainer{
     public void selectAnnexedMode() {
         prefix = "";
         currentSuffixList = annexedSuffixList;
-
         if (AssimilateFormulaE2SuffixContainer.getInstance().getCurrentSuffixList() != AssimilateFormulaE2SuffixContainer.getInstance().getAnnexedSuffixList())
             AssimilateFormulaE2SuffixContainer.getInstance().selectAnnexedMode();
-    }
-
-    public static AssimilateFormulaE1SuffixContainer getInstance() {
-        return instance;
     }
 
     public String getPrefix() {

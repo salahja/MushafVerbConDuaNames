@@ -1,20 +1,20 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.vocalizer.lafif.separated.passive;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
-   
+import java.util.LinkedList;
+import java.util.List;
+
 public class WawiPastVocalizer extends SubstitutionsApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public WawiPastVocalizer() {
-        substitutions.add(new InfixSubstitution("ِيْ","ِي"));// EX: (أنا أُوصِيتُ، وُفِّيتُ، وُولِيتُ، اتُّقِيتُ، تُوُوريتُ، تُوُلِّيتُ، استُوفِيتُ)
-        substitutions.add(new InfixSubstitution("ِيُ","ُ"));// EX: (هم أُوصُوا، وُولُوا، اتُّقُوا، تُوُورُوا، استُوفُوا)
-        substitutions.add(new InfixSubstitution("ِّيُ","ُّ"));// EX: (هم وُفُّوا، تُوُلُّوا)
+        substitutions.add(new InfixSubstitution("ِيْ", "ِي"));// EX: (أنا أُوصِيتُ، وُفِّيتُ، وُولِيتُ، اتُّقِيتُ، تُوُوريتُ، تُوُلِّيتُ، استُوفِيتُ)
+        substitutions.add(new InfixSubstitution("ِيُ", "ُ"));// EX: (هم أُوصُوا، وُولُوا، اتُّقُوا، تُوُورُوا، استُوفُوا)
+        substitutions.add(new InfixSubstitution("ِّيُ", "ُّ"));// EX: (هم وُفُّوا، تُوُلُّوا)
 
     }
 
@@ -25,10 +25,8 @@ public class WawiPastVocalizer extends SubstitutionsApplier implements IAugmente
     public boolean isApplied(MazeedConjugationResult mazeedConjugationResult) {
         if (mazeedConjugationResult.getRoot().getC1() != 'و')
             return false;
-
         int kov = mazeedConjugationResult.getKov();
         int formulaNo = mazeedConjugationResult.getFormulaNo();
-
         switch (kov) {
             case 29:
                 switch (formulaNo) {
@@ -37,7 +35,6 @@ public class WawiPastVocalizer extends SubstitutionsApplier implements IAugmente
                     case 9:
                         return true;
                 }
-
             case 30:
                 switch (formulaNo) {
                     case 1:
@@ -52,6 +49,5 @@ public class WawiPastVocalizer extends SubstitutionsApplier implements IAugmente
         }
         return false;
     }
-
 
 }

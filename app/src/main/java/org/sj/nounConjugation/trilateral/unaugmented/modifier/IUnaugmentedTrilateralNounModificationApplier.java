@@ -13,5 +13,5 @@ package org.sj.nounConjugation.trilateral.unaugmented.modifier;
  * @version 1.0
  */
 public interface IUnaugmentedTrilateralNounModificationApplier {
-   public boolean isApplied(ConjugationResult conjugationResult);
+    boolean isApplied(ConjugationResult conjugationResult);
 }

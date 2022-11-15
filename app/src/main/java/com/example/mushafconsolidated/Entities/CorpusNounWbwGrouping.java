@@ -1,23 +1,11 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import androidx.annotation.NonNull;
 
-
 public class CorpusNounWbwGrouping {
-
     private String wordtype;
     @NonNull
     private String root_a;
-
-    public String getWordtype() {
-        return wordtype;
-    }
-
-    public void setWordtype(String wordtype) {
-        this.wordtype = wordtype;
-    }
-
     @NonNull
     private int surah;
     @NonNull
@@ -30,10 +18,8 @@ public class CorpusNounWbwGrouping {
     private int lemmacount;
     private String arabicword;
     private String en;
-
-
-    public CorpusNounWbwGrouping(String wordtype,@NonNull String root_a, int surah, int ayah, int wordno, int wordcount, String lemma, int lemmacount, String arabicword, String en) {
-        this.wordtype=wordtype;
+    public CorpusNounWbwGrouping(String wordtype, @NonNull String root_a, int surah, int ayah, int wordno, int wordcount, String lemma, int lemmacount, String arabicword, String en) {
+        this.wordtype = wordtype;
         this.root_a = root_a;
         this.surah = surah;
         this.ayah = ayah;
@@ -45,6 +31,13 @@ public class CorpusNounWbwGrouping {
         this.en = en;
     }
 
+    public String getWordtype() {
+        return wordtype;
+    }
+
+    public void setWordtype(String wordtype) {
+        this.wordtype = wordtype;
+    }
 
     @NonNull
     public String getRoot_a() {

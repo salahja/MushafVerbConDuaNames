@@ -1,9 +1,11 @@
 package org.sj.nounConjugation.trilateral.augmented.modifier.substituter;
 
-import java.util.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
 import org.sj.nounConjugation.trilateral.augmented.modifier.AbstractGenericSubstituter;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -18,12 +20,11 @@ import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
  * @version 1.0
  */
 public class GenericSubstituter5 extends AbstractGenericSubstituter {
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public GenericSubstituter5() {
-        substitutions.add(new InfixSubstitution("زْت","زْد"));// EX: (ازدِراد، )
+        substitutions.add(new InfixSubstitution("زْت", "زْد"));// EX: (ازدِراد، )
     }
-
 
     public List getSubstitutions() {
         return substitutions;

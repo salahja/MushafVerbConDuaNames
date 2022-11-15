@@ -1,6 +1,7 @@
 package org.sj.nounConjugation;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -15,8 +16,7 @@ import java.util.*;
  * @version 1.0
  */
 public class XmlNounFormulaTree {
-
-    private List formulas = new LinkedList();
+    private final List formulas = new LinkedList();
 
     public XmlNounFormulaTree() {
     }

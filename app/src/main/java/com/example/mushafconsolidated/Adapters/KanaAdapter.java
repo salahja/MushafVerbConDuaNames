@@ -1,7 +1,5 @@
 package com.example.mushafconsolidated.Adapters;
 
-
-
 import static com.example.utility.SharedPref.arabicFontSelection;
 
 import android.app.Activity;
@@ -22,8 +20,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.mushafconsolidated.Entities.KanaPOJO;
 import com.example.mushafconsolidated.R;
 import com.example.mushafconsolidated.intrface.OnItemClickListener;
-import com.example.utility.QuranGrammarApplication;
 import com.example.utility.FlowLayout;
+import com.example.utility.QuranGrammarApplication;
 import com.example.utility.SharedPref;
 
 import java.util.ArrayList;
@@ -32,11 +30,21 @@ public class KanaAdapter extends RecyclerView.Adapter<KanaAdapter.ItemViewAdapte
     private static final String TAG = "VerseDisplayAdapter";
     private static final String ROOTWORDSTRING = "Root Word:-";
     private static final String LEMMA = "Lemma/Derivative-";
-    private Activity activity;
     OnItemClickListener mItemClickListener;
+    boolean isSarfSagheerMazeed;
+    private Activity activity;
     private Context context;
     private boolean conjugate;
     private Integer fontSizeTranslation;
+    private int form;
+    private ArrayList<KanaPOJO> list;
+    // private ArrayList<GrammarWordEntity> grammarArayList = new ArrayList<>();
+    private ArrayList<ArrayList> sarfsagheer;
+
+    public KanaAdapter(Context context, ArrayList<KanaPOJO> sifaEntities) {
+        this.context = context;
+        this.list = sifaEntities;
+    }
 
     public int getForm() {
         return form;
@@ -54,36 +62,15 @@ public class KanaAdapter extends RecyclerView.Adapter<KanaAdapter.ItemViewAdapte
         this.conjugate = conjugate;
     }
 
-    private int form;
-    private ArrayList<KanaPOJO> list;
-
-
-
     public boolean isSarfSagheerMazeed() {
         return isSarfSagheerMazeed;
     }
-
-    boolean isSarfSagheerMazeed;
-    // private ArrayList<GrammarWordEntity> grammarArayList = new ArrayList<>();
-
-
-    private ArrayList<ArrayList> sarfsagheer;
-
-
-    public KanaAdapter(Context context, ArrayList<KanaPOJO> sifaEntities) {
-        this.context = context;
-        this.list=sifaEntities;
-    }
-
 
     @NonNull
     @Override
     public ItemViewAdapter onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
-
-
         view = LayoutInflater.from(parent.getContext()).inflate(R.layout.phrases, parent, false);
-
         return new ItemViewAdapter(view);
     }
 
@@ -93,85 +80,57 @@ public class KanaAdapter extends RecyclerView.Adapter<KanaAdapter.ItemViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ItemViewAdapter holder, int position) {
-     TextView arabic;
+        TextView arabic;
         Log.d(TAG, "onBindViewHolder: called");
         final int fontsize = SharedPref.SeekarabicFontsize();
         Typeface arabicTypeface = Typeface.createFromAsset(context.getAssets(), SharedPref.arabicFontSelection());
-        boolean showWordByword=true;
+        boolean showWordByword = true;
         final KanaPOJO sifa = list.get(position);
         Typeface custom_font = Typeface.createFromAsset(context.getAssets(),
                 SharedPref.arabicFontSelection());
         fontSizeTranslation = SharedPref.arabicFontsize();
         final Boolean showTranslation = SharedPref.showTranslation();
-
-
         final String arabicFontSelection = arabicFontSelection();
-
-
         try {
             if (sifa != null) {
-
-                StringBuilder sb = new
-                        StringBuilder();
-                sb.append(sifa.getSurah()).append(":").append(sifa.getAyah());
-                holder.chapterverse.setText(sb.toString());
-
-
-
-            //    holder.translation.setText(sifa.getTranslation());
+                holder.chapterverse.setText(sifa.getSurah() + ":" + sifa.getAyah());
+                //    holder.translation.setText(sifa.getTranslation());
                 holder.ayah.setText(sifa.getSpannedverse());
                 if (showTranslation) {
-
                     holder.translation.setText(sifa.getTranslation());
                 }
                 holder.chapterverse.setTypeface(arabicTypeface);
                 holder.arabicword.setTypeface(arabicTypeface);
-
-
-
                 holder.ayah.setTypeface(custom_font);
-
-
                 holder.chapterverse.setTextSize(fontsize);
                 holder.ayah.setTextSize(fontsize);
-            //    holder.translation.setTextSize(fontsize);
+                //    holder.translation.setTextSize(fontsize);
                 holder.arabicword.setTextSize(fontsize);
-
-
 
             }
         } catch (NullPointerException e) {
-
             System.out.println("Exception occurred . . . . . . . . ");
-
-          //  this.activity.finish();
+            //  this.activity.finish();
         }
     }
-
 
     private void SetTypeFace(ItemViewAdapter holder, ArrayList ismfaelmafoolarray) {
         //  final Typeface arabicTypeface = Typeface.createFromAsset(context.getAssets(), "Pdms.ttf");
         Typeface arabicTypeface = Typeface.createFromAsset(context.getAssets(), SharedPref.arabicFontSelection());
-
         //   String s = SharedPref.arabicFontSelection();
         boolean isTraditional = true;
 
-
     }
-
 
     private void FontSizeSelection(@NonNull ItemViewAdapter holder) {
         SharedPreferences sharedPreferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(QuranGrammarApplication.getContext());
-        final Integer fontsize = sharedPreferences.getInt("pref_font_arabic_key",20);
+        final Integer fontsize = sharedPreferences.getInt("pref_font_arabic_key", 20);
         holder.chapterverse.setTextSize(fontsize);
-
 
     }
 
     @Override
     public long getItemId(int position) {
-
-
         return list.get(position).getSurah();
     }
 
@@ -181,24 +140,20 @@ public class KanaAdapter extends RecyclerView.Adapter<KanaAdapter.ItemViewAdapte
     }
 
     public Object getItem(int position) {
-
         return list.get(position);
     }
 
-
     public void setUp(ArrayList<KanaPOJO> list, Context context) {
-
         this.list = list;
         this.context = context;
     }
 
-
     public class ItemViewAdapter extends RecyclerView.ViewHolder
-            implements OnClickListener  {
-        TextView  chapterverse,arabicword, meaning, wazan, gendernumber, cases, nounname, participles,  translation;
+            implements OnClickListener {
+        public FlowLayout flow_word_by_word;
+        TextView chapterverse, arabicword, meaning, wazan, gendernumber, cases, nounname, participles, translation;
         TextView ayah;
         ImageView more;
-        public FlowLayout flow_word_by_word;
 
         public ItemViewAdapter(@NonNull View view) {
             super(view);
@@ -217,19 +172,10 @@ public class KanaAdapter extends RecyclerView.Adapter<KanaAdapter.ItemViewAdapte
             more.setOnClickListener(this);
             view.setOnClickListener(this);
 
-
-
-
-
-
-
-
         }
-
 
         @Override
         public void onClick(View v) {
-
         }
     }
 }

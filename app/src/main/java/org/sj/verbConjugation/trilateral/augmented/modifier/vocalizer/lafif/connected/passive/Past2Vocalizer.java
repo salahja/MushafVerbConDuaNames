@@ -1,26 +1,24 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.vocalizer.lafif.connected.passive;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
-import org.sj.verbConjugation.trilateral.augmented.*;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
-   
+import java.util.LinkedList;
+import java.util.List;
+
 public class Past2Vocalizer extends SubstitutionsApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
-
+    private final List substitutions = new LinkedList();
 
     public Past2Vocalizer() {
-        substitutions.add(new InfixSubstitution("ِوُ","ُ"));// EX: (اُسْوُوا، سُووُوا، انغُوُوا، استُوُوا، تُسُووُوا، استُغْوُوا)
-        substitutions.add(new InfixSubstitution("ِّوُ","ُّ"));// EX: (سُوُّوا، تُسُوُّوا، احْوُوُّوا)
-        substitutions.add(new InfixSubstitution("وَ","يَ"));// EX: (أُسْوِيَ، سُوِّيَ أُسْوِيَتْ، أُسْوِيَا، سُووِيَ، انغُوِيَ، استُوِيَ، تُسُووِيَ، استُغْوِيَ احْوُوِّيَ)
-        substitutions.add(new InfixSubstitution("وْ","ي"));// EX: (أُسْوِيتُ، سُوِّيتُ سُووِيتُ، انغُوِيتُ، استُوِيتُ، تُسُووِيتُ، استُغْوِيتُ)
+        substitutions.add(new InfixSubstitution("ِوُ", "ُ"));// EX: (اُسْوُوا، سُووُوا، انغُوُوا، استُوُوا، تُسُووُوا، استُغْوُوا)
+        substitutions.add(new InfixSubstitution("ِّوُ", "ُّ"));// EX: (سُوُّوا، تُسُوُّوا، احْوُوُّوا)
+        substitutions.add(new InfixSubstitution("وَ", "يَ"));// EX: (أُسْوِيَ، سُوِّيَ أُسْوِيَتْ، أُسْوِيَا، سُووِيَ، انغُوِيَ، استُوِيَ، تُسُووِيَ، استُغْوِيَ احْوُوِّيَ)
+        substitutions.add(new InfixSubstitution("وْ", "ي"));// EX: (أُسْوِيتُ، سُوِّيتُ سُووِيتُ، انغُوِيتُ، استُوِيتُ، تُسُووِيتُ، استُغْوِيتُ)
 
     }
-
 
     public List getSubstitutions() {
         return substitutions;
@@ -44,7 +42,6 @@ public class Past2Vocalizer extends SubstitutionsApplier implements IAugmentedTr
                     return true;
             }
         }
-
         return false;
     }
 

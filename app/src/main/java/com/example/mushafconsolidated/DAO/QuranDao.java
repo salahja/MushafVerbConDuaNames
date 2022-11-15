@@ -9,8 +9,6 @@ import java.util.List;
 
 @Dao
 public interface QuranDao {
-
-
     @Query("SELECT * FROM qurans where surah=:surahid")
     List<QuranEntity> getQuranVersesBySurah(int surahid);
 
@@ -21,13 +19,9 @@ public interface QuranDao {
     List<QuranEntity> getAllQuran();
 
     @Query("SELECT * FROM qurans where surah=:surahid and ayah=:ayahid")
-    List<QuranEntity> getsurahayahVerses(int surahid,int ayahid);
+    List<QuranEntity> getsurahayahVerses(int surahid, int ayahid);
 
     @Query("select * from qurans where docid  between :start and :end")
     List<QuranEntity> getVersesByPart(int start, int end);
-
-
-
-
 
 }

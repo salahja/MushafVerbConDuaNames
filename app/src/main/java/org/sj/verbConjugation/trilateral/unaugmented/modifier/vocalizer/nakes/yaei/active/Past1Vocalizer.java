@@ -1,10 +1,13 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.nakes.yaei.active;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,12 +23,12 @@ import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
  */
 public class Past1Vocalizer extends SubstitutionsApplier implements IUnaugmentedTrilateralModifier {
 
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public Past1Vocalizer() {
-        substitutions.add(new SuffixSubstitution("َيَ","َى"));// EX: (رمى، أتى، سعى، نأى، أبى )
-        substitutions.add(new InfixSubstitution("َيُوا","َوْا"));// EX: (رَمَوْا، أتَوْا، سَعَوْا، نأوْا، أبَوْا)
-        substitutions.add(new InfixSubstitution("َيَت","َت"));// EX: (رَمَتْ، رَمَتَا، أتَتْ، أتَتَا، سَعَتْ، سَعَتَا، نَأتْ، نأتَا، أبَتْ، أبَتَا)
+        substitutions.add(new SuffixSubstitution("َيَ", "َى"));// EX: (رمى، أتى، سعى، نأى، أبى )
+        substitutions.add(new InfixSubstitution("َيُوا", "َوْا"));// EX: (رَمَوْا، أتَوْا، سَعَوْا، نأوْا، أبَوْا)
+        substitutions.add(new InfixSubstitution("َيَت", "َت"));// EX: (رَمَتْ، رَمَتَا، أتَتْ، أتَتَا، سَعَتْ، سَعَتَا، نَأتْ، نأتَا، أبَتْ، أبَتَا)
     }
 
 

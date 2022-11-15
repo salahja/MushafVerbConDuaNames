@@ -1,9 +1,10 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.yaei;
 
-import java.util.*;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.AbstractAjwafYaeiVocalizer;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -18,7 +19,7 @@ import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.*;
  * @version 1.0
  */
 public class ActivePresentAjwafYaeiVocalizer extends AbstractAjwafYaeiVocalizer {
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public ActivePresentAjwafYaeiVocalizer() {
         substitutions.add(new ExpressionInfixSubstitution("ْيِC3ُ", "ِيC3ُ")); // EX: (يبيع، يقيء، يئين)

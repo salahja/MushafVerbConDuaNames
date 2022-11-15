@@ -1,6 +1,5 @@
 package com.example.mushafconsolidated.model;
 
-
 public class Word {
     private long id;
     private long surahId;
@@ -110,7 +109,5 @@ public class Word {
     public void setTranslateIndo(String translateIndo) {
         this.translateIndo = translateIndo;
     }
-
-
 
 }

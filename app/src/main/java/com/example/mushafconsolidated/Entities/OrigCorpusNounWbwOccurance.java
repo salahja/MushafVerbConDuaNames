@@ -1,11 +1,9 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import android.text.SpannableStringBuilder;
 
 import androidx.annotation.NonNull;
 import androidx.room.Ignore;
-
 
 public class OrigCorpusNounWbwOccurance {
     @Ignore
@@ -16,12 +14,10 @@ public class OrigCorpusNounWbwOccurance {
     private int surah;
     @NonNull
     private int ayah;
-
     @NonNull
     private int wordno;
     @NonNull
     private int wordcount;
-
     private String translations;
     private String quranverses;
     private String araone;
@@ -41,46 +37,123 @@ public class OrigCorpusNounWbwOccurance {
     private String gendernumber;
     private String type;
     private String cases;
-
     private String en;
     @Ignore
     private String translation;
     @Ignore
     private SpannableStringBuilder spannableNoun;
-
     @Ignore
     private String lemma;
     @Ignore
     private int lemmacount;
-
     @Ignore
     private String arabicword;
+
+    public OrigCorpusNounWbwOccurance(@NonNull String root_a, int surah, int ayah, int wordno, int wordcount, String translations, String quranverses, String araone, String aratwo, String arathree, String arafour, String arafive, String tagone, String tagtwo, String tagthree, String tagfour, String tagfive, String tag, String propone, String proptwo, String form, String gendernumber, String type, String cases, String en) {
+        this.root_a = root_a;
+        this.surah = surah;
+        this.ayah = ayah;
+        this.wordno = wordno;
+        this.wordcount = wordcount;
+        this.translations = translations;
+        this.quranverses = quranverses;
+        this.araone = araone;
+        this.aratwo = aratwo;
+        this.arathree = arathree;
+        this.arafour = arafour;
+        this.arafive = arafive;
+        this.tagone = tagone;
+        this.tagtwo = tagtwo;
+        this.tagthree = tagthree;
+        this.tagfour = tagfour;
+        this.tagfive = tagfive;
+        this.tag = tag;
+        this.propone = propone;
+        this.proptwo = proptwo;
+        this.form = form;
+        this.gendernumber = gendernumber;
+        this.type = type;
+        this.cases = cases;
+        this.en = en;
+    }
+
+    @Ignore
+    public OrigCorpusNounWbwOccurance(String araone, String aratwo, String arathree, String arafour, String arafive, String tagone, String tagtwo, String tagthree, String tagfour, String tagfive, String translations, String quranverses, SpannableStringBuilder verses, String root_a, int surah, int ayah, int wordno, int wordcount,
+                                      SpannableStringBuilder spannable,
+                                      String tag, String propone, String proptwo, String form, String gendernumber,
+                                      String type, String cases, String en) {
+        this.araone = araone;
+        this.aratwo = aratwo;
+        this.arathree = arathree;
+        this.arafour = arafour;
+        this.arafive = arafive;
+        this.tagone = tagone;
+        this.tagtwo = tagtwo;
+        this.tagthree = tagthree;
+        this.tagfour = tagfour;
+        this.tagfive = tagfive;
+        this.translations = translations;
+        this.quranverses = quranverses;
+        this.verses = verses;
+        this.root_a = root_a;
+        this.surah = surah;
+        this.ayah = ayah;
+        this.wordno = wordno;
+        this.wordcount = wordcount;
+        this.spannableNoun = spannable;
+        this.tag = tag;
+        this.propone = propone;
+        this.proptwo = proptwo;
+        this.form = form;
+        this.gendernumber = gendernumber;
+        this.type = type;
+        this.cases = cases;
+        this.en = en;
+
+    }
+
+    @Ignore
+    public OrigCorpusNounWbwOccurance(@NonNull String root_a, int surah, int ayah, int wordno, int wordcount, String lemma, int lemmacount, String arabicword, String en) {
+        this.root_a = root_a;
+        this.surah = surah;
+        this.ayah = ayah;
+        this.wordno = wordno;
+        this.wordcount = wordcount;
+        this.lemma = lemma;
+        this.lemmacount = lemmacount;
+        this.arabicword = arabicword;
+        this.en = en;
+    }
 
     @Ignore
     public String getLemma() {
         return lemma;
     }
+
     @Ignore
     public void setLemma(String lemma) {
         this.lemma = lemma;
     }
+
     @Ignore
     public int getLemmacount() {
         return lemmacount;
     }
 
-    @Ignore public void setLemmacount(int lemmacount) {
+    @Ignore
+    public void setLemmacount(int lemmacount) {
         this.lemmacount = lemmacount;
     }
+
     @Ignore
     public String getArabicword() {
         return arabicword;
     }
+
     @Ignore
     public void setArabicword(String arabicword) {
         this.arabicword = arabicword;
     }
-
 
     public String getTranslation() {
         return translation;
@@ -113,87 +186,6 @@ public class OrigCorpusNounWbwOccurance {
 
     public void setQuranverses(String quranverses) {
         this.quranverses = quranverses;
-    }
-
-    public OrigCorpusNounWbwOccurance(@NonNull String root_a, int surah, int ayah, int wordno, int wordcount, String translations, String quranverses, String araone, String aratwo, String arathree, String arafour, String arafive, String tagone, String tagtwo, String tagthree, String tagfour, String tagfive, String tag, String propone, String proptwo, String form, String gendernumber, String type, String cases, String en) {
-        this.root_a = root_a;
-        this.surah = surah;
-        this.ayah = ayah;
-        this.wordno = wordno;
-        this.wordcount = wordcount;
-        this.translations=translations;
-        this.quranverses=quranverses;
-        this.araone = araone;
-        this.aratwo = aratwo;
-        this.arathree = arathree;
-        this.arafour = arafour;
-        this.arafive = arafive;
-        this.tagone = tagone;
-        this.tagtwo = tagtwo;
-        this.tagthree = tagthree;
-        this.tagfour = tagfour;
-        this.tagfive = tagfive;
-        this.tag = tag;
-        this.propone = propone;
-        this.proptwo = proptwo;
-        this.form = form;
-        this.gendernumber = gendernumber;
-        this.type = type;
-        this.cases = cases;
-        this.en = en;
-    }
-
-    @Ignore
-    public OrigCorpusNounWbwOccurance(String araone, String aratwo, String arathree, String arafour, String arafive, String tagone, String tagtwo, String tagthree, String tagfour, String tagfive, String translations, String quranverses, SpannableStringBuilder verses, String root_a, int surah, int ayah, int wordno, int wordcount,
-                                      SpannableStringBuilder spannable,
-                                      String tag, String propone, String proptwo, String form, String gendernumber,
-                                      String type, String cases, String en) {
-
-
-
-        this.araone = araone;
-        this.aratwo = aratwo;
-        this.arathree = arathree;
-        this.arafour = arafour;
-        this.arafive = arafive;
-        this.tagone = tagone;
-        this.tagtwo = tagtwo;
-        this.tagthree = tagthree;
-        this.tagfour = tagfour;
-        this.tagfive = tagfive;
-
-        this.translations=translations;
-        this.quranverses=quranverses;
-        this.verses =verses;
-        this.root_a = root_a;
-        this.surah = surah;
-        this.ayah = ayah;
-        this.wordno = wordno;
-        this.wordcount = wordcount;
-        this.spannableNoun = spannable;
-        this.tag = tag;
-        this.propone = propone;
-        this.proptwo = proptwo;
-        this.form = form;
-        this.gendernumber = gendernumber;
-        this.type = type;
-        this.cases = cases;
-        this.en = en;
-
-    }
-
-
-    @Ignore
-    public OrigCorpusNounWbwOccurance(@NonNull String root_a, int surah, int ayah, int wordno, int wordcount, String lemma, int lemmacount, String arabicword, String en) {
-        this.root_a = root_a;
-        this.surah = surah;
-        this.ayah = ayah;
-        this.wordno = wordno;
-        this.wordcount = wordcount;
-        this.lemma = lemma;
-        this.lemmacount = lemmacount;
-        this.arabicword = arabicword;
-        this.en = en;
     }
 
     @Ignore

@@ -14,32 +14,24 @@ import com.example.mushafconsolidated.R;
 import com.example.mushafconsolidated.databinding.ActivityGrammarruleDetailBinding;
 
 public class GrammarRuleDetailHostActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         ActivityGrammarruleDetailBinding binding = ActivityGrammarruleDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.nav_host_fragment_grammarrule_detail);
         NavController navController = navHostFragment.getNavController();
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.
                 Builder(navController.getGraph())
                 .build();
-
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
     }
 
-
     @Override
     public void onBackPressed() {
-        Intent in=new Intent(this , QuranGrammarAct.class);
+        Intent in = new Intent(this, QuranGrammarAct.class);
         startActivity(in);
-
-
-
 
     }
 

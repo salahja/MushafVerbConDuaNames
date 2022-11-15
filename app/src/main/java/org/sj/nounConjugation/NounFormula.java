@@ -1,6 +1,6 @@
 package org.sj.nounConjugation;
 
-import org.sj.verbConjugation.trilateral.unaugmented.*;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,12 +20,13 @@ public abstract class NounFormula {
     protected String suffix;
 
     //to be used in refection getting the formula name
-    public NounFormula() {}
+    public NounFormula() {
+    }
 
     public NounFormula(UnaugmentedTrilateralRoot root, String suffixNo) {
         this.root = root;
-        this.suffixNo = Integer.parseInt(suffixNo)+1;
-        suffix = GenericNounSuffixContainer.getInstance().get(this.suffixNo-1);
+        this.suffixNo = Integer.parseInt(suffixNo) + 1;
+        suffix = GenericNounSuffixContainer.getInstance().get(this.suffixNo - 1);
     }
 
     public abstract String form();
@@ -35,7 +36,7 @@ public abstract class NounFormula {
     public String toString() {
         String result = form();
         if (result != null && result != "")
-            return getNounSuffixContainer().getPrefix()+result;
+            return getNounSuffixContainer().getPrefix() + result;
         return "";
     }
 

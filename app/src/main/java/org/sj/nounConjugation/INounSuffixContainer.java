@@ -13,10 +13,13 @@ package org.sj.nounConjugation;
  * @version 1.0
  */
 public interface INounSuffixContainer {
+    void selectDefiniteMode();
 
-    public void selectDefiniteMode() ;
-    public void selectInDefiniteMode();
-    public void selectAnnexedMode() ;
-    public String getPrefix() ;
-    public String get(int index) ;
+    void selectInDefiniteMode();
+
+    void selectAnnexedMode();
+
+    String getPrefix();
+
+    String get(int index);
 }

@@ -1,12 +1,13 @@
 package org.sj.nounConjugation.trilateral.augmented.modifier.activeparticiple.hamza;
 
+import org.sj.nounConjugation.TrilateralNounSubstitutionApplier;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
+import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
-import java.util.*;
-
-import org.sj.nounConjugation.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,17 +21,14 @@ import org.sj.verbConjugation.trilateral.augmented.modifier.*;
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
-
-
 public class RaaEinMahmouz extends TrilateralNounSubstitutionApplier implements IAugmentedTrilateralModifier {
     List substitutions = new LinkedList();
 
     public RaaEinMahmouz() {
-        substitutions.add(new InfixSubstitution("ْءٍ","ٍ"));// EX: (مُرٍ، )
-        substitutions.add(new InfixSubstitution("ْءِ","ِ"));// EX: (مُرِيَة، )
-        substitutions.add(new InfixSubstitution("ْءُ","ُ"));// EX: (مُرُونَ، )
+        substitutions.add(new InfixSubstitution("ْءٍ", "ٍ"));// EX: (مُرٍ، )
+        substitutions.add(new InfixSubstitution("ْءِ", "ِ"));// EX: (مُرِيَة، )
+        substitutions.add(new InfixSubstitution("ْءُ", "ُ"));// EX: (مُرُونَ، )
     }
-
 
     public List getSubstitutions() {
         return substitutions;

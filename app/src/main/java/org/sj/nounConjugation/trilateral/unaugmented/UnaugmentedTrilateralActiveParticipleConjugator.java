@@ -1,8 +1,11 @@
 package org.sj.nounConjugation.trilateral.unaugmented;
 
-import org.sj.verbConjugation.trilateral.unaugmented.*;
-import org.sj.nounConjugation.*;
-import java.util.*;
+import org.sj.nounConjugation.GenericNounSuffixContainer;
+import org.sj.nounConjugation.IUnaugmentedTrilateralNounConjugator;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -16,11 +19,11 @@ import java.util.*;
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
-public class UnaugmentedTrilateralActiveParticipleConjugator implements IUnaugmentedTrilateralNounConjugator{
+public class UnaugmentedTrilateralActiveParticipleConjugator implements IUnaugmentedTrilateralNounConjugator {
+    private static final UnaugmentedTrilateralActiveParticipleConjugator instance = new UnaugmentedTrilateralActiveParticipleConjugator();
+
     private UnaugmentedTrilateralActiveParticipleConjugator() {
     }
-
-    private static UnaugmentedTrilateralActiveParticipleConjugator instance = new UnaugmentedTrilateralActiveParticipleConjugator();
 
     public static UnaugmentedTrilateralActiveParticipleConjugator getInstance() {
         return instance;
@@ -33,7 +36,7 @@ public class UnaugmentedTrilateralActiveParticipleConjugator implements IUnaugme
 
     public List createNounList(UnaugmentedTrilateralRoot root, String formulaName) {
         List result = new ArrayList(18);
-        for (int i=0; i<18; i++)
+        for (int i = 0; i < 18; i++)
             result.add(createNoun(root, i));
         return result;
     }

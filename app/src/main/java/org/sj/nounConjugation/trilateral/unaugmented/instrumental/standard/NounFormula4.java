@@ -1,8 +1,8 @@
 package org.sj.nounConjugation.trilateral.unaugmented.instrumental.standard;
 
 import org.sj.nounConjugation.NounFormula;
-import org.sj.verbConjugation.trilateral.unaugmented.*;
-import org.sj.verbConjugation.util.*;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+import org.sj.verbConjugation.util.ArabCharUtil;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -16,21 +16,19 @@ import org.sj.verbConjugation.util.*;
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
-public class NounFormula4 extends NounFormula{
-
+public class NounFormula4 extends NounFormula {
     public NounFormula4(UnaugmentedTrilateralRoot root, String suffix) {
         super(root, suffix);
     }
 
     public String form() {
         if (suffixNo % 2 == 0)
-            return root.getC1()+ArabCharUtil.FATHA+root.getC2()+ArabCharUtil.SHADDA+ArabCharUtil.FATHA+ArabCharUtil.Aleph+root.getC3()+suffix;
+            return root.getC1() + ArabCharUtil.FATHA + root.getC2() + ArabCharUtil.SHADDA + ArabCharUtil.FATHA + ArabCharUtil.Aleph + root.getC3() + suffix;
         return "";
     }
 
     public String getFormulaName() {
         return "فَعَّالَة";
     }
-
 
 }

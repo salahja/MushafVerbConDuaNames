@@ -1,16 +1,12 @@
 package sj.hisnul.activity;
 
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-;
 
 import com.example.mushafconsolidated.R;
 
@@ -18,30 +14,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class CustomAdapter extends BaseExpandableListAdapter {
-    private Context context;
-
-    public int getCurrentgrouposition() {
-        return currentgrouposition;
-    }
-
-    public void setCurrentgrouposition(int currentgrouposition) {
-        this.currentgrouposition = currentgrouposition;
-    }
-
+    private final Context context;
+    private final ArrayList<ParentItem> parentItemArrayList;
+    private final ArrayList<ParentItem> originalList;
     int currentgrouposition;
-    private ArrayList<ParentItem> parentItemArrayList;
-    private ArrayList<ChildItem> childItemArrayList;
-    private TextView tv_parentItem, tv_childItem;
-    private ImageView iv_groupIndicator;
-    private ArrayList<ParentItem> originalList;
-
-    HashMap<Integer, Integer> childCheckedState = new HashMap<>();
     HashMap<Integer, Integer> childCheckboxState = new HashMap<>();
     ArrayList<String> listOfStatusFilters = new ArrayList<>();
     ArrayList<Selected> selectedfilters = new ArrayList<>();
-    ArrayList<Selected> arrofselection=new ArrayList<Selected>();
-    ArrayList<ArrayList<Integer>> check_states = new ArrayList<ArrayList<Integer>>();
-    public CustomAdapter(Context context, ArrayList<ParentItem> parentItemArrayList, ArrayList<String> dataheader) {
+    private ArrayList<ChildItem> childItemArrayList;
+
+    public CustomAdapter(Context context, ArrayList<ParentItem> parentItemArrayList) {
         this.context = context;
         this.parentItemArrayList = parentItemArrayList;
         this.originalList = new ArrayList<>();
@@ -88,64 +70,36 @@ public class CustomAdapter extends BaseExpandableListAdapter {
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded, View view, ViewGroup parent) {
         ParentItem parentItemInfo = (ParentItem) getGroup(groupPosition);
-
         if (view == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             //  view = inflater.inflate(R.layout.group_items,null);
             view = inflater.inflate(R.layout.nlist_group, null);
         }
-        tv_parentItem = (TextView) view.findViewById(R.id.tv_parentItem);
-        iv_groupIndicator = (ImageView) view.findViewById(R.id.iv_groupIndicator);
+        TextView tv_parentItem = (TextView) view.findViewById(R.id.tv_parentItem);
+        ImageView iv_groupIndicator = (ImageView) view.findViewById(R.id.iv_groupIndicator);
         tv_parentItem.setText(parentItemInfo.getName());
-
         if (isExpanded) {
             iv_groupIndicator.setImageResource(R.drawable.baseline_expand_24);
         } else {
             iv_groupIndicator.setImageResource(R.drawable.baseline_close_24);
         }
-
         iv_groupIndicator.setSelected(isExpanded);
-
-
         return view;
     }
 
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View view, ViewGroup viewGroup) {
         ChildItem childItemInfo = (ChildItem) getChild(groupPosition, childPosition);
-       //  String childText = String.valueOf(getChild(groupPosition, childPosition));
-        Object ss=       getChild(groupPosition,childPosition);
-        String childText = ((ChildItem) ss).getName();
-    Object sss=    getGroup(groupPosition);
-        final ParentItem headerText = (ParentItem) getGroup(groupPosition);
-      //  ParentItem headerText = ((ParentItem) sss).getName();
-
-     //   final FilterHeader headerText = (FilterHeader) getGroup(groupPosition);
-        String headerTexts = String.valueOf(getGroup(groupPosition));
-                       getGroup(groupPosition);
+        getGroup(groupPosition);
         if (view == null) {
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             //    view = layoutInflater.inflate(R.layout.child_items,null);
             view = layoutInflater.inflate(R.layout.list_item, null);
         }
-
-        tv_childItem = (TextView) view.findViewById(R.id.tv_childItem);
+        TextView tv_childItem = (TextView) view.findViewById(R.id.tv_childItem);
         tv_childItem.setText(childItemInfo.getName());
-
-
-
-
-
-
-
-
-
-
-
-
         return view;
     }
-
 
     @Override
     public boolean isChildSelectable(int i, int i1) {
@@ -155,11 +109,9 @@ public class CustomAdapter extends BaseExpandableListAdapter {
     public void filterData(String query) {
         query = query.toLowerCase();
         parentItemArrayList.clear();
-
         if (query.isEmpty()) {
             parentItemArrayList.addAll(originalList);
         } else {
-
             for (ParentItem parentItem : originalList) {
                 ArrayList<ChildItem> childList = parentItem.getChildList();
                 ArrayList<ChildItem> newlist = new ArrayList<ChildItem>();
@@ -174,11 +126,8 @@ public class CustomAdapter extends BaseExpandableListAdapter {
                 }
             }
 
-
         } // end else
-
         notifyDataSetChanged();
     }
-
 
 }

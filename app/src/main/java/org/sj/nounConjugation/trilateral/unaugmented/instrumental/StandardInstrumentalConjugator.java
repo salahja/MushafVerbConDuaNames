@@ -1,9 +1,12 @@
 package org.sj.nounConjugation.trilateral.unaugmented.instrumental;
 
-import org.sj.nounConjugation.*;
-import org.sj.verbConjugation.util.*;
-import org.sj.verbConjugation.trilateral.unaugmented.*;
-import java.util.*;
+import org.sj.nounConjugation.IUnaugmentedTrilateralNounConjugator;
+import org.sj.nounConjugation.NounFormula;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+import org.sj.verbConjugation.util.ArabCharUtil;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -17,17 +20,10 @@ import java.util.*;
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
-public class StandardInstrumentalConjugator implements IUnaugmentedTrilateralNounConjugator{
-    private StandardInstrumentalConjugator() {
-    }
+public class StandardInstrumentalConjugator implements IUnaugmentedTrilateralNounConjugator {
+    private static final StandardInstrumentalConjugator instance = new StandardInstrumentalConjugator();
+    private static final List formulas = new LinkedList();
 
-    private static StandardInstrumentalConjugator instance = new StandardInstrumentalConjugator();
-
-    public static StandardInstrumentalConjugator getInstance() {
-        return instance;
-    }
-
-    private static List formulas = new LinkedList();
     static {
         formulas.add("مِفْعَل");
         formulas.add("مِفْعَلَة");
@@ -35,15 +31,20 @@ public class StandardInstrumentalConjugator implements IUnaugmentedTrilateralNou
         formulas.add("فَعَّالَة");
     }
 
-    public NounFormula createNoun(UnaugmentedTrilateralRoot root, int suffixNo, int formulaNo) {
-        String formulaClassName = getClass().getPackage().getName()+".standard.NounFormula"+formulaNo;
-        Object [] parameters = {root, suffixNo+""};
+    private StandardInstrumentalConjugator() {
+    }
 
+    public static StandardInstrumentalConjugator getInstance() {
+        return instance;
+    }
+
+    public NounFormula createNoun(UnaugmentedTrilateralRoot root, int suffixNo, int formulaNo) {
+        String formulaClassName = getClass().getPackage().getName() + ".standard.NounFormula" + formulaNo;
+        Object[] parameters = {root, suffixNo + ""};
         try {
             NounFormula noun = (NounFormula) Class.forName(formulaClassName).getConstructors()[0].newInstance(parameters);
             return noun;
-        }
-        catch (Exception ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
         return null;
@@ -68,6 +69,5 @@ public class StandardInstrumentalConjugator implements IUnaugmentedTrilateralNou
             return formulas;
         return new LinkedList();
     }
-
 
 }

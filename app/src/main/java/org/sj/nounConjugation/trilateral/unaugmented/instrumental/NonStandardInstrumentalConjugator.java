@@ -1,9 +1,15 @@
 package org.sj.nounConjugation.trilateral.unaugmented.instrumental;
 
-import org.sj.nounConjugation.*;
-import org.sj.verbConjugation.util.*;
-import org.sj.verbConjugation.trilateral.unaugmented.*;
-import java.util.*;
+import org.sj.nounConjugation.IUnaugmentedTrilateralNounConjugator;
+import org.sj.nounConjugation.NounFormula;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+import org.sj.verbConjugation.util.ArabCharUtil;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -18,9 +24,10 @@ import java.util.*;
  * @version 1.0
  */
 public class NonStandardInstrumentalConjugator implements IUnaugmentedTrilateralNounConjugator {
-    private Map formulaClassNamesMap = new HashMap();
+    private static final NonStandardInstrumentalConjugator instance = new NonStandardInstrumentalConjugator();
+    private final Map formulaClassNamesMap = new HashMap();
     //map <symbol,formulaName>
-    private Map formulaSymbolsNamesMap = new HashMap();
+    private final Map formulaSymbolsNamesMap = new HashMap();
 
     private NonStandardInstrumentalConjugator() {
         for (int i = 1; i <= 15; i++) {
@@ -30,29 +37,23 @@ public class NonStandardInstrumentalConjugator implements IUnaugmentedTrilateral
                 NonStandardInstrumentalNounFormula instrumentalNounFormula = (NonStandardInstrumentalNounFormula) formulaClass.newInstance();
                 formulaClassNamesMap.put(instrumentalNounFormula.getFormulaName(), formulaClass);
                 formulaSymbolsNamesMap.put(instrumentalNounFormula.getSymbol(), instrumentalNounFormula.getFormulaName());
-            }
-            catch (Exception ex) {
+            } catch (Exception ex) {
                 ex.printStackTrace();
             }
         }
     }
 
-    private static NonStandardInstrumentalConjugator instance = new NonStandardInstrumentalConjugator();
-
     public static NonStandardInstrumentalConjugator getInstance() {
         return instance;
     }
 
-
     public NounFormula createNoun(UnaugmentedTrilateralRoot root, int suffixNo, String formulaName) {
         Object[] parameters = {root, suffixNo + ""};
-
         try {
             Class formulaClass = (Class) formulaClassNamesMap.get(formulaName);
             NounFormula noun = (NounFormula) formulaClass.getConstructors()[1].newInstance(parameters);
             return noun;
-        }
-        catch (Exception ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
         return null;
@@ -64,7 +65,6 @@ public class NonStandardInstrumentalConjugator implements IUnaugmentedTrilateral
             NounFormula noun = createNoun(root, i, formulaName);
             result.add(noun);
         }
-
         return result;
     }
 
@@ -74,15 +74,12 @@ public class NonStandardInstrumentalConjugator implements IUnaugmentedTrilateral
             return null;
         }
 //todo
-    //    XmlNonStandardInstrumentalNounFormulaTree formulaTree = DatabaseManager.getInstance().getInstrumentalNounFormulaTree(root.getC1());
-
-        XmlNonStandardInstrumentalNounFormulaTree formulaTree=null;
+        //    XmlNonStandardInstrumentalNounFormulaTree formulaTree = DatabaseManager.getInstance().getInstrumentalNounFormulaTree(root.getC1());
+        XmlNonStandardInstrumentalNounFormulaTree formulaTree = null;
         if (formulaTree == null) {
             return null;
         }
-
         List result = new LinkedList();
-
         Iterator iter = formulaTree.getFormulaList().iterator();
         while (iter.hasNext()) {
             XmlNonStandardInstrumentalNounFormula formula = (XmlNonStandardInstrumentalNounFormula) iter.next();
@@ -91,7 +88,6 @@ public class NonStandardInstrumentalConjugator implements IUnaugmentedTrilateral
                     //add the formula pattern insteaed of the symbol (form1)
                     result.add(formulaSymbolsNamesMap.get(formula.getForm1()));
                 }
-
                 //may the verb has two forms of instumentals
                 if (formula.getForm2() != null && formula.getForm2() != "") {
                     //add the formula pattern insteaed of the symbol (form2)
@@ -99,10 +95,8 @@ public class NonStandardInstrumentalConjugator implements IUnaugmentedTrilateral
                 }
             }
         }
-
         return result;
 
     }
-
 
 }

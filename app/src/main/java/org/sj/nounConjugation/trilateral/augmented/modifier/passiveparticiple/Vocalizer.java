@@ -1,16 +1,19 @@
 package org.sj.nounConjugation.trilateral.augmented.modifier.passiveparticiple;
 
-import java.util.*;
-
 import org.sj.nounConjugation.trilateral.augmented.modifier.activeparticiple.vocalizer.PreSeparatedLafifVocalizer;
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.augmented.modifier.passiveparticiple.vocalizer.*;
-
-
+import org.sj.nounConjugation.trilateral.augmented.modifier.passiveparticiple.vocalizer.Ajwaf1Vocalizer;
+import org.sj.nounConjugation.trilateral.augmented.modifier.passiveparticiple.vocalizer.Ajwaf2Vocalizer;
+import org.sj.nounConjugation.trilateral.augmented.modifier.passiveparticiple.vocalizer.Mithal1Vocalizer;
+import org.sj.nounConjugation.trilateral.augmented.modifier.passiveparticiple.vocalizer.Mithal2Vocalizer;
+import org.sj.nounConjugation.trilateral.augmented.modifier.passiveparticiple.vocalizer.WawiNakesLafifVocalizer;
+import org.sj.nounConjugation.trilateral.augmented.modifier.passiveparticiple.vocalizer.YaeiNakesLafifVocalizer;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
-
-
 import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -25,9 +28,8 @@ import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateral
  * @version 1.0
  */
 public class Vocalizer {
-    private List modifiers = new LinkedList();
-
-    private PreSeparatedLafifVocalizer preSeparatedLafifVocalizer = new PreSeparatedLafifVocalizer();
+    private final List modifiers = new LinkedList();
+    private final PreSeparatedLafifVocalizer preSeparatedLafifVocalizer = new PreSeparatedLafifVocalizer();
 
     public Vocalizer() {
         modifiers.add(new Mithal1Vocalizer());
@@ -41,7 +43,6 @@ public class Vocalizer {
     public void apply(MazeedConjugationResult conjResult) {
         if (preSeparatedLafifVocalizer.isApplied(conjResult))
             preSeparatedLafifVocalizer.apply(conjResult.getFinalResult(), conjResult.getRoot());
-
         Iterator iter = modifiers.iterator();
         while (iter.hasNext()) {
             IAugmentedTrilateralModifier modifier = (IAugmentedTrilateralModifier) iter.next();

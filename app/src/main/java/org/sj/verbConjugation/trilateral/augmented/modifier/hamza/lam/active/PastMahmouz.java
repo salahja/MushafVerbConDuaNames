@@ -1,14 +1,13 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.hamza.lam.active;
 
-import java.util.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.augmented.modifier.hamza.lam.AbstractLamMahmouz;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.hamza.lam.*;
-
+import java.util.LinkedList;
+import java.util.List;
 
 public class PastMahmouz extends AbstractLamMahmouz {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public PastMahmouz() {
         substitutions.add(new InfixSubstitution("َءْ", "َأْ")); // EX: (أجْزَأْتُ، كافأْتُ، انفقَأْتُ، ابتدَأْتُ، تدارَأْتُ، استَهْزَأْتُ، احْزَوْزَأْتُ)
@@ -20,8 +19,6 @@ public class PastMahmouz extends AbstractLamMahmouz {
         substitutions.add(new InfixSubstitution("اءَ", "اءَ")); // EX: (أساءَ، استاءَ، )
         substitutions.add(new InfixSubstitution("اءُ", "اؤُ")); // EX: (أساؤُوا، استاؤُوا، )
     }
-
-
 
     public List getSubstitutions() {
         return substitutions;

@@ -1,6 +1,5 @@
 package org.sj.conjugator.utilities;
 
-
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -13,16 +12,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import org.sj.conjugator.MainActivity;
 import com.example.mushafconsolidated.R;
 
+import org.sj.conjugator.MainActivity;
 
 public class Splash extends AppCompatActivity {
     public final int SPLASH_DISPLAY_LENGTH = 3000;
+
     private void checkPermission() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WAKE_LOCK) !=
                 PackageManager.PERMISSION_GRANTED ||
-                ContextCompat.checkSelfPermission(this,Manifest.permission.INTERNET) !=
+                ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET) !=
                         PackageManager.PERMISSION_GRANTED ||
                 ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_NETWORK_STATE)
                         != PackageManager.PERMISSION_GRANTED) {//Can add more as per requirement
@@ -33,19 +33,19 @@ public class Splash extends AppCompatActivity {
                     123);
         }
     }
+
     @Override
-    protected void onCreate(Bundle sis){
+    protected void onCreate(Bundle sis) {
         super.onCreate(sis);
 //set the content view. The XML file can contain nothing but an image, such as a logo or the       app icon
         setContentView(R.layout.splash_layout);
 //we want to display the splash screen for a few seconds before it automatically
-
         //disappears and loads the game. So we create a thread:
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 //request permissions. NOTE: Copying this and the manifest will cause the app to           crash as the permissions requested aren't defined in the manifest.
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     checkPermission();
                 }
                 //    String lang =["ss"];
@@ -68,7 +68,8 @@ public class Splash extends AppCompatActivity {
             }
         }, SPLASH_DISPLAY_LENGTH);
     }
-    public void onPause(){
+
+    public void onPause() {
         super.onPause();
         finish();
     }

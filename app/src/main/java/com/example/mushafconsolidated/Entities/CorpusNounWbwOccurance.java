@@ -1,6 +1,5 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import android.text.SpannableString;
 
 import androidx.annotation.NonNull;
@@ -10,19 +9,142 @@ import com.example.mushafconsolidated.model.WordSpan;
 
 import java.util.ArrayList;
 
-
 public class CorpusNounWbwOccurance {
     @Ignore
-    private ArrayList<WordSpan> wordspan;
-    @Ignore
     SpannableString verses;
+    @Ignore
+    private ArrayList<WordSpan> wordspan;
     @NonNull
     private String root_a;
-
+    @NonNull
+    private int surah;
+    @NonNull
+    private int ayah;
+    @NonNull
+    private int wordno;
+    @NonNull
+    private int wordcount;
+    private String qurantext;
+    private String araone;
+    private String aratwo;
+    private String arathree;
+    private String arafour;
+    private String arafive;
+    private String tagone;
+    private String tagtwo;
+    private String tagthree;
+    private String tagfour;
+    private String tagfive;
+    private String detailsone;
+    private String detailstwo;
+    private String detailsthree;
+    private String detailsfour;
+    private String detailsfive;
+    private String tag;
+    private String propone;
+    private String proptwo;
+    private String form;
+    private String gendernumber;
+    private String type;
+    private String cases;
+    private String en;
+    private String translation;
+    private String ur_jalalayn;
+    private String en_jalalayn;
+    private String en_arberry;
+    @Ignore
+    private SpannableString spannableNoun;
+    @Ignore
+    private String lemma;
+    @Ignore
+    private int lemmacount;
+    @Ignore
+    private String arabicword;
     public CorpusNounWbwOccurance() {
+    }
+    public CorpusNounWbwOccurance(@NonNull String root_a, int surah, int ayah, int wordno, int wordcount, String translation, String ur_jalalayn, String en_jalalayn, String qurantext, String araone, String aratwo, String arathree, String arafour, String arafive, String tagone, String tagtwo, String tagthree, String tagfour, String tagfive, String detailsone, String detailstwo, String detailsthree, String detailsfour, String detailsfive, String tag, String propone, String proptwo, String form, String gendernumber, String type, String cases, String en) {
+        this.root_a = root_a;
+        this.surah = surah;
+        this.ayah = ayah;
+        this.wordno = wordno;
+        this.wordcount = wordcount;
+        this.translation = translation;
+        this.ur_jalalayn = ur_jalalayn;
+        this.en_jalalayn = en_jalalayn;
+        this.qurantext = qurantext;
+        this.araone = araone;
+        this.aratwo = aratwo;
+        this.arathree = arathree;
+        this.arafour = arafour;
+        this.arafive = arafive;
+        this.tagone = tagone;
+        this.tagtwo = tagtwo;
+        this.tagthree = tagthree;
+        this.tagfour = tagfour;
+        this.tagfive = tagfive;
+        this.detailsone = detailsone;
+        this.detailstwo = detailstwo;
+        this.detailsthree = detailsthree;
+        this.detailsfour = detailsfour;
+        this.detailsfive = detailsfive;
+        this.tag = tag;
+        this.propone = propone;
+        this.proptwo = proptwo;
+        this.form = form;
+        this.gendernumber = gendernumber;
+        this.type = type;
+        this.cases = cases;
+        this.en = en;
+    }
+    @Ignore
+    public CorpusNounWbwOccurance(String araone, String aratwo, String arathree, String arafour, String arafive,
+                                  String tagone, String tagtwo, String tagthree, String tagfour, String tagfive,
+                                  String translation, String qurantext,
+                                  SpannableString verses, String root_a, int surah, int ayah, int wordno, int wordcount,
+                                  SpannableString spannableNoun,
+                                  String tag, String propone, String proptwo, String form, String gendernumber,
+                                  String type, String cases, String en) {
+        this.araone = araone;
+        this.aratwo = aratwo;
+        this.arathree = arathree;
+        this.arafour = arafour;
+        this.arafive = arafive;
+        this.tagone = tagone;
+        this.tagtwo = tagtwo;
+        this.tagthree = tagthree;
+        this.tagfour = tagfour;
+        this.tagfive = tagfive;
+        this.translation = translation;
+        this.qurantext = qurantext;
+        this.verses = verses;
+        this.root_a = root_a;
+        this.surah = surah;
+        this.ayah = ayah;
+        this.wordno = wordno;
+        this.wordcount = wordcount;
+        this.spannableNoun = spannableNoun;
+        this.tag = tag;
+        this.propone = propone;
+        this.proptwo = proptwo;
+        this.form = form;
+        this.gendernumber = gendernumber;
+        this.type = type;
+        this.cases = cases;
+        this.en = en;
 
     }
-
+    @Ignore
+    public CorpusNounWbwOccurance(@NonNull String root_a, int surah, int ayah, int wordno, int wordcount, String lemma, int lemmacount, String arabicword, String en) {
+        this.root_a = root_a;
+        this.surah = surah;
+        this.ayah = ayah;
+        this.wordno = wordno;
+        this.wordcount = wordcount;
+        this.lemma = lemma;
+        this.lemmacount = lemmacount;
+        this.arabicword = arabicword;
+        this.en = en;
+    }
 
     public ArrayList<WordSpan> getWordspan() {
         return wordspan;
@@ -72,56 +194,12 @@ public class CorpusNounWbwOccurance {
         this.detailsfive = detailsfive;
     }
 
-    @NonNull
-    private int surah;
-    @NonNull
-    private int ayah;
-
-    @NonNull
-    private int wordno;
-    @NonNull
-    private int wordcount;
-
-
-    private String qurantext;
-    private String araone;
-    private String aratwo;
-    private String arathree;
-    private String arafour;
-    private String arafive;
-    private String tagone;
-    private String tagtwo;
-    private String tagthree;
-    private String tagfour;
-
-    private String tagfive;
-    private String detailsone;
-    private String detailstwo;
-    private String detailsthree;
-    private String detailsfour;
-    private String detailsfive;
-
-
-
-    private String tag;
-    private String propone;
-    private String proptwo;
-    private String form;
-    private String gendernumber;
-    private String type;
-    private String cases;
-
-
-
-    private String en;
-
-    private String translation;
-
-    private String ur_jalalayn;
-    private String en_jalalayn;
-private String en_arberry;
     public String getUr_jalalayn() {
         return ur_jalalayn;
+    }
+
+    public void setUr_jalalayn(String ur_jalalayn) {
+        this.ur_jalalayn = ur_jalalayn;
     }
 
     public String getEn_arberry() {
@@ -130,10 +208,6 @@ private String en_arberry;
 
     public void setEn_arberry(String en_arberry) {
         this.en_arberry = en_arberry;
-    }
-
-    public void setUr_jalalayn(String ur_jalalayn) {
-        this.ur_jalalayn = ur_jalalayn;
     }
 
     public String getEn_jalalayn() {
@@ -145,41 +219,34 @@ private String en_arberry;
     }
 
     @Ignore
-    private SpannableString spannableNoun;
-
-    @Ignore
-    private String lemma;
-    @Ignore
-    private int lemmacount;
-
-    @Ignore
-    private String arabicword;
-
-    @Ignore
     public String getLemma() {
         return lemma;
     }
+
     @Ignore
     public void setLemma(String lemma) {
         this.lemma = lemma;
     }
+
     @Ignore
     public int getLemmacount() {
         return lemmacount;
     }
 
-    @Ignore public void setLemmacount(int lemmacount) {
+    @Ignore
+    public void setLemmacount(int lemmacount) {
         this.lemmacount = lemmacount;
     }
+
     @Ignore
     public String getArabicword() {
         return arabicword;
     }
+
     @Ignore
     public void setArabicword(String arabicword) {
         this.arabicword = arabicword;
     }
-
 
     public String getTranslation() {
         return translation;
@@ -198,106 +265,12 @@ private String en_arberry;
         this.verses = verses;
     }
 
-
     public String getQurantext() {
         return qurantext;
     }
 
     public void setQurantext(String qurantext) {
         this.qurantext = qurantext;
-    }
-
-    public CorpusNounWbwOccurance(@NonNull String root_a, int surah, int ayah, int wordno, int wordcount, String translation,String ur_jalalayn,String en_jalalayn, String qurantext, String araone, String aratwo, String arathree, String arafour, String arafive, String tagone, String tagtwo, String tagthree, String tagfour, String tagfive, String detailsone, String detailstwo, String detailsthree, String detailsfour, String detailsfive, String tag, String propone, String proptwo, String form, String gendernumber, String type, String cases, String en) {
-        this.root_a = root_a;
-        this.surah = surah;
-        this.ayah = ayah;
-        this.wordno = wordno;
-        this.wordcount = wordcount;
-        this.translation = translation;
-        this.ur_jalalayn=ur_jalalayn;
-        this.en_jalalayn=en_jalalayn;
-        this.qurantext = qurantext;
-        this.araone = araone;
-        this.aratwo = aratwo;
-        this.arathree = arathree;
-        this.arafour = arafour;
-        this.arafive = arafive;
-        this.tagone = tagone;
-        this.tagtwo = tagtwo;
-        this.tagthree = tagthree;
-        this.tagfour = tagfour;
-        this.tagfive = tagfive;
-        this.detailsone = detailsone;
-        this.detailstwo = detailstwo;
-        this.detailsthree = detailsthree;
-        this.detailsfour = detailsfour;
-        this.detailsfive = detailsfive;
-
-
-        this.tag = tag;
-        this.propone = propone;
-        this.proptwo = proptwo;
-        this.form = form;
-        this.gendernumber = gendernumber;
-        this.type = type;
-        this.cases = cases;
-        this.en = en;
-    }
-
-    @Ignore
-    public CorpusNounWbwOccurance(String araone, String aratwo, String arathree, String arafour, String arafive,
-                                  String tagone, String tagtwo, String tagthree, String tagfour, String tagfive,
-                                  String translation, String qurantext,
-                                  SpannableString verses, String root_a, int surah, int ayah, int wordno, int wordcount,
-                                  SpannableString spannableNoun,
-                                  String tag, String propone, String proptwo, String form, String gendernumber,
-                                  String type, String cases, String en) {
-
-
-
-        this.araone = araone;
-        this.aratwo = aratwo;
-        this.arathree = arathree;
-        this.arafour = arafour;
-        this.arafive = arafive;
-        this.tagone = tagone;
-        this.tagtwo = tagtwo;
-        this.tagthree = tagthree;
-        this.tagfour = tagfour;
-        this.tagfive = tagfive;
-       this.translation = translation;
-
-        this.qurantext = qurantext;
-        this.verses =verses;
-        this.root_a = root_a;
-        this.surah = surah;
-        this.ayah = ayah;
-        this.wordno = wordno;
-        this.wordcount = wordcount;
-        this.spannableNoun = spannableNoun;
-        this.tag = tag;
-        this.propone = propone;
-        this.proptwo = proptwo;
-        this.form = form;
-        this.gendernumber = gendernumber;
-        this.type = type;
-        this.cases = cases;
-        this.en = en;
-
-    }
-
-
-    @Ignore
-    public CorpusNounWbwOccurance(@NonNull String root_a, int surah, int ayah, int wordno, int wordcount, String lemma, int lemmacount, String arabicword, String en) {
-        this.root_a = root_a;
-        this.surah = surah;
-        this.ayah = ayah;
-        this.wordno = wordno;
-        this.wordcount = wordcount;
-        this.lemma = lemma;
-        this.lemmacount = lemmacount;
-        this.arabicword = arabicword;
-        this.en = en;
     }
 
     @Ignore

@@ -1,6 +1,5 @@
 package com.example.mushafconsolidated.Activity;
 
-
 import static com.example.mushafconsolidated.settings.Constants.DATABASENAME;
 import static com.example.mushafconsolidated.settings.Constants.DATABASEZIP;
 import static com.example.mushafconsolidated.settings.Constants.FILEPATH;
@@ -47,32 +46,24 @@ import java.util.zip.ZipInputStream;
 
 import database.GridImageAct;
 
-
 public class MainActivity extends BaseActivity {
     private static final int PERMISSION_REQUEST_CODE = 100;
+    private static final int REQUEST_WRITE_STORAGE = 112;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private MaterialToolbar materialToolbar;
-
-    private static final int REQUEST_WRITE_STORAGE = 112;
+    private File newquran;
+    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
     }
 
-    private File newquran;
-    private BottomNavigationView bottomNavigationView;
-
-
-    public enum WindowSizeClass {COMPACT, MEDIUM, EXPANDED}
-
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,14 +76,10 @@ public class MainActivity extends BaseActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
      */
         computeWindowSizeClasses();
-
         //  setContentView(R.layout.fragment_reading);
-
         setContentView(R.layout.drawer_activity);
         materialToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(materialToolbar);
-
-
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
         int SPL = 1;
         if (sp.getInt("spl", 0) != SPL) {
@@ -100,15 +87,10 @@ public class MainActivity extends BaseActivity {
             //  PreferenceManager.setDefaultValues(this, R.xml.prefs2, true);
             sp.edit().putInt("spl", SPL).apply();
         }
-
-
         newquran = new File(FILEPATH + "/" + DATABASENAME);
-
-
         if (!hasPermission) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_WRITE_STORAGE);
         } else {
-
             try {
                 validateFilesAndDownload();
             } catch (IOException e) {
@@ -116,11 +98,8 @@ public class MainActivity extends BaseActivity {
             }
 
         }
-
-
         //  PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
         boolean hasPermissions = (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED);
-
 
     }
 
@@ -129,49 +108,36 @@ public class MainActivity extends BaseActivity {
         SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit();
         float widthDp = metrics.getBounds().width() / getResources().getDisplayMetrics().density;
         // WindowSizeClass widthWindowSizeClass;
-
         //     SharedPreferences.Editor editor = getActivity().getSharedPreferences("properties", 0).edit();
-
         if (widthDp < 600f) {
             //widthWindowSizeClass = WindowSizeClass.COMPACT;
-
             //     SharedPreferences.Editor editor = getActivity().getSharedPreferences("properties", 0).edit();
             editor.putString("width", "compactWidth");
             editor.apply();
 
-
         } else if (widthDp < 840f) {
             //widthWindowSizeClass = WindowSizeClass.MEDIUM;
-
             //     SharedPreferences.Editor editor = getActivity().getSharedPreferences("properties", 0).edit();
             editor.putString("width", "mediumWidth");
-
             editor.apply();
         } else {
             // widthWindowSizeClass = WindowSizeClass.EXPANDED;
-
             editor.putString("width", "expandedWidth");
-
             editor.apply();
 
         }
-
         float heightDp = metrics.getBounds().height() / getResources().getDisplayMetrics().density;
         WindowSizeClass heightWindowSizeClass;
-
         if (heightDp < 480f) {
             heightWindowSizeClass = WindowSizeClass.COMPACT;
-
 
         } else if (heightDp < 900f) {
             heightWindowSizeClass = WindowSizeClass.MEDIUM;
         } else {
             heightWindowSizeClass = WindowSizeClass.EXPANDED;
         }
-
         // Use widthWindowSizeClass and heightWindowSizeClass
     }
-
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -194,24 +160,18 @@ public class MainActivity extends BaseActivity {
 
     private void validateFilesAndDownload() throws IOException {
         boolean isexternalstorageMounted = getDefaultSaveRootPath();
-
-
         if (!newquran.exists()) {
             // first install copy newquran.db.zip and unzip
             //   new CopyDatabase().execute();
             CopyDatbases();
-
 
         } else {
             Intent homeactivity = new Intent(MainActivity.this, QuranGrammarAct.class);
             //   Intent homeactivity = new Intent(MainActivity.this, ReadingSurahPartActivity.class);
             startActivity(homeactivity);
             MainActivity.this.finish();
-         //   initnavigation();
-
-
+            //   initnavigation();
         }
-
 
     }
 
@@ -221,8 +181,6 @@ public class MainActivity extends BaseActivity {
         materialToolbar = findViewById(R.id.toolbar);
         bottomNavigationView = findViewById(R.id.bottomNavView);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, materialToolbar, (R.string.drawer_open), (R.string.drawer_close));
-
-
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         SharedPreferences shared = PreferenceManager.getDefaultSharedPreferences(QuranGrammarApplication.getContext());
@@ -242,34 +200,21 @@ public class MainActivity extends BaseActivity {
         } else {
             materialToolbar.setBackgroundColor(colorsurface);
         }
-
-
         bottomNavigationView.setOnNavigationItemReselectedListener(item ->
-
         {
-
-
             Fragment fragment;
             switch (item.getItemId()) {
-
                 case R.id.surahnav:
-
-
                     Intent searchintents = new Intent(this, QuranGrammarAct.class);
-
                     startActivity(searchintents);
                     navigationView.setCheckedItem(R.id.surahnav);
                     break;
-
-
                 case R.id.conjugationnav:
                     //   drawerLayout.closeDrawers();
                     materialToolbar.setTitle("Setting");
                     //  Intent conjugatorintent = new Intent(newreadactivity.this, VerbConjugationAct.class);
                     Intent conjugatorintent = new Intent(this, ConjugatorAct.class);
                     //   Intent conjugatorintent = new Intent(newreadactivity.this, VerbConjugationAct.class);
-
-
                     //    finish();
                     startActivity(conjugatorintent);
                     break;
@@ -277,39 +222,24 @@ public class MainActivity extends BaseActivity {
                     break;
             }
 
-
         });
-
-
         navigationView.setNavigationItemSelectedListener(item ->
-
         {
             Fragment fragment;
             switch (item.getItemId()) {
-
-
                 case R.id.Names:
                     drawerLayout.closeDrawers();
                     Intent searchintents = new Intent(this, GridImageAct.class);
-
                     startActivity(searchintents);
                     navigationView.setCheckedItem(R.id.Names);
                     break;
-
-
-
                 case R.id.bookmark:
                     drawerLayout.closeDrawers();
-
-
                     //  Intent intents = new Intent(MainActivity.this, MufradatPagerActivity.class);
                     //  startActivity(intents);
-
                     break;
                 case R.id.setting:
-
                     drawerLayout.closeDrawers();
-
                     Intent intents = new Intent(this, ActivitySettings.class);
                     startActivity(intents);
                     break;
@@ -333,19 +263,13 @@ public class MainActivity extends BaseActivity {
                 boolean canWrie = canWriteInSDCard();
                 if (canWrie) {
                     try {
-
                         File databaseDirectory = new File(FILEPATH);
-
-
                         if (!databaseDirectory.exists()) {
                             boolean cr = databaseDirectory.mkdirs();
                             System.out.println(cr);
                         }
-
                         File databaseFile = new File(databaseDirectory, DATABASEZIP);
-
                         databaseFile.getParentFile();
-
                         if (!databaseFile.exists()) {
                             databaseFile.createNewFile();
                         }
@@ -371,16 +295,10 @@ public class MainActivity extends BaseActivity {
 
                     }
                 }
-
                 runOnUiThread(() -> {
-
-
                     File zipfile = new File(getExternalFilesDir(null).getAbsolutePath() + getString(R.string.app_folder_path) + File.separator + DATABASEZIP);
-
                     File targetDirectory = new File(FILEPATH);
                     File mainDatabasesZIP = new File(String.valueOf(zipfile));
-
-
                     ZipInputStream zis = null;
                     int progress = 1;
                     try {
@@ -405,7 +323,6 @@ public class MainActivity extends BaseActivity {
                             if (ze.isDirectory()) continue;
                             try (FileOutputStream fout = new FileOutputStream(file)) {
                                 progress += 1;
-
                                 while ((count = zis.read(buffer)) != -1) {
                                     fout.write(buffer, 0, count);
                                     progress += 1;
@@ -427,14 +344,11 @@ public class MainActivity extends BaseActivity {
                     }
                     ex.shutdown();
                     dialog.dismiss();
-
                     Intent zipintent = new Intent(MainActivity.this, QuranGrammarAct.class);
-
                     startActivity(zipintent);
                     MainActivity.this.finish();
 
                 });
-
 
             }
 
@@ -446,26 +360,21 @@ public class MainActivity extends BaseActivity {
 
     }
 
-
     public boolean getDefaultSaveRootPath() {
-
-
         boolean useExternalStorage = false;
         File externalCacheDir = getExternalCacheDir();
         boolean mounted = Environment.getExternalStorageState().equals("mounted");
         final long freeSpace = Environment.getExternalStorageDirectory().getFreeSpace();
-
-
         if (mounted) {
             if (freeSpace > 0) {
                 useExternalStorage = true;
 
             }
         }
-
         return useExternalStorage;
     }
 
+    public enum WindowSizeClass {COMPACT, MEDIUM, EXPANDED}
 
 }
 

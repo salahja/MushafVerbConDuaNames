@@ -1,12 +1,16 @@
 package org.sj.nounConjugation.trilateral.augmented.modifier.activeparticiple;
 
-import java.util.*;
+import org.sj.nounConjugation.trilateral.augmented.modifier.activeparticiple.hamza.EinMahmouz;
+import org.sj.nounConjugation.trilateral.augmented.modifier.activeparticiple.hamza.FaaMahmouz;
+import org.sj.nounConjugation.trilateral.augmented.modifier.activeparticiple.hamza.LamMahmouz;
+import org.sj.nounConjugation.trilateral.augmented.modifier.activeparticiple.hamza.RaaEinMahmouz;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
-import org.sj.nounConjugation.trilateral.augmented.modifier.activeparticiple.hamza.*;
-//.RaaEinMahmouz;
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -21,7 +25,7 @@ import org.sj.verbConjugation.trilateral.augmented.modifier.*;
  * @version 1.0
  */
 public class Mahmouz {
-    private List modifiers = new LinkedList();
+    private final List modifiers = new LinkedList();
 
     public Mahmouz() {
         modifiers.add(new RaaEinMahmouz());

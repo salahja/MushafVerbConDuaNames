@@ -1,7 +1,9 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf;
 
-import java.util.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.*;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ListedVocalizer;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -17,7 +19,7 @@ import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.*;
  * @version 1.0
  */
 public abstract class AbstractAjwafYaeiListedVocalizer extends ListedVocalizer {
-    private List appliedRoots = new LinkedList();
+    private final List appliedRoots = new LinkedList();
 
     public AbstractAjwafYaeiListedVocalizer() {
         appliedRoots.add("بيت");

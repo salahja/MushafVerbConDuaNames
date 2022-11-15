@@ -1,9 +1,10 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.wawi;
 
-import java.util.List;
-import java.util.LinkedList;
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
 import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.AbstractAjwafWawiListedVocalizer;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -18,7 +19,7 @@ import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.Ab
  * @version 1.0
  */
 public class ImperativeAjwafWawiListedVocalizer extends AbstractAjwafWawiListedVocalizer {
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public ImperativeAjwafWawiListedVocalizer() {
         substitutions.add(new ExpressionInfixSubstitution("اC1ْوَC3ُ", "C1َاC3ُ"));

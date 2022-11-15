@@ -1,28 +1,27 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.vocalizer.lafif.connected.active;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
-import org.sj.verbConjugation.trilateral.augmented.*;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
-   
+import java.util.LinkedList;
+import java.util.List;
+
 public class Present3Vocalizer extends SubstitutionsApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public Present3Vocalizer() {
         substitutions.add(new SuffixSubstitution("يُ", "ا")); // EX: (يَتَحَايَا، يَتَحَيَّا)
-        substitutions.add(new SuffixSubstitution("َيَ","َا"));// EX: (لن يَتَحَايَا، لن يتَحَيَّا)
+        substitutions.add(new SuffixSubstitution("َيَ", "َا"));// EX: (لن يَتَحَايَا، لن يتَحَيَّا)
         substitutions.add(new SuffixSubstitution("يْ", "")); // EX: (لم يَتَحَايَ، لم يَتَحَيَّ)
         substitutions.add(new InfixSubstitution("يِي", "يْ")); // EX: (أنتِ تَتَحَايَيْنَ، تَتَحَيَّيْنَ)
         substitutions.add(new InfixSubstitution("يُو", "وْ")); // EX: (أنتم تَتَحايَوْنَ، تَتَحَيَّوْنَ)
         substitutions.add(new InfixSubstitution("يُن", "وُن")); // EX: (أنتم تَتَحايَوُنَّ، تَتَحَيَّوُنَّ)
 
-
     }
-
 
     public List getSubstitutions() {
         return substitutions;

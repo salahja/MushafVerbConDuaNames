@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/chips_group"
     android:layout_width="match_parent"
@@ -11,47 +10,31 @@
 
     <TextView
         android:id="@+id/word_arabic_textView"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:checkable="true"
         android:text="Word"
-
-
         android:visibility="visible" />
 
     <TextView
         android:id="@+id/root_word"
-
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
         android:checkable="true"
-
-
         android:visibility="gone" />
 
     <TextView
         android:id="@+id/wordno"
-
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
         android:checkable="true"
-
-
         android:visibility="gone" />
 
     <TextView
         android:id="@+id/word_trans_textView"
-
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content"/>
 
-        >
-
-    </TextView>
 
 
 </LinearLayout>
-

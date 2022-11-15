@@ -138,7 +138,7 @@
         app:title="Arabic Fonts">
 
         <ListPreference
-            android:defaultValue="kitab.ttf"
+            android:defaultValue="quranicfontregular.ttf"
             android:entries="@array/arabicFontListArray"
             android:entryValues="@array/arabicFontEntryArray"
             android:key="Arabic_Font_Selection"

@@ -1,9 +1,10 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.instrumental.hamza;
 
-import java.util.*;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.AbstractEinMahmouz;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -21,16 +22,14 @@ public class EinMahmouz extends AbstractEinMahmouz {
     List substitutions = new LinkedList();
 
     public EinMahmouz() {
-
-        substitutions.add(new InfixSubstitution("َءَّا","َآَّ"));// EX: (سآَّلَة)
-        substitutions.add(new InfixSubstitution("ْءَا","ْآ"));// EX: (مِذآب)
-        substitutions.add(new InfixSubstitution("ْءَ","ْأَ"));// EX: (مِذْأَب، مِذْأبَة)
-        substitutions.add(new InfixSubstitution("ْءً","ْأً"));// EX: (مِمْأًى)
-        substitutions.add(new InfixSubstitution("يءً","يئً"));// EX: (مِيئًى)
-        substitutions.add(new InfixSubstitution("يءَ","يئَ"));// EX: (مِيئَد، مِيئَدة، مِيئاد)
+        substitutions.add(new InfixSubstitution("َءَّا", "َآَّ"));// EX: (سآَّلَة)
+        substitutions.add(new InfixSubstitution("ْءَا", "ْآ"));// EX: (مِذآب)
+        substitutions.add(new InfixSubstitution("ْءَ", "ْأَ"));// EX: (مِذْأَب، مِذْأبَة)
+        substitutions.add(new InfixSubstitution("ْءً", "ْأً"));// EX: (مِمْأًى)
+        substitutions.add(new InfixSubstitution("يءً", "يئً"));// EX: (مِيئًى)
+        substitutions.add(new InfixSubstitution("يءَ", "يئَ"));// EX: (مِيئَد، مِيئَدة، مِيئاد)
 
     }
-
 
     public List getSubstitutions() {
         return substitutions;

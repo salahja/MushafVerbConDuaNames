@@ -1,8 +1,7 @@
 package org.sj.verbConjugation.trilateral.unaugmented.active;
 
-import org.sj.verbConjugation.util.*;
-import org.sj.verbConjugation.trilateral.unaugmented.*;
-
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+import org.sj.verbConjugation.util.ArabCharUtil;
 
 /**
  * يمثل هذا الصف الفعل في صيغة المضارع متضمناً الأحرف الثلاثة
@@ -11,29 +10,24 @@ import org.sj.verbConjugation.trilateral.unaugmented.*;
  * <p>Description: برنامج التصريف</p>
  * <p>Copyright: Copyright (c) 2006</p>
  * <p>Company: </p>
+ *
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
 public class ActivePresentVerb {
-    private UnaugmentedTrilateralRoot root;
-
-    //حرف المضارع
-    private String cp;
-
     //حركة حرف المضارع وهي دائماًً  فتحة
     private static final String vcp = ArabCharUtil.FATHA;
-
     //حركة فاء الفعل وهي دائماً ثابتة سكون
     private static final String dpr1 = ArabCharUtil.SKOON;
-
+    private final UnaugmentedTrilateralRoot root;
+    //حرف المضارع
+    private final String cp;
     //حركة عين الفعل حسب باب التصريف
-    private String dpr2;
-
+    private final String dpr2;
     //حركة لام الفعل حسب الضمير
-    private String lastDpr;
-
+    private final String lastDpr;
     //الأحرف المضافة لنهاية الفعل حسب الضمير
-    private String connectedPronoun;
+    private final String connectedPronoun;
 
     public ActivePresentVerb(UnaugmentedTrilateralRoot root, String cp, String dpr2, String lastDpr, String connectedPronoun) {
         this.root = root;
@@ -64,7 +58,7 @@ public class ActivePresentVerb {
     }
 
     public String toString() {
-        return cp+vcp+root.getC1()+dpr1+root.getC2()+dpr2+root.getC3()+lastDpr+connectedPronoun;
+        return cp + vcp + root.getC1() + dpr1 + root.getC2() + dpr2 + root.getC3() + lastDpr + connectedPronoun;
     }
 
 }

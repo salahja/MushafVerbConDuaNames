@@ -16,6 +16,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -31,7 +32,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
-import androidx.preference.PreferenceManager;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -80,6 +81,17 @@ public class GridImageAct extends BaseActivity {
         toolbar = (Toolbar) findViewById(R.id.my_action_bar);
         View mToolbarShadow = findViewById(R.id.view_toolbar_shadow);
         setSupportActionBar(toolbar);
+        final int color = ContextCompat.getColor(this, R.color.color_background_overlay);
+        final int colorsurface = ContextCompat.getColor(this, R.color.DarkGoldenrod);
+        final int coloronbackground = ContextCompat.getColor(this, R.color.neutral0);
+        SharedPreferences shared = PreferenceManager.getDefaultSharedPreferences(QuranGrammarApplication.getContext());
+        String isNightmode = shared.getString("theme", "dark");
+        if (isNightmode.equals("dark") || isNightmode.equals("blue")) {
+            toolbar.setBackgroundColor(coloronbackground);
+            toolbar.setBackgroundColor(color);
+        } else {
+            toolbar.setBackgroundColor(colorsurface);
+        }
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         RecyclerView recyclerView = findViewById(R.id.duaListView);

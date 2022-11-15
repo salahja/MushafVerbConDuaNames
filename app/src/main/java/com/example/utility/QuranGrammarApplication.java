@@ -23,8 +23,6 @@ import android.content.res.Configuration;
 
 import androidx.preference.PreferenceManager;
 
-
-
 import java.util.Locale;
 
 import leakcanary.LeakCanary;
@@ -32,40 +30,29 @@ import leakcanary.LeakCanary;
 public class QuranGrammarApplication extends Application {
     private static Context appContext;
 
-
-    public void onCreate() {
-        super.onCreate();
-        LeakCanary.Config config = LeakCanary.getConfig();
-        if (appContext == null) {
-
-            appContext = this;
-        }
-        SharedPreferences sharedPreferences =
-                PreferenceManager.getDefaultSharedPreferences(this);
-      //  String theme = sharedPreferences.getString("theme", 1);
-            String themePref = sharedPreferences.getString("themepref", "white");
-
-      ThemeHelper.applyTheme(themePref);
-    }
-
-
     public static Context getContext() {
         return appContext;
     }
 
     public static Context getInstance() {
-
         //Check application language
         Locale locale;
-
-
         Configuration config = new Configuration();
-
-
         appContext.getResources().updateConfiguration(config, appContext.getResources().getDisplayMetrics());
-
         return appContext;
     }
 
+    public void onCreate() {
+        super.onCreate();
+        LeakCanary.Config config = LeakCanary.getConfig();
+        if (appContext == null) {
+            appContext = this;
+        }
+        SharedPreferences sharedPreferences =
+                PreferenceManager.getDefaultSharedPreferences(this);
+        //  String theme = sharedPreferences.getString("theme", 1);
+        String themePref = sharedPreferences.getString("themepref", "white");
+        ThemeHelper.applyTheme(themePref);
+    }
 
 }

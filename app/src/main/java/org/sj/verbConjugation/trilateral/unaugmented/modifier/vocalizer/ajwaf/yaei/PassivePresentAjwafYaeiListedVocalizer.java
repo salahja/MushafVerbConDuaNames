@@ -1,9 +1,10 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.yaei;
 
-import java.util.List;
-import java.util.LinkedList;
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
 import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.AbstractAjwafYaeiListedVocalizer;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -18,14 +19,14 @@ import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.Ab
  * @version 1.0
  */
 public class PassivePresentAjwafYaeiListedVocalizer extends AbstractAjwafYaeiListedVocalizer {
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public PassivePresentAjwafYaeiListedVocalizer() {
-        substitutions.add(new ExpressionInfixSubstitution("ْيَC3ُ","َاC3ُ"));// EX: (يُباع، يُبات، لن تُباتوا)
-        substitutions.add(new ExpressionInfixSubstitution("ْيَC3ِ","َاC3ِ"));// EX: (تُباعِينَ، تُباتين، لن تُباتي )
-        substitutions.add(new ExpressionInfixSubstitution("ْيَC3َ","َاC3َ"));// EX: (تُباعان، تُباتان، لن يُباتَ، يُباتَنَّ)
-        substitutions.add(new ExpressionInfixSubstitution("ْيَC3ْ","َC3ْ"));// EX: (يُبَعْنَ، يُبَتْنَ، لم تُبَتْ)
-        substitutions.add(new ExpressionInfixSubstitution("ْيَC3ّ","َC3ّ"));// EX: (أنتن تُلَنَّ، هن يُلَنَّ)
+        substitutions.add(new ExpressionInfixSubstitution("ْيَC3ُ", "َاC3ُ"));// EX: (يُباع، يُبات، لن تُباتوا)
+        substitutions.add(new ExpressionInfixSubstitution("ْيَC3ِ", "َاC3ِ"));// EX: (تُباعِينَ، تُباتين، لن تُباتي )
+        substitutions.add(new ExpressionInfixSubstitution("ْيَC3َ", "َاC3َ"));// EX: (تُباعان، تُباتان، لن يُباتَ، يُباتَنَّ)
+        substitutions.add(new ExpressionInfixSubstitution("ْيَC3ْ", "َC3ْ"));// EX: (يُبَعْنَ، يُبَتْنَ، لم تُبَتْ)
+        substitutions.add(new ExpressionInfixSubstitution("ْيَC3ّ", "َC3ّ"));// EX: (أنتن تُلَنَّ، هن يُلَنَّ)
     }
 
 

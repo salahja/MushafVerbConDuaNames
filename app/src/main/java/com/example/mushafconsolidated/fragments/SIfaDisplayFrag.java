@@ -1,6 +1,5 @@
 package com.example.mushafconsolidated.fragments;
 
-
 import static com.example.Constant.BYELLOW;
 
 import android.os.Build;
@@ -27,23 +26,17 @@ import com.example.mushafconsolidated.intrface.OnItemClickListener;
 
 import java.util.ArrayList;
 
-
 public class SIfaDisplayFrag extends Fragment {
-
-
     private RecyclerView recyclerView;
     //   private RecyclerView.Adapter ParentAdapter;
     private SifaAdapter sifaAdapter;
     //  SurahDisplayAdapter ParentAdapter;
-
     private OnItemClickListener mItemClickListener;
     private RecyclerView.LayoutManager layoutManager;
-
 
     public SIfaDisplayFrag() {
         // Required empty public constructor
     }
-
 
     /**
      * Use this factory method to create a new instance of
@@ -55,7 +48,6 @@ public class SIfaDisplayFrag extends Fragment {
     public static SIfaDisplayFrag newInstance() {
         SIfaDisplayFrag fragment = new SIfaDisplayFrag();
         Bundle args = new Bundle();
-
         fragment.setArguments(args);
         return fragment;
     }
@@ -70,56 +62,38 @@ public class SIfaDisplayFrag extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
         View view = inflater.inflate(R.layout.reccylerview, container, false);
         Utils utils = new Utils(getContext());
-
-
         final ArrayList<SifaPOJO> sifabySurahAll = utils.getMousufSIfa();
-
         for (SifaPOJO sifa : sifabySurahAll) {
             SpannableStringBuilder str = new SpannableStringBuilder(sifa.getQurantext());
             try {
                 str.setSpan(new ForegroundColorSpan(BYELLOW), sifa.getStartindex(), sifa.getEndindex(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 sifa.setSpannedverse(str);
             } catch (IndexOutOfBoundsException e) {
-
                 System.out.println(e.getMessage());
                 System.out.println(sifa.getSurah() + "," + sifa.getAyah() + "," + sifa.getWordno());
             }
 
         }
-
-
         setRecyclerView(view.findViewById(R.id.RecyclerView));
         getRecyclerView().setHasFixedSize(true);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-
-
         getRecyclerView().setLayoutManager(getLayoutManager());
         setSifaAdapter(new SifaAdapter(getContext(), sifabySurahAll));
-
-
         getRecyclerView().setAdapter(getSifaAdapter());
         return view;
     }
 
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-
         getRecyclerView().setAdapter(getSifaAdapter());
-
         setRecyclerView(view.findViewById(R.id.RecyclerView));
         getRecyclerView().setHasFixedSize(true);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-
         Utils utils = new Utils(getContext());
         final ArrayList<SifaPOJO> all = utils.getMousufSIfa();
-
         for (SifaPOJO sifa : all) {
             SpannableStringBuilder str = new SpannableStringBuilder(sifa.getQurantext());
             try {
@@ -131,24 +105,15 @@ public class SIfaDisplayFrag extends Fragment {
             }
 
         }
-
-
         setRecyclerView(view.findViewById(R.id.RecyclerView));
         getRecyclerView().setHasFixedSize(true);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-
-
         getRecyclerView().setLayoutManager(getLayoutManager());
         setSifaAdapter(new SifaAdapter(getContext(), all));
-
-
         getRecyclerView().setAdapter(getSifaAdapter());
-
         getRecyclerView().setLayoutManager(getLayoutManager());
 
-
     }
-
 
     public RecyclerView getRecyclerView() {
         return recyclerView;
@@ -181,6 +146,5 @@ public class SIfaDisplayFrag extends Fragment {
     public void setLayoutManager(RecyclerView.LayoutManager layoutManager) {
         this.layoutManager = layoutManager;
     }
-
 
 }

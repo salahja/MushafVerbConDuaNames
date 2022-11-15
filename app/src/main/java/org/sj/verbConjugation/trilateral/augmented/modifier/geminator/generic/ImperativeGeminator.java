@@ -1,15 +1,16 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.geminator.generic;
 
-import java.util.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionSuffixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 
+import java.util.LinkedList;
+import java.util.List;
 
 public class ImperativeGeminator extends SubstitutionsApplier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public ImperativeGeminator() {
-
         substitutions.add(new ExpressionInfixSubstitution("C1ْC3ِC3ُ", "C1ِC3ُّ")); // EX: (أَتِمُّوا)
         substitutions.add(new ExpressionInfixSubstitution("C1ْC3ِC3َ", "C1ِC3َّ")); // EX: (أَتِمَّا)
         substitutions.add(new ExpressionInfixSubstitution("C1ْC3ِC3ِ", "C1ِC3ِّ")); // EX: (أَتِمِّي)
@@ -19,10 +20,9 @@ public class ImperativeGeminator extends SubstitutionsApplier {
         substitutions.add(new ExpressionInfixSubstitution("C3ِC3ِ", "C3ِّ")); // EX: (انْقَضِّي، حاجِّي)
         substitutions.add(new ExpressionSuffixSubstitution("C3ِC3ْ", "C3َّ")); // EX: (انْقَضَّ، حاجَّ)
         substitutions.add(new ExpressionSuffixSubstitution("اC3َC3ْ", "اC3َّ")); // EX: (تآجَّ)
-        substitutions.add(new ExpressionInfixSubstitution("اC3َC3ْن","اC3َC3ْن"));// EX: (تآجَجْنَ)
+        substitutions.add(new ExpressionInfixSubstitution("اC3َC3ْن", "اC3َC3ْن"));// EX: (تآجَجْنَ)
         substitutions.add(new ExpressionInfixSubstitution("اC3َC3", "اC3ّ")); // EX: (تآجُّوا، تآجَّا، تآجِّي)
     }
-
 
     public List getSubstitutions() {
         return substitutions;

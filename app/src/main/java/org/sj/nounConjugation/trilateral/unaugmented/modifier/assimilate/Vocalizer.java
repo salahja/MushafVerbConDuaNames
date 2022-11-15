@@ -1,10 +1,18 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.assimilate;
 
-import java.util.*;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.assimilate.vocalizer.Vocalizer1;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.assimilate.vocalizer.Vocalizer2;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.assimilate.vocalizer.Vocalizer31;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.assimilate.vocalizer.Vocalizer32;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.assimilate.vocalizer.Vocalizer41;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.assimilate.vocalizer.Vocalizer42;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.assimilate.vocalizer.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -19,7 +27,7 @@ import org.sj.verbConjugation.trilateral.Substitution.*;
  * @version 1.0
  */
 public class Vocalizer {
-    private List modifiers = new LinkedList();
+    private final List modifiers = new LinkedList();
 
     public Vocalizer() {
         modifiers.add(new Vocalizer1());

@@ -80,23 +80,19 @@ import sj.hisnul.entity.hcategory;
 import sj.hisnul.entity.hduadetails;
 import sj.hisnul.entity.hduanames;
 
-
 //@Database(entities= {VerseEntit.class,ErabEntity.class,ChaptersAnaEntity.class},version= 1)
-@Database(entities = {hcategory.class, hduadetails.class, hduanames.class,surahsummary.class,quranexplorer.class,AllahNamesDetails.class,AllahNames.class,DuaGroup.class, DuaDetails.class,   MafoolMutlaqEnt.class,BadalErabNotesEnt.class, HalEnt.class,MafoolBihi.class,LiajlihiEnt.class,TameezEnt.class,GrammarRules.class,hanslexicon.class, qurandictionary.class,lanelexicon.class, lughat.class,NewNasbEntity.class,NewShartEntity.class, NewKanaEntity.class, NewMudhafEntity.class,   SifaEntity.class,   wbwentity.class,NounCorpus.class,VerbCorpus.class,QuranEntity.class, CorpusEntity.class,BookMarks.class,      ChaptersAnaEntity.class }, version = 1)
-
+@Database(entities = {hcategory.class, hduadetails.class, hduanames.class, surahsummary.class, quranexplorer.class, AllahNamesDetails.class, AllahNames.class, DuaGroup.class, DuaDetails.class, MafoolMutlaqEnt.class, BadalErabNotesEnt.class, HalEnt.class, MafoolBihi.class, LiajlihiEnt.class, TameezEnt.class, GrammarRules.class, hanslexicon.class, qurandictionary.class, lanelexicon.class, lughat.class, NewNasbEntity.class, NewShartEntity.class, NewKanaEntity.class, NewMudhafEntity.class, SifaEntity.class, wbwentity.class, NounCorpus.class, VerbCorpus.class, QuranEntity.class, CorpusEntity.class, BookMarks.class, ChaptersAnaEntity.class}, version = 1)
 public abstract class QuranAppDatabase extends RoomDatabase {
-
-    public static QuranAppDatabase quranAppDatabaseInstance;
-    public static QuranAppDatabase quranAppDatabaseInstanceasset;
     //  public static Builder<QuranAppDatabase> quranAppDatabaseInstance;
     private static final RoomDatabase.Callback initialCallBack = new RoomDatabase.Callback() {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
-
             //  new InitialAsyncTask(quranAppDatabaseInstance).execute();
         }
     };
+    public static QuranAppDatabase quranAppDatabaseInstance;
+    public static QuranAppDatabase quranAppDatabaseInstanceasset;
 
     public static synchronized QuranAppDatabase getInstance() {
         return getInstance();
@@ -104,8 +100,7 @@ public abstract class QuranAppDatabase extends RoomDatabase {
 
     public static synchronized QuranAppDatabase getInstance(Context context) {
         if (null == quranAppDatabaseInstance) {
-
-            File mainDatabase= new File(FILEPATH + "/"+DATABASENAME);
+            File mainDatabase = new File(FILEPATH + "/" + DATABASENAME);
 
 
 
@@ -128,77 +123,37 @@ public abstract class QuranAppDatabase extends RoomDatabase {
               //   .openHelperFactory(factory)
                      .build();
  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            quranAppDatabaseInstance=     Room.databaseBuilder(context, QuranAppDatabase.class, "qurangrammar.db")
-
+            quranAppDatabaseInstance = Room.databaseBuilder(context, QuranAppDatabase.class, "qurangrammar.db")
                     .createFromFile(mainDatabase)
                     //          .fallbackToDestructiveMigration()
                     .addCallback(initialCallBack)
                     .allowMainThreadQueries()
                     .build();
 
-
-
-
-
-
-
-
-
-
         }
-    return quranAppDatabaseInstance;
- // return quranAppDatabaseInstanceasset;
+        return quranAppDatabaseInstance;
+        // return quranAppDatabaseInstanceasset;
     }
 
-
     public abstract AnaQuranChapterDao AnaQuranChapterDao();
-
-
-
-
-
-
-
-
-
-
-
-
-
     // public abstract WordbywordPojoDao WordbywordPojoDao();
-
 
     public abstract BookMarkDao BookMarkDao();
 
-
-
     public abstract RawDao RawDao();
+
     public abstract CorpusExpandedDao CorpusExpandedDao();
 
     public abstract QuranDao QuranDao();
+
     public abstract VerbCorpusDao VerbCorpusDao();
+
     public abstract NounCorpusDao NounCorpusDao();
+
     public abstract wbwDao wbwDao();
 
-
-
-
-    ;
     public abstract SifaDao SifaDao();
+
     //  public abstract ShartDAO ShartDAO();
     public abstract NewShartDAO NewShartDAO();
     //  public abstract KanaDao KanaDao();
@@ -207,29 +162,47 @@ public abstract class QuranAppDatabase extends RoomDatabase {
     public abstract NewNasbDao NewNasbDao();
 
     public abstract NewMudhafDao NewMudhafDao();
+
     public abstract NewKanaDao NewKanaDao();
+
     public abstract LughatDao LughatDao();
+
     public abstract LaneDao LaneDao();
+
     public abstract HansDao HansDao();
+
     public abstract qurandictionaryDao qurandictionaryDao();
+
     public abstract grammarRulesDao grammarRulesDao();
+
     public abstract tameezDao tameezDao();
+
     public abstract liajlihiDao liajlihiDao();
+
     public abstract MafoolBihiDao MafoolBihiDao();
 
     public abstract HaliyaDao HaliyaDao();
+
     public abstract BadalErabNotesDao BadalErabNotesDao();
+
     public abstract MafoolMutlaqEntDao MafoolMutlaqEntDao();
+
     public abstract DuaDao DuaDao();
+
     public abstract DuaGroupDao DuaGroupDao();
 
-   public abstract NamesDao NamesDao();
-   public abstract NamesDetailsDao NamesDetailsDao();
+    public abstract NamesDao NamesDao();
+
+    public abstract NamesDetailsDao NamesDetailsDao();
+
     public abstract QuranExplorerDao QuranExplorerDao();
+
     public abstract surahsummaryDao surahsummaryDao();
 
-    public  abstract hDuaItemDao hDuaItemDao();
-    public  abstract hDuaNamesDao hDuaNamesDao();
-    public  abstract hDuaCategoryDao hDuaCategoryDao();
+    public abstract hDuaItemDao hDuaItemDao();
+
+    public abstract hDuaNamesDao hDuaNamesDao();
+
+    public abstract hDuaCategoryDao hDuaCategoryDao();
 
 }

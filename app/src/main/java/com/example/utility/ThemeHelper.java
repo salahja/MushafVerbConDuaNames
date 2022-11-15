@@ -26,55 +26,45 @@ import com.example.mushafconsolidated.R;
 public class ThemeHelper {
     public static final String LIGHT_THEME = "light";
     public static final String DARK_THEME = "dark";
-
-   // private static int sCurrentTheme = LIGHT_THEME;
-
-    public static final String  DARK_BLUE = "blue";
+    // private static int sCurrentTheme = LIGHT_THEME;
+    public static final String DARK_BLUE = "blue";
     public static final String GREEN_MODE = "green";
     public static final String BROWN_MODE = "brown";
- //   public static final String LIGHT_MODE = "light";
-  //  public static final String DARK_MODE = "dark";
-  //  public static final String DARK_BLUE = "blue";
-   // public static final String GREEN_MODE = "green";
-   // public static final String DEFAULT_MODE = "default";
-   // public static final String BROWN_MODE="greem";
+    //   public static final String LIGHT_MODE = "light";
+    //  public static final String DARK_MODE = "dark";
+    //  public static final String DARK_BLUE = "blue";
+    // public static final String GREEN_MODE = "green";
+    // public static final String DEFAULT_MODE = "default";
+    // public static final String BROWN_MODE="greem";
 
     public static void applyTheme(@NonNull String themePref) {
         switch (themePref) {
             case LIGHT_THEME: {
                 //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                 QuranGrammarApplication.getContext().setTheme(R.style.Theme_White);
-                  AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                 break;
             }
             case DARK_THEME: {
-               // AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                // AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                 QuranGrammarApplication.getContext().setTheme(R.style.Theme_Black);
-            //    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                //    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                 break;
             }
             case DARK_BLUE: {
                 QuranGrammarApplication.getContext().setTheme(R.style.Theme_DarkBlue);
-           //     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                //     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                 break;
             }
-
             case BROWN_MODE: {
-
                 QuranGrammarApplication.getContext().setTheme(R.style.Theme_Green);
-break;
-            }
-
-                case GREEN_MODE: {
-                    QuranGrammarApplication.getContext().setTheme(R.style.Theme_Brown);
-
-
-
-              //  AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                 break;
             }
-
-
+            case GREEN_MODE: {
+                QuranGrammarApplication.getContext().setTheme(R.style.Theme_Brown);
+                //  AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                break;
+            }
             default: {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);

@@ -17,7 +17,6 @@ package org.sj.conjugator.fragments;
  * limitations under the License.
  */
 
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
@@ -33,11 +32,8 @@ import com.example.utility.QuranGrammarApplication;
 
 import org.sj.conjugator.utilities.ThemeHelper;
 
-
 public class SettingsFragmentVerb extends PreferenceFragmentCompat {
-
     public static final String TAG = "SettingsFragmentTag";
-
     private Drawable mDivider;
 
     public static void setArabicTextFontSize(Context paramContext, String paramString) {
@@ -49,7 +45,6 @@ public class SettingsFragmentVerb extends PreferenceFragmentCompat {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.verbpreferences, rootKey);
-
         ListPreference themePreference = findPreference("themePref");
         if (themePreference != null) {
             themePreference.setOnPreferenceChangeListener(
@@ -57,41 +52,28 @@ public class SettingsFragmentVerb extends PreferenceFragmentCompat {
                         @Override
                         public boolean onPreferenceChange(Preference preference, Object newValue) {
                             String themeOption = (String) newValue;
-
                             ThemeHelper.applyTheme(themeOption);
                             return true;
                         }
                     });
         }
-
         Preference selectionPreference = findPreference("Accusative");
         if (selectionPreference != null) {
-
             selectionPreference.setOnPreferenceChangeListener(
                     new Preference.OnPreferenceChangeListener() {
                         @Override
                         public boolean onPreferenceChange(Preference preference, Object newValue) {
-                            boolean selectionOption =  (boolean) newValue;
+                            boolean selectionOption = (boolean) newValue;
                             SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(QuranGrammarApplication.getContext()).edit();
-                         //   SharedPreferences.Editor editor =  getContext().getSharedPreferences("properties", 0).edit();
+                            //   SharedPreferences.Editor editor =  getContext().getSharedPreferences("properties", 0).edit();
                             editor.putBoolean("Accusative", selectionOption);
-                            editor.putBoolean("Nominative",false);
-
+                            editor.putBoolean("Nominative", false);
                             editor.apply();
-
-
-
                             return true;
                         }
                     });
         }
 
-
-
-
-
-
     }
-
 
 }

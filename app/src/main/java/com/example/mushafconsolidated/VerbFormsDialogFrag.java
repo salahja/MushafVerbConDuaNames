@@ -1,31 +1,14 @@
 package com.example.mushafconsolidated;
 
-import static androidx.webkit.WebSettingsCompat.DARK_STRATEGY_USER_AGENT_DARKENING_ONLY;
-import static androidx.webkit.WebSettingsCompat.FORCE_DARK_AUTO;
-import static androidx.webkit.WebSettingsCompat.FORCE_DARK_ON;
-
-import static com.example.Constant.QURAN_VERB_WAZAN;
-
-import android.content.res.Resources;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.webkit.WebSettingsCompat;
-import androidx.webkit.WebViewFeature;
 
 import com.example.mushafconsolidated.Entities.GrammarRules;
-import com.example.mushafconsolidated.intrface.OnItemClickListener;
 import com.example.utility.QuranGrammarApplication;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
@@ -40,12 +23,8 @@ import java.util.ArrayList;
  */
 public class VerbFormsDialogFrag extends BottomSheetDialogFragment {
     //   public class VerbFormsDialogFrag extends Fragment {
-
     private static final String ARG_OPTIONS_DATA = "item_count";
-
-
     private String form;
-
 
     public static VerbFormsDialogFrag newInstance(String[] data) {
         final VerbFormsDialogFrag fragment = new VerbFormsDialogFrag();
@@ -55,8 +34,6 @@ public class VerbFormsDialogFrag extends BottomSheetDialogFragment {
         return fragment;
 
     }
-
-
 
     @Nullable
     @Override
@@ -68,16 +45,14 @@ public class VerbFormsDialogFrag extends BottomSheetDialogFragment {
         String[] stringArray = bundle.getStringArray(ARG_OPTIONS_DATA);
         form = (stringArray[0]);
         WebView wv = (WebView) view.findViewById(R.id.webview);
-
         Utils utils = new Utils(QuranGrammarApplication.getContext());
         String formstr = "Form";
         formstr = formstr.concat(" ").concat(form);
         ArrayList<GrammarRules> list = utils.getGrammarRulesByRules(formstr);
-        if(!list.isEmpty()) {
-            wv.loadDataWithBaseURL(null, list.get(0).getDetailsrules().toString(), "text/html", "utf-8", null);
+        if (!list.isEmpty()) {
+            wv.loadDataWithBaseURL(null, list.get(0).getDetailsrules(), "text/html", "utf-8", null);
         }
         return view;
     }
-
 
 }

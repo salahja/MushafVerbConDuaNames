@@ -1,8 +1,8 @@
 package org.sj.nounConjugation.trilateral.unaugmented.instrumental.nonstandard;
 
-import org.sj.verbConjugation.trilateral.unaugmented.*;
-import org.sj.verbConjugation.util.*;
-import org.sj.nounConjugation.trilateral.unaugmented.instrumental.*;
+import org.sj.nounConjugation.trilateral.unaugmented.instrumental.NonStandardInstrumentalNounFormula;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+import org.sj.verbConjugation.util.ArabCharUtil;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -17,7 +17,6 @@ import org.sj.nounConjugation.trilateral.unaugmented.instrumental.*;
  * @version 1.0
  */
 public class NounFormula5 extends NonStandardInstrumentalNounFormula {
-
     public NounFormula5(UnaugmentedTrilateralRoot root, String suffixNo) {
         super(root, suffixNo);
     }
@@ -28,18 +27,17 @@ public class NounFormula5 extends NonStandardInstrumentalNounFormula {
 
     public String form() {
         switch (suffixNo) {
-        case 1:
-        case 3:
-        case 7:
-        case 9:
-        case 13:
-        case 15:
-        case 6:
-        case 12:
-        case 18:
-            return ArabCharUtil.MEEM + ArabCharUtil.DAMMA + root.getC1() + ArabCharUtil.FATHA + root.getC2() + ArabCharUtil.SHADDA + ArabCharUtil.KASRA + root.getC3() + suffix;
+            case 1:
+            case 3:
+            case 7:
+            case 9:
+            case 13:
+            case 15:
+            case 6:
+            case 12:
+            case 18:
+                return ArabCharUtil.MEEM + ArabCharUtil.DAMMA + root.getC1() + ArabCharUtil.FATHA + root.getC2() + ArabCharUtil.SHADDA + ArabCharUtil.KASRA + root.getC3() + suffix;
         }
-
         return "";
     }
 
@@ -50,6 +48,5 @@ public class NounFormula5 extends NonStandardInstrumentalNounFormula {
     public String getSymbol() {
         return "I";
     }
-
 
 }

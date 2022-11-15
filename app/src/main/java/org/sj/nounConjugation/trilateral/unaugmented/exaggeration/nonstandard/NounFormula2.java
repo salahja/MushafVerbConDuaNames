@@ -1,8 +1,8 @@
 package org.sj.nounConjugation.trilateral.unaugmented.exaggeration.nonstandard;
 
-import org.sj.verbConjugation.trilateral.unaugmented.*;
-import org.sj.verbConjugation.util.*;
 import org.sj.nounConjugation.trilateral.unaugmented.exaggeration.NonStandardExaggerationNounFormula;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+import org.sj.verbConjugation.util.ArabCharUtil;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -16,8 +16,7 @@ import org.sj.nounConjugation.trilateral.unaugmented.exaggeration.NonStandardExa
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
-public class NounFormula2 extends NonStandardExaggerationNounFormula{
-
+public class NounFormula2 extends NonStandardExaggerationNounFormula {
     public NounFormula2(UnaugmentedTrilateralRoot root, String suffixNo) {
         super(root, suffixNo);
     }
@@ -28,15 +27,14 @@ public class NounFormula2 extends NonStandardExaggerationNounFormula{
 
     public String form() {
         switch (suffixNo) {
-        case 1:
-        case 3:
-        case 7:
-        case 9:
-        case 13:
-        case 15:
-            return ArabCharUtil.MEEM+ArabCharUtil.KASRA+root.getC1()+ArabCharUtil.SKOON+root.getC2()+ArabCharUtil.FATHA+ArabCharUtil.Aleph+root.getC3()+suffix;
+            case 1:
+            case 3:
+            case 7:
+            case 9:
+            case 13:
+            case 15:
+                return ArabCharUtil.MEEM + ArabCharUtil.KASRA + root.getC1() + ArabCharUtil.SKOON + root.getC2() + ArabCharUtil.FATHA + ArabCharUtil.Aleph + root.getC3() + suffix;
         }
-
         return "";
     }
 
@@ -47,6 +45,5 @@ public class NounFormula2 extends NonStandardExaggerationNounFormula{
     public String getSymbol() {
         return "C";
     }
-
 
 }

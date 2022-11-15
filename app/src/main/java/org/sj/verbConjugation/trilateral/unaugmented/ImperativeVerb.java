@@ -1,6 +1,6 @@
 package org.sj.verbConjugation.trilateral.unaugmented;
 
-import org.sj.verbConjugation.util.*;
+import org.sj.verbConjugation.util.ArabCharUtil;
 
 
 /**
@@ -9,27 +9,25 @@ import org.sj.verbConjugation.util.*;
  * <p>Description: برنامج التصريف</p>
  * <p>Copyright: Copyright (c) 2006</p>
  * <p>Company: </p>
+ *
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
 public class ImperativeVerb {
-    private UnaugmentedTrilateralRoot root;
-
     //حرف الأمر
     private final static String ci = ArabCharUtil.Aleph;
-
     //حركة فاء الفعل وهي السكون دائماً
     private static final String dim1 = ArabCharUtil.SKOON;
-
+    private final UnaugmentedTrilateralRoot root;
     //حركة عين الفعل حسب باب التصريف
     //وهي نفسها في المضارع
-    private String dpr2;
+    private final String dpr2;
 
     //حركة لام الفعل حسب الضمير
-    private String lastDim;
+    private final String lastDim;
 
     //ضمير الرفع المتصل
-    private String connectedPronoun;
+    private final String connectedPronoun;
 
     public ImperativeVerb(UnaugmentedTrilateralRoot root, String dpr2, String lastDim, String connectedPronoun) {
         this.root = root;
@@ -59,7 +57,7 @@ public class ImperativeVerb {
     }
 
     public String toString() {
-        return ci+root.getC1()+dim1+root.getC2()+dpr2+root.getC3()+lastDim+connectedPronoun;
+        return ci + root.getC1() + dim1 + root.getC2() + dpr2 + root.getC3() + lastDim + connectedPronoun;
     }
 
 }

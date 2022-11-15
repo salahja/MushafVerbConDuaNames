@@ -1,14 +1,13 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.hamza.ein.active;
 
-import java.util.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.augmented.modifier.hamza.ein.AbstractEinMahmouz;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.hamza.ein.*;
+import java.util.LinkedList;
+import java.util.List;
 
 public class PastMahmouz extends AbstractEinMahmouz {
-
-    private List substitutions = new LinkedList();
-
+    private final List substitutions = new LinkedList();
 
     public PastMahmouz() {
         substitutions.add(new InfixSubstitution("وْءَ", "وْءَ")); // EX: (اسْتَوْءَى)

@@ -1,6 +1,6 @@
 package org.sj.verbConjugation.trilateral.Substitution;
 
-import org.sj.verbConjugation.trilateral.*;
+import org.sj.verbConjugation.trilateral.TrilateralRoot;
 
 
 public abstract class Substitution {
@@ -15,6 +15,7 @@ public abstract class Substitution {
     /**
      * check wheather this Substitution cn be applied for this root and word (which generated form this root)
      * if ok the result will be used
+     *
      * @param word String
      * @return String
      */

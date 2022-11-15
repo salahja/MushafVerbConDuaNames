@@ -1,8 +1,9 @@
 package org.sj.nounConjugation.trilateral.unaugmented.elative;
 
-import java.util.*;
-import org.sj.nounConjugation.*;
-import org.sj.verbConjugation.util.*;
+import org.sj.nounConjugation.INounSuffixContainer;
+import org.sj.verbConjugation.util.ArabCharUtil;
+
+import java.util.ArrayList;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -16,23 +17,21 @@ import org.sj.verbConjugation.util.*;
  * @author Haytham Mohta\u00E6sseb Billah
  * @version 1.0
  */
-public class ElativeSuffixContainer implements INounSuffixContainer{
-    private static ElativeSuffixContainer instance = new ElativeSuffixContainer();
+public class ElativeSuffixContainer implements INounSuffixContainer {
+    private static final ElativeSuffixContainer instance = new ElativeSuffixContainer();
     //حالة المعرفة
-    private ArrayList definiteSuffixList = new ArrayList(18);
+    private final ArrayList definiteSuffixList = new ArrayList(18);
     //جدول تصريف اسم التفضيل المضاف إلى معرفة
-    private ArrayList annexedDefiniteSuffixList = new ArrayList(18);
-
+    private final ArrayList annexedDefiniteSuffixList = new ArrayList(18);
     // جدول تصريف اسم التفضيل المضاف إلى نكرة
-    private ArrayList annexedIndefiniteSuffixList = new ArrayList(18);
+    private final ArrayList annexedIndefiniteSuffixList = new ArrayList(18);
     //جدول تصريف اسم التفضيل غير المضاف
     //notAnnexedSuffixList is same as annexedIndefiniteSuffixList
-    private ArrayList notAnnexedSuffixList = new ArrayList(18);
-
+    private final ArrayList notAnnexedSuffixList = new ArrayList(18);
     //تكون لها قيمة عندما تكون الحالة هي معرفة
     private String prefix = "";
     //يمثل القائمة المختارة تبعاً للحالة
-    private ArrayList currentSuffixList = annexedIndefiniteSuffixList ;
+    private ArrayList currentSuffixList = annexedIndefiniteSuffixList;
 
     private ElativeSuffixContainer() {
         annexedIndefiniteSuffixList.add(ArabCharUtil.DAMMA);
@@ -53,7 +52,6 @@ public class ElativeSuffixContainer implements INounSuffixContainer{
         annexedIndefiniteSuffixList.add(ArabCharUtil.KASRA);
         annexedIndefiniteSuffixList.add(ArabCharUtil.KASRA);
         annexedIndefiniteSuffixList.add(ArabCharUtil.KASRA);
-
         definiteSuffixList.add("ُ");
         definiteSuffixList.add("َى");
         definiteSuffixList.add("َانِ");
@@ -72,8 +70,6 @@ public class ElativeSuffixContainer implements INounSuffixContainer{
         definiteSuffixList.add("َيَيْنِ");
         definiteSuffixList.add("ِينَ");
         definiteSuffixList.add("َيَاتِ");
-
-
         annexedDefiniteSuffixList.add(ArabCharUtil.DAMMA);
         annexedDefiniteSuffixList.add("َى");
         annexedDefiniteSuffixList.add("َا");
@@ -92,25 +88,28 @@ public class ElativeSuffixContainer implements INounSuffixContainer{
         annexedDefiniteSuffixList.add("َيَيْ");
         annexedDefiniteSuffixList.add("ِي");
         annexedDefiniteSuffixList.add("َيَاتِ");
+        notAnnexedSuffixList.add(ArabCharUtil.DAMMA);
+        notAnnexedSuffixList.add(ArabCharUtil.DAMMA);
+        notAnnexedSuffixList.add(ArabCharUtil.DAMMA);
+        notAnnexedSuffixList.add(ArabCharUtil.DAMMA);
+        notAnnexedSuffixList.add(ArabCharUtil.DAMMA);
+        notAnnexedSuffixList.add(ArabCharUtil.DAMMA);
+        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
+        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
+        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
+        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
+        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
+        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
+        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
+        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
+        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
+        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
+        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
+        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
+    }
 
-        notAnnexedSuffixList.add(ArabCharUtil.DAMMA);
-        notAnnexedSuffixList.add(ArabCharUtil.DAMMA);
-        notAnnexedSuffixList.add(ArabCharUtil.DAMMA);
-        notAnnexedSuffixList.add(ArabCharUtil.DAMMA);
-        notAnnexedSuffixList.add(ArabCharUtil.DAMMA);
-        notAnnexedSuffixList.add(ArabCharUtil.DAMMA);
-        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
-        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
-        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
-        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
-        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
-        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
-        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
-        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
-        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
-        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
-        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
-        notAnnexedSuffixList.add(ArabCharUtil.FATHA);
+    public static ElativeSuffixContainer getInstance() {
+        return instance;
     }
 
     /**
@@ -137,17 +136,12 @@ public class ElativeSuffixContainer implements INounSuffixContainer{
         currentSuffixList = notAnnexedSuffixList;
     }
 
-
     /**
      * اختيار المضاف إلى معرفة
      */
     public void selectAnnexedMode() {
         prefix = "";
         currentSuffixList = annexedDefiniteSuffixList;
-    }
-
-    public static ElativeSuffixContainer getInstance() {
-        return instance;
     }
 
     public String getPrefix() {

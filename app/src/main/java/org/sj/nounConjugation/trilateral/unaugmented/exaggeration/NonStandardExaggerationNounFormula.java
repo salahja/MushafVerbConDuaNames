@@ -1,6 +1,6 @@
 package org.sj.nounConjugation.trilateral.unaugmented.exaggeration;
 
-import org.sj.nounConjugation.*;
+import org.sj.nounConjugation.NounFormula;
 import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
 
 /**
@@ -25,6 +25,7 @@ public abstract class NonStandardExaggerationNounFormula extends NounFormula {
 
     /**
      * Every non standard instrumental has a symbol to be represented by
+     *
      * @return String
      */
     public abstract String getSymbol();

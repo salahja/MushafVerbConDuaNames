@@ -1,9 +1,10 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.hamza;
 
-import java.util.*;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.AbstractFaaMahmouz;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -21,9 +22,8 @@ public class FaaMahmouz extends AbstractFaaMahmouz {
     List substitutions = new LinkedList();
 
     public FaaMahmouz() {
-        substitutions.add(new InfixSubstitution("ءَا","آ"));// EX: (آكِلٌ)
+        substitutions.add(new InfixSubstitution("ءَا", "آ"));// EX: (آكِلٌ)
     }
-
 
     public List getSubstitutions() {
         return substitutions;

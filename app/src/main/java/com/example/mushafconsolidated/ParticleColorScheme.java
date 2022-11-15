@@ -1,23 +1,18 @@
 package com.example.mushafconsolidated;
 
-import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mushafconsolidated.intrface.OnItemClickListener;
@@ -35,12 +30,11 @@ import java.util.Map;
  * </pre>
  */
 public class ParticleColorScheme extends BottomSheetDialogFragment {
-
     // TODO: Customize parameter argument names
     private static final String ARG_OPTIONS_DATA = "item_count";
     OnItemClickListener mItemClickListener;
-    private ColorSchemeAdapter colorSchemeAdapter;
     TextView textView;
+    private ColorSchemeAdapter colorSchemeAdapter;
 
     // TODO: Customize parameters
     public static ParticleColorScheme newInstance(String[] data) {
@@ -51,34 +45,30 @@ public class ParticleColorScheme extends BottomSheetDialogFragment {
         return fragment;
 
     }
+
     public void SetOnItemClickListener(final OnItemClickListener mItemClickListener) {
         this.mItemClickListener = mItemClickListener;
     }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-
-
-
-
-
-       return inflater.inflate(R.layout.colorschemelayout, container, false);
-     //   return inflater.inflate(R.layout.quranFontselection, container, false);
+        return inflater.inflate(R.layout.colorschemelayout, container, false);
+        //   return inflater.inflate(R.layout.quranFontselection, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-
-      //  recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        //  recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         GridLayoutManager mLayoutManager = new GridLayoutManager(getActivity(), 2);
         // parentRecyclerView = view.findViewById(R.id.juzRecyclerView);
         RecyclerView recyclerView = view.findViewById(R.id.colorrecview);
         recyclerView.setLayoutManager(mLayoutManager);
         Map<String, ForegroundColorSpan> spanhash;
         spanhash = CorpusUtilityorig.getStringForegroundColorSpanMap();
-        textView =  view.findViewById(R.id.Colortv);
-        ArrayList<String> particle=new ArrayList();
+        textView = view.findViewById(R.id.Colortv);
+        ArrayList<String> particle = new ArrayList();
         particle.add("PN = \"Proper Noun(اسم علم)\",");
         particle.add("ADJ = \"Adjective(صفة)");
         particle.add("V =Verb(فعل)");
@@ -122,45 +112,30 @@ public class ParticleColorScheme extends BottomSheetDialogFragment {
         particle.add("SUR  	Surprise particle	(حرف فجاءة)");
         particle.add("VOC  	Vocative particle	(حرف نداء)");
         particle.add("INL  	Quranic initials(	(حروف مقطعة	");
-
-
-        ArrayList<String> details=new ArrayList<>();
-        String sample="بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ";
-
-      colorSchemeAdapter =new ColorSchemeAdapter(spanhash,particle);
-       recyclerView.setAdapter(colorSchemeAdapter);
-      colorSchemeAdapter.SetOnItemClickListener(new OnItemClickListener() {
-          @Override
-          public void onItemClick(View v, int position) {
-        //      int checkedRadioButtonId = textView.getCheckedRadioButtonId();
-              //Toast.makeText(getContext(), "", Toast.LENGTH_SHORT).show();
-          }
-      });
-
-
-
-
+        ArrayList<String> details = new ArrayList<>();
+        String sample = "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ";
+        colorSchemeAdapter = new ColorSchemeAdapter(spanhash, particle);
+        recyclerView.setAdapter(colorSchemeAdapter);
+        colorSchemeAdapter.SetOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+                //      int checkedRadioButtonId = textView.getCheckedRadioButtonId();
+                //Toast.makeText(getContext(), "", Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
     private class ViewHolder extends RecyclerView.ViewHolder
             implements View.OnClickListener {
-
         final TextView text;
-
-
 
         ViewHolder(LayoutInflater inflater, ViewGroup parent) {
             // TODO: Customize the item layout
-          //  super(inflater.inflate(R.layout.fragment_item_list_dialog_list_dialog_item, parent, false));
+            //  super(inflater.inflate(R.layout.fragment_item_list_dialog_list_dialog_item, parent, false));
             super(inflater.inflate(R.layout.coloradapter, parent, false));
-            text=itemView.findViewById(R.id.Colortv);
-
+            text = itemView.findViewById(R.id.Colortv);
             itemView.setOnClickListener(this);
-
-
-
-
 
         }
 
@@ -173,10 +148,9 @@ public class ParticleColorScheme extends BottomSheetDialogFragment {
     }
 
     private class ColorSchemeAdapter extends RecyclerView.Adapter<ViewHolder> {
-
-        private  ArrayList<String> particle;
-        private  String mItemCount;
-        private  Map<String, ForegroundColorSpan> spanhash;
+        private ArrayList<String> particle;
+        private String mItemCount;
+        private Map<String, ForegroundColorSpan> spanhash;
         private OnItemClickListener mItemClickListener;
 
         ColorSchemeAdapter(String itemCount) {
@@ -184,8 +158,8 @@ public class ParticleColorScheme extends BottomSheetDialogFragment {
         }
 
         public ColorSchemeAdapter(Map<String, ForegroundColorSpan> spanhash, ArrayList<String> particle) {
-            this.spanhash=spanhash;
-            this.particle=particle;
+            this.spanhash = spanhash;
+            this.particle = particle;
         }
 
         @NonNull
@@ -196,19 +170,17 @@ public class ParticleColorScheme extends BottomSheetDialogFragment {
 
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
-            String sample="بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ";
+            String sample = "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ";
             Typeface mequran = Typeface.createFromAsset(getContext().getAssets(), "me_quran.ttf");
             Typeface qalam = Typeface.createFromAsset(getContext().getAssets(), "AlQalam.ttf");
             Typeface amiri = Typeface.createFromAsset(getContext().getAssets(), "Pdms.ttf");
             String s = particle.get(position);
             String[] split = s.split("\\s");
-
             ForegroundColorSpan foregroundColorSpan = spanhash.get(split[0]);
-            SpannableString sp=new SpannableString(s);
-            sp.setSpan(foregroundColorSpan,       0,                   s.length(),           Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
+            SpannableString sp = new SpannableString(s);
+            sp.setSpan(foregroundColorSpan, 0, s.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             holder.text.setText(sp);
-
+            holder.text.setTextSize(20);
 
         }
 

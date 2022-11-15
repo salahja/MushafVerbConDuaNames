@@ -1,14 +1,13 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.geminator.generic;
 
-import java.util.*;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-
-
+import java.util.LinkedList;
+import java.util.List;
 
 public class PassivePastGeminator extends SubstitutionsApplier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public PassivePastGeminator() {
         substitutions.add(new ExpressionInfixSubstitution("ْC3ِC3َ", "ِC3َّ")); // EX: (أُحِبَّ،)
@@ -18,6 +17,7 @@ public class PassivePastGeminator extends SubstitutionsApplier {
         substitutions.add(new ExpressionInfixSubstitution("وC3ِC3َ", "وC3َّ")); // EX: (حُوجَّ، احْمُورَّ)
         substitutions.add(new ExpressionInfixSubstitution("وC3ِC3ُ", "وC3ُّ")); // EX: (حُوجُّوا، احْمُورُّوا)
     }
+
     public List getSubstitutions() {
         return substitutions;
     }

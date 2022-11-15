@@ -1,10 +1,16 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration;
 
-import java.util.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration.hamza.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
 import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration.hamza.EinMahmouz;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration.hamza.FaaMahmouz;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration.hamza.LamMahmouz;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration.hamza.NakesLafifMahmouz;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -19,9 +25,8 @@ import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
  * @version 1.0
  */
 public class Mahmouz {
-    private List modifiers = new LinkedList();
-
-    private NakesLafifMahmouz nakesLafifMahmouz = new NakesLafifMahmouz();
+    private final List modifiers = new LinkedList();
+    private final NakesLafifMahmouz nakesLafifMahmouz = new NakesLafifMahmouz();
 
     public Mahmouz() {
         modifiers.add(new FaaMahmouz());
@@ -41,9 +46,8 @@ public class Mahmouz {
         //apply that after the 3 before
         if (nakesLafifMahmouz.isApplied(conjResult))
             nakesLafifMahmouz.apply(conjResult.getFinalResult(), conjResult.getRoot());
-
         //الأفعال الثلاثية المجردة المهموزة الفاء والمهموزة اللام (وهي: أبأ، أثأ، أجأ، أزأ، أكأ)
         if (conjResult.getRoot().getC3() == 'ء')
-            ((SubstitutionsApplier)modifiers.get(2)).apply(conjResult.getFinalResult(), conjResult.getRoot());
+            ((SubstitutionsApplier) modifiers.get(2)).apply(conjResult.getFinalResult(), conjResult.getRoot());
     }
 }

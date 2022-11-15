@@ -1,11 +1,12 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple;
 
-import java.util.List;
-
 import org.sj.nounConjugation.NounLamAlefModifier;
 import org.sj.nounConjugation.NounSunLamModifier;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModifier;
 import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -21,15 +22,14 @@ import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
-public class ActiveParticipleModifier implements IUnaugmentedTrilateralNounModifier{
-    private Geminator geminator = new Geminator();
-    private Vocalizer vocalizer = new Vocalizer();
-    private Mahmouz mahmouz = new Mahmouz();
+public class ActiveParticipleModifier implements IUnaugmentedTrilateralNounModifier {
+    private static final ActiveParticipleModifier instance = new ActiveParticipleModifier();
+    private final Geminator geminator = new Geminator();
+    private final Vocalizer vocalizer = new Vocalizer();
+    private final Mahmouz mahmouz = new Mahmouz();
 
     private ActiveParticipleModifier() {
     }
-
-    private static ActiveParticipleModifier instance = new ActiveParticipleModifier();
 
     public static ActiveParticipleModifier getInstance() {
         return instance;

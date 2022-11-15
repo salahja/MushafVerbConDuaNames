@@ -1,28 +1,29 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.vocalizer.lafif.connected.active;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
-import org.sj.verbConjugation.trilateral.augmented.*;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
+import java.util.LinkedList;
+import java.util.List;
 
 public class Past2Vocalizer extends SubstitutionsApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public Past2Vocalizer() {
-        substitutions.add(new SuffixSubstitution("يَ","ى"));// EX: (أذْوَى، قَوَّى، داوى، انزوى، احتوى،تداوى، تقوَّى استهوى)
+        substitutions.add(new SuffixSubstitution("يَ", "ى"));// EX: (أذْوَى، قَوَّى، داوى، انزوى، احتوى،تداوى، تقوَّى استهوى)
         substitutions.add(new InfixSubstitution("يُو", "وْ")); // EX: (أذوَوْا، قَوَّوْا داوَوْا، انزَوَوْا، احتَوَوْا، تداوَوْا، تَقَوَّوْا، استهوَوْا)
         substitutions.add(new InfixSubstitution("يَت", "ت")); // EX: (أذوَتْ، قَوَّت داوَت، انزوتْ، احتوتْ، تداوتْ، تقوَّتْ، استهوتْ)
 
     }
 
-
     public List getSubstitutions() {
         return substitutions;
     }
+
     public boolean isApplied(MazeedConjugationResult mazeedConjugationResult) {
         int kov = mazeedConjugationResult.getKov();
         int formulaNo = mazeedConjugationResult.getFormulaNo();
@@ -39,7 +40,6 @@ public class Past2Vocalizer extends SubstitutionsApplier implements IAugmentedTr
                         case 9:
                             return true;
                     }
-
                 case 28:
                     switch (formulaNo) {
                         case 1:
@@ -56,7 +56,5 @@ public class Past2Vocalizer extends SubstitutionsApplier implements IAugmentedTr
         }
         return false;
     }
-
-
 
 }

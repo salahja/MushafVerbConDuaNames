@@ -19,7 +19,7 @@ public class UnaugmentedTrilateralRootTreeCreator {
     public UnaugmentedTrilateralRootTreeCreator() {
     }
 
-    public static UnaugmentedTrilateralRootTree buildXmlVerbTree(File xmlDiagramFile) throws Exception{
+    public static UnaugmentedTrilateralRootTree buildXmlVerbTree(File xmlDiagramFile) throws Exception {
      /*
         Digester digester = new Digester();
         digester.setValidating( false );
@@ -48,10 +48,9 @@ public class UnaugmentedTrilateralRootTreeCreator {
     public static void main(String[] args) {
         try {
             char c1 = 'ظ';
-            UnaugmentedTrilateralRootTree rootTree = buildXmlVerbTree(new File("c:/org.sj/"+c1+".xml"));
+            UnaugmentedTrilateralRootTree rootTree = buildXmlVerbTree(new File("c:/org.sj/" + c1 + ".xml"));
             ////System.out.println("done");
-        }
-        catch (Exception ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
     }

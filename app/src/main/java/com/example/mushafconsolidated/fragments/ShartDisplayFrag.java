@@ -1,6 +1,5 @@
 package com.example.mushafconsolidated.fragments;
 
-
 import static com.example.Constant.BYELLOW;
 import static com.example.Constant.GOLD;
 import static com.example.Constant.GREENDARK;
@@ -30,25 +29,18 @@ import com.example.mushafconsolidated.intrface.OnItemClickListener;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class ShartDisplayFrag extends Fragment {
-
-
     List<SpannableStringBuilder> kanaExpandableListDetail;
-
     private RecyclerView recyclerView;
     //   private RecyclerView.Adapter ParentAdapter;
     private ShartAdapter shartAdapter;
     //  SurahDisplayAdapter ParentAdapter;
-
     private OnItemClickListener mItemClickListener;
     private RecyclerView.LayoutManager layoutManager;
-
 
     public ShartDisplayFrag() {
         // Required empty public constructor
     }
-
 
     /**
      * Use this factory method to create a new instance of
@@ -60,7 +52,6 @@ public class ShartDisplayFrag extends Fragment {
     public static ShartDisplayFrag newInstance() {
         ShartDisplayFrag fragment = new ShartDisplayFrag();
         Bundle args = new Bundle();
-
         fragment.setArguments(args);
         return fragment;
     }
@@ -75,82 +66,51 @@ public class ShartDisplayFrag extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
         View view = inflater.inflate(R.layout.reccylerview, container, false);
         Utils utils = new Utils(getContext());
         //   ExpandableListData expandableListData=new ExpandableListData(chapterid,ayanumber,corpusSurahWord,utils);
         //   kanaExpandableListDetail=   expandableListData .getKana();
         final ArrayList<ShartPOJO> sifabySurahAll = utils.getSharts();
-
         for (ShartPOJO shart : sifabySurahAll) {
             SpannableStringBuilder spannableverse = new SpannableStringBuilder(shart.getQurantext());
             try {
-
-
                 spannableverse.setSpan(new ForegroundColorSpan(GOLD), shart.getIndexstart(), shart.getIndexend(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 shart.setSpannedverse(spannableverse);
-
-
                 spannableverse.setSpan(new ForegroundColorSpan(BYELLOW), shart.getShartindexstart(), shart.getShartindexend(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 shart.setSpannedverse(spannableverse);
-
-
                 spannableverse.setSpan(new ForegroundColorSpan(GREENDARK), shart.getJawabshartindexstart(), shart.getJawabshartindexend(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 shart.setSpannedverse(spannableverse);
-
 
             } catch (IndexOutOfBoundsException e) {
                 System.out.println(e.getMessage());
             }
 
-
         }
-
-
         setRecyclerView(view.findViewById(R.id.RecyclerView));
         getRecyclerView().setHasFixedSize(true);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-
-
         getRecyclerView().setLayoutManager(getLayoutManager());
         setShartAdapter(new ShartAdapter(getContext(), sifabySurahAll));
-
-
         getRecyclerView().setAdapter(getShartAdapter());
         return view;
     }
 
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-
         getRecyclerView().setAdapter(getShartAdapter());
-
         setRecyclerView(view.findViewById(R.id.RecyclerView));
         getRecyclerView().setHasFixedSize(true);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-
         Utils utils = new Utils(getContext());
         final ArrayList<ShartPOJO> all = utils.getSharts();
-
         for (ShartPOJO shart : all) {
             SpannableStringBuilder spannableverse = new SpannableStringBuilder(shart.getQurantext());
-
-
             try {
-
-
                 spannableverse.setSpan(new ForegroundColorSpan(GOLD), shart.getIndexstart(), shart.getIndexend(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 shart.setSpannedverse(spannableverse);
-
-
                 spannableverse.setSpan(new ForegroundColorSpan(BYELLOW), shart.getShartindexstart(), shart.getShartindexend(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 shart.setSpannedverse(spannableverse);
-
-
                 spannableverse.setSpan(new ForegroundColorSpan(GREENDARK), shart.getJawabshartindexstart(), shart.getJawabshartindexend(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 shart.setSpannedverse(spannableverse);
 
@@ -158,33 +118,19 @@ public class ShartDisplayFrag extends Fragment {
                 System.out.println(e.getMessage());
             }
 
-
         }
-
-
         setRecyclerView(view.findViewById(R.id.RecyclerView));
         getRecyclerView().setHasFixedSize(true);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-
-
         getRecyclerView().setLayoutManager(getLayoutManager());
         setShartAdapter(new ShartAdapter(getContext(), all));
-
-
         getRecyclerView().setAdapter(getShartAdapter());
-
         getRecyclerView().setLayoutManager(getLayoutManager());
-
-
         getShartAdapter().SetOnItemClickListener((v, position) -> {
             //   Toast.makeText(getActivity(), "clicked", Toast.LENGTH_SHORT).show();
-
-
         });
 
-
     }
-
 
     public RecyclerView getRecyclerView() {
         return recyclerView;
@@ -217,6 +163,5 @@ public class ShartDisplayFrag extends Fragment {
     public void setLayoutManager(RecyclerView.LayoutManager layoutManager) {
         this.layoutManager = layoutManager;
     }
-
 
 }

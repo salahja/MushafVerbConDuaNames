@@ -1,10 +1,12 @@
 package org.sj.nounConjugation.trilateral.augmented.modifier.substituter;
 
-import java.util.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import org.sj.nounConjugation.TrilateralNounSubstitutionApplier;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
 import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
-import org.sj.nounConjugation.TrilateralNounSubstitutionApplier;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -19,10 +21,10 @@ import org.sj.nounConjugation.TrilateralNounSubstitutionApplier;
  * @version 1.0
  */
 public class SpecialSubstituter2 extends TrilateralNounSubstitutionApplier implements IAugmentedTrilateralModifier {
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public SpecialSubstituter2() {
-        substitutions.add(new InfixSubstitution("يْت","تّ"));// EX: (اتِّسار،)
+        substitutions.add(new InfixSubstitution("يْت", "تّ"));// EX: (اتِّسار،)
     }
 
     public List getSubstitutions() {

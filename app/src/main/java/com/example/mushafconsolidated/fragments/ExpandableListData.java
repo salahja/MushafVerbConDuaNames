@@ -58,11 +58,10 @@ import java.util.LinkedHashMap;
 import java.util.List;
 
 public class ExpandableListData {
-
-
     int spanFlag = Spannable.SPAN_INCLUSIVE_INCLUSIVE; // this is what is changing
     int spanFlagExclusive = SPAN_EXCLUSIVE_EXCLUSIVE;
-    private int chapterid, ayanumber;
+    private final int chapterid;
+    private final int ayanumber;
     private ArrayList<NewCorpusExpandWbwPOJO> corpusSurahWord;
     private Utils utils;
     private String whichwbw;
@@ -80,13 +79,8 @@ public class ExpandableListData {
 
     }
 
-
     public LinkedHashMap<String, List<SpannableStringBuilder>> getData() {
-
-
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(QuranGrammarApplication.getContext());
-
-
         String whichtranslation = prefs.getString("selecttranslation", "en_sahih");
         whichwbw = prefs.getString("wbw", "en_sahih");
         LinkedHashMap<String, List<SpannableStringBuilder>> expandableListDetail = new LinkedHashMap<>();
@@ -99,21 +93,15 @@ public class ExpandableListData {
             translation.add(SpannableStringBuilder.valueOf(corpusSurahWord.get(0).getUr_junagarhi()));
 
         }
-
         List<SpannableStringBuilder> shartarray = new ArrayList<SpannableStringBuilder>();
-
         newSetShart(shartarray);
         List<SpannableStringBuilder> harfnasbarray = new ArrayList<>();
-
         setNewNasb(harfnasbarray);
         List<SpannableStringBuilder> mausoofsifaarray = new ArrayList<>();
         setMausoof(mausoofsifaarray);
         List<SpannableStringBuilder> mudhafarray = new ArrayList<>();
-
         setMudhaf(mudhafarray);
         List<SpannableStringBuilder> kanaarray = new ArrayList<>();
-
-
         newsetKana(kanaarray);
         List<SpannableStringBuilder> kana = new ArrayList<>();
         expandableListDetail.put("Verse", verse);
@@ -121,19 +109,15 @@ public class ExpandableListData {
         expandableListDetail.put("Conditional/جملة شرطية\"", shartarray);
         expandableListDetail.put("Accusative/ ", harfnasbarray);
         expandableListDetail.put("Verb kāna/كان واخواتها", kanaarray);
-
         expandableListDetail.put("Adjectival Phrases/مرکب توصیفی", mausoofsifaarray);
         expandableListDetail.put("Possessive/إضافَة", mudhafarray);
         return expandableListDetail;
     }
 
-
     private void setNewNasb(List<SpannableStringBuilder> hasbarray) {
-
         ArrayList<NewNasbEntity> kanaSurahAyahnew = utils.getHarfNasbIndSurahAyahSnew(chapterid, ayanumber);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(QuranGrammarApplication.getContext());
         String preferences = prefs.getString("theme", "dark");
-
         for (NewNasbEntity nasbEntity : kanaSurahAyahnew) {
             if (nasbEntity.getSurah() == 3 && nasbEntity.getAyah() == 118) {
                 //System.out.println("CHECK");
@@ -143,10 +127,8 @@ public class ExpandableListData {
             String khabarofverse = "";
             int indexstart = nasbEntity.getIndexstart();
             int indexend = nasbEntity.getIndexend();
-
             int ismstartindex = nasbEntity.getIsmstart();
             int ismendindex = nasbEntity.getIsmend();
-
             int khabarstartindex = nasbEntity.getKhabarstart();
             int khabarendindex = nasbEntity.getKhabarend();
             String quranverses = corpusSurahWord.get(0).getQurantext();
@@ -160,7 +142,6 @@ public class ExpandableListData {
             boolean d = isharfb && iskhabar;
             boolean b = isharfb && isism;
             boolean c = isharfb;
-
             int harfword = nasbEntity.getHarfwordno();
             int shartSword = nasbEntity.getIsmstartwordno();
             int shartEword = nasbEntity.getIsmendwordno();
@@ -168,16 +149,13 @@ public class ExpandableListData {
             int jawabEword = nasbEntity.getKhabarendwordno();
             StringBuilder sb = new StringBuilder();
             StringBuilder khabarsb = new StringBuilder();
-
             TextBorderSpan tb = new TextBorderSpan();
             boolean iscolored = false;
-
             SpannableStringBuilder spannable = new SpannableStringBuilder(quranverses);
             SpannableStringBuilder harfspannble = null;
             SpannableStringBuilder harfismspannable = null;
             SpannableStringBuilder khabarofversespannable = null;
             int connected = nasbEntity.getKhabarstart() - nasbEntity.getIndexend();
-
             if (a) {
                 int isismkhabarconnected = nasbEntity.getKhabarstart() - nasbEntity.getIsmend();
                 harfspannble = new SpannableStringBuilder(harfofverse);
@@ -186,7 +164,6 @@ public class ExpandableListData {
                 harfinnaspanDark = new ForegroundColorSpan(GOLD);
                 harfismspanDark = new ForegroundColorSpan(GREEN);
                 harfkhabarspanDark = new ForegroundColorSpan(CYAN);
-
                 if (preferences.equals("dark") || preferences.equals("blue")) {
                     harfinnaspanDark = new ForegroundColorSpan(GREEN);
                     harfismspanDark = new ForegroundColorSpan(BCYAN);
@@ -201,20 +178,16 @@ public class ExpandableListData {
                 harfismspannable.setSpan(harfismspanDark, 0, ismofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
                 khabarofversespannable.setSpan(harfkhabarspanDark, 0, khabarofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
                 if (nasbEntity.getIsmstart() > nasbEntity.getKhabarstart()) {
-
                     CharSequence charSequence = TextUtils.concat(harfspannble, " ", khabarofversespannable, " ", harfismspannable);
-
                     hasbarray.add(SpannableStringBuilder.valueOf(charSequence));
                 } else {
                     CharSequence charSequence = TextUtils.concat(harfspannble, " ", harfismspannable, " ", khabarofversespannable);
                     hasbarray.add(SpannableStringBuilder.valueOf(charSequence));
 
                 }
-
                 if (isismkhabarconnected == 1) {
                     ArrayList<wbwentity> list = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(),
                             corpusSurahWord.get(0).getAyah(), harfword, jawabEword);
-
                     for (wbwentity w : list) {
                         new StringBuilder();
                         StringBuilder temp;
@@ -231,7 +204,6 @@ public class ExpandableListData {
                         if (w.getWordno() == harfword) {
                             sb.append(temp).append(" ");
                         } else if (w.getWordno() >= shartSword && w.getWordno() <= shartEword) {
-
                             sb.append(temp).append(" ");
                         } else if (w.getWordno() >= jawbSword && w.getWordno() <= jawabEword) {
                             //     sb. append("... ");
@@ -241,20 +213,15 @@ public class ExpandableListData {
 
                     }
                     sb.append(".....");
-                    sb.append(khabarsb.toString());
-
-
+                    sb.append(khabarsb);
                     hasbarray.add(SpannableStringBuilder.valueOf(sb.toString()));
 
                 }
-
-
                 hasbarray.add(SpannableStringBuilder.valueOf(sb.toString()));
                 //  CharSequence first = TextUtils.concat(harfspannble," ",shartofverse);
             } else if (d) {
                 harfspannble = new SpannableStringBuilder(harfofverse);
                 khabarofversespannable = new SpannableStringBuilder(khabarofverse);
-
                 harfspannble.setSpan(harfshartspanDark, 0, harfofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
                 khabarofversespannable.setSpan(jawabshartspanDark, 0, khabarofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
                 CharSequence charSequence = TextUtils.concat(harfspannble, " ", khabarofversespannable);
@@ -276,9 +243,7 @@ public class ExpandableListData {
                         new StringBuilder();
                         StringBuilder temp;
                         temp = getSelectedTranslation(w);
-
                         sb.append(temp).append(" ");
-
 
                     }
                     hasbarray.add(SpannableStringBuilder.valueOf(sb.toString()));
@@ -290,7 +255,6 @@ public class ExpandableListData {
                     if (to == 0) {
                         to = from;
                     }
-
                     sb.append(list.get(0).getEn()).append(".......");
                     if (whichwbw.equals("en")) {
                         sb.append(list.get(0).getEn()).append(".......");
@@ -302,27 +266,21 @@ public class ExpandableListData {
                     } else if (whichwbw.equals("id")) {
                         sb.append(list.get(0).getId()).append(".......");
                     }
-
                     ArrayList<wbwentity> lists = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah(), from, to);
                     for (wbwentity w : lists) {
                         new StringBuilder();
                         StringBuilder temp;
                         temp = getSelectedTranslation(w);
-
                         sb.append(temp).append(" ");
 
-
                     }
-
                     hasbarray.add(SpannableStringBuilder.valueOf(sb.toString()));
                 }
-
 
             } else if (b) {
                 harfshartspanDark = new ForegroundColorSpan(GOLD);
                 shartspanDark = new ForegroundColorSpan(GREEN);
                 jawabshartspanDark = new ForegroundColorSpan(CYAN);
-
                 harfspannble = new SpannableStringBuilder(harfofverse);
                 harfismspannable = new SpannableStringBuilder(ismofverse);
                 harfspannble.setSpan(harfshartspanDark, 0, harfofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -334,7 +292,6 @@ public class ExpandableListData {
                 // SpannableStringBuilder trstr = getFragmentTranslations(quranverses, sb, charSequence, false);
                 // kanaarray.add(trstr);
                 int ismconnected = nasbEntity.getIsmstart() - nasbEntity.getIndexend();
-
                 int wordfrom = nasbEntity.getHarfwordno();
                 int wordto = nasbEntity.getIsmendwordno();
                 if (ismconnected == 1) {
@@ -343,9 +300,7 @@ public class ExpandableListData {
                         new StringBuilder();
                         StringBuilder temp;
                         temp = getSelectedTranslation(w);
-
                         sb.append(temp).append(" ");
-
 
                     }
                     hasbarray.add(SpannableStringBuilder.valueOf(sb.toString()));
@@ -359,15 +314,11 @@ public class ExpandableListData {
                     //     sb.append(list.get(0).getEn()).append("----");
                     ArrayList<wbwentity> harf = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah(), from, from);
                     ArrayList<wbwentity> ism = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah(), ismfrom, ismto);
-
-
                     for (wbwentity w : harf) {
                         new StringBuilder();
                         StringBuilder temp;
                         temp = getSelectedTranslation(w);
-
                         sb.append(temp).append(" ");
-
 
                     }
                     sb.append(".....");
@@ -375,28 +326,20 @@ public class ExpandableListData {
                         new StringBuilder();
                         StringBuilder temp;
                         temp = getSelectedTranslation(w);
-
                         sb.append(temp).append(" ");
 
-
                     }
-
                     hasbarray.add(SpannableStringBuilder.valueOf(sb.toString()));
                 }
 
-
             } else if (c) {
                 harfspannble = new SpannableStringBuilder(harfofverse);
-
                 harfspannble.setSpan(harfshartspanDark, 0, harfofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
-
                 CharSequence charSequence = TextUtils.concat(harfspannble);
                 hasbarray.add(SpannableStringBuilder.valueOf(charSequence));
                 int wordfroms = nasbEntity.getHarfwordno();
                 ArrayList<wbwentity> list = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah(), wordfroms, wordfroms);
-
                 StringBuffer sbss = new StringBuffer();
-
                 if (whichwbw.equals("en")) {
                     sbss.append(list.get(0).getEn()).append(".......");
                 } else if (whichwbw.equals("ur")) {
@@ -407,19 +350,13 @@ public class ExpandableListData {
                 } else if (whichwbw.equals("id")) {
                     sbss.append(list.get(0).getId()).append(".......");
                 }
-
                 hasbarray.add(SpannableStringBuilder.valueOf(sbss));
 
-
             }
-
-
             // kanaarray.add(spannable);
-
         }
 
     }
-
 
     private StringBuilder getSelectedTranslation(wbwentity tr) {
         StringBuilder sb = new StringBuilder();
@@ -433,16 +370,12 @@ public class ExpandableListData {
         } else if (whichwbw.equals("id")) {
             sb.append(tr.getId());
         }
-
         sb.append(" ");
         return sb;
     }
 
     private void newsetKana(List<SpannableStringBuilder> kanaarray) {
-
         ArrayList<NewKanaEntity> kanaSurahAyahnew = utils.getKanaSurahAyahnew(chapterid, ayanumber);
-
-
         for (NewKanaEntity kana : kanaSurahAyahnew) {
             if (kana.getSurah() == 3 && kana.getAyah() == 118) {
                 //System.out.println("CHECK");
@@ -452,10 +385,8 @@ public class ExpandableListData {
             String khabarofverse = "";
             int start = kana.getIndexstart();
             int end = kana.getIndexend();
-
             int isstart = kana.getIsmkanastart();
             int issend = kana.getIsmkanaend();
-
             int khabarstart = kana.getKhabarstart();
             int khabarend = kana.getKhabarend();
             String quranverses = corpusSurahWord.get(0).getQurantext();
@@ -477,37 +408,29 @@ public class ExpandableListData {
             int ismEword = kana.getIsmendword();
             int khabarSword = kana.getKhabarstartwordno();
             int habarEword = kana.getKhabarendwordno();
-
             TextBorderSpan tb = new TextBorderSpan();
             boolean iscolored = false;
-
             SpannableStringBuilder spannable = new SpannableStringBuilder(quranverses);
             SpannableStringBuilder harfspannble = null;
             SpannableStringBuilder harfismspannable = null;
             SpannableStringBuilder khabarofversespannable = null;
             int connected = kana.getKhabarstart() - kana.getIndexend();
-
             if (a) {
-                int isismkhabarconnected = kana.getIsmkanaend() - kana.getIsmkanaend();
+                int isismkhabarconnected = 0;
                 harfspannble = new SpannableStringBuilder(harfofverse);
                 harfismspannable = new SpannableStringBuilder(ismofverse);
                 khabarofversespannable = new SpannableStringBuilder(khabarofverse);
-
                 harfspannble.setSpan(harfshartspanDark, 0, harfofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
                 harfismspannable.setSpan(shartspanDark, 0, ismofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
                 khabarofversespannable.setSpan(jawabshartspanDark, 0, khabarofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
                 if (kana.getIsmkanastart() > kana.getKhabarstart()) {
-
                     CharSequence charSequence = TextUtils.concat(harfspannble, " ", khabarofversespannable, " ", harfismspannable);
-
                     kanaarray.add(SpannableStringBuilder.valueOf(charSequence));
                 } else {
                     CharSequence charSequence = TextUtils.concat(harfspannble, " ", harfismspannable, " ", khabarofversespannable);
                     kanaarray.add(SpannableStringBuilder.valueOf(charSequence));
 
                 }
-
-
                 StringBuilder sb = new StringBuilder();
                 StringBuilder ismorkhabarsb = new StringBuilder();
                 if (isismkhabarconnected == 1) {
@@ -518,12 +441,9 @@ public class ExpandableListData {
                         new StringBuilder();
                         StringBuilder temp;
                         temp = getSelectedTranslation(w);
-
                         sb.append(temp).append(" ");
 
-
                     }
-
 
                 } else {
                     int from = kana.getHarfwordno();
@@ -539,27 +459,22 @@ public class ExpandableListData {
                         if (w.getWordno() == harfword) {
                             sb.append(temp.append(" "));
                         } else if (w.getWordno() >= ismSword && w.getWordno() <= ismEword) {
-
                             sb.append(temp).append(" ");
                         } else if (w.getWordno() >= khabarSword && w.getWordno() <= habarEword) {
-
                             ismorkhabarsb.append(temp).append(" ");
 
                         }
 
                     }
                     sb.append("... ");
-                    sb.append(ismorkhabarsb.toString());
+                    sb.append(ismorkhabarsb);
                     kanaarray.add(SpannableStringBuilder.valueOf(sb.toString()));
 
                 }
-
-
                 //  CharSequence first = TextUtils.concat(harfspannble," ",shartofverse);
             } else if (d) {
                 harfspannble = new SpannableStringBuilder(harfofverse);
                 khabarofversespannable = new SpannableStringBuilder(khabarofverse);
-
                 harfspannble.setSpan(harfshartspanDark, 0, harfofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
                 khabarofversespannable.setSpan(jawabshartspanDark, 0, khabarofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
                 CharSequence charSequence = TextUtils.concat(harfspannble, " ", khabarofversespannable);
@@ -581,9 +496,7 @@ public class ExpandableListData {
                         new StringBuilder();
                         StringBuilder temp;
                         temp = getSelectedTranslation(w);
-
                         sb.append(temp).append(" ");
-
 
                     }
                     kanaarray.add(SpannableStringBuilder.valueOf(sb.toString()));
@@ -595,7 +508,6 @@ public class ExpandableListData {
                     if (to == 0) {
                         to = from;
                     }
-
                     if (whichwbw.equals("en")) {
                         sb.append(list.get(0).getEn()).append(".......");
                     } else if (whichwbw.equals("ur")) {
@@ -606,28 +518,22 @@ public class ExpandableListData {
                     } else if (whichwbw.equals("id")) {
                         sb.append(list.get(0).getId()).append(".......");
                     }
-
                     //    sb.append(list).append("----");
                     ArrayList<wbwentity> lists = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah(), from, to);
                     for (wbwentity w : lists) {
                         new StringBuilder();
                         StringBuilder temp;
                         temp = getSelectedTranslation(w);
-
                         sb.append(temp).append(" ");
 
-
                     }
-
                     kanaarray.add(SpannableStringBuilder.valueOf(sb.toString()));
                 }
-
 
             } else if (b) {
                 harfshartspanDark = new ForegroundColorSpan(GOLD);
                 shartspanDark = new ForegroundColorSpan(GREEN);
                 jawabshartspanDark = new ForegroundColorSpan(CYAN);
-
                 harfspannble = new SpannableStringBuilder(harfofverse);
                 harfismspannable = new SpannableStringBuilder(ismofverse);
                 harfspannble.setSpan(harfshartspanDark, 0, harfofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -640,7 +546,6 @@ public class ExpandableListData {
                 // SpannableStringBuilder trstr = getFragmentTranslations(quranverses, sb, charSequence, false);
                 // kanaarray.add(trstr);
                 int ismconnected = kana.getIsmkanastart() - kana.getIndexend();
-
                 int wordfrom = kana.getHarfwordno();
                 int wordto = kana.getIsmwordo();
                 if (ismconnected == 1) {
@@ -649,16 +554,13 @@ public class ExpandableListData {
                         new StringBuilder();
                         StringBuilder temp;
                         temp = getSelectedTranslation(w);
-
                         sb.append(temp).append(" ");
-
 
                     }
                     kanaarray.add(SpannableStringBuilder.valueOf(sb.toString()));
                 } else {
                     int wordfroms = kana.getHarfwordno();
                     //  ArrayList<wbwentity> list = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah(), wordfroms, wordfroms);
-
                     ArrayList<wbwentity> wbwayah = utils.getwbwQuranBySurahAyah(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah());
                     for (wbwentity w : wbwayah) {
                         new StringBuilder();
@@ -667,37 +569,26 @@ public class ExpandableListData {
                         if (w.getWordno() == harfword) {
                             sb.append(temp).append(" ");
                         } else if (w.getWordno() >= ismSword && w.getWordno() <= ismEword) {
-
                             ismorkhabarsb.append(temp).append(" ");
                         }
 
                     }
                     sb.append(".....");
-                    sb.append(ismorkhabarsb.toString());
-
-
+                    sb.append(ismorkhabarsb);
                     kanaarray.add(SpannableStringBuilder.valueOf(sb.toString()));
-
-
                     //    ArrayList<wbwentity> harf = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah(), harfword, harfword);
                     //   ArrayList<wbwentity> ism = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah(), ismfrom, ismto);
-
                 }
-
 
             } else if (c) {
                 harfspannble = new SpannableStringBuilder(harfofverse);
-
                 harfspannble.setSpan(harfshartspanDark, 0, harfofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
-
                 CharSequence charSequence = TextUtils.concat(harfspannble);
                 kanaarray.add(SpannableStringBuilder.valueOf(charSequence));
                 int wordfroms = kana.getHarfwordno();
                 ArrayList<wbwentity> list = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah(), wordfroms, wordfroms);
-
                 StringBuffer sb = new StringBuffer();
                 //   sb.append(list.get(0).getEn()).append("----");
-
                 //    sb.append(list.get(0).getEn()).append(".......");
                 if (whichwbw.equals("en")) {
                     sb.append(list.get(0).getEn()).append(".......");
@@ -709,15 +600,10 @@ public class ExpandableListData {
                 } else if (whichwbw.equals("id")) {
                     sb.append(list.get(0).getId()).append(".......");
                 }
-
                 kanaarray.add(SpannableStringBuilder.valueOf(sb));
 
-
             }
-
-
             // kanaarray.add(spannable);
-
         }
 
     }
@@ -734,7 +620,6 @@ public class ExpandableListData {
             } else {
                 sifaspansDark = new BackgroundColorSpan(CYANLIGHTEST);
             }
-
             //   sifaspansDark = new BackgroundColorSpan(WBURNTUMBER);
             String quranverses = corpusSurahWord.get(0).getQurantext();
             SpannableStringBuilder spannable = new SpannableStringBuilder(quranverses);
@@ -752,19 +637,15 @@ public class ExpandableListData {
             StringBuilder sb = new StringBuilder();
             ArrayList<wbwentity> list = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah(), wordfrom, wordto);
             for (wbwentity w : list) {
-
                 new StringBuilder();
                 StringBuilder temp;
                 temp = getSelectedTranslation(w);
                 ssb.append(temp).append(" ");
 
-
             }
             mausoofsifaarray.add(SpannableStringBuilder.valueOf(ssb.toString()));
             //   SpannableStringBuilder trstr = getFragmentTranslations(quranverses, sb, sequence, true);
             //   mausoofsifaarray.add(trstr);
-
-
         }
     }
 
@@ -772,26 +653,19 @@ public class ExpandableListData {
         //   ArrayList<MudhafEntity> mudhafSurahAyah = utils.getMudhafSurahAyah(chapterid, ayanumber);
         ArrayList<NewMudhafEntity> mudhafSurahAyah = utils.getMudhafSurahAyahNew(chapterid, ayanumber);
         int index = 0;
-
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(QuranGrammarApplication.getContext());
         String preferences = prefs.getString("theme", "dark");
-
         for (NewMudhafEntity mudhafEntity : mudhafSurahAyah) {
-
             if (preferences.equals("dark") || preferences.equals("blue")) {
                 mudhafspansDark = new BackgroundColorSpan(MIDNIGHTBLUE);
             } else {
                 mudhafspansDark = new BackgroundColorSpan(GREENYELLOW);
             }
-
-
             String quranverses = corpusSurahWord.get(0).getQurantext();
             SpannableStringBuilder spannable = new SpannableStringBuilder(quranverses);
-
             spannable.setSpan(mudhafspansDark, mudhafEntity.getStartindex(), mudhafEntity.getEndindex(), SPAN_EXCLUSIVE_EXCLUSIVE);
             CharSequence sequence = spannable.subSequence(mudhafEntity.getStartindex(), mudhafEntity.getEndindex());
             mudhafarray.add((SpannableStringBuilder) sequence);
-
             StringBuilder sb = new StringBuilder();
             int wordfrom = mudhafEntity.getWordfrom();
             int wordto = mudhafEntity.getWordto();
@@ -803,15 +677,12 @@ public class ExpandableListData {
                     new StringBuilder();
                     StringBuilder temp;
                     temp = getSelectedTranslation(w);
-
                     ssb.append(temp).append(" ");
-
 
                 }
                 mudhafarray.add(SpannableStringBuilder.valueOf(ssb.toString()));
             } else {
                 ArrayList<wbwentity> list = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah(), wordto, wordto);
-
                 if (whichwbw.equals("en")) {
                     sb.append(list.get(0).getEn()).append(".......");
                 } else if (whichwbw.equals("ur")) {
@@ -826,13 +697,11 @@ public class ExpandableListData {
 
             }
             //   SpannableStringBuilder trstr = getFragmentTranslations(quranverses, sb, sequence, true);
-
             //  mudhafarray.add(trstr);
             // mudhafarray.add(spannable);
         }
 
     }
-
 
     private void newSetShart(List<SpannableStringBuilder> shartarray) {
         String quranverses = corpusSurahWord.get(0).getQurantext();
@@ -848,13 +717,10 @@ public class ExpandableListData {
                 androidx.preference.PreferenceManager.getDefaultSharedPreferences(QuranGrammarApplication.getContext());
         String quranFont = sharedPreferences.getString("quranFont", "kitab.ttf");
         Typeface mequran = Typeface.createFromAsset(QuranGrammarApplication.getContext().getAssets(), quranFont);
-
-
         for (NewShartEntity shartEntity : shart) {
             String harfofverse = "";
             String shartofverse = "";
             String jawabofverrse = "";
-
             sb = new StringBuilder();
             int indexstart = shartEntity.getIndexstart();
             int indexend = shartEntity.getIndexend();
@@ -893,17 +759,12 @@ public class ExpandableListData {
                     jawabshartspanDark = new ForegroundColorSpan(WHOTPINK);
 
                 }
-
-
                 harfspannble.setSpan(harfshartspanDark, 0, harfofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
                 shartspoannable.setSpan(shartspanDark, 0, shartofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
                 jawabshartspannable.setSpan(jawabshartspanDark, 0, jawabofverrse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
-
                 CharSequence charSequence = TextUtils.concat(harfspannble, " ", shartspoannable, " ", jawabshartspannable);
-
                 CharSequence charsequenceshart = TextUtils.concat(harfspannble, " ", shartspoannable);
                 CharSequence charsequencejawabshart = TextUtils.concat(jawabshartspannable);
-
                 SpannableStringBuilder trstr = getFragmentTranslations(quranverses, sb, charSequence, false);
                 shartarray.add(SpannableStringBuilder.valueOf(charSequence));
                 int connected = jawabstart - shartindexend;
@@ -912,13 +773,11 @@ public class ExpandableListData {
                 if (connected == 1) {
                     ArrayList<wbwentity> list = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(),
                             corpusSurahWord.get(0).getAyah(), harfword, jawabEword);
-
                     for (wbwentity w : list) {
                         StringBuilder temp = new StringBuilder();
                         temp = getSelectedTranslation(w);
                         sb.append(temp).append(" ");
                     }
-
                     trstr1 = getFragmentTranslations(quranverses, sb, charSequence, false);
                     shartarray.add(SpannableStringBuilder.valueOf(sb.toString()));
                 } else {
@@ -929,7 +788,6 @@ public class ExpandableListData {
                         if (w.getWordno() == harfword) {
                             sb.append(temp).append(" ");
                         } else if (w.getWordno() >= shartSword && w.getWordno() <= shartEword) {
-
                             sb.append(temp).append(" ");
                         } else if (w.getWordno() >= jawbSword && w.getWordno() <= jawabEword) {
                             //     sb. append("... ");
@@ -939,20 +797,13 @@ public class ExpandableListData {
 
                     }
                     sb.append(".....");
-                    sb.append(sbjawab.toString());
-
-
+                    sb.append(sbjawab);
                     shartarray.add(SpannableStringBuilder.valueOf(sb.toString()));
 
                 }
-
-
-                ;
             } else if (b) {
-
                 harfspannble = new SpannableStringBuilder(harfofverse);
                 shartspoannable = new SpannableStringBuilder(shartofverse);
-
                 harfspannble.setSpan(harfshartspanDark, 0, harfofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
                 shartspoannable.setSpan(shartspanDark, 0, shartofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
                 CharSequence charSequence = TextUtils.concat(harfspannble, " ", shartspoannable);
@@ -961,7 +812,6 @@ public class ExpandableListData {
                 //    shartarray.add(trstr);
                 if ((shartindexstart - indexend) == 1) {
                     ArrayList<wbwentity> harfnshart = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah(), harfword, shartEword);
-
                     for (wbwentity w : harfnshart) {
                         new StringBuilder();
                         StringBuilder temp;
@@ -969,11 +819,9 @@ public class ExpandableListData {
                         getSelectedTranslation(w);
                         sb.append(temp).append(" ");
 
-
                     }
 
                 } else {
-
                     ArrayList<wbwentity> wbwayah = utils.getwbwQuranBySurahAyah(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah());
                     for (wbwentity w : wbwayah) {
                         StringBuilder temp = new StringBuilder();
@@ -981,15 +829,12 @@ public class ExpandableListData {
                         if (w.getWordno() == harfword) {
                             sb.append(temp).append(" ");
                         } else if (w.getWordno() >= shartSword && w.getWordno() <= shartEword) {
-
                             sb.append(temp).append(" ");
                         }
 
                     }
                     sb.append(".....");
-                    sb.append(sbjawab.toString());
-
-
+                    sb.append(sbjawab);
                     //   shartarray.add(SpannableStringBuilder.valueOf(sb.toString()));
 
 
@@ -1014,22 +859,17 @@ public class ExpandableListData {
 
                     }
  */
-
                 }
                 shartarray.add(SpannableStringBuilder.valueOf(sb.toString()));
 
-
             } else if (c) {
                 harfspannble = new SpannableStringBuilder(harfofverse);
-
                 harfspannble.setSpan(harfshartspanDark, 0, harfofverse.length(), SPAN_EXCLUSIVE_EXCLUSIVE);
-
                 CharSequence charSequence = TextUtils.concat(harfspannble);
                 SpannableStringBuilder trstr = getFragmentTranslations(quranverses, sb, charSequence, false);
                 shartarray.add(SpannableStringBuilder.valueOf(charSequence));
                 shartarray.add(trstr);
             }
-
 
         }
     }
@@ -1037,35 +877,24 @@ public class ExpandableListData {
     private void disconnected(StringBuilder sb, int harfword, int shartSword, int shartEword, int jawbSword, int jawabEword) {
         ArrayList<wbwentity> harf = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah(), harfword, harfword);
         ArrayList<wbwentity> shartlist = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah(), shartSword, shartEword);
-
         ArrayList<wbwentity> jawablist = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah(), jawbSword, jawabEword);
-
-
         for (wbwentity tr : harf) {
-
             getSelectedTranslation(tr);
             sb.append(tr.getEn()).append(" ");
-
 
         }
-
         for (wbwentity tr : shartlist) {
-
             getSelectedTranslation(tr);
             sb.append(tr.getEn()).append(" ");
-
 
         }
         sb.append(".......");
         for (wbwentity tr : jawablist) {
-
             getSelectedTranslation(tr);
             sb.append(tr.getEn()).append(" ");
 
-
         }
     }
-
 
     @NonNull
     private SpannableStringBuilder getFragmentTranslations(String quranverses, StringBuilder sb, CharSequence charSequence, boolean ismudhaf) {
@@ -1077,14 +906,12 @@ public class ExpandableListData {
         SplitQuranVerses split = new SplitQuranVerses(QuranGrammarApplication.getContext());
         ArrayList<Word> words = split.splitSingleVerse(quranverses);
         String trim = charSequence.toString().trim();
-        String[] strings = trim.toString().split("\\s");
+        String[] strings = trim.split("\\s");
         int length = strings.length;
         String firstword = strings[0];
         String lastword = strings[length - 1];
         for (Word w : words) {
             String wordsAr = w.getWordsAr();
-
-
             if (w.getWordsAr().equals(firstword)) {
                 firstwordindex = w.getWordno();
 
@@ -1093,7 +920,6 @@ public class ExpandableListData {
                 lastwordindex = w.getWordno();
                 break;
             }
-
 
         }
 //if the agove is false incase of the punctutaion marks,strip the punctuation and reloop
@@ -1116,28 +942,22 @@ public class ExpandableListData {
                     break;
                 }
 
-
             }
         }
         ArrayList<wbwentity> list = utils.getwbwQuranbTranslation(corpusSurahWord.get(0).getSurah(), corpusSurahWord.get(0).getAyah(), firstwordindex, lastwordindex);
         String translation = "";
-
         for (wbwentity tr : list) {
             getSelectedTranslation(tr);
-
             sb.append(tr.getEn()).append(" ");
 
         }
-
         SpannableStringBuilder trstr = new SpannableStringBuilder(sb);
         return trstr;
     }
 
-
     public List<SpannableStringBuilder> getKana() {
         List<SpannableStringBuilder> kanaarray = new ArrayList<>();
         newsetKana(kanaarray);
-
         return kanaarray;
     }
 }

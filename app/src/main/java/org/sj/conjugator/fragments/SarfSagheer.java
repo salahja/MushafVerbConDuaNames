@@ -1,18 +1,8 @@
 package org.sj.conjugator.fragments;
 
-
 public class SarfSagheer {
-
-    private String madhi,madhimajhool,mudharay,mudharaymajhool,ismfael,ismmafool,weakness,wazan,
-            amrone,amrtwo,amrthree,nahiamrone,nahiamrtwo,nahiamrthree,ismalaone,ismalatwo,ismalathree,zarfone,zarftwo,zarfthree,verbroot,verbtype,wazanname;
-
-    public String getWazanname() {
-        return wazanname;
-    }
-
-    public void setWazanname(String wazanname) {
-        this.wazanname = wazanname;
-    }
+    private String madhi, madhimajhool, mudharay, mudharaymajhool, ismfael, ismmafool, weakness, wazan,
+            amrone, amrtwo, amrthree, nahiamrone, nahiamrtwo, nahiamrthree, ismalaone, ismalatwo, ismalathree, zarfone, zarftwo, zarfthree, verbroot, verbtype, wazanname;
 
     public SarfSagheer(String madhi, String madhimajhool, String mudharay, String mudharaymajhool, String ismfael, String ismmafool, String weakness, String wazan, String amrone, String amrtwo, String amrthree, String nahiamrone, String nahiamrtwo, String nahiamrthree, String ismalaone, String ismalatwo, String ismalathree, String zarfone, String zarftwo, String zarfthree, String verbroot) {
         this.madhi = madhi;
@@ -39,7 +29,14 @@ public class SarfSagheer {
     }
 
     public SarfSagheer() {
+    }
 
+    public String getWazanname() {
+        return wazanname;
+    }
+
+    public void setWazanname(String wazanname) {
+        this.wazanname = wazanname;
     }
 
     public String getVerbtype() {

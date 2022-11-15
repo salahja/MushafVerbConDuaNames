@@ -1,6 +1,5 @@
 package org.sj.conjugator.adapter;
 
-
 import static androidx.preference.PreferenceManager.getDefaultSharedPreferences;
 
 import android.content.Context;
@@ -16,23 +15,26 @@ import android.widget.TextView;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mushafconsolidated.R;
 import com.google.android.material.chip.Chip;
 
 import org.jetbrains.annotations.NotNull;
 import org.sj.conjugator.interfaces.OnItemClickListener;
 import org.sj.conjugator.utilities.SharedPref;
-import com.example.mushafconsolidated.R;
 
 import java.util.ArrayList;
 
 public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<MujarradSarfSagheerListingAdapter.ViewHolder> {
-
-    int rootcolor, weaknesscolor, wazancolor;
     private final Context context;
+    int rootcolor, weaknesscolor, wazancolor;
     int bookmarkpostion;
     OnItemClickListener mItemClickListener;
     //    private final Integer arabicTextColor;
     Context mycontext;
+    String ismzaftitle = "(الْظَرْف:)";
+    String ismalatitle = "( الآلَة:)";
+    String alaheader = "اِسْم الآلَة";
+    String zarfheader = "اِسْم الْظَرفْ";
     private ArrayList<String> madhi = new ArrayList<>();
     private boolean mazeedregular;
     private int bookChapterno;
@@ -40,23 +42,15 @@ public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<Muja
     private Integer ayahNumber;
     private String urdu_font_selection;
     private int quran_arabic_font;
-
-    String ismzaftitle = "(الْظَرْف:)";
-    String ismalatitle = "( الآلَة:)";
-    String alaheader = "اِسْم الآلَة";
-    String zarfheader = "اِسْم الْظَرفْ";
     private int urdu_font_size;
     private String arabic_font_selection;
     private ArrayList<ArrayList> sarfSagheer = new ArrayList<>();
-
 
     public MujarradSarfSagheerListingAdapter(ArrayList<ArrayList> lists, Context context) {
         this.context = context;
         this.sarfSagheer = lists;
 
-
     }
-
 
     public MujarradSarfSagheerListingAdapter(boolean mazeedregular, ArrayList sarfSagheer, FragmentActivity activity) {
         this.context = activity;
@@ -72,53 +66,39 @@ public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<Muja
 
     }
 
-
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
-
         //      View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.sarfkabeercolumn, parent, false);
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.thulathitable, parent, false);
         //    View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.thulathisarfsagheer, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
-
         return viewHolder;
     }
-
 
     public void onBindViewHolder(@NotNull ViewHolder holder, int position) {
         //  final List sarf = sarfSagheer.get(position);
 //        final String[] array = (String[]) sarfSagheer.get(position).toArray();
-
-        SharedPreferences shared =getDefaultSharedPreferences(context);
-
+        SharedPreferences shared = getDefaultSharedPreferences(context);
         String preferences = shared.getString("theme", "dark");
         int cweakness = 0;
         int crootword = 0;
         final int cbabcolor;
-
         if (preferences.equals("dark")) {
             rootcolor = Color.CYAN;
             weaknesscolor = Color.YELLOW;
             wazancolor = Color.BLUE;
-
-
 
         } else {
             rootcolor = Color.RED;
             weaknesscolor = Color.BLACK;
             wazancolor = Color.RED;
 
-
-
         }
-
         StringBuilder zarf = new StringBuilder();
         StringBuilder ismala = new StringBuilder();
         StringBuilder amr = new StringBuilder();
         StringBuilder nahiamr = new StringBuilder();
         final Object[] toArray = sarfSagheer.get(position).toArray();
         final Typeface mequran = Typeface.createFromAsset(context.getAssets(), SharedPref.arabicFontSelection());
-
         final int length = toArray.length;
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         Integer arabicFontsize = prefs.getInt("arabicFontSizeEntryArray", 20);
@@ -127,80 +107,42 @@ public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<Muja
         holder.ismalaheader.setTextSize(arabicFontsize);
         holder.ismzarfheader.setTextSize(arabicFontsize);
         holder.mamaroof.setTextSize(arabicFontsize);
-        ;
         holder.mumaroof.setTextSize(arabicFontsize);
-        ;
         holder.masdaro.setTextSize(arabicFontsize);
-        ;
         holder.masdart.setTextSize(arabicFontsize);
-        ;
         holder.ismfail.setTextSize(arabicFontsize);
-        ;
-
         holder.mamajhool.setTextSize(arabicFontsize);
-        ;
-
         holder.mumajhool.setTextSize(arabicFontsize);
-        ;
-
         holder.ismmafool.setTextSize(arabicFontsize);
-        ;
-
         holder.amr.setTextSize(arabicFontsize);
-        ;
-
         holder.nahiamr.setTextSize(arabicFontsize);
-        ;
         holder.babname.setTextSize(arabicFontsize);
-        ;
-
         holder.rootword.setTextSize(arabicFontsize);
-        ;
-
-
         holder.ismzarf.setTextSize(arabicFontsize);
-        ;
         holder.ismala.setTextSize(arabicFontsize);
-        ;
         holder.weaknessname.setTextSize(arabicFontsize);
-        ;
-
         holder.wazan.setTextSize(arabicFontsize);
-
-
         holder.mamaroof.setTypeface(mequran);
         holder.mumaroof.setTypeface(mequran);
         //   holder.masdaro.setTypeface(mequran);
         // holder.masdart.setTypeface(mequran);
         holder.ismfail.setTypeface(mequran);
-
         holder.mamajhool.setTypeface(mequran);
-
         holder.mumajhool.setTypeface(mequran);
-
         holder.ismmafool.setTypeface(mequran);
-
         holder.amr.setTypeface(mequran);
-
         holder.nahiamr.setTypeface(mequran);
         holder.babname.setTypeface(mequran);
         //  holder.babname.setTextColor(Color.YELLOW);
         holder.rootword.setTypeface(mequran);
         //  holder.rootword.setTextColor(Color.BLUE);
-
         holder.ismzarf.setTypeface(mequran);
         holder.ismala.setTypeface(mequran);
         holder.weaknessname.setTypeface(mequran);
         //  holder.weaknessname.setTextColor(Color.GREEN);
-
         holder.babname.setTextColor(wazancolor);
         holder.rootword.setTextColor(rootcolor);
         holder.weaknessname.setTextColor(weaknesscolor);
-
-
-
-
-
         if (length == 13) {
             holder.mamaroof.setText((CharSequence) toArray[0]);
             holder.mumaroof.setText((CharSequence) toArray[1]);
@@ -213,15 +155,9 @@ public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<Muja
             holder.ismzarfheader.setText(zarfheader);
             holder.ismalaheader.setText(alaheader);
             zarf.append((CharSequence) toArray[8]);
-
             holder.ismzarf.setText(zarf);
-
-
             holder.ismala.setText(ismalatitle);
-
-
             holder.weaknessname.setText((CharSequence) toArray[11]);
-
             holder.rootword.setText((CharSequence) toArray[10]);
             holder.babname.setText((CharSequence) toArray[9]);
 
@@ -238,17 +174,11 @@ public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<Muja
             holder.ismzarfheader.setText(zarfheader);
             holder.ismalaheader.setText(alaheader);
             zarf.append((CharSequence) toArray[8]);
-
             holder.ismzarf.setText(zarf);
             holder.ismalaheader.setText(alaheader);
             ismala.append((CharSequence) toArray[9]);
-
-
             holder.ismala.setText(ismala);
-
-
             holder.weaknessname.setText((CharSequence) toArray[10]);
-
             holder.rootword.setText((CharSequence) toArray[11]);
             holder.babname.setText((CharSequence) toArray[12]);
             holder.verify.setText((CharSequence) toArray[13]);
@@ -272,17 +202,13 @@ public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<Muja
             holder.ismalaheader.setText(alaheader);
             ismala.append((CharSequence) toArray[11]);
             ismala.append(",");
-
             ismala.append((CharSequence) toArray[12]);
             ismala.append(",");
             ismala.append((CharSequence) toArray[13]);
-
             holder.ismala.setText(ismala);
-
             holder.rootword.setText((CharSequence) toArray[14]);
 
         }
-
         if (length == 17) {
             holder.mamaroof.setText((CharSequence) toArray[0]);
             holder.mumaroof.setText((CharSequence) toArray[1]);
@@ -307,7 +233,6 @@ public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<Muja
             ismala.append((CharSequence) toArray[13]);
             holder.ismala.setText(ismala);
             holder.weaknessname.setText((CharSequence) toArray[14]);
-
             holder.rootword.setText((CharSequence) toArray[15]);
             holder.wazan.setText((CharSequence) toArray[16]);
             //     holder.verify.setText((CharSequence) toArray[16]);
@@ -336,7 +261,6 @@ public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<Muja
             ismala.append((CharSequence) toArray[13]);
             holder.ismala.setText(ismala);
             holder.weaknessname.setText((CharSequence) toArray[14]);
-
             holder.rootword.setText((CharSequence) toArray[15]);
             holder.wazan.setText((CharSequence) toArray[16]);
             holder.babno.setText((CharSequence) toArray[16]);
@@ -381,7 +305,6 @@ public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<Muja
             holder.babname.setText((CharSequence) toArray[20]);
             holder.verify.setText((CharSequence) toArray[21]);
             //  holder.rootword.setText((CharSequence) toArray[15]);
-
         }
         //mahmooz mithal and lafeef originall 18
         if (length == 19) {
@@ -406,7 +329,6 @@ public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<Muja
             ismala.append((CharSequence) toArray[12]);
             ismala.append(",");
             ismala.append((CharSequence) toArray[13]);
-
             holder.ismala.setText(ismala);
             //  holder.masdaro.setText((CharSequence) toArray[14]);
             //  holder.masdart.setText((CharSequence) toArray[14]);
@@ -437,17 +359,11 @@ public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<Muja
             ismala.append((CharSequence) toArray[12]);
             ismala.append(",");
             ismala.append((CharSequence) toArray[13]);
-
             holder.ismala.setText(ismala);
-
             holder.weaknessname.setText((CharSequence) toArray[14]);
-
             holder.rootword.setText((CharSequence) toArray[15]);
-
-
             holder.rootword.setText((CharSequence) toArray[15]);
             holder.verify.setText((CharSequence) toArray[16]);
-
 
         }
         //mudhaf
@@ -470,7 +386,6 @@ public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<Muja
             nahiamr.append(",");
             nahiamr.append((CharSequence) toArray[11]);
             holder.nahiamr.setText(nahiamr);
-
             holder.ismzarfheader.setText(zarfheader);
             holder.ismalaheader.setText(alaheader);
             zarf.append((CharSequence) toArray[12]);
@@ -484,7 +399,6 @@ public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<Muja
             ismala.append((CharSequence) toArray[16]);
             ismala.append(",");
             ismala.append((CharSequence) toArray[17]);
-
             holder.ismala.setText(ismala);
             holder.masdaro.setText((CharSequence) toArray[18]);
             holder.masdart.setText((CharSequence) toArray[18]);
@@ -493,33 +407,23 @@ public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<Muja
             holder.weaknessname.setText((CharSequence) toArray[21]);
             holder.wazan.setText((CharSequence) toArray[22]);
         }
-
-
         //     holder.masdaro.setText((CharSequence) toArray[12]);
         //     holder.masdart.setText((CharSequence) toArray[12]);
-
         //     TextView textView = (TextView) findViewById(R.id.textView);
         //     Spannable spanDark = new SpannableString(textView.getText());
         //     span.setSpan(new RelativeSizeSpan(0.8f), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         //     textView.setText(span);
-
-
         //     ismfail,masdaro,mumaroof,mamaroof,ismmafool,masdart,mumajhool,mamajhool,ismzarf,ismala;
         //  holder.ismfail.setText(o.);
-
-
     }
-
 
     @Override
     public long getItemId(int position) {
         //  Surah surah = surahArrayList.get(position);
-
         return sarfSagheer.size();
     }
 
     public Object getItem(int position) {
-
         return sarfSagheer.get(position);
     }
 
@@ -537,20 +441,16 @@ public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<Muja
         this.sarfSagheer = sarfsagheer;
     }
 
-
     public class ViewHolder extends RecyclerView.ViewHolder
-          implements View.OnClickListener // current clickListerner
+            implements View.OnClickListener // current clickListerner
     {
-        public final Chip amr, nahiamr, ismfail,   mumaroof,
-              mamaroof, ismmafool,  mumajhool, mamajhool,
-              ismzarf, ismala,   verify;
-        public final TextView babno,ismalaheader,ismzarfheader,masdart,masdaro,babname,rootword,weaknessname,wazan;
-
+        public final Chip amr, nahiamr, ismfail, mumaroof,
+                mamaroof, ismmafool, mumajhool, mamajhool,
+                ismzarf, ismala, verify;
+        public final TextView babno, ismalaheader, ismzarfheader, masdart, masdaro, babname, rootword, weaknessname, wazan;
 
         public ViewHolder(View view) {
             super(view);
-
-
             //    itemView.setTag(this);
             //     itemView.setOnClickListener(onItemClickListener);
             babno = view.findViewById(R.id.babno);
@@ -573,35 +473,22 @@ public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<Muja
             ismalaheader = view.findViewById(R.id.ismalaheader);
             wazan = view.findViewById(R.id.wazan);
             verify = view.findViewById(R.id.conjugateall);
-
-
-
-
-
             mumajhool.setTooltipText("Click for Verb Conjugation");
-
             view.setOnClickListener(this);
             ismfail.setOnClickListener(this);//R.id.ismfail);
-
             mumaroof.setOnClickListener(this);//R.id.mumaroof);
             mamaroof.setOnClickListener(this);//R.id.mamaroof);
             ismmafool.setOnClickListener(this);//R.id.ismmafool);
-
             mumajhool.setOnClickListener(this);//R.id.mumajhool);
             mamajhool.setOnClickListener(this);//R.id.mamajhool);
             amr.setOnClickListener(this);//R.id.amr);
             nahiamr.setOnClickListener(this);//R.id.nahiamr);
             ismala.setOnClickListener(this);//R.id.ismaalatable);
             ismzarf.setOnClickListener(this);//R.id.zarftable);
-
             rootword.setOnClickListener(this);//R.id.weaknesstype);
-
-            ;
-
             verify.setOnClickListener(this);
 
         }
-
 
         @Override
         public void onClick(View v) {
@@ -611,6 +498,5 @@ public class MujarradSarfSagheerListingAdapter extends RecyclerView.Adapter<Muja
         }
 
     }
-
 
 }

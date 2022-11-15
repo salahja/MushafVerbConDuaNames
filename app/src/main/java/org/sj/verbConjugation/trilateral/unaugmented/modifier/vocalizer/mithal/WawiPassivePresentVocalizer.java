@@ -1,10 +1,12 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.mithal;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,10 +22,10 @@ import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
  */
 public class WawiPassivePresentVocalizer extends SubstitutionsApplier implements IUnaugmentedTrilateralModifier {
 
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public WawiPassivePresentVocalizer() {
-        substitutions.add(new InfixSubstitution("ُوْ","ُو"));// EX: (يُوعَدُ، يُوهَبُ، يُورَثُ، )
+        substitutions.add(new InfixSubstitution("ُوْ", "ُو"));// EX: (يُوعَدُ، يُوهَبُ، يُورَثُ، )
     }
 
 
@@ -34,7 +36,7 @@ public class WawiPassivePresentVocalizer extends SubstitutionsApplier implements
     public boolean isApplied(ConjugationResult conjugationResult) {
         int kov = conjugationResult.getKov();
         int noc = Integer.parseInt(conjugationResult.getRoot().getConjugation());
-        return (kov == 9  && noc == 2) ||
+        return (kov == 9 && noc == 2) ||
                 (kov == 10 && (noc == 3 || noc == 4 || noc == 5)) ||
                 (kov == 11 && (noc == 2 || noc == 3 || noc == 4 || noc == 5));
     }

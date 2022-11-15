@@ -1,12 +1,12 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.hamza.faa;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
-import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 import org.sj.verbConjugation.trilateral.TrilateralRoot;
-import org.sj.verbConjugation.trilateral.unaugmented.*;
+import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -21,7 +21,6 @@ import org.sj.verbConjugation.trilateral.unaugmented.*;
  * @version 1.0
  */
 public class SpecialEmphsizedImperativeMahmouz1 extends SubstitutionsApplier implements IUnaugmentedTrilateralModifier {
-
     public SpecialEmphsizedImperativeMahmouz1() {
     }
 
@@ -31,13 +30,14 @@ public class SpecialEmphsizedImperativeMahmouz1 extends SubstitutionsApplier imp
 
     public boolean isApplied(ConjugationResult conjugationResult) {
         UnaugmentedTrilateralRoot root = conjugationResult.getRoot();
-        return root.getC1() == 'ء' && root.getC2() == 'خ' && root.getC3() == 'ذ'&& root.getConjugation().equals("1");
+        return root.getC1() == 'ء' && root.getC2() == 'خ' && root.getC3() == 'ذ' && root.getConjugation().equals("1");
     }
 
     /**
      * override this method to return the custom list
+     *
      * @param words List
-     * @param root TrilateralRoot
+     * @param root  TrilateralRoot
      */
     public void apply(List words, TrilateralRoot root) {
         words.set(2, "خُذَنَّ");

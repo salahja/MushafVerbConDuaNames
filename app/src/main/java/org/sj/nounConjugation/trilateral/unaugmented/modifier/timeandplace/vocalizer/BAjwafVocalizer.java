@@ -1,11 +1,12 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.timeandplace.vocalizer;
 
-import java.util.*;
+import org.sj.nounConjugation.TrilateralNounSubstitutionApplier;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
 
-import org.sj.nounConjugation.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -23,9 +24,8 @@ public class BAjwafVocalizer extends TrilateralNounSubstitutionApplier implement
     List substitutions = new LinkedList();
 
     public BAjwafVocalizer() {
-        substitutions.add(new InfixSubstitution("ْيِ","ِي"));// EX: (مَبِيع)
+        substitutions.add(new InfixSubstitution("ْيِ", "ِي"));// EX: (مَبِيع)
     }
-
 
     public List getSubstitutions() {
         return substitutions;
@@ -35,15 +35,13 @@ public class BAjwafVocalizer extends TrilateralNounSubstitutionApplier implement
         String nounFormula = conjugationResult.getNounFormula();
         if (!nounFormula.equals("مَفْعِل"))
             return false;
-
         int kov = conjugationResult.getKov();
         int noc = Integer.parseInt(conjugationResult.getRoot().getConjugation());
-
         switch (kov) {
-        case 18:
-        case 19:
-        case 20:
-            return noc == 2 || noc == 4;
+            case 18:
+            case 19:
+            case 20:
+                return noc == 2 || noc == 4;
         }
         return false;
 

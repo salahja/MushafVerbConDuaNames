@@ -14,7 +14,7 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="textViewPadding">5dp</dimen>
 
-    <dimen name="textViewMargin">6dp</dimen>
+    <dimen name="textViewMargin">2dp</dimen>
 
     <dimen name="lineSpacingExtra">2dp</dimen>
     <dimen name="lineWidth">0.2dp</dimen>

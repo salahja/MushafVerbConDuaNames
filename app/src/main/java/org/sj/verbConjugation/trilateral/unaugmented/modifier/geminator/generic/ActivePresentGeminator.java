@@ -1,7 +1,11 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.geminator.generic;
 
-import java.util.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionSuffixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -15,26 +19,22 @@ import org.sj.verbConjugation.trilateral.Substitution.*;
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
-public class ActivePresentGeminator extends SubstitutionsApplier{
-
-    private List substitutions = new LinkedList();
+public class ActivePresentGeminator extends SubstitutionsApplier {
+    private final List substitutions = new LinkedList();
 
     public ActivePresentGeminator() {
-
-        substitutions.add(new ExpressionInfixSubstitution("ْC3ُC3ُ","ُC3ُّ"));
-        substitutions.add(new ExpressionInfixSubstitution("ْC3ُC3َ","ُC3َّ"));
-        substitutions.add(new ExpressionInfixSubstitution("ْC3ُC3ِ","ُC3ِّ"));
-        substitutions.add(new ExpressionSuffixSubstitution("ْC3ُC3ْ","ُC3َّ"));
-        substitutions.add(new ExpressionInfixSubstitution("ْC3ِC3ُ","ِC3ُّ"));
-        substitutions.add(new ExpressionInfixSubstitution("ْC3ِC3َ","ِC3َّ"));
-        substitutions.add(new ExpressionInfixSubstitution("ْC3ِC3ِ","ِC3ِّ"));
-        substitutions.add(new ExpressionSuffixSubstitution("ْC3ِC3ْ","ِC3َّ"));
-        substitutions.add(new ExpressionInfixSubstitution("ْC3َC3ُ","َC3ُّ"));
-        substitutions.add(new ExpressionInfixSubstitution("ْC3َC3َ","َC3َّ"));
-        substitutions.add(new ExpressionInfixSubstitution("ْC3َC3ِ","َC3ِّ"));
-        substitutions.add(new ExpressionSuffixSubstitution("ْC3َC3ْ","َC3َّ"));
-
-
+        substitutions.add(new ExpressionInfixSubstitution("ْC3ُC3ُ", "ُC3ُّ"));
+        substitutions.add(new ExpressionInfixSubstitution("ْC3ُC3َ", "ُC3َّ"));
+        substitutions.add(new ExpressionInfixSubstitution("ْC3ُC3ِ", "ُC3ِّ"));
+        substitutions.add(new ExpressionSuffixSubstitution("ْC3ُC3ْ", "ُC3َّ"));
+        substitutions.add(new ExpressionInfixSubstitution("ْC3ِC3ُ", "ِC3ُّ"));
+        substitutions.add(new ExpressionInfixSubstitution("ْC3ِC3َ", "ِC3َّ"));
+        substitutions.add(new ExpressionInfixSubstitution("ْC3ِC3ِ", "ِC3ِّ"));
+        substitutions.add(new ExpressionSuffixSubstitution("ْC3ِC3ْ", "ِC3َّ"));
+        substitutions.add(new ExpressionInfixSubstitution("ْC3َC3ُ", "َC3ُّ"));
+        substitutions.add(new ExpressionInfixSubstitution("ْC3َC3َ", "َC3َّ"));
+        substitutions.add(new ExpressionInfixSubstitution("ْC3َC3ِ", "َC3ِّ"));
+        substitutions.add(new ExpressionSuffixSubstitution("ْC3َC3ْ", "َC3َّ"));
 
     }
 

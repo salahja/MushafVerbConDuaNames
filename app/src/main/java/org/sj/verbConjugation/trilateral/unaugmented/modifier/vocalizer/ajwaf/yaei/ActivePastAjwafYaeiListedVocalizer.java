@@ -1,9 +1,10 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.yaei;
 
-import java.util.List;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.AbstractAjwafYaeiListedVocalizer;
+
 import java.util.LinkedList;
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.*;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -18,13 +19,13 @@ import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.*;
  * @version 1.0
  */
 public class ActivePastAjwafYaeiListedVocalizer extends AbstractAjwafYaeiListedVocalizer {
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public ActivePastAjwafYaeiListedVocalizer() {
-        substitutions.add(new ExpressionInfixSubstitution("َيِC3ْ","ِC3ْ"));// EX: ( شِئْتُ)
-        substitutions.add(new ExpressionInfixSubstitution("َيِC3ّ","ِC3ّ"));// EX: ( بِتُّ)
-        substitutions.add(new ExpressionInfixSubstitution("َيِC3َ","َاC3َ"));// EX: (شاء، بات)
-        substitutions.add(new ExpressionInfixSubstitution("َيِC3ُ","َاC3ُ"));// EX: (شاؤوا، باتوا)
+        substitutions.add(new ExpressionInfixSubstitution("َيِC3ْ", "ِC3ْ"));// EX: ( شِئْتُ)
+        substitutions.add(new ExpressionInfixSubstitution("َيِC3ّ", "ِC3ّ"));// EX: ( بِتُّ)
+        substitutions.add(new ExpressionInfixSubstitution("َيِC3َ", "َاC3َ"));// EX: (شاء، بات)
+        substitutions.add(new ExpressionInfixSubstitution("َيِC3ُ", "َاC3ُ"));// EX: (شاؤوا، باتوا)
     }
 
     public List getSubstitutions() {

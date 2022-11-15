@@ -1,11 +1,13 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.vocalizer;
 
-import java.util.*;
+import org.sj.nounConjugation.TrilateralNounSubstitutionApplier;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
 
-import org.sj.nounConjugation.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -23,17 +25,15 @@ public class Ajwaf4Vocalizer extends TrilateralNounSubstitutionApplier implement
     List substitutions = new LinkedList();
 
     public Ajwaf4Vocalizer() {
-
-        substitutions.add(new InfixSubstitution("ايِءٌ","اءٍ"));// EX: (هذا جاءٍ)
-        substitutions.add(new InfixSubstitution("ايِءٍ","اءٍ"));// EX: (مررتُ على جاءٍ)
-        substitutions.add(new SuffixSubstitution("ايِءُ","ائِي"));// EX: (هذا الجائِي، )
-        substitutions.add(new SuffixSubstitution("ايِءِ","ائِي"));// EX: (مررتُ على الجائِي )
-        substitutions.add(new InfixSubstitution("ايِءُ","اؤُ"));// EX: (جاؤُونَ، )
-        substitutions.add(new InfixSubstitution("ايِءِ","ائِ"));// EX: (جائِينَ، )
-        substitutions.add(new InfixSubstitution("ايِء","ائِي"));// EX: (جائيان، جائيَيْن، جائية، جائيًا، رأيتُ الجائِيَ)
+        substitutions.add(new InfixSubstitution("ايِءٌ", "اءٍ"));// EX: (هذا جاءٍ)
+        substitutions.add(new InfixSubstitution("ايِءٍ", "اءٍ"));// EX: (مررتُ على جاءٍ)
+        substitutions.add(new SuffixSubstitution("ايِءُ", "ائِي"));// EX: (هذا الجائِي، )
+        substitutions.add(new SuffixSubstitution("ايِءِ", "ائِي"));// EX: (مررتُ على الجائِي )
+        substitutions.add(new InfixSubstitution("ايِءُ", "اؤُ"));// EX: (جاؤُونَ، )
+        substitutions.add(new InfixSubstitution("ايِءِ", "ائِ"));// EX: (جائِينَ، )
+        substitutions.add(new InfixSubstitution("ايِء", "ائِي"));// EX: (جائيان، جائيَيْن، جائية، جائيًا، رأيتُ الجائِيَ)
 
     }
-
 
     public List getSubstitutions() {
         return substitutions;
@@ -42,7 +42,6 @@ public class Ajwaf4Vocalizer extends TrilateralNounSubstitutionApplier implement
     public boolean isApplied(ConjugationResult conjugationResult) {
         int kov = conjugationResult.getKov();
         int noc = Integer.parseInt(conjugationResult.getRoot().getConjugation());
-
         return kov == 19 && (noc == 2 || noc == 4);
     }
 }

@@ -1,11 +1,11 @@
 package org.sj.verbConjugation;
 
 /**
- *   Title:
- *
- *   Copyright: Copyright (c) 2006
- *
- *   Company:
+ * Title:
+ * <p>
+ * Copyright: Copyright (c) 2006
+ * <p>
+ * Company:
  *
  * @author not attributable
  * @version 1.0
@@ -21,12 +21,12 @@ public class Gerund {
         return symbol;
     }
 
-    public String getValue() {
-        return value;
-    }
-
     public void setSymbol(String symbol) {
         this.symbol = symbol;
+    }
+
+    public String getValue() {
+        return value;
     }
 
     public void setValue(String value) {

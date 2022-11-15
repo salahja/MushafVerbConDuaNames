@@ -1,12 +1,12 @@
 package org.sj.nounConjugation.trilateral.augmented.modifier;
 
-import java.util.*;
-
-import org.sj.nounConjugation.*;
-
+import org.sj.nounConjugation.TrilateralNounSubstitutionApplier;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
 import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -21,9 +21,7 @@ import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateral
  * @version 1.0
  */
 public class Substituter {
-
-    private List modifiers = new LinkedList();
-
+    private final List modifiers = new LinkedList();
 
     public Substituter() {
         modifiers.add(new org.sj.nounConjugation.trilateral.augmented.modifier.substituter.GenericSubstituter1());
@@ -36,14 +34,14 @@ public class Substituter {
         modifiers.add(new org.sj.nounConjugation.trilateral.augmented.modifier.substituter.GenericSubstituter8());
         modifiers.add(new org.sj.nounConjugation.trilateral.augmented.modifier.substituter.SpecialSubstituter1());
         modifiers.add(new org.sj.nounConjugation.trilateral.augmented.modifier.substituter.SpecialSubstituter2());
-       }
+    }
 
     public void apply(MazeedConjugationResult conjResult) {
         Iterator iter = modifiers.iterator();
         while (iter.hasNext()) {
             IAugmentedTrilateralModifier modifier = (IAugmentedTrilateralModifier) iter.next();
             if (modifier.isApplied(conjResult)) {
-                ((TrilateralNounSubstitutionApplier)modifier).apply(conjResult.getFinalResult(), conjResult.getRoot());
+                ((TrilateralNounSubstitutionApplier) modifier).apply(conjResult.getFinalResult(), conjResult.getRoot());
                 break;
             }
         }

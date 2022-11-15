@@ -9,12 +9,13 @@ import org.jetbrains.annotations.NotNull;
 public class AllahNamesDetails {
     @PrimaryKey
     @NotNull
-    private int   id ;
-
-    @NotNull  private String    title  ;
-
-    @NotNull  private String   summary;
-    @NotNull  private String   details   ;
+    private int id;
+    @NotNull
+    private String title;
+    @NotNull
+    private String summary;
+    @NotNull
+    private String details;
     private String ref;
 
     public AllahNamesDetails(int id, @NotNull String title, @NotNull String summary, @NotNull String details, String ref) {
@@ -24,7 +25,6 @@ public class AllahNamesDetails {
         this.details = details;
         this.ref = ref;
     }
-
 
     public int getId() {
         return id;

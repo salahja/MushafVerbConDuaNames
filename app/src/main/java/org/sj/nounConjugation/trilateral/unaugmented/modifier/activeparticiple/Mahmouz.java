@@ -1,10 +1,15 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple;
 
-import java.util.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.hamza.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
 import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.hamza.EinMahmouz;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.hamza.FaaMahmouz;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.hamza.LamMahmouz;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -19,8 +24,8 @@ import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
  * @version 1.0
  */
 public class Mahmouz {
-    private List modifiers = new LinkedList();
-    private LamMahmouz lamMahmouz = new LamMahmouz();
+    private final List modifiers = new LinkedList();
+    private final LamMahmouz lamMahmouz = new LamMahmouz();
 
     public Mahmouz() {
         modifiers.add(new EinMahmouz());

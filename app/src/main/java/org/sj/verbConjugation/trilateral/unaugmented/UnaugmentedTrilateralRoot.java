@@ -1,9 +1,10 @@
 package org.sj.verbConjugation.trilateral.unaugmented;
 
-import java.util.*;
-import org.sj.verbConjugation.util.*;
 import org.sj.verbConjugation.Gerund;
 import org.sj.verbConjugation.trilateral.TrilateralRoot;
+import org.sj.verbConjugation.util.OrderedMap;
+
+import java.util.Collection;
 
 /**
  * <p>Title: </p>
@@ -18,7 +19,7 @@ import org.sj.verbConjugation.trilateral.TrilateralRoot;
  * @author not attributable
  * @version 1.0
  */
-public class UnaugmentedTrilateralRoot implements TrilateralRoot{
+public class UnaugmentedTrilateralRoot implements TrilateralRoot {
 
     private char c1;
     private char c2;
@@ -28,7 +29,12 @@ public class UnaugmentedTrilateralRoot implements TrilateralRoot{
     private String conjugationname;
     private String rulename;
 
-  private String verbtype;
+    private String verbtype;
+    private String verb;
+    private final OrderedMap gerundes = new OrderedMap();
+
+    public UnaugmentedTrilateralRoot() {
+    }
 
     public String getRulename() {
         return rulename;
@@ -46,10 +52,6 @@ public class UnaugmentedTrilateralRoot implements TrilateralRoot{
         this.verbtype = verbtype;
     }
 
-    private String verb;
-
-    private OrderedMap gerundes = new OrderedMap();
-
     public String getVerb() {
         return verb;
     }
@@ -58,15 +60,20 @@ public class UnaugmentedTrilateralRoot implements TrilateralRoot{
         this.verb = verb;
     }
 
-    public UnaugmentedTrilateralRoot() {
-    }
-
     public char getC1() {
         return c1;
     }
 
+    public void setC1(char c1) {
+        this.c1 = c1;
+    }
+
     public char getC2() {
         return c2;
+    }
+
+    public void setC2(char c2) {
+        this.c2 = c2;
     }
 
     public String getConjugationname() {
@@ -81,11 +88,17 @@ public class UnaugmentedTrilateralRoot implements TrilateralRoot{
         return conjugation;
     }
 
+    public void setConjugation(String conjugation) {
+        this.conjugation = conjugation;
+    }
+
     public char getC3() {
         return c3;
     }
 
-
+    public void setC3(char c3) {
+        this.c3 = c3;
+    }
 
     public Collection getGerundsSymbols() {
         return gerundes.getOrderedKeys();
@@ -93,25 +106,6 @@ public class UnaugmentedTrilateralRoot implements TrilateralRoot{
 
     public Gerund getGerund(String symbol) {
         return (Gerund) gerundes.get(symbol);
-    }
-
-
-
-
-    public void setConjugation(String conjugation) {
-        this.conjugation = conjugation;
-    }
-
-    public void setC3(char c3) {
-        this.c3 = c3;
-    }
-
-    public void setC2(char c2) {
-        this.c2 = c2;
-    }
-
-    public void setC1(char c1) {
-        this.c1 = c1;
     }
 
     public void addGerund(Gerund gerund) {

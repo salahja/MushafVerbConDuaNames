@@ -1,24 +1,24 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.vocalizer.lafif.connected.active;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
-import org.sj.verbConjugation.trilateral.augmented.*;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
-   
+import java.util.LinkedList;
+import java.util.List;
+
 public class Present4Vocalizer extends SubstitutionsApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public Present4Vocalizer() {
-        substitutions.add(new SuffixSubstitution("ِيُ","ِي"));// EX: (يُذْوِي، يداوي، ينزوي، يحتوي، يستهوي)
-        substitutions.add(new SuffixSubstitution("يْ",""));// EX: (لم يُذْوِ، لم يداوِ، لم يَنْزَوِ، لم يَحْتَوِ، لم يَسْتَهْوِ)
-        substitutions.add(new InfixSubstitution("ِيِ","ِ"));// EX: (أنتِ تُذْوِينَ، تُداوِينَ، تنْزوين، تحتوين، تستهوين)
-        substitutions.add(new InfixSubstitution("ِيُ","ُ"));// EX: (أنتم تُذْوُونَ، تُداوُونَ، تنْزوون، تحتوون، تستهوون)
-        substitutions.add(new InfixSubstitution("ِيْ","ِي"));// EX: (أنتن تُذْوِينَ، تداوين، تنْزوين، تحتوين، تستهوين)
-
+        substitutions.add(new SuffixSubstitution("ِيُ", "ِي"));// EX: (يُذْوِي، يداوي، ينزوي، يحتوي، يستهوي)
+        substitutions.add(new SuffixSubstitution("يْ", ""));// EX: (لم يُذْوِ، لم يداوِ، لم يَنْزَوِ، لم يَحْتَوِ، لم يَسْتَهْوِ)
+        substitutions.add(new InfixSubstitution("ِيِ", "ِ"));// EX: (أنتِ تُذْوِينَ، تُداوِينَ، تنْزوين، تحتوين، تستهوين)
+        substitutions.add(new InfixSubstitution("ِيُ", "ُ"));// EX: (أنتم تُذْوُونَ، تُداوُونَ، تنْزوون، تحتوون، تستهوون)
+        substitutions.add(new InfixSubstitution("ِيْ", "ِي"));// EX: (أنتن تُذْوِينَ، تداوين، تنْزوين، تحتوين، تستهوين)
 
     }
 
@@ -39,7 +39,6 @@ public class Present4Vocalizer extends SubstitutionsApplier implements IAugmente
                         case 9:
                             return true;
                     }
-
                 case 28:
                     switch (formulaNo) {
                         case 1:

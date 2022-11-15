@@ -1,6 +1,5 @@
 package com.example.mushafconsolidated.fragments;
 
-
 import static com.example.Constant.BYELLOW;
 
 import android.os.Build;
@@ -27,23 +26,17 @@ import com.example.mushafconsolidated.intrface.OnItemClickListener;
 
 import java.util.ArrayList;
 
-
 public class MudhafDisplayFrag extends Fragment {
-
-
     private RecyclerView recyclerView;
     //   private RecyclerView.Adapter ParentAdapter;
     private MudhafAdapter sifaAdapter;
     //  SurahDisplayAdapter ParentAdapter;
-
     private OnItemClickListener mItemClickListener;
     private RecyclerView.LayoutManager layoutManager;
-
 
     public MudhafDisplayFrag() {
         // Required empty public constructor
     }
-
 
     /**
      * Use this factory method to create a new instance of
@@ -55,7 +48,6 @@ public class MudhafDisplayFrag extends Fragment {
     public static MudhafDisplayFrag newInstance() {
         MudhafDisplayFrag fragment = new MudhafDisplayFrag();
         Bundle args = new Bundle();
-
         fragment.setArguments(args);
         return fragment;
     }
@@ -70,56 +62,38 @@ public class MudhafDisplayFrag extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
         View view = inflater.inflate(R.layout.reccylerview, container, false);
         Utils utils = new Utils(getContext());
-
-
         final ArrayList<MudhafPOJO> sifabySurahAll = utils.getMudhaf();
-
         for (MudhafPOJO sifa : sifabySurahAll) {
             SpannableStringBuilder str = new SpannableStringBuilder(sifa.getQurantext());
             try {
                 str.setSpan(new ForegroundColorSpan(BYELLOW), sifa.getStartindex(), sifa.getEndindex(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 sifa.setSpannedverse(str);
             } catch (IndexOutOfBoundsException e) {
-
                 System.out.println(e.getMessage());
                 System.out.println(sifa.getSurah() + "," + sifa.getAyah() + "," + sifa.getWordno());
             }
 
         }
-
-
         setRecyclerView(view.findViewById(R.id.RecyclerView));
         getRecyclerView().setHasFixedSize(true);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-
-
         getRecyclerView().setLayoutManager(getLayoutManager());
         setSifaAdapter(new MudhafAdapter(getContext(), sifabySurahAll));
-
-
         getRecyclerView().setAdapter(getSifaAdapter());
         return view;
     }
 
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-
         getRecyclerView().setAdapter(getSifaAdapter());
-
         setRecyclerView(view.findViewById(R.id.RecyclerView));
         getRecyclerView().setHasFixedSize(true);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-
         Utils utils = new Utils(getContext());
         final ArrayList<MudhafPOJO> all = utils.getMudhaf();
-
         for (MudhafPOJO sifa : all) {
             SpannableStringBuilder str = new SpannableStringBuilder(sifa.getQurantext());
             try {
@@ -131,31 +105,18 @@ public class MudhafDisplayFrag extends Fragment {
             }
 
         }
-
-
         setRecyclerView(view.findViewById(R.id.RecyclerView));
         getRecyclerView().setHasFixedSize(true);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-
-
         getRecyclerView().setLayoutManager(getLayoutManager());
         setSifaAdapter(new MudhafAdapter(getContext(), all));
-
-
         getRecyclerView().setAdapter(getSifaAdapter());
-
         getRecyclerView().setLayoutManager(getLayoutManager());
-
-
         getSifaAdapter().SetOnItemClickListener((v, position) -> {
             //   Toast.makeText(getActivity(), "clicked", Toast.LENGTH_SHORT).show();
-
-
         });
 
-
     }
-
 
     public RecyclerView getRecyclerView() {
         return recyclerView;
@@ -188,6 +149,5 @@ public class MudhafDisplayFrag extends Fragment {
     public void setLayoutManager(RecyclerView.LayoutManager layoutManager) {
         this.layoutManager = layoutManager;
     }
-
 
 }

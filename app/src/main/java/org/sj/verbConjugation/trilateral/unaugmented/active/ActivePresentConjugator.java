@@ -1,10 +1,10 @@
 package org.sj.verbConjugation.trilateral.unaugmented.active;
 
-import java.util.List;
-import java.util.LinkedList;
-import org.sj.verbConjugation.trilateral.unaugmented.*;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
 import org.sj.verbConjugation.util.PresentConjugationDataContainer;
 
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf</p>
@@ -19,10 +19,10 @@ import org.sj.verbConjugation.util.PresentConjugationDataContainer;
  * @version 1.0
  */
 public class ActivePresentConjugator {
+    private static final ActivePresentConjugator instance = new ActivePresentConjugator();
+
     private ActivePresentConjugator() {
     }
-
-    private static ActivePresentConjugator instance = new ActivePresentConjugator();
 
     public static ActivePresentConjugator getInstance() {
         return instance;
@@ -30,9 +30,10 @@ public class ActivePresentConjugator {
 
     /**
      * *إنشاء الفعل المضارع بغض النظر عن حالته الإعرابية
-     * @param pronounIndex int
-     * @param root UnaugmentedTrilateralRoot
-     * @param lastDprList List
+     *
+     * @param pronounIndex         int
+     * @param root                 UnaugmentedTrilateralRoot
+     * @param lastDprList          List
      * @param connectedPronounList List
      * @return ActivePresentVerb
      */
@@ -44,53 +45,54 @@ public class ActivePresentConjugator {
         return new ActivePresentVerb(root, cp, dpr2, lastDpr, connectedPronoun);
     }
 
-
     /**
      * إنشاء الفعل المضارع في حالة الرفع
+     *
      * @param pronounIndex int
-     * @param root TrilateralVerb
+     * @param root         TrilateralVerb
      * @return PresentConjugation
      */
     public ActivePresentVerb createNominativeVerb(int pronounIndex, UnaugmentedTrilateralRoot root) {
-        return createVerb(pronounIndex, root, PresentConjugationDataContainer.getInstance().getNominativeLastDprList() , PresentConjugationDataContainer.getInstance().getNominativeConnectedPronounList());
+        return createVerb(pronounIndex, root, PresentConjugationDataContainer.getInstance().getNominativeLastDprList(), PresentConjugationDataContainer.getInstance().getNominativeConnectedPronounList());
     }
-
 
     /**
      * إنشاء الفعل المضارع في حالة النصب
+     *
      * @param pronounIndex int
-     * @param root TrilateralVerb
+     * @param root         TrilateralVerb
      * @return PresentConjugation
      */
     public ActivePresentVerb createAccusativeVerb(int pronounIndex, UnaugmentedTrilateralRoot root) {
-        return createVerb(pronounIndex, root, PresentConjugationDataContainer.getInstance().getAccusativeLastDprList() , PresentConjugationDataContainer.getInstance().getAccusativeConnectedPronounList());
+        return createVerb(pronounIndex, root, PresentConjugationDataContainer.getInstance().getAccusativeLastDprList(), PresentConjugationDataContainer.getInstance().getAccusativeConnectedPronounList());
     }
-
 
     /**
      * إنشاء الفعل المضارع في حالة الجزم
+     *
      * @param pronounIndex int
-     * @param root TrilateralVerb
+     * @param root         TrilateralVerb
      * @return PresentConjugation
      */
     public ActivePresentVerb createJussiveVerb(int pronounIndex, UnaugmentedTrilateralRoot root) {
-        return createVerb(pronounIndex, root, PresentConjugationDataContainer.getInstance().getJussiveLastDprList() , PresentConjugationDataContainer.getInstance().getJussiveConnectedPronounList());
+        return createVerb(pronounIndex, root, PresentConjugationDataContainer.getInstance().getJussiveLastDprList(), PresentConjugationDataContainer.getInstance().getJussiveConnectedPronounList());
     }
-
 
     /**
      * إنشاء الفعل المضارع في حالة التأكيد
+     *
      * @param pronounIndex int
-     * @param root TrilateralVerb
+     * @param root         TrilateralVerb
      * @return PresentConjugation
      */
     public ActivePresentVerb createEmphasizedVerb(int pronounIndex, UnaugmentedTrilateralRoot root) {
-        return createVerb(pronounIndex, root, PresentConjugationDataContainer.getInstance().getEmphasizedLastDprList() , PresentConjugationDataContainer.getInstance().getEmphasizedConnectedPronounList());
+        return createVerb(pronounIndex, root, PresentConjugationDataContainer.getInstance().getEmphasizedLastDprList(), PresentConjugationDataContainer.getInstance().getEmphasizedConnectedPronounList());
     }
 
     /**
      * إنشاء قائمة تحتوي الأفعال حسب الضمائر
      * في حالة الرفع
+     *
      * @param root TripleVerb
      * @return List
      */
@@ -99,14 +101,13 @@ public class ActivePresentConjugator {
         for (int i = 0; i < 13; i++) {
             result.add(createNominativeVerb(i, root));
         }
-
         return result;
     }
-
 
     /**
      * إنشاء قائمة تحتوي الأفعال حسب الضمائر
      * في حالة النصب
+     *
      * @param root TripleVerb
      * @return List
      */
@@ -115,13 +116,13 @@ public class ActivePresentConjugator {
         for (int i = 0; i < 13; i++) {
             result.add(createAccusativeVerb(i, root));
         }
-
         return result;
     }
 
     /**
      * إنشاء قائمة تحتوي الأفعال حسب الضمائر
      * في حالة الجزم
+     *
      * @param root TripleVerb
      * @return List
      */
@@ -130,13 +131,13 @@ public class ActivePresentConjugator {
         for (int i = 0; i < 13; i++) {
             result.add(createJussiveVerb(i, root));
         }
-
         return result;
     }
 
     /**
      * إنشاء قائمة تحتوي الأفعال حسب الضمائر
      * في حالة التأكيد
+     *
      * @param root TripleVerb
      * @return List
      */
@@ -145,25 +146,22 @@ public class ActivePresentConjugator {
         for (int i = 0; i < 13; i++) {
             result.add(createEmphasizedVerb(i, root));
         }
-
         return result;
     }
-
 
     public List createNominativeVerbHua(UnaugmentedTrilateralRoot root) {
         List result = new LinkedList();
         for (int i = 0; i < 1; i++) {
             result.add(createNominativeVerb(i, root));
         }
-
         return result;
     }
+
     public List createAccusativeVerbHua(UnaugmentedTrilateralRoot root) {
         List result = new LinkedList();
         for (int i = 0; i < 1; i++) {
             result.add(createAccusativeVerb(i, root));
         }
-
         return result;
     }
 
@@ -172,7 +170,6 @@ public class ActivePresentConjugator {
         for (int i = 0; i < 1; i++) {
             result.add(createJussiveVerb(i, root));
         }
-
         return result;
     }
 
@@ -181,9 +178,7 @@ public class ActivePresentConjugator {
         for (int i = 0; i < 1; i++) {
             result.add(createEmphasizedVerb(i, root));
         }
-
         return result;
     }
-
 
 }

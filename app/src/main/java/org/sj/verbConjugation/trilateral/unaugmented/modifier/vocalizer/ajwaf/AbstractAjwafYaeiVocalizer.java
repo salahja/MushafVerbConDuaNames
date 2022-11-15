@@ -1,8 +1,8 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf;
 
 import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
 
 /**
  * <p>Title: Sarf Program</p>

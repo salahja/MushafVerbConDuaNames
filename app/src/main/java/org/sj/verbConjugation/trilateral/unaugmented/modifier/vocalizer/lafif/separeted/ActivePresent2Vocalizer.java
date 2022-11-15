@@ -1,10 +1,13 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.lafif.separeted;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionSuffixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,7 +23,7 @@ import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
  */
 public class ActivePresent2Vocalizer extends SubstitutionsApplier implements IUnaugmentedTrilateralModifier {
 
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public ActivePresent2Vocalizer() {
         substitutions.add(new ExpressionSuffixSubstitution("َوْC2ِيُ", "َC2ِي")); // EX: (يَقِي، يَلِي)
@@ -29,7 +32,7 @@ public class ActivePresent2Vocalizer extends SubstitutionsApplier implements IUn
         substitutions.add(new ExpressionInfixSubstitution("َوْC2ِيِ", "َC2ِ")); // EX: (أنتِ تَقِينَ، تَلِينَ)
         substitutions.add(new ExpressionInfixSubstitution("َوْC2ِيْ", "َC2ِي")); // EX: (أنتن تَقِينَ، تَلِينَ)
         substitutions.add(new ExpressionInfixSubstitution("َوْC2ِيُ", "َC2ُ")); // EX: (أنتم تَقُون، تَقُنَّ، تَلُون، تَلُنَّ)
-        substitutions.add(new ExpressionInfixSubstitution("َوْC2ِيَ","َC2ِيَ"));// EX: (أنتما تقيان)
+        substitutions.add(new ExpressionInfixSubstitution("َوْC2ِيَ", "َC2ِيَ"));// EX: (أنتما تقيان)
 
     }
 

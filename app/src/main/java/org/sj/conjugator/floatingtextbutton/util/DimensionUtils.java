@@ -4,7 +4,6 @@ import android.content.Context;
 import android.util.TypedValue;
 
 public class DimensionUtils {
-
     public static int dpToPx(Context context, int dp) {
         return (int) TypedValue
                 .applyDimension(

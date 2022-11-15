@@ -16,7 +16,6 @@ import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
  * @version 1.0
  */
 public abstract class NonStandardTimeAndPlaceNounFormula extends NounFormula {
-
     public NonStandardTimeAndPlaceNounFormula() {
     }
 
@@ -26,6 +25,7 @@ public abstract class NonStandardTimeAndPlaceNounFormula extends NounFormula {
 
     /**
      * Every non standard time and place has a symbol to be represented by
+     *
      * @return String
      */
     public abstract String getSymbol();

@@ -1,10 +1,12 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.nakes.wawi.active;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,12 +22,12 @@ import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
  */
 public class Past3Vocalizer extends SubstitutionsApplier implements IUnaugmentedTrilateralModifier {
 
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public Past3Vocalizer() {
-        substitutions.add(new InfixSubstitution("ِوْ","ِي"));
-substitutions.add(new InfixSubstitution("ِوَ","ِيَ"));
-substitutions.add(new InfixSubstitution("ِوُ","ُ"));
+        substitutions.add(new InfixSubstitution("ِوْ", "ِي"));
+        substitutions.add(new InfixSubstitution("ِوَ", "ِيَ"));
+        substitutions.add(new InfixSubstitution("ِوُ", "ُ"));
 
     }
 

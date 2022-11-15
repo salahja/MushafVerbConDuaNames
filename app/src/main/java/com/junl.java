@@ -505,18 +505,4 @@ private class PartSyncWordByWord extends AsyncTask<ArrayList<AyahWord>, Integer,
 
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -1,25 +1,25 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.vocalizer.lafif.connected.active;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
-import org.sj.verbConjugation.trilateral.augmented.*;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class Imperative1Vocalizer extends SubstitutionsApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public Imperative1Vocalizer() {
-
-        substitutions.add(new SuffixSubstitution("يْ",""));// EX: (أحْيِ، أذْوِ، حايِ، داوِ، انزوِ، احتوِ، استحيِ، استهوِ)
-        substitutions.add(new InfixSubstitution("ِيِ","ِ"));// EX: (أنتِ أحْيِي، أذْوِي، حايِي، داوِي، انزوِي، احتوِي، استحيِي، استهوِي)
-        substitutions.add(new InfixSubstitution("ِيُ","ُ"));// EX: (أنتم أحْيُوا، أذْوُوا، حايُوا، داوُوا، انزوُوا، احتوُوا، استحيُوا، استهوُوا)
-        substitutions.add(new InfixSubstitution("ِيْ","ِي"));// EX: (أنتن أحْيِينَ، أذْوِينَ، حايِينَ، داوِينَ، انزوِينَ، احتوِينَ، استحيِينَ، استهوِينَ)
+        substitutions.add(new SuffixSubstitution("يْ", ""));// EX: (أحْيِ، أذْوِ، حايِ، داوِ، انزوِ، احتوِ، استحيِ، استهوِ)
+        substitutions.add(new InfixSubstitution("ِيِ", "ِ"));// EX: (أنتِ أحْيِي، أذْوِي، حايِي، داوِي، انزوِي، احتوِي، استحيِي، استهوِي)
+        substitutions.add(new InfixSubstitution("ِيُ", "ُ"));// EX: (أنتم أحْيُوا، أذْوُوا، حايُوا، داوُوا، انزوُوا، احتوُوا، استحيُوا، استهوُوا)
+        substitutions.add(new InfixSubstitution("ِيْ", "ِي"));// EX: (أنتن أحْيِينَ، أذْوِينَ، حايِينَ، داوِينَ، انزوِينَ، احتوِينَ، استحيِينَ، استهوِينَ)
 
     }
-
 
     public List getSubstitutions() {
         return substitutions;
@@ -38,7 +38,6 @@ public class Imperative1Vocalizer extends SubstitutionsApplier implements IAugme
                         case 9:
                             return true;
                     }
-
                 case 28:
                     switch (formulaNo) {
                         case 1:
@@ -53,6 +52,5 @@ public class Imperative1Vocalizer extends SubstitutionsApplier implements IAugme
         }
         return false;
     }
-
 
 }

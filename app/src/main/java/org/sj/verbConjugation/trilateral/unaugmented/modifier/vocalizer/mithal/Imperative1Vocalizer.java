@@ -1,11 +1,14 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.mithal;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
 import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -21,10 +24,10 @@ import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
  */
 public class Imperative1Vocalizer extends SubstitutionsApplier implements IUnaugmentedTrilateralModifier {
 
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
-    private List acceptList = new LinkedList();
-    private List declineList = new LinkedList();
+    private final List acceptList = new LinkedList();
+    private final List declineList = new LinkedList();
 
     public Imperative1Vocalizer() {
         acceptList.add("وذر");
@@ -37,7 +40,7 @@ public class Imperative1Vocalizer extends SubstitutionsApplier implements IUnaug
         declineList.add("وسع");
         declineList.add("وهل");
 
-        substitutions.add(new InfixSubstitution("اوْ",""));
+        substitutions.add(new InfixSubstitution("اوْ", ""));
     }
 
 
@@ -47,6 +50,7 @@ public class Imperative1Vocalizer extends SubstitutionsApplier implements IUnaug
 
     /**
      * فحص أحد ثلاثة احتمالات
+     *
      * @param conjugationResult ConjugationResult
      * @return boolean
      */

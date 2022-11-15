@@ -1,7 +1,6 @@
 package org.sj.nounConjugation.trilateral.unaugmented.assimilate;
 
-
-import java.io.*;
+import java.io.File;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -19,7 +18,7 @@ public class AssimilateAdjectiveFormulaTreeCreator {
     private AssimilateAdjectiveFormulaTreeCreator() {
     }
 
-    public static AssimilateAdjectiveFormulaTree buildNounFormulaTree(File xmlDiagramFile) throws Exception{
+    public static AssimilateAdjectiveFormulaTree buildNounFormulaTree(File xmlDiagramFile) throws Exception {
           /*
             Digester digester = new Digester();
         digester.setValidating( false );

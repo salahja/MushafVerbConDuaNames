@@ -1,16 +1,12 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 //primaryKeys ={"translation_id","verse_id"}
 
-
 @Entity(tableName = "CorpusExpand")
 public class CorpusEntity {
-
-
     @NonNull
     private final int surah;
     @NonNull
@@ -19,7 +15,6 @@ public class CorpusEntity {
     private final int wordno;
     @NonNull
     private final int wordcount;
-
     private final String araone;
     private final String aratwo;
     private final String arathree;
@@ -46,7 +41,6 @@ public class CorpusEntity {
     private final String form_three;
     private final String form_four;
     private final String form_five;
-
     private final String detailsone;
     private final String detailstwo;
     private final String detailsthree;
@@ -67,7 +61,6 @@ public class CorpusEntity {
         this.ayah = ayah;
         this.wordno = wordno;
         this.wordcount = wordcount;
-
         this.araone = araone;
         this.aratwo = aratwo;
         this.arathree = arathree;
@@ -122,7 +115,6 @@ public class CorpusEntity {
     public int getWordcount() {
         return wordcount;
     }
-
 
     public String getAraone() {
         return araone;

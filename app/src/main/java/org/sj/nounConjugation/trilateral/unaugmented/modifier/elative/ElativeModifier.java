@@ -1,10 +1,12 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.elative;
 
-import java.util.List;
 import org.sj.nounConjugation.NounLamAlefModifier;
-import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
 import org.sj.nounConjugation.NounSunLamModifier;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModifier;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,18 +22,16 @@ import org.sj.nounConjugation.NounSunLamModifier;
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
-public class ElativeModifier implements IUnaugmentedTrilateralNounModifier{
-    private Geminator geminator = new Geminator();
-    private Vocalizer vocalizer = new Vocalizer();
-    private Mahmouz mahmouz = new Mahmouz();
-
-    private AlkhairModifier alkhairModifier = new AlkhairModifier();
-    private AlSharModifier alSharModifier = new AlSharModifier();
+public class ElativeModifier implements IUnaugmentedTrilateralNounModifier {
+    private static final ElativeModifier instance = new ElativeModifier();
+    private final Geminator geminator = new Geminator();
+    private final Vocalizer vocalizer = new Vocalizer();
+    private final Mahmouz mahmouz = new Mahmouz();
+    private final AlkhairModifier alkhairModifier = new AlkhairModifier();
+    private final AlSharModifier alSharModifier = new AlSharModifier();
 
     private ElativeModifier() {
     }
-
-    private static ElativeModifier instance = new ElativeModifier();
 
     public static ElativeModifier getInstance() {
         return instance;
@@ -41,11 +41,9 @@ public class ElativeModifier implements IUnaugmentedTrilateralNounModifier{
         ConjugationResult conjResult = new ConjugationResult(kov, root, conjugations, formula);
         if (alkhairModifier.isApplied(conjResult)) {
             alkhairModifier.apply(conjResult);
-        }
-        else if (alSharModifier.isApplied(conjResult)) {
+        } else if (alSharModifier.isApplied(conjResult)) {
             alSharModifier.apply(conjResult);
-        }
-        else {
+        } else {
             if (geminator.isApplied(conjResult))
                 geminator.apply(conjResult.getFinalResult(), root);
             vocalizer.apply(conjResult);

@@ -1,7 +1,9 @@
 package org.sj.nounConjugation.trilateral.augmented.activeparticiple;
+
+import org.sj.nounConjugation.trilateral.augmented.AugmentedTrilateralNoun;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
 import org.sj.verbConjugation.util.ArabCharUtil;
-import org.sj.nounConjugation.trilateral.augmented.*;
-import org.sj.verbConjugation.trilateral.augmented.*;
+
 /**
  * <p>Title: Sarf Program</p>
  *
@@ -26,9 +28,8 @@ public class NounFormula3 extends AugmentedTrilateralNoun {
      * @todo Implement this sarf.noun.trilateral.TrilateralNoun method
      */
     public String form() {
-
-        String m= ArabCharUtil.MEEM+ArabCharUtil.DAMMA+root.getC1()+ArabCharUtil.FATHA+ArabCharUtil.Aleph+root.getC2()+ArabCharUtil.KASRA+root.getC3()+suffix;
-  return m;
+        String m = ArabCharUtil.MEEM + ArabCharUtil.DAMMA + root.getC1() + ArabCharUtil.FATHA + ArabCharUtil.Aleph + root.getC2() + ArabCharUtil.KASRA + root.getC3() + suffix;
+        return m;
 
     }
 }

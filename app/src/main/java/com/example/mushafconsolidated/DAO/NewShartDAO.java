@@ -7,7 +7,6 @@ import com.example.mushafconsolidated.Entities.NewShartEntity;
 
 import java.util.List;
 
-
 @Dao
 public interface NewShartDAO {
     @Query("SELECT * FROM newshart ORDER BY surah,ayah")
@@ -17,8 +16,7 @@ public interface NewShartDAO {
     List<NewShartEntity> getShartBySurah(int id);
 
     @Query("SELECT * FROM newshart where surah=:id and ayah=:ayah order by indexstart")
-    List<NewShartEntity> getShartBySurahAyah(int id,int ayah);
-
+    List<NewShartEntity> getShartBySurahAyah(int id, int ayah);
 
 }
 

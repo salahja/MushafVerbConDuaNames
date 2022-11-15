@@ -1,8 +1,10 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.geminator.generic;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+
+import java.util.LinkedList;
 import java.util.List;
-import java.util.*;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -16,17 +18,16 @@ import java.util.*;
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
-public class ActivePastGeminator extends SubstitutionsApplier{
-
-    private List substitutions = new LinkedList();
+public class ActivePastGeminator extends SubstitutionsApplier {
+    private final List substitutions = new LinkedList();
 
     public ActivePastGeminator() {
-        substitutions.add(new ExpressionInfixSubstitution("C2َC3َ","C3َّ"));
-        substitutions.add(new ExpressionInfixSubstitution("C2َC3ُ","C3ُّ"));
-        substitutions.add(new ExpressionInfixSubstitution("C2ِC3َ","C3َّ"));
-        substitutions.add(new ExpressionInfixSubstitution("C2ِC3ُ","C3ُّ"));
-        substitutions.add(new ExpressionInfixSubstitution("C2ُC3َ","C3َّ"));
-        substitutions.add(new ExpressionInfixSubstitution("C2ُC3ُ","C3ُّ"));
+        substitutions.add(new ExpressionInfixSubstitution("C2َC3َ", "C3َّ"));
+        substitutions.add(new ExpressionInfixSubstitution("C2َC3ُ", "C3ُّ"));
+        substitutions.add(new ExpressionInfixSubstitution("C2ِC3َ", "C3َّ"));
+        substitutions.add(new ExpressionInfixSubstitution("C2ِC3ُ", "C3ُّ"));
+        substitutions.add(new ExpressionInfixSubstitution("C2ُC3َ", "C3َّ"));
+        substitutions.add(new ExpressionInfixSubstitution("C2ُC3ُ", "C3ُّ"));
 
     }
 

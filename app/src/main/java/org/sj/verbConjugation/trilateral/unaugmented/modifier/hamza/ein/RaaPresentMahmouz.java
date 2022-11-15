@@ -1,11 +1,13 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.hamza.ein;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.TrilateralRoot;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
-import org.sj.verbConjugation.trilateral.*;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,10 +22,10 @@ import org.sj.verbConjugation.trilateral.*;
  * @version 1.0
  */
 public class RaaPresentMahmouz extends SubstitutionsApplier implements IUnaugmentedTrilateralModifier {
-    private List substitutions = new ArrayList();
+    private final List substitutions = new ArrayList();
 
     public RaaPresentMahmouz() {
-        substitutions.add(new InfixSubstitution("ْءَ","َ"));// EX: (يَرَى)
+        substitutions.add(new InfixSubstitution("ْءَ", "َ"));// EX: (يَرَى)
     }
 
     public List getSubstitutions() {

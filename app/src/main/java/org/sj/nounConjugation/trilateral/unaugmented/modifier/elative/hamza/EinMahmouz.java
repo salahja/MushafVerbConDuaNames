@@ -1,9 +1,10 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.elative.hamza;
 
-import java.util.*;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.AbstractEinMahmouz;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -21,10 +22,9 @@ public class EinMahmouz extends AbstractEinMahmouz {
     List substitutions = new LinkedList();
 
     public EinMahmouz() {
-        substitutions.add(new InfixSubstitution("ْءَ","ْأَ"));// EX: (أضأل)
-        substitutions.add(new InfixSubstitution("ُءْ","ُؤْ"));// EX: (ضُؤْلَى)
+        substitutions.add(new InfixSubstitution("ْءَ", "ْأَ"));// EX: (أضأل)
+        substitutions.add(new InfixSubstitution("ُءْ", "ُؤْ"));// EX: (ضُؤْلَى)
     }
-
 
     public List getSubstitutions() {
         return substitutions;

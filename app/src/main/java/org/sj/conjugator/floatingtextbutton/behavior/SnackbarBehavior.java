@@ -14,12 +14,9 @@ import com.google.android.material.snackbar.Snackbar;
 
 import ru.dimorinny.floatingtextbutton.FloatingTextButton;
 
-
 public class SnackbarBehavior extends CoordinatorLayout.Behavior<FloatingTextButton> {
-
     private static final Interpolator HIDE_INTERPOLATOR = new FastOutSlowInInterpolator();
     private static final Long HIDE_DURATION = 250L;
-
     private ViewPropertyAnimatorCompat animation = null;
 
     public SnackbarBehavior(Context context, AttributeSet attrs) {
@@ -48,7 +45,6 @@ public class SnackbarBehavior extends CoordinatorLayout.Behavior<FloatingTextBut
             animation.cancel();
             animation = null;
         }
-
         child.setTranslationY(
                 Math.min(0f, dependency.getTranslationY() - dependency.getHeight())
         );
@@ -62,12 +58,10 @@ public class SnackbarBehavior extends CoordinatorLayout.Behavior<FloatingTextBut
             View dependency
     ) {
         if (dependency instanceof Snackbar.SnackbarLayout) {
-
             animation = ViewCompat.animate(child)
                     .translationY(0f)
                     .setInterpolator(HIDE_INTERPOLATOR)
                     .setDuration(HIDE_DURATION);
-
             animation.start();
         }
         super.onDependentViewRemoved(parent, child, dependency);

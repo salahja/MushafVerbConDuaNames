@@ -1,10 +1,14 @@
 package org.sj.nounConjugation.trilateral.unaugmented.elative;
 
-import org.sj.nounConjugation.*;
-import org.sj.verbConjugation.trilateral.unaugmented.*;
-import java.util.*;
+import org.sj.nounConjugation.IUnaugmentedTrilateralNounConjugator;
+import org.sj.nounConjugation.NounFormula;
+import org.sj.nounConjugation.trilateral.unaugmented.elative.nonstandard.GenericElativeNounFormula;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
 
-import org.sj.nounConjugation.trilateral.unaugmented.elative.nonstandard.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -18,41 +22,38 @@ import org.sj.nounConjugation.trilateral.unaugmented.elative.nonstandard.*;
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
-public class ElativeNounConjugator implements IUnaugmentedTrilateralNounConjugator{
+public class ElativeNounConjugator implements IUnaugmentedTrilateralNounConjugator {
+    private static final ElativeNounConjugator instance = new ElativeNounConjugator();
+    static List formulas = new ArrayList(1);
 
-    private static ElativeNounConjugator instance = new ElativeNounConjugator();
-
-    public static ElativeNounConjugator getInstance() {
-        return instance;
+    static {
+        formulas.add("أَفْعَل");
     }
 
     private ElativeNounConjugator() {
     }
 
+    public static ElativeNounConjugator getInstance() {
+        return instance;
+    }
+
     public List createNounList(UnaugmentedTrilateralRoot root, String formulaName) {
         List result = new LinkedList();
         for (int i = 0; i < 18; i++) {
-            NounFormula noun = new GenericElativeNounFormula(root, i+"");
+            NounFormula noun = new GenericElativeNounFormula(root, i + "");
             result.add(noun);
         }
         return result;
 
     }
 
-    static List formulas = new ArrayList(1);
-    static {
-        formulas.add("أَفْعَل");
-    }
     public List getAppliedFormulaList(UnaugmentedTrilateralRoot root) {
         //todo
-        ElativeNounFormulaTree formulaTree =null;//  DatabaseManager.getInstance().getElativeNounFormulaTree(root.getC1());
+        ElativeNounFormulaTree formulaTree = null;//  DatabaseManager.getInstance().getElativeNounFormulaTree(root.getC1());
         if (formulaTree == null)
             return null;
-
         if (formulaTree == null)
             return null;
-
-
         Iterator iter = formulaTree.getFormulaList().iterator();
         while (iter.hasNext()) {
             ElativeNounFormula formula = (ElativeNounFormula) iter.next();
@@ -60,7 +61,6 @@ public class ElativeNounConjugator implements IUnaugmentedTrilateralNounConjugat
                 return formulas;
             }
         }
-
         return new LinkedList();
     }
 }

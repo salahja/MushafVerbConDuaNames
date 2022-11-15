@@ -1,21 +1,20 @@
 package org.sj.verbConjugation.trilateral.augmented.passive.present;
 
-
-import org.sj.verbConjugation.util.*;
+import org.sj.verbConjugation.util.PresentConjugationDataContainer;
 
 public class AugmentedPassivePresentConjugator {
-    private AugmentedPassivePresentConjugator() {}
-
-    private static AugmentedPassivePresentConjugator instance = new AugmentedPassivePresentConjugator();
-
-    private AbstractAugmentedPresentConjugator nominativeConjugator = new AbstractAugmentedPresentConjugator(PresentConjugationDataContainer.getInstance().getNominativeLastDprList(),
+    private static final AugmentedPassivePresentConjugator instance = new AugmentedPassivePresentConjugator();
+    private final AbstractAugmentedPresentConjugator nominativeConjugator = new AbstractAugmentedPresentConjugator(PresentConjugationDataContainer.getInstance().getNominativeLastDprList(),
             PresentConjugationDataContainer.getInstance().getNominativeConnectedPronounList());
-    private AbstractAugmentedPresentConjugator accusativeConjugator = new AbstractAugmentedPresentConjugator(PresentConjugationDataContainer.getInstance().getAccusativeLastDprList(),
+    private final AbstractAugmentedPresentConjugator accusativeConjugator = new AbstractAugmentedPresentConjugator(PresentConjugationDataContainer.getInstance().getAccusativeLastDprList(),
             PresentConjugationDataContainer.getInstance().getAccusativeConnectedPronounList());
-    private AbstractAugmentedPresentConjugator jussiveConjugator = new AbstractAugmentedPresentConjugator(PresentConjugationDataContainer.getInstance().getJussiveLastDprList(),
+    private final AbstractAugmentedPresentConjugator jussiveConjugator = new AbstractAugmentedPresentConjugator(PresentConjugationDataContainer.getInstance().getJussiveLastDprList(),
             PresentConjugationDataContainer.getInstance().getJussiveConnectedPronounList());
-    private AbstractAugmentedPresentConjugator emphasizedConjugator = new AbstractAugmentedPresentConjugator(PresentConjugationDataContainer.getInstance().getEmphasizedLastDprList(),
+    private final AbstractAugmentedPresentConjugator emphasizedConjugator = new AbstractAugmentedPresentConjugator(PresentConjugationDataContainer.getInstance().getEmphasizedLastDprList(),
             PresentConjugationDataContainer.getInstance().getEmphasizedConnectedPronounList());
+
+    private AugmentedPassivePresentConjugator() {
+    }
 
     public static AugmentedPassivePresentConjugator getInstance() {
         return instance;

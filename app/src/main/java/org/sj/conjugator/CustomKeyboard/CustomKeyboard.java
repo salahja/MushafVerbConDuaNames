@@ -1,7 +1,8 @@
 package org.sj.conjugator.CustomKeyboard;
 
+import static com.example.Constant.QURAN_VERB_ROOT;
+import static com.example.Constant.QURAN_VERB_WAZAN;
 
-import static com.example.Constant.*;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -17,12 +18,15 @@ import android.widget.RadioGroup;
 
 import androidx.annotation.Nullable;
 
-import org.sj.conjugator.activity.ConjugatorAct;
 import com.example.mushafconsolidated.R;
 
+import org.sj.conjugator.activity.ConjugatorAct;
 
 public class CustomKeyboard extends LinearLayout implements View.OnClickListener {
+    private final SparseArray<String> keyValues = new SparseArray<>();
+    private final String LogTag = "Keyboard";
     public Context mycontext;
+    CustomKeyboard keyboard;
     private Button key1, key2, key3, key4, key5, key6, key7, key8, key9, key0, key00;
     private Button key_delete, key_AC, key_dot, key_enter;
     private Button dhad, suwad, qaf, fa, ghain, ayn, haaa, kha, ha, jeem;
@@ -32,16 +36,13 @@ public class CustomKeyboard extends LinearLayout implements View.OnClickListener
     private RadioButton nasara, zaraba, samia, fatha, karuma, hasiba;
     private RadioButton two, three, four, five, six, seven, eight, ten;
     private String inputtext;
-    private SparseArray<String> keyValues = new SparseArray<>();
     private InputConnection inputConnection;
-    private String LogTag = "Keyboard";
-       CustomKeyboard keyboard;
     private CharSequence charSequence;
     //  private com.sjconjugatortwo.keyboard.KeyBoardInitActivity InitActivity;
     private String radioText;
     private String bab;
 
-    public CustomKeyboard( ConjugatorAct keyBoardInitActivity) {
+    public CustomKeyboard(ConjugatorAct keyBoardInitActivity) {
         super(keyBoardInitActivity);
         mycontext = keyBoardInitActivity;
     }
@@ -115,8 +116,6 @@ public class CustomKeyboard extends LinearLayout implements View.OnClickListener
         kha = findViewById(R.id.kha);
         ha = findViewById(R.id.ha);
         jeem = findViewById(R.id.jeem);
-
-
         dhad.setOnClickListener(this);
         suwad.setOnClickListener(this);
         qaf.setOnClickListener(this);
@@ -127,8 +126,6 @@ public class CustomKeyboard extends LinearLayout implements View.OnClickListener
         kha.setOnClickListener(this);
         ha.setOnClickListener(this);
         jeem.setOnClickListener(this);
-
-
         keyValues.put(R.id.dhad, "ض");
         keyValues.put(R.id.suwad, "ص");
         keyValues.put(R.id.qaf, "ق");
@@ -139,8 +136,6 @@ public class CustomKeyboard extends LinearLayout implements View.OnClickListener
         keyValues.put(R.id.kha, "خ");
         keyValues.put(R.id.ha, "ح");
         keyValues.put(R.id.jeem, "ج");
-
-
         sheen = findViewById(R.id.sheen);
         seen = findViewById(R.id.seen);
         ya = findViewById(R.id.ya);
@@ -151,7 +146,6 @@ public class CustomKeyboard extends LinearLayout implements View.OnClickListener
         nun = findViewById(R.id.nun);
         meem = findViewById(R.id.meem);
         kaf = findViewById(R.id.kaf);
-
         sheen.setOnClickListener(this);
         seen.setOnClickListener(this);
         ya.setOnClickListener(this);
@@ -162,14 +156,11 @@ public class CustomKeyboard extends LinearLayout implements View.OnClickListener
         nun.setOnClickListener(this);
         meem.setOnClickListener(this);
         kaf.setOnClickListener(this);
-
-
         //   key00.setOnClickListener(this);
         key_delete.setOnClickListener(this);
         key_AC.setOnClickListener(this);
         key_enter.setOnClickListener(this);
         //  key_dot.setOnClickListener(this);
-
         keyValues.put(R.id.sheen, "ش");
         keyValues.put(R.id.seen, "س");
         keyValues.put(R.id.ya, "ي");
@@ -180,8 +171,6 @@ public class CustomKeyboard extends LinearLayout implements View.OnClickListener
         keyValues.put(R.id.nun, "ن");
         keyValues.put(R.id.meem, "م");
         keyValues.put(R.id.kaf, "ك");
-
-
         zoay = findViewById(R.id.zoay);
         toay = findViewById(R.id.toay);
         dhal = findViewById(R.id.dhal);
@@ -191,8 +180,6 @@ public class CustomKeyboard extends LinearLayout implements View.OnClickListener
         waw = findViewById(R.id.waw);
         tamarboot = findViewById(R.id.tamarboota);
         tha = findViewById(R.id.tha);
-
-
         zoay.setOnClickListener(this);
         toay.setOnClickListener(this);
         dhal.setOnClickListener(this);
@@ -202,7 +189,6 @@ public class CustomKeyboard extends LinearLayout implements View.OnClickListener
         waw.setOnClickListener(this);
         tamarboot.setOnClickListener(this);
         tha.setOnClickListener(this);
-
         keyValues.put(R.id.zoay, "ظ");
         keyValues.put(R.id.toay, "ط");
         keyValues.put(R.id.dhal, "ذ");
@@ -212,8 +198,6 @@ public class CustomKeyboard extends LinearLayout implements View.OnClickListener
         keyValues.put(R.id.waw, "و");
         keyValues.put(R.id.tamarboota, "ة");
         keyValues.put(R.id.tha, "ث");
-
-
         //    keyValues.put(R.id.key_00, "00");
         //    keyValues.put(R.id.key_dot, ".");
     }
@@ -222,41 +206,30 @@ public class CustomKeyboard extends LinearLayout implements View.OnClickListener
         return key_enter;
     }
 
-
     public void setInputConnection(InputConnection ic) {
         inputConnection = ic;
     }
 
     private void InitDiaalog(String root) {
-        Context applicationContext =  ConjugatorAct.getContextOfApplication();
+        Context applicationContext = ConjugatorAct.getContextOfApplication();
         //   GRadioGroup gr=new GRadioGroup(nasara,zaraba,samia,fatha,karuma,hasiba);
-
         SharedPreferences sp = applicationContext.getSharedPreferences("key", 0);
-
         String babs = sp.getString("bab", "");
-
-
         Bundle dataBundle = new Bundle();
         dataBundle.putString(QURAN_VERB_WAZAN, getRadioText());
         dataBundle.putString(QURAN_VERB_WAZAN, babs);
         dataBundle.putString(QURAN_VERB_ROOT, root);
-
-     //   QuranVerbConjDialog dialog = new QuranVerbConjDialog(getContext());
-      //  dialog.setArguments(dataBundle);
-
+        //   QuranVerbConjDialog dialog = new QuranVerbConjDialog(getContext());
+        //  dialog.setArguments(dataBundle);
         //   Intent i = new Intent(getContext(), VerbQueryActivity.class);
         //   i.putExtra(QURAN_VERB_ROOT,root);
         //   i.putExtra(QURAN_VERB_FORM,babs);
         //   getContext().startActivity(i);
-
         //      FragmentActivity activity = (FragmentActivity) getContext();
         //      final FragmentTransaction transaction = activity.getSupportFragmentManager().beginTransaction();
         //     transaction.add(R.id.frame_container ,dialog,VERSEFRAGMENT);
         //     transaction.commit();
-
-
     }
-
 
     private void inputConnectionCommitText(View view) {
         String value = keyValues.get(view.getId());
@@ -265,6 +238,5 @@ public class CustomKeyboard extends LinearLayout implements View.OnClickListener
 
     @Override
     public void onClick(View view) {
-
     }
 }

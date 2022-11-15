@@ -1,15 +1,14 @@
 package org.sj.verbConjugation.trilateral.augmented.imperative;
 
-import org.sj.verbConjugation.util.*;
-
+import org.sj.verbConjugation.util.ImperativeConjugationDataContainer;
 
 public class AugmentedImperativeConjugator {
-    private AugmentedImperativeConjugator() {}
+    private static final AugmentedImperativeConjugator instance = new AugmentedImperativeConjugator();
+    private final AbstractAugmentedImperativeConjugator notEmphsizedConjugator = new AbstractAugmentedImperativeConjugator(ImperativeConjugationDataContainer.getInstance().getLastDimList(), ImperativeConjugationDataContainer.getInstance().getConnectedPronounList());
+    private final AbstractAugmentedImperativeConjugator emphsizedConjugator = new AbstractAugmentedImperativeConjugator(ImperativeConjugationDataContainer.getInstance().getEmphasizedLastDimList(), ImperativeConjugationDataContainer.getInstance().getEmphasizedConnectedPronounList());
 
-    private static AugmentedImperativeConjugator instance = new AugmentedImperativeConjugator();
-
-    private AbstractAugmentedImperativeConjugator notEmphsizedConjugator = new AbstractAugmentedImperativeConjugator(ImperativeConjugationDataContainer.getInstance().getLastDimList(), ImperativeConjugationDataContainer.getInstance().getConnectedPronounList());
-    private AbstractAugmentedImperativeConjugator emphsizedConjugator = new AbstractAugmentedImperativeConjugator(ImperativeConjugationDataContainer.getInstance().getEmphasizedLastDimList(), ImperativeConjugationDataContainer.getInstance().getEmphasizedConnectedPronounList());
+    private AugmentedImperativeConjugator() {
+    }
 
     public static AugmentedImperativeConjugator getInstance() {
         return instance;

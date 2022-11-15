@@ -1,17 +1,16 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.geminator;
 
-import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
-import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
-
-import java.util.*;
 import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
 import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
-import org.sj.verbConjugation.util.*;
+import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
+import org.sj.verbConjugation.util.SystemConstants;
 
+import java.util.LinkedList;
+import java.util.List;
 
 public class TEndedGeminator extends SubstitutionsApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public TEndedGeminator() {
         substitutions.add(new InfixSubstitution("تْت", "تّ")); // EX: (أنا سَكَّتُّ ، أنتَ سَكَّتَّ ، أنتِ سَكَّتِّ )    }
@@ -21,12 +20,10 @@ public class TEndedGeminator extends SubstitutionsApplier implements IAugmentedT
         return substitutions;
     }
 
-
     public boolean isApplied(MazeedConjugationResult mazeedConjugationResult) {
         int kov = mazeedConjugationResult.getKov();
         int formulaNo = mazeedConjugationResult.getFormulaNo();
         if (mazeedConjugationResult.getRoot().getC3() != 'ت') return false;
-
         switch (formulaNo) {
             case 1:
             case 2:

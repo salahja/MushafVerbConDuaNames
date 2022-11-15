@@ -1,40 +1,34 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 //primaryKeys ={"translation_id","verse_id"}
 
-
 @Entity(tableName = "onlylugat")
 public class lughat {
-
-
     @NonNull
-    private int    surah    ;
+    private int surah;
     @NonNull
-    private int     ayah      ;
+    private int ayah;
     @NonNull
-    private String     surahname ;
+    private String surahname;
     @NonNull
-    private int     wordno     ;
+    private int wordno;
     @NonNull
-    private String      rootword  ;
-    private String  hansweir;
+    private String rootword;
+    private String hansweir;
     @NonNull
-    private String     arabicword;
+    private String arabicword;
     @NonNull
-    private String    ur_lughat ;
+    private String ur_lughat;
     @NonNull
-    private String    meaning   ;
+    private String meaning;
     @NonNull
-    private String     letter    ;
+    private String letter;
     @NonNull
-    private String     en_lughat ;
-
+    private String en_lughat;
     private String comments;
-
     @PrimaryKey(autoGenerate = true)
     @NonNull
     private int id;

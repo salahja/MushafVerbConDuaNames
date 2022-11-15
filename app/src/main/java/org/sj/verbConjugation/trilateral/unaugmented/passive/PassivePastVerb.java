@@ -1,7 +1,7 @@
 package org.sj.verbConjugation.trilateral.unaugmented.passive;
 
-import org.sj.verbConjugation.util.*;
-import org.sj.verbConjugation.trilateral.unaugmented.*;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+import org.sj.verbConjugation.util.ArabCharUtil;
 
 /**
  * يمثل هذا الصف الفعل في صيغة الماضي المبني للمجهول متضمناً الأحرف الثلاثة
@@ -10,23 +10,20 @@ import org.sj.verbConjugation.trilateral.unaugmented.*;
  * <p>Description: برنامج التصريف</p>
  * <p>Copyright: Copyright (c) 2006</p>
  * <p>Company: </p>
+ *
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
 public class PassivePastVerb {
-    private UnaugmentedTrilateralRoot root;
-
     //حركة فاء الفعل وهي دائماً  ضمة
     private static final String dpa1 = ArabCharUtil.DAMMA;
-
     //حركة عين الفعل وهي دائماً كسرة
     private static final String dpa2 = ArabCharUtil.KASRA;
-
+    private final UnaugmentedTrilateralRoot root;
     //حركة لام الفعل حسب الضمير
-    private String lastDpa;
-
+    private final String lastDpa;
     //الأحرف المضافة لنهاية الفعل حسب الضمير
-    private String connectedPronoun;
+    private final String connectedPronoun;
 
     public PassivePastVerb(UnaugmentedTrilateralRoot root, String lastDpa, String connectedPronoun) {
         this.root = root;
@@ -47,7 +44,7 @@ public class PassivePastVerb {
     }
 
     public String toString() {
-        return root.getC1()+dpa1+root.getC2()+dpa2+root.getC3()+lastDpa+connectedPronoun;
+        return root.getC1() + dpa1 + root.getC2() + dpa2 + root.getC3() + lastDpa + connectedPronoun;
     }
 
 }

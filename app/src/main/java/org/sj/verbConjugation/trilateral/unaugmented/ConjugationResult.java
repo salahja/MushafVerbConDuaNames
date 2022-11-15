@@ -1,6 +1,7 @@
 package org.sj.verbConjugation.trilateral.unaugmented;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -51,10 +52,10 @@ public class ConjugationResult {
     @Override
     public String toString() {
         return "ConjugationResult{" +
-              "kov=" + kov +
-              ", root=" + root +
-              ", originalResult=" + originalResult +
-              ", finalResult=" + finalResult +
-              '}';
+                "kov=" + kov +
+                ", root=" + root +
+                ", originalResult=" + originalResult +
+                ", finalResult=" + finalResult +
+                '}';
     }
 }

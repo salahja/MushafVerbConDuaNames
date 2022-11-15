@@ -1,12 +1,9 @@
 package org.sj.verbConjugation.trilateral.augmented;
 
-
 public abstract class AugmentedPresentVerb {
-
     protected AugmentedTrilateralRoot root;
     protected String lastDpr;
     protected String connectedPronoun;
-
     protected String cp;
 
     public AugmentedPresentVerb(AugmentedTrilateralRoot root, String cp, String lastDpr, String connectedPronoun) {

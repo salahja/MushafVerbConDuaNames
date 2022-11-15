@@ -1,10 +1,14 @@
-
 package org.sj.verbConjugation.trilateral.unaugmented.modifier;
 
-import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
-import java.util.*;
-import org.sj.verbConjugation.util.*;
 import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.util.SystemConstants;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,7 +24,7 @@ import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
  */
 public class Vocalizer {
     //المعلوم  و  المجهول تحتوي قائمة بالأنواع الخمسة لاعلال لماضي والمضارع والأمر حسب
-    private Map vocalizerMap = new HashMap();
+    private final Map vocalizerMap = new HashMap();
 
     public Vocalizer() {
         List activePastList = new LinkedList();
@@ -108,17 +112,18 @@ public class Vocalizer {
     /**
      * تطبيق الاعلال حسب الصيغة ماضي أو مضارع أو أمر للمعلوم أو لمجهول
      * قد لا يطبق أي نوع من الاعلال
-     * @param tense String
-     * @param active boolean
+     *
+     * @param tense      String
+     * @param active     boolean
      * @param conjResult ConjugationResult
      */
     public void apply(String tense, boolean active, ConjugationResult conjResult) {
-        List vocalizers = (List) vocalizerMap.get(tense+active);
+        List vocalizers = (List) vocalizerMap.get(tense + active);
         Iterator iter = vocalizers.iterator();
         while (iter.hasNext()) {
             IUnaugmentedTrilateralModifier vocalizer = (IUnaugmentedTrilateralModifier) iter.next();
             if (vocalizer.isApplied(conjResult)) {
-                ((SubstitutionsApplier)vocalizer).apply(conjResult.getFinalResult(), conjResult.getRoot());
+                ((SubstitutionsApplier) vocalizer).apply(conjResult.getFinalResult(), conjResult.getRoot());
                 break;
             }
         }

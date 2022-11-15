@@ -1,15 +1,16 @@
 package org.sj.nounConjugation.trilateral.augmented.modifier.passiveparticiple;
 
-import java.util.*;
-
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.augmented.modifier.activeparticiple.geminator.*;
-import org.sj.nounConjugation.trilateral.augmented.modifier.geminator.*;
-
+import org.sj.nounConjugation.trilateral.augmented.modifier.activeparticiple.geminator.Geminator1;
+import org.sj.nounConjugation.trilateral.augmented.modifier.geminator.Geminator2;
+import org.sj.nounConjugation.trilateral.augmented.modifier.geminator.Geminator3;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
 import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
-import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * <p>Title: Sarf Program</p>
  *
@@ -23,7 +24,7 @@ import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
  * @version 1.0
  */
 public class Geminator {
-    private List modifiers = new LinkedList();
+    private final List modifiers = new LinkedList();
 
     public Geminator() {
         modifiers.add(new Geminator1());

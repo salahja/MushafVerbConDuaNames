@@ -1,12 +1,13 @@
 package org.sj.nounConjugation.trilateral.augmented.modifier.passiveparticiple.vocalizer;
 
-import java.util.*;
-
-import org.sj.nounConjugation.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import org.sj.nounConjugation.TrilateralNounSubstitutionApplier;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
 import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -21,23 +22,21 @@ import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateral
  * @version 1.0
  */
 public class YaeiNakesLafifVocalizer extends TrilateralNounSubstitutionApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public YaeiNakesLafifVocalizer() {
-
-        substitutions.add(new InfixSubstitution("ايَيٌ","ايًا"));// EX: (هذا مُتَحايًا)
-        substitutions.add(new InfixSubstitution("ايَيًا","ايًا"));// EX: (رأيتُ مُتَحايًا)
-        substitutions.add(new InfixSubstitution("ايَيٍ","ايًا"));// EX: (مررتُ على مُتَحايًا)
-        substitutions.add(new SuffixSubstitution("ايَيُ","ايَا"));// EX: (هذا المتحايا،)
-        substitutions.add(new SuffixSubstitution("ايَيَ","ايَا"));// EX: (رأيتُ المتحايا ،  )
-        substitutions.add(new SuffixSubstitution("ايَيِ","ايَا"));// EX: (مررتُ على المتحايا ، )
-        substitutions.add(new InfixSubstitution("ْيَيٌ","ْيًا"));// EX: (هذا مُستحيًا)
-        substitutions.add(new InfixSubstitution("ْيَيًا","ْيًا"));// EX: (رأيتُ مُستحيًا)
-        substitutions.add(new InfixSubstitution("ْيَيٍ","ْيًا"));// EX: (مررتُ على مُستحيًا)
-        substitutions.add(new SuffixSubstitution("ْيَيُ","ْيَا"));// EX: (هذا المستحيا،)
-        substitutions.add(new SuffixSubstitution("ْيَيَ","ْيَا"));// EX: (رأيتُ المستحيا ،  )
-        substitutions.add(new SuffixSubstitution("ْيَيِ","ْيَا"));// EX: (مررتُ على المستحيا ، )
+        substitutions.add(new InfixSubstitution("ايَيٌ", "ايًا"));// EX: (هذا مُتَحايًا)
+        substitutions.add(new InfixSubstitution("ايَيًا", "ايًا"));// EX: (رأيتُ مُتَحايًا)
+        substitutions.add(new InfixSubstitution("ايَيٍ", "ايًا"));// EX: (مررتُ على مُتَحايًا)
+        substitutions.add(new SuffixSubstitution("ايَيُ", "ايَا"));// EX: (هذا المتحايا،)
+        substitutions.add(new SuffixSubstitution("ايَيَ", "ايَا"));// EX: (رأيتُ المتحايا ،  )
+        substitutions.add(new SuffixSubstitution("ايَيِ", "ايَا"));// EX: (مررتُ على المتحايا ، )
+        substitutions.add(new InfixSubstitution("ْيَيٌ", "ْيًا"));// EX: (هذا مُستحيًا)
+        substitutions.add(new InfixSubstitution("ْيَيًا", "ْيًا"));// EX: (رأيتُ مُستحيًا)
+        substitutions.add(new InfixSubstitution("ْيَيٍ", "ْيًا"));// EX: (مررتُ على مُستحيًا)
+        substitutions.add(new SuffixSubstitution("ْيَيُ", "ْيَا"));// EX: (هذا المستحيا،)
+        substitutions.add(new SuffixSubstitution("ْيَيَ", "ْيَا"));// EX: (رأيتُ المستحيا ،  )
+        substitutions.add(new SuffixSubstitution("ْيَيِ", "ْيَا"));// EX: (مررتُ على المستحيا ، )
         substitutions.add(new InfixSubstitution("َيَيٌ", "َيًا")); // EX: (هذا مُزدَيًا)
         substitutions.add(new InfixSubstitution("َيَيًا", "َيًا")); // EX: (رأيتُ مُزدَيًا)
         substitutions.add(new InfixSubstitution("َيَيٍ", "َيًا")); // EX: (مررتُ على مُزدَيًا)
@@ -61,17 +60,14 @@ public class YaeiNakesLafifVocalizer extends TrilateralNounSubstitutionApplier i
         substitutions.add(new InfixSubstitution("َيًا", "ًى")); // EX: (رأيتُ مُهْدًى)
         substitutions.add(new InfixSubstitution("َيٍ", "ًى")); // EX: (مررتُ على مُهْدًى)
 
-
     }
 
     public boolean isApplied(MazeedConjugationResult mazeedConjugationResult) {
         if (mazeedConjugationResult.getRoot().getC3() != 'ي') {
             return false;
         }
-
         int kov = mazeedConjugationResult.getKov();
         int formulaNo = mazeedConjugationResult.getFormulaNo();
-
         switch (kov) {
             case 24:
             case 30:
@@ -85,7 +81,6 @@ public class YaeiNakesLafifVocalizer extends TrilateralNounSubstitutionApplier i
                     case 9:
                         return true;
                 }
-
             case 25:
                 switch (formulaNo) {
                     case 1:
@@ -99,7 +94,6 @@ public class YaeiNakesLafifVocalizer extends TrilateralNounSubstitutionApplier i
                     case 11:
                         return true;
                 }
-
             case 26:
                 switch (formulaNo) {
                     case 1:
@@ -113,7 +107,6 @@ public class YaeiNakesLafifVocalizer extends TrilateralNounSubstitutionApplier i
                     case 10:
                         return true;
                 }
-
             case 27:
                 switch (formulaNo) {
                     case 1:
@@ -124,7 +117,6 @@ public class YaeiNakesLafifVocalizer extends TrilateralNounSubstitutionApplier i
                     case 9:
                         return true;
                 }
-
             case 28:
                 switch (formulaNo) {
                     case 1:
@@ -137,7 +129,6 @@ public class YaeiNakesLafifVocalizer extends TrilateralNounSubstitutionApplier i
                     case 9:
                         return true;
                 }
-
             case 29:
                 switch (formulaNo) {
                     case 5:

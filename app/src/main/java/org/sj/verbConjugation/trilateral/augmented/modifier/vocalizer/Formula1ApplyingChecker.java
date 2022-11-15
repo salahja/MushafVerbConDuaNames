@@ -1,11 +1,12 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.vocalizer;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
 
-   
-public class Formula1ApplyingChecker extends IFormulaApplyingChecker{
-    private List twoStateList = new LinkedList();
-    private List notVocalizedList = new LinkedList();
+public class Formula1ApplyingChecker extends IFormulaApplyingChecker {
+    private final List twoStateList = new LinkedList();
+    private final List notVocalizedList = new LinkedList();
+
     public Formula1ApplyingChecker() {
         twoStateList.add("جود");
         twoStateList.add("حوش");
@@ -39,7 +40,6 @@ public class Formula1ApplyingChecker extends IFormulaApplyingChecker{
         twoStateList.add("لين");
         twoStateList.add("نيء");
         twoStateList.add("هيج");
-
         notVocalizedList.add("حوب");
         notVocalizedList.add("حوج");
         notVocalizedList.add("حوذ");

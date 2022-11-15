@@ -4,37 +4,33 @@ import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-
 @Entity(tableName = "verbcorpus")
-public  class VerbCorpus {
-
-@NonNull    private int chapterno;
-
-
-
-    @NonNull   private int verseno;
-    @NonNull  private int wordno;
-    @NonNull   private int token;
+public class VerbCorpus {
+    @NonNull
+    private int chapterno;
+    @NonNull
+    private int verseno;
+    @NonNull
+    private int wordno;
+    @NonNull
+    private int token;
     private String root_a;
-    private String    form           ;
-    private String    thulathibab    ;
-    private String    tag            ;
-    private String   details        ;
-    private String   POS            ;
-    private String   tense          ;
-    private String   voice          ;
-    private String   lemma_b        ;
-    private String   root_b         ;
-    private String   gendernumber   ;
-    private String   mood_kananumbers;
-    private String   kana_mood      ;
-    private String lemma_a        ;
+    private String form;
+    private String thulathibab;
+    private String tag;
+    private String details;
+    private String POS;
+    private String tense;
+    private String voice;
+    private String lemma_b;
+    private String root_b;
+    private String gendernumber;
+    private String mood_kananumbers;
+    private String kana_mood;
+    private String lemma_a;
     @NonNull
     @PrimaryKey(autoGenerate = true)
     private int id;
-
-
-
 
     public VerbCorpus(int chapterno, int verseno, int wordno, int token, String root_a, String form, String thulathibab, String tag, String details, String POS, String tense, String voice, String lemma_b, String root_b, String gendernumber, String mood_kananumbers, String kana_mood, String lemma_a, int id) {
         this.chapterno = chapterno;

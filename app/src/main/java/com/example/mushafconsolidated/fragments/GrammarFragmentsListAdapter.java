@@ -22,11 +22,9 @@ import java.util.HashMap;
 import java.util.List;
 
 public class GrammarFragmentsListAdapter extends BaseExpandableListAdapter {
-
     private final HashMap<String, List<SpannableStringBuilder>> expandableListDetail;
-    private Context context;
-    private List<String> expandableListTitle;
-
+    private final Context context;
+    private final List<String> expandableListTitle;
 
     public GrammarFragmentsListAdapter(Context context, List<String> expandableListTitle,
                                        HashMap<String, List<SpannableStringBuilder>> expandableListDetail) {
@@ -56,10 +54,8 @@ public class GrammarFragmentsListAdapter extends BaseExpandableListAdapter {
             convertView = layoutInflater.inflate(R.layout.list_grammar_item, null);
         }
         Typeface mequran = Typeface.createFromAsset(QuranGrammarApplication.getContext().getAssets(), "Roboto.ttf");
-
         TextView expandedListTextView = (TextView) convertView.findViewById(R.id.expandedListItem);
         expandedListTextView.setText(expandedListText);
-
         //    expandedListTextView.setTypeface(mequran);
         return convertView;
     }
@@ -89,8 +85,6 @@ public class GrammarFragmentsListAdapter extends BaseExpandableListAdapter {
     public View getGroupView(int listPosition, boolean isExpanded,
                              View convertView, ViewGroup parent) {
         String listTitle = (String) getGroup(listPosition);
-
-
         if (convertView == null) {
             LayoutInflater layoutInflater = (LayoutInflater) this.context.
                     getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -98,7 +92,6 @@ public class GrammarFragmentsListAdapter extends BaseExpandableListAdapter {
         }
         TextView listTitleTextView = (TextView) convertView
                 .findViewById(R.id.listTitle);
-
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(QuranGrammarApplication.getContext());
         String preferences = prefs.getString("theme", "dark");
         if (preferences.equals("dark") || preferences.equals("blue")) {
@@ -108,12 +101,9 @@ public class GrammarFragmentsListAdapter extends BaseExpandableListAdapter {
 
         }
         listTitleTextView.setTypeface(null, Typeface.BOLD);
-
         listTitleTextView.setText(listTitle);
-
         return convertView;
     }
-
 
     @Override
     public boolean hasStableIds() {

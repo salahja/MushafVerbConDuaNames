@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TrilateralKovRuleList {
-  private List rules = new ArrayList(33);
+    private final List rules = new ArrayList(33);
 
-  public TrilateralKovRuleList() {
-  }
+    public TrilateralKovRuleList() {
+    }
 
-  public void addRule(TrilateralKovRule rule) {
-    rules.add(rule);
-  }
+    public void addRule(TrilateralKovRule rule) {
+        rules.add(rule);
+    }
 
-  public List getRules() {
-    return rules;
-  }
+    public List getRules() {
+        return rules;
+    }
 }

@@ -6,17 +6,12 @@ import androidx.fragment.app.FragmentManager;
 import java.util.HashMap;
 
 public class FragmentStateHelper {
-
-
-FragmentManager fragmentManager;
+    FragmentManager fragmentManager;
+    // mutableMapOf<String, Fragment.SavedState?>()
+    HashMap<String, Fragment.SavedState> fragmentSavedStates = new HashMap<>();
 
     public FragmentStateHelper(FragmentManager fragmentManager) {
         this.fragmentManager = fragmentManager;
     }
-
-   // mutableMapOf<String, Fragment.SavedState?>()
-HashMap<String, Fragment.SavedState>    fragmentSavedStates  = new HashMap<>();
-
-
 
 }

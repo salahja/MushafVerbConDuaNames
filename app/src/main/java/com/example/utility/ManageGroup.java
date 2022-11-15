@@ -79,10 +79,8 @@ public class ManageGroup extends Group {
         for (int id : idsToRemove) {
             mRemovedRefIds.add(id);
         }
-
         int[] refIds = getReferencedIds();
         Set<Integer> newRefIdSet = new HashSet<>();
-
         for (int id : refIds) {
             if (!mRemovedRefIds.contains(id)) {
                 newRefIdSet.add(id);
@@ -117,18 +115,15 @@ public class ManageGroup extends Group {
     private int[] copySetToIntArray(Set<Integer> fromSet) {
         int[] toArray = new int[fromSet.size()];
         int i = 0;
-
         for (int id : fromSet) {
             toArray[i++] = id;
         }
-
         return toArray;
     }
 
     @NonNull
     private int[] joinArrays(@NonNull int[] array1, @NonNull int[] array2) {
         int[] joinedArray = new int[array1.length + array2.length];
-
         System.arraycopy(array1, 0, joinedArray, 0, array1.length);
         System.arraycopy(array2, 0, joinedArray, array1.length, array2.length);
         return joinedArray;

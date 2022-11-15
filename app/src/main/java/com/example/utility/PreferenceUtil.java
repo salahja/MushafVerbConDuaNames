@@ -1,11 +1,9 @@
 package com.example.utility;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-
 import static android.content.Context.MODE_PRIVATE;
 
-
+import android.content.Context;
+import android.content.SharedPreferences;
 // quran_arabic_font = sharedPreferences.getString("quran_arabic_font", String.valueOf(Context.MODE_PRIVATE));
 //        String arabic_font_selection = sharedPreferences.getString("Arabic_font_selection", String.valueOf(Context.MODE_PRIVATE));
 //        String urdu_font_size = sharedPreferences.getString("Urdu_Font_Size", String.valueOf(Context.MODE_PRIVATE));
@@ -19,15 +17,13 @@ public class PreferenceUtil {
   }
  */
 
-
 public class PreferenceUtil {
+    private static SharedPreferences.Editor editor;
+    SharedPreferences sharedPreferences;
 
-  private static SharedPreferences.Editor editor;
-  SharedPreferences sharedPreferences;
-
-  public PreferenceUtil(SharedPreferences share) {
-    this.sharedPreferences = share;
-  }
+    public PreferenceUtil(SharedPreferences share) {
+        this.sharedPreferences = share;
+    }
 
     public static Integer getArabicTextFontSize(Context paramContext) {
         return Integer.valueOf(paramContext.getSharedPreferences("properties", 0).getInt("quran_arabic_font", 28));
@@ -37,77 +33,52 @@ public class PreferenceUtil {
         return Integer.valueOf(paramContext.getSharedPreferences("properties", 0).getInt("Urdu_Font_Size", 22));
     }
 
+    public static String getThemeMode(Context paramContext) {
+        return paramContext.getSharedPreferences("properties", 0).getString("themePref", "default");
+        //  return paramContext.getSharedPreferences("themePref", MODE_PRIVATE);
+    }
 
+    public static void setArabicTextFontSize(Context paramContext, String paramString) {
+        editor = paramContext.getSharedPreferences("properties", 0).edit();
+        editor.putString("quran_arabic_font", paramString);
+        editor.apply();
+    }
 
-  public static String  getThemeMode(Context paramContext) {
+    public static void setUrduTextFontSize(Context paramContext, Integer paramInteger) {
+        SharedPreferences.Editor editor = paramContext.getSharedPreferences("properties", 0).edit();
+        editor.putInt("Urdu_Font_Size", paramInteger.intValue());
+        editor.apply();
+    }
 
-    return paramContext.getSharedPreferences("properties", 0).getString("themePref", "default");
-
-  //  return paramContext.getSharedPreferences("themePref", MODE_PRIVATE);
-  }
-
-
-  public   String getArabicTextFonts() {
-
-    return sharedPreferences.getString("Arabic_font_selection", String.valueOf(MODE_PRIVATE));
-
-
-  }
-  public   String getTranslation() {
-
-    String selecton = sharedPreferences.getString("selecton", String.valueOf(MODE_PRIVATE));
-
-  return selecton;
-  }
-  public   int getfontsize() {
-
-    int selecton = Integer.parseInt(sharedPreferences.getString("pref_font_seek_bar", String.valueOf(MODE_PRIVATE)));
-
-    return selecton;
-  }
-
-  public String getUrduTextFontSize() {
-   return sharedPreferences.getString("Urdu_Font_Size", String.valueOf(MODE_PRIVATE));
-  }
-
-  public String getUrduTextFonts() {
-    return sharedPreferences.getString("Urdu_Font_Selection", String.valueOf(MODE_PRIVATE));
-  }
-
-
-
-
-
-  public static void setArabicTextFontSize(Context paramContext, String paramString) {
-    editor = paramContext.getSharedPreferences("properties", 0).edit();
-    editor.putString("quran_arabic_font", paramString);
-    editor.apply();
-  }
-    public  void setTranslation(Context paramContext, String paramString) {
-     editor = paramContext.getSharedPreferences("properties", 0).edit();
-      editor.putString("selection", paramString);
-      editor.apply();
-
+    public String getArabicTextFonts() {
+        return sharedPreferences.getString("Arabic_font_selection", String.valueOf(MODE_PRIVATE));
 
     }
 
+    public String getTranslation() {
+        String selecton = sharedPreferences.getString("selecton", String.valueOf(MODE_PRIVATE));
+        return selecton;
+    }
 
+    public int getfontsize() {
+        int selecton = Integer.parseInt(sharedPreferences.getString("pref_font_seek_bar", String.valueOf(MODE_PRIVATE)));
+        return selecton;
+    }
 
+    public String getUrduTextFontSize() {
+        return sharedPreferences.getString("Urdu_Font_Size", String.valueOf(MODE_PRIVATE));
+    }
 
+    public String getUrduTextFonts() {
+        return sharedPreferences.getString("Urdu_Font_Selection", String.valueOf(MODE_PRIVATE));
+    }
 
+    public void setTranslation(Context paramContext, String paramString) {
+        editor = paramContext.getSharedPreferences("properties", 0).edit();
+        editor.putString("selection", paramString);
+        editor.apply();
 
-
-
-
-
-
-
-  public static void setUrduTextFontSize(Context paramContext, Integer paramInteger) {
-    SharedPreferences.Editor editor = paramContext.getSharedPreferences("properties", 0).edit();
-    editor.putInt("Urdu_Font_Size", paramInteger.intValue());
-    editor.apply();
-  }
-
+    }
 
 }
 

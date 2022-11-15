@@ -1,8 +1,6 @@
-
 package org.sj.nounConjugation.trilateral.unaugmented.elative;
 
-
-import java.io.*;
+import java.io.File;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,7 +18,7 @@ public class ElativeNounFormulaTreeCreator {
     private ElativeNounFormulaTreeCreator() {
     }
 
-    public static ElativeNounFormulaTree buildNounFormulaTree(File xmlDiagramFile) throws Exception{
+    public static ElativeNounFormulaTree buildNounFormulaTree(File xmlDiagramFile) throws Exception {
         //todo xml
     /*
         Digester digester = new Digester();

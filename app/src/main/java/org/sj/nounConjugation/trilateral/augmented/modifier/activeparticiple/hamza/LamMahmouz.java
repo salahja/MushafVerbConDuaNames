@@ -1,8 +1,8 @@
 package org.sj.nounConjugation.trilateral.augmented.modifier.activeparticiple.hamza;
 
-
 import org.sj.nounConjugation.trilateral.augmented.modifier.AbstractLamMahmouz;
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -19,15 +19,13 @@ import java.util.List;
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
-
 public class LamMahmouz extends AbstractLamMahmouz {
     List substitutions = new LinkedList();
 
     public LamMahmouz() {
-
-        substitutions.add(new SuffixSubstitution("اءَ","اءَ"));// EX: (مستاءَ)
-        substitutions.add(new SuffixSubstitution("اءُ","اءُ"));// EX: (مستاءُ)
-        substitutions.add(new SuffixSubstitution("اءِ","اءِ"));// EX: (مستاءِ)
+        substitutions.add(new SuffixSubstitution("اءَ", "اءَ"));// EX: (مستاءَ)
+        substitutions.add(new SuffixSubstitution("اءُ", "اءُ"));// EX: (مستاءُ)
+        substitutions.add(new SuffixSubstitution("اءِ", "اءِ"));// EX: (مستاءِ)
         substitutions.add(new SuffixSubstitution("يءَ", "يءَ")); // EX: (مُدِيءَ)
         substitutions.add(new SuffixSubstitution("يءُ", "يءُ")); // EX: (مُدِيءُ)
         substitutions.add(new SuffixSubstitution("يءِ", "يءِ")); // EX: (مُدِيءِ)

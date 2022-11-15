@@ -1,6 +1,5 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import android.text.SpannableString;
 
 import androidx.annotation.NonNull;
@@ -12,8 +11,9 @@ import com.example.mushafconsolidated.model.WordSpan;
 
 import java.util.ArrayList;
 
-
 public class CorpusVerbWbwOccurance {
+    @Ignore
+    String arabicword;
     @Ignore
     private SpannableString spannedverb;
     @Ignore
@@ -22,8 +22,6 @@ public class CorpusVerbWbwOccurance {
     private ArrayList<Word> word;
     @Ignore
     private ArrayList<WordSpan> wordspan;
-    @Ignore
-    String arabicword;
     @NonNull
     private String root_a;
     @NonNull
@@ -34,7 +32,6 @@ public class CorpusVerbWbwOccurance {
     private int wordno;
     @NonNull
     private int wordcount;
-
     @Ignore
     private SpannableString quranversesSpannable;
     private String qurantext;
@@ -62,65 +59,32 @@ public class CorpusVerbWbwOccurance {
     private String kana_mood;
     private String en;
     private String translation;
-
     private String ur_jalalayn;
     private String en_jalalayn;
-
-    public String getEn_arberry() {
-        return en_arberry;
-    }
-
-    public void setEn_arberry(String en_arberry) {
-        this.en_arberry = en_arberry;
-    }
-
     private String en_arberry;
-    public String getUr_jalalayn() {
-        return ur_jalalayn;
-    }
-
-    public void setUr_jalalayn(String ur_jalalayn) {
-        this.ur_jalalayn = ur_jalalayn;
-    }
-
-    public String getEn_jalalayn() {
-        return en_jalalayn;
-    }
-
-    public void setEn_jalalayn(String en_jalalayn) {
-        this.en_jalalayn = en_jalalayn;
-    }
-
-    public SpannableString getSpannedverb() {
-        return spannedverb;
-    }
-
-    public void setSpannedverb(SpannableString spannedverb) {
-        this.spannedverb = spannedverb;
-    }
-
+    @Ignore
+    private SpannableString verses;
+    @Ignore
+    private SpannableString spannedarabicverb;
 
     public CorpusVerbWbwOccurance() {
-
     }
 
     public CorpusVerbWbwOccurance(String tagone, String tagtwo, String tagthree, String tagfour, String tagfive, String araone,
-                                  String aratwo, String arathree, String arafour, String arafive, String arabicword, String translation,String ur_jalalayn,String en_jalalayn,  String qurantext, SpannableString quranversesSpannable, String root_a, int surah, int ayah, int wordno, int wordcount, String voice, String form, String thulathibab, String tenseStr, String genderNumberdetails, String mood_kananumbers, String kana_mood, String en, SpannableString setWordSpanNew, String detailsone, String detailstwo, String detailsthree, String detailsfour, String detailsfive) {
-
-       // this.word = word;
-       // this.wordspanDark = wordspan;
+                                  String aratwo, String arathree, String arafour, String arafive, String arabicword, String translation, String ur_jalalayn, String en_jalalayn, String qurantext, SpannableString quranversesSpannable, String root_a, int surah, int ayah, int wordno, int wordcount, String voice, String form, String thulathibab, String tenseStr, String genderNumberdetails, String mood_kananumbers, String kana_mood, String en, SpannableString setWordSpanNew, String detailsone, String detailstwo, String detailsthree, String detailsfour, String detailsfive) {
+        // this.word = word;
+        // this.wordspanDark = wordspan;
         this.arabicword = arabicword;
         this.root_a = root_a;
         this.surah = surah;
         this.ayah = ayah;
         this.wordno = wordno;
         this.wordcount = wordcount;
-
         this.quranversesSpannable = quranversesSpannable;
         this.qurantext = qurantext;
         this.translation = translation;
-        this.ur_jalalayn=ur_jalalayn;
-        this.en_jalalayn=en_jalalayn;
+        this.ur_jalalayn = ur_jalalayn;
+        this.en_jalalayn = en_jalalayn;
         this.araone = araone;
         this.aratwo = aratwo;
         this.arathree = arathree;
@@ -146,6 +110,37 @@ public class CorpusVerbWbwOccurance {
         this.en = en;
     }
 
+    public String getEn_arberry() {
+        return en_arberry;
+    }
+
+    public void setEn_arberry(String en_arberry) {
+        this.en_arberry = en_arberry;
+    }
+
+    public String getUr_jalalayn() {
+        return ur_jalalayn;
+    }
+
+    public void setUr_jalalayn(String ur_jalalayn) {
+        this.ur_jalalayn = ur_jalalayn;
+    }
+
+    public String getEn_jalalayn() {
+        return en_jalalayn;
+    }
+
+    public void setEn_jalalayn(String en_jalalayn) {
+        this.en_jalalayn = en_jalalayn;
+    }
+
+    public SpannableString getSpannedverb() {
+        return spannedverb;
+    }
+
+    public void setSpannedverb(SpannableString spannedverb) {
+        this.spannedverb = spannedverb;
+    }
 
     public ArrayList<CorpusWbwWord> getCorpusWbwWordsword() {
         return corpusWbwWordsword;
@@ -163,14 +158,13 @@ public class CorpusVerbWbwOccurance {
         this.word = word;
     }
 
-    public void setWordspan(ArrayList<WordSpan> wordspan) {
-        this.wordspan = wordspan;
-    }
-
     public ArrayList<WordSpan> getWordspan() {
         return wordspan;
     }
 
+    public void setWordspan(ArrayList<WordSpan> wordspan) {
+        this.wordspan = wordspan;
+    }
 
     public String getDetailsone() {
         return detailsone;
@@ -216,7 +210,9 @@ public class CorpusVerbWbwOccurance {
         return translation;
     }
 
-
+    public void setTranslation(String translation) {
+        this.translation = translation;
+    }
 
     @Ignore
     public SpannableString getQuranversesSpannable() {
@@ -228,13 +224,6 @@ public class CorpusVerbWbwOccurance {
         this.quranversesSpannable = quranversesSpannable;
     }
 
-    public void setTranslation(String translation) {
-        this.translation = translation;
-    }
-
-
-
-
     @Ignore
     public SpannableString getVerses() {
         return verses;
@@ -245,11 +234,6 @@ public class CorpusVerbWbwOccurance {
         this.verses = verses;
     }
 
-    @Ignore
-    private SpannableString verses;
-    @Ignore
-    private SpannableString spannedarabicverb;
-
     public String getQurantext() {
         return qurantext;
     }
@@ -257,27 +241,6 @@ public class CorpusVerbWbwOccurance {
     public void setQurantext(String qurantext) {
         this.qurantext = qurantext;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     @Ignore
     public SpannableString getSpannedarabicverb() {
@@ -390,16 +353,16 @@ public class CorpusVerbWbwOccurance {
         return tagthree;
     }
 
+    public void setTagthree(String tagthree) {
+        this.tagthree = tagthree;
+    }
+
     public String getArabicword() {
         return arabicword;
     }
 
     public void setArabicword(String arabicword) {
         this.arabicword = arabicword;
-    }
-
-    public void setTagthree(String tagthree) {
-        this.tagthree = tagthree;
     }
 
     public String getTagfour() {
@@ -481,8 +444,5 @@ public class CorpusVerbWbwOccurance {
     public void setEn(String en) {
         this.en = en;
     }
-
-
-
 
 }

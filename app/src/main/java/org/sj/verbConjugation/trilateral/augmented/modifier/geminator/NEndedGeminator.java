@@ -1,17 +1,18 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.geminator;
 
-import java.util.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 public class NEndedGeminator extends SubstitutionsApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public NEndedGeminator() {
-        substitutions.add(new InfixSubstitution("نْن","نّ"));// EX: (نحن سَكَّنَّا، هنَّ سَكَّنَّ)
+        substitutions.add(new InfixSubstitution("نْن", "نّ"));// EX: (نحن سَكَّنَّا، هنَّ سَكَّنَّ)
     }
 
     public boolean isApplied(MazeedConjugationResult mazeedConjugationResult) {
@@ -44,7 +45,6 @@ public class NEndedGeminator extends SubstitutionsApplier implements IAugmentedT
                         return true;
                 }
         }
-
         return false;
     }
 

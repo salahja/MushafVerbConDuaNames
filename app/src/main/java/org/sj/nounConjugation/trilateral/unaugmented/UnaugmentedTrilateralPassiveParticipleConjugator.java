@@ -1,6 +1,5 @@
 package org.sj.nounConjugation.trilateral.unaugmented;
 
-
 import org.sj.nounConjugation.GenericNounSuffixContainer;
 import org.sj.nounConjugation.IUnaugmentedTrilateralNounConjugator;
 import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
@@ -21,10 +20,10 @@ import java.util.List;
  * @version 1.0
  */
 public class UnaugmentedTrilateralPassiveParticipleConjugator implements IUnaugmentedTrilateralNounConjugator {
+    private static final UnaugmentedTrilateralPassiveParticipleConjugator instance = new UnaugmentedTrilateralPassiveParticipleConjugator();
+
     private UnaugmentedTrilateralPassiveParticipleConjugator() {
     }
-
-    private static UnaugmentedTrilateralPassiveParticipleConjugator instance = new UnaugmentedTrilateralPassiveParticipleConjugator();
 
     public static UnaugmentedTrilateralPassiveParticipleConjugator getInstance() {
         return instance;
@@ -37,7 +36,7 @@ public class UnaugmentedTrilateralPassiveParticipleConjugator implements IUnaugm
 
     public List createNounList(UnaugmentedTrilateralRoot root, String formulaName) {
         List result = new ArrayList(18);
-        for (int i=0; i<18; i++)
+        for (int i = 0; i < 18; i++)
             result.add(createNoun(root, i));
         return result;
 

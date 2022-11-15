@@ -1,16 +1,17 @@
 package org.sj.verbConjugation.trilateral.augmented.passive.past.formula;
 
-import org.sj.verbConjugation.trilateral.augmented.*;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedPastVerb;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
 import org.sj.verbConjugation.util.ArabCharUtil;
 
 /**
- *   Title: Sarf
- *
- *   Description: ������ �������
- *
- *   Copyright: Copyright (c) 2006
- *
- *   Company:
+ * Title: Sarf
+ * <p>
+ * Description: ������ �������
+ * <p>
+ * Copyright: Copyright (c) 2006
+ * <p>
+ * Company:
  *
  * @author Haytham Mohtasseb Billah
  * @version 1.0
@@ -25,9 +26,9 @@ public class AugmentedPastVerb6 extends AugmentedPastVerb {
      *
      * @return String
      * @todo Implement this sarf.trilingual.augmented.past.AugmentedPastVerb
-     *   method
+     * method
      */
     public String form() {
-        return "ا"+root.getC1()+ArabCharUtil.SKOON+root.getC2()+ArabCharUtil.DAMMA+root.getC3()+ArabCharUtil.KASRA+root.getC3()+lastDpa+connectedPronoun;
+        return "ا" + root.getC1() + ArabCharUtil.SKOON + root.getC2() + ArabCharUtil.DAMMA + root.getC3() + ArabCharUtil.KASRA + root.getC3() + lastDpa + connectedPronoun;
     }
 }

@@ -8,23 +8,18 @@ import androidx.room.RoomWarnings;
 @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH)
 @Entity(tableName = "bookmark")
 public class BookMarks {
-
     @PrimaryKey(autoGenerate = true)
     private int id;
-
     private String header;
     @NonNull
     private String verseno;
     @NonNull
     private String chapterno;
     @NonNull
-  private String surahname;
+    private String surahname;
+    private String datetime;
 
-  private String datetime;
-
-
-
-    public BookMarks(int id, String header, @NonNull String verseno, @NonNull String chapterno, @NonNull String surahname,   String datetime) {
+    public BookMarks(int id, String header, @NonNull String verseno, @NonNull String chapterno, @NonNull String surahname, String datetime) {
         this.id = id;
         this.header = header;
         this.verseno = verseno;
@@ -34,7 +29,6 @@ public class BookMarks {
     }
 
     public BookMarks() {
-
     }
 
     public int getId() {
@@ -85,7 +79,7 @@ public class BookMarks {
         return datetime;
     }
 
-    public void setDatetime( String datetime) {
+    public void setDatetime(String datetime) {
         this.datetime = datetime;
     }
 }

@@ -1,8 +1,8 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier;
 
-import java.util.*;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
 
-import org.sj.verbConjugation.trilateral.unaugmented.*;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -16,8 +16,8 @@ import org.sj.verbConjugation.trilateral.unaugmented.*;
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
-public class ConjugationResult extends org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult{
-    private String nounFormula;
+public class ConjugationResult extends org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult {
+    private final String nounFormula;
 
     public ConjugationResult(int kov, UnaugmentedTrilateralRoot root, List originalResult, String nounFormula) {
         super(kov, root, originalResult);

@@ -1,10 +1,13 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.nakes.yaei.active;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,17 +23,17 @@ import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
  */
 public class ImperativeVocalizer extends SubstitutionsApplier implements IUnaugmentedTrilateralModifier {
 
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public ImperativeVocalizer() {
-        substitutions.add(new SuffixSubstitution("ِيْ","ِ"));// EX: (أنتَ ارمِ)
-        substitutions.add(new InfixSubstitution("ِيِ","ِ"));// EX: (أنتِ ارمي)
-        substitutions.add(new InfixSubstitution("ِيْ","ِي"));// EX: (انتن ارمين)
-        substitutions.add(new InfixSubstitution("ِيُ","ُ"));// EX: (أنتم ارموا)
-        substitutions.add(new SuffixSubstitution("َيْ","َ"));// EX: (اسعَ، اخشَ)
-        substitutions.add(new InfixSubstitution("َيِي","َيْ"));// EX: (أنتِ اسعَيْ، اخشي )
-        substitutions.add(new InfixSubstitution("َيُو","َوْ"));// EX: (أنتم اسعَوْا، اخشَوْا )
-        substitutions.add(new InfixSubstitution("َيُن","َوُن"));// EX: (أنتم اسعَوُنَّ، اخشَوُنَّ )
+        substitutions.add(new SuffixSubstitution("ِيْ", "ِ"));// EX: (أنتَ ارمِ)
+        substitutions.add(new InfixSubstitution("ِيِ", "ِ"));// EX: (أنتِ ارمي)
+        substitutions.add(new InfixSubstitution("ِيْ", "ِي"));// EX: (انتن ارمين)
+        substitutions.add(new InfixSubstitution("ِيُ", "ُ"));// EX: (أنتم ارموا)
+        substitutions.add(new SuffixSubstitution("َيْ", "َ"));// EX: (اسعَ، اخشَ)
+        substitutions.add(new InfixSubstitution("َيِي", "َيْ"));// EX: (أنتِ اسعَيْ، اخشي )
+        substitutions.add(new InfixSubstitution("َيُو", "َوْ"));// EX: (أنتم اسعَوْا، اخشَوْا )
+        substitutions.add(new InfixSubstitution("َيُن", "َوُن"));// EX: (أنتم اسعَوُنَّ، اخشَوُنَّ )
     }
 
 

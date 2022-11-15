@@ -1,10 +1,12 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.mithal;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,10 +22,10 @@ import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
  */
 public class Imperative2Vocalizer extends SubstitutionsApplier implements IUnaugmentedTrilateralModifier {
 
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public Imperative2Vocalizer() {
-        substitutions.add(new InfixSubstitution("اوْ","اي"));// EX: (ايجل، ايبأ، ايدد، ايئب )
+        substitutions.add(new InfixSubstitution("اوْ", "اي"));// EX: (ايجل، ايبأ، ايدد، ايئب )
 
 
     }
@@ -36,6 +38,6 @@ public class Imperative2Vocalizer extends SubstitutionsApplier implements IUnaug
     public boolean isApplied(ConjugationResult conjugationResult) {
         int kov = conjugationResult.getKov();
         int noc = Integer.parseInt(conjugationResult.getRoot().getConjugation());
-        return (kov == 8 || kov == 9 || kov == 10 || kov == 11)  && noc == 4 ;
+        return (kov == 8 || kov == 9 || kov == 10 || kov == 11) && noc == 4;
     }
 }

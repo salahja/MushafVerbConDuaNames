@@ -30,13 +30,16 @@ import androidx.preference.SeekBarPreference;
 import com.example.mushafconsolidated.R;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
-
     public static final String TAG = "SettingsFragmentTag";
-
-    private Drawable mDivider;
     static final String SHARED_PREFERENCE_EDITOR_NAME = "properties";
     static final String SHARED_PREFERENCE_SEEKBAR_VALUE = "pref_font_seekbar_key";
+    private Drawable mDivider;
 
+    public static void setArabicTextFontSize(Context paramContext, String paramString) {
+        SharedPreferences.Editor editor = paramContext.getSharedPreferences("properties", 0).edit();
+        editor.putString("quran_arabic_font", paramString);
+        editor.apply();
+    }
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -51,14 +54,10 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                             SharedPreferences.Editor editor = getContext().getSharedPreferences("properties", 0).edit();
                             editor.putString("selecttranslation", selectionOption);
                             editor.apply();
-
-
                             return true;
                         }
                     });
         }
-
-
         SeekBarPreference fetchBar = (SeekBarPreference) findPreference("pref_font_seekbar_key");
         if (fetchBar != null) {
             fetchBar.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
@@ -73,18 +72,13 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                                     "SeekBarPreference is a Integer, but it caused a NumberFormatException");
                             return false;
                         }
-
                         if (preference.getContext() == null) {
                             return false;
                         }
-
                         final SharedPreferences.Editor editor =
                                 preference.getContext().getSharedPreferences(SHARED_PREFERENCE_EDITOR_NAME, Context.MODE_PRIVATE).edit();
-
                         editor.putInt(SHARED_PREFERENCE_SEEKBAR_VALUE, newValueInt);
                         editor.apply();
-
-
                         //   SharedPreferences.Editor editor = preference.getContext().getSharedPreferences("properties", 0).edit();
                         //   editor.putString("quran_arabic_font", paramString);
                         //   editor.apply();
@@ -104,7 +98,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                         @Override
                         public boolean onPreferenceChange(Preference preference, Object newValue) {
                             String themeOption = (String) newValue;
-
                             //    ThemeHelper.applyTheme(themeOption);
                             return true;
                         }
@@ -134,16 +127,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         }
 
  */
-
-
     }
-
-
-    public static void setArabicTextFontSize(Context paramContext, String paramString) {
-        SharedPreferences.Editor editor = paramContext.getSharedPreferences("properties", 0).edit();
-        editor.putString("quran_arabic_font", paramString);
-        editor.apply();
-    }
-
 
 }

@@ -11,7 +11,6 @@ import android.widget.ZoomButtonsController;
 import java.lang.reflect.Method;
 
 public class TweakedWebView extends WebView {
-
     private ZoomButtonsController zoomButtons;
 
     public TweakedWebView(Context context) {

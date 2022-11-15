@@ -1,8 +1,8 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.hamza;
 
-import org.sj.verbConjugation.trilateral.unaugmented.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -23,12 +23,12 @@ public abstract class AbstractLamMahmouz extends SubstitutionsApplier implements
     public boolean isApplied(ConjugationResult conjugationResult) {
         int kov = conjugationResult.getKov();
         switch (kov) {
-        case 4:
-        case 7:
-        case 10:
-        case 16:
-        case 19:
-            return true;
+            case 4:
+            case 7:
+            case 10:
+            case 16:
+            case 19:
+                return true;
         }
         return false;
     }

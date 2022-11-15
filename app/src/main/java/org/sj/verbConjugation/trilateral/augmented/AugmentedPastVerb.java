@@ -1,8 +1,6 @@
 package org.sj.verbConjugation.trilateral.augmented;
 
-
 public abstract class AugmentedPastVerb {
-
     protected AugmentedTrilateralRoot root;
     protected String lastDpa;
     protected String connectedPronoun;

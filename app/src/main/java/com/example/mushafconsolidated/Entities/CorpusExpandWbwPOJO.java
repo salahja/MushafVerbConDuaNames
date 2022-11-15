@@ -1,20 +1,16 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import androidx.annotation.NonNull;
 import androidx.room.PrimaryKey;
 //primaryKeys ={"translation_id","verse_id"}
 
-
 public class CorpusExpandWbwPOJO {
-
     private String root_a;
     private int surah;
     private int ayah;
     private int wordno;
     private int wordcount;
     private String translation;
-
     private String araone;
     private String aratwo;
     private String arathree;
@@ -25,26 +21,63 @@ public class CorpusExpandWbwPOJO {
     private String tagthree;
     private String tagfour;
     private String tagfive;
-
     private String detailsone;
     private String detailstwo;
     private String detailsthree;
     private String detailsfour;
     private String detailsfive;
-
-
-
     private String en;
     private String bn;
     private String in;
     private String ur;
-
     private String qurantext;
     private int passage_no;
     private String ar_irab_two;
     private String tafsir_kathir;
+    @PrimaryKey(autoGenerate = true)
+    @NonNull
+    private int id;
+    private String en_transliteration;
+    private String en_jalalayn;
+    private String en_arberry;
+    private String ur_jalalayn;
+    private String ur_junagarhi;
+
+    public CorpusExpandWbwPOJO(String root_a, int surah, int ayah, int wordno, int wordcount, String translation, String araone, String aratwo, String arathree, String arafour, String arafive, String tagone, String tagtwo, String tagthree, String tagfour, String tagfive, String detailsone, String detailstwo, String detailsthree, String detailsfour, String detailsfive, String en, String bn, String in,
+                               String ur) {
+        this.root_a = root_a;
+        this.surah = surah;
+        this.ayah = ayah;
+        this.wordno = wordno;
+        this.wordcount = wordcount;
+        this.translation = translation;
+        this.araone = araone;
+        this.aratwo = aratwo;
+        this.arathree = arathree;
+        this.arafour = arafour;
+        this.arafive = arafive;
+        this.tagone = tagone;
+        this.tagtwo = tagtwo;
+        this.tagthree = tagthree;
+        this.tagfour = tagfour;
+        this.tagfive = tagfive;
+        this.detailsone = detailsone;
+        this.detailstwo = detailstwo;
+        this.detailsthree = detailsthree;
+        this.detailsfour = detailsfour;
+        this.detailsfive = detailsfive;
+        this.en = en;
+        this.bn = bn;
+        this.in = in;
+        this.ur = ur;
+    }
+
     public int getPassage_no() {
         return passage_no;
+    }
+
+    public void setPassage_no(int passage_no) {
+        this.passage_no = passage_no;
     }
 
     public String getAr_irab_two() {
@@ -62,21 +95,6 @@ public class CorpusExpandWbwPOJO {
     public void setTafsir_kathir(String tafsir_kathir) {
         this.tafsir_kathir = tafsir_kathir;
     }
-
-    public void setPassage_no(int passage_no) {
-        this.passage_no = passage_no;
-    }
-
-    @PrimaryKey(autoGenerate = true)
-    @NonNull
-    private int id;
-
-    private String en_transliteration ;
-    private String en_jalalayn ;
-    private String en_arberry ;
-
-    private String ur_jalalayn ;
-    private String ur_junagarhi;
 
     public String getEn_transliteration() {
         return en_transliteration;
@@ -126,36 +144,6 @@ public class CorpusExpandWbwPOJO {
         this.id = id;
     }
 
-    public CorpusExpandWbwPOJO(String root_a, int surah, int ayah, int wordno, int wordcount, String translation,   String araone, String aratwo, String arathree, String arafour, String arafive, String tagone, String tagtwo, String tagthree, String tagfour, String tagfive, String detailsone, String detailstwo, String detailsthree, String detailsfour, String detailsfive, String en, String bn, String in,
-                               String ur) {
-        this.root_a = root_a;
-        this.surah = surah;
-        this.ayah = ayah;
-        this.wordno = wordno;
-        this.wordcount = wordcount;
-        this.translation = translation;
-
-        this.araone = araone;
-        this.aratwo = aratwo;
-        this.arathree = arathree;
-        this.arafour = arafour;
-        this.arafive = arafive;
-        this.tagone = tagone;
-        this.tagtwo = tagtwo;
-        this.tagthree = tagthree;
-        this.tagfour = tagfour;
-        this.tagfive = tagfive;
-        this.detailsone = detailsone;
-        this.detailstwo = detailstwo;
-        this.detailsthree = detailsthree;
-        this.detailsfour = detailsfour;
-        this.detailsfive = detailsfive;
-        this.en = en;
-        this.bn = bn;
-        this.in = in;
-        this.ur=ur;
-    }
-
     public String getRoot_a() {
         return root_a;
     }
@@ -203,7 +191,6 @@ public class CorpusExpandWbwPOJO {
     public void setTranslation(String translation) {
         this.translation = translation;
     }
-
 
     public String getAraone() {
         return araone;
@@ -356,7 +343,6 @@ public class CorpusExpandWbwPOJO {
     public void setQurantext(String qurantext) {
         this.qurantext = qurantext;
     }
-
 
     public String getUr() {
         return ur;

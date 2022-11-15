@@ -1,9 +1,10 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration.hamza;
 
-import java.util.*;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.AbstractEinMahmouz;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -21,12 +22,11 @@ public class EinMahmouz extends AbstractEinMahmouz {
     List substitutions = new LinkedList();
 
     public EinMahmouz() {
-        substitutions.add(new InfixSubstitution("َءَّا","َآَّ"));// EX: (سآَّل)
-        substitutions.add(new InfixSubstitution("َءُ","َؤُ"));// EX: (سَؤُول)
-        substitutions.add(new InfixSubstitution("ُءَ","ُؤَ"));// EX: (سُؤَلَة)
-        substitutions.add(new InfixSubstitution("َءِ","َئِ"));// EX: (سَئِمٌ)
+        substitutions.add(new InfixSubstitution("َءَّا", "َآَّ"));// EX: (سآَّل)
+        substitutions.add(new InfixSubstitution("َءُ", "َؤُ"));// EX: (سَؤُول)
+        substitutions.add(new InfixSubstitution("ُءَ", "ُؤَ"));// EX: (سُؤَلَة)
+        substitutions.add(new InfixSubstitution("َءِ", "َئِ"));// EX: (سَئِمٌ)
     }
-
 
     public List getSubstitutions() {
         return substitutions;

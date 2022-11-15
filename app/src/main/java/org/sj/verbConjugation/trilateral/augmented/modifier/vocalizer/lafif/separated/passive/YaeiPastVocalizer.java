@@ -1,21 +1,20 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.vocalizer.lafif.separated.passive;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
-   
+import java.util.LinkedList;
+import java.util.List;
+
 public class YaeiPastVocalizer extends SubstitutionsApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public YaeiPastVocalizer() {
         substitutions.add(new InfixSubstitution("ِيْ", "ِي")); // EX: (أنا أُودِيتُ، )
         substitutions.add(new InfixSubstitution("ِيُ", "ُ")); // EX: (هم أُودُوا، )
         substitutions.add(new InfixSubstitution("ِّيُ", "ُّ")); // EX: (هم يُدُّوا، )
-
 
     }
 
@@ -27,10 +26,8 @@ public class YaeiPastVocalizer extends SubstitutionsApplier implements IAugmente
         if (mazeedConjugationResult.getRoot().getC1() != 'ي') {
             return false;
         }
-
         int kov = mazeedConjugationResult.getKov();
         int formulaNo = mazeedConjugationResult.getFormulaNo();
-
         switch (kov) {
             case 29:
                 switch (formulaNo) {
@@ -39,7 +36,6 @@ public class YaeiPastVocalizer extends SubstitutionsApplier implements IAugmente
                     case 9:
                         return true;
                 }
-
             case 30:
                 switch (formulaNo) {
                     case 1:

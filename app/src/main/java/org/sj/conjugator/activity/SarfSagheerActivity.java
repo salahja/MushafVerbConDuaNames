@@ -1,7 +1,7 @@
 package org.sj.conjugator.activity;
 
+import static com.example.Constant.VERBTYPE;
 
-import static com.example.Constant.*;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,17 +12,16 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mushafconsolidated.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.sj.conjugator.fragments.RulesBottomSheet;
-import com.example.mushafconsolidated.R;
 
 import ru.dimorinny.floatingtextbutton.FloatingTextButton;
 
 public class SarfSagheerActivity extends BaseActivity {
-
-    private TextView mTextView;
     RecyclerView recyclerView;
+    private TextView mTextView;
     private LinearLayoutManager layoutManager;
     private BottomNavigationView bottomNavigationView;
     private String verbtype;
@@ -31,13 +30,11 @@ public class SarfSagheerActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sarfsagheer);
-      //  bottomNavigationView = findViewById(R.id.bottomNavView);
-        String rootText="ضرب";
-
+        //  bottomNavigationView = findViewById(R.id.bottomNavView);
+        String rootText = "ضرب";
         Bundle bundle = getIntent().getExtras();
-        if(bundle!=null) {
-
-            verbtype=bundle.getString(VERBTYPE);
+        if (bundle != null) {
+            verbtype = bundle.getString(VERBTYPE);
         }
         FloatingTextButton callButton = findViewById(R.id.sagheeractivtyfloat);
         callButton.setOnClickListener(new View.OnClickListener() {
@@ -50,18 +47,14 @@ public class SarfSagheerActivity extends BaseActivity {
                 //  Snackbar.make(viewById, "Call button clicked", Snackbar.LENGTH_SHORT).show();
             }
         });
-
-
         RulesBottomSheet item = new RulesBottomSheet();
         //    item.setdata(rootWordMeanings,wbwRootwords,grammarRootsCombined);
-        FragmentManager fragmentManager =  getSupportFragmentManager();
-
+        FragmentManager fragmentManager = getSupportFragmentManager();
         String TAG = "bottom";
-           String[] data = {verbtype };
+        String[] data = {verbtype};
         FragmentTransaction transactions = fragmentManager.beginTransaction().setCustomAnimations(R.anim.abc_slide_in_top, android.R.anim.fade_out);
         //   transactions.show(item);
         RulesBottomSheet.newInstance(data).show(getSupportFragmentManager(), RulesBottomSheet.TAG);
-
 
     }
 }

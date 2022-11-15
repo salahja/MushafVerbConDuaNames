@@ -1,9 +1,6 @@
 package com.example.mushafconsolidated.fragments;
 
 import static com.example.Constant.MIDNIGHTBLUE;
-import static Utility.ArabicLiterals.Damma;
-import static Utility.ArabicLiterals.Fatha;
-import static Utility.ArabicLiterals.Kasra;
 
 import android.app.ProgressDialog;
 import android.content.SharedPreferences;
@@ -38,7 +35,6 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-
 /**
  * <p>A fragment that shows a list of items as a modal bottom sheet.</p>
  * <p>You can show this modal bottom sheet from your activity like this:</p>
@@ -47,25 +43,16 @@ import java.util.concurrent.Executors;
  * </pre>
  */
 public class GrammerFragmentsBottomSheet extends BottomSheetDialogFragment {
-
     public static final String TAG = "bottom";
-    int chapterid = 0;
-    int ayanumber = 0;
-
     // TODO: Customize parameter argument names
     private static final String ARG_OPTIONS_DATA = "options_data";
-    private SpannableStringBuilder spannableHarf;
-    private SpannableStringBuilder spannable;
+    int chapterid = 0;
+    int ayanumber = 0;
     boolean isMazeedSarfSagheer;
     boolean isThulathiSarfSagheer;
     boolean isverbconjugaton;
     boolean participles;
     boolean noun;
-    private String HarfNasbAndZarf;
-    private SpannableStringBuilder spannableShart;
-
-    private SpannableStringBuilder spannablemousufmudhaf;
-
     ExpandableListView expandableListView;
     ExpandableListAdapter expandableListAdapter;
     List<String> expandableListTitle;
@@ -77,9 +64,30 @@ public class GrammerFragmentsBottomSheet extends BottomSheetDialogFragment {
     HashMap<String, SpannableStringBuilder> wordbdetail;
     BackgroundColorSpan mudhafspans = new BackgroundColorSpan(MIDNIGHTBLUE);
     boolean showGrammarFragments = false;
+    ArrayList<ArrayList> ThulathiMazeedConjugatonList;
+    SarfSagheerPOJO sarf;
+    private SpannableStringBuilder spannableHarf;
+    private SpannableStringBuilder spannable;
+    private String HarfNasbAndZarf;
+    private SpannableStringBuilder spannableShart;
+    private SpannableStringBuilder spannablemousufmudhaf;
     private ArrayList<NewCorpusExpandWbwPOJO> SencorpusSurahWord;
     private ArrayList<NewCorpusExpandWbwPOJO> corpusSurahWord;
     private AlertDialog dialog;
+    private ArrayList<ArrayList> ismfaelmafool;
+    private VerbWazan vb;
+    private RootWordDisplayAdapter rwAdapter;
+    private SentenceRootWordDisplayAdapter sentenceRootWordDisplayAdapter;
+
+    // TODO: Customize parameters
+    @NonNull
+    public static GrammerFragmentsBottomSheet newInstance(String[] data) {
+        final GrammerFragmentsBottomSheet fragment = new GrammerFragmentsBottomSheet();
+        final Bundle args = new Bundle();
+        args.putStringArray(ARG_OPTIONS_DATA, data);
+        fragment.setArguments(args);
+        return fragment;
+    }
 
     public boolean isNoun() {
         return noun;
@@ -88,14 +96,6 @@ public class GrammerFragmentsBottomSheet extends BottomSheetDialogFragment {
     public void setNoun(boolean noun) {
         this.noun = noun;
     }
-
-    private ArrayList<ArrayList> ismfaelmafool;
-    private VerbWazan vb;
-
-    private RootWordDisplayAdapter rwAdapter;
-    ArrayList<ArrayList> ThulathiMazeedConjugatonList;
-    SarfSagheerPOJO sarf;
-    private SentenceRootWordDisplayAdapter sentenceRootWordDisplayAdapter;
 
     public boolean isParticiples() {
         return participles;
@@ -117,6 +117,10 @@ public class GrammerFragmentsBottomSheet extends BottomSheetDialogFragment {
         return isMazeedSarfSagheer;
     }
 
+    public void setMazeedSarfSagheer(boolean mazeedSarfSagheer) {
+        isMazeedSarfSagheer = mazeedSarfSagheer;
+    }
+
     public String getHarfNasbAndZarf() {
         return HarfNasbAndZarf;
     }
@@ -125,27 +129,12 @@ public class GrammerFragmentsBottomSheet extends BottomSheetDialogFragment {
         HarfNasbAndZarf = harfNasbAndZarf;
     }
 
-    public void setMazeedSarfSagheer(boolean mazeedSarfSagheer) {
-        isMazeedSarfSagheer = mazeedSarfSagheer;
-    }
-
     public boolean isThulathiSarfSagheer() {
         return isThulathiSarfSagheer;
     }
 
     public void setThulathiSarfSagheer(boolean thulathiSarfSagheer) {
         isThulathiSarfSagheer = thulathiSarfSagheer;
-    }
-
-
-    // TODO: Customize parameters
-    @NonNull
-    public static GrammerFragmentsBottomSheet newInstance(String[] data) {
-        final GrammerFragmentsBottomSheet fragment = new GrammerFragmentsBottomSheet();
-        final Bundle args = new Bundle();
-        args.putStringArray(ARG_OPTIONS_DATA, data);
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Nullable
@@ -159,31 +148,23 @@ public class GrammerFragmentsBottomSheet extends BottomSheetDialogFragment {
         builder.setCancelable(false); // if you want user to wait for some process to finish,
         builder.setView(R.layout.layout_loading_dialog);
         dialog = builder.create();
-
         Bundle bundle = this.getArguments();
         String[] stringArray = bundle.getStringArray(ARG_OPTIONS_DATA);
         chapterid = Integer.parseInt(stringArray[0]);
-
         SharedPreferences shared =
                 PreferenceManager.getDefaultSharedPreferences(getContext());
         showGrammarFragments = shared.getBoolean("fragments", false);
-
         ayanumber = Integer.parseInt(stringArray[1]);
         ExecutorService ex = Executors.newSingleThreadExecutor();
         Utils utils = new Utils(getActivity());
-
-
         ex.execute(new Runnable() {
-            ProgressDialog mProgressBar = new ProgressDialog(getActivity());
+            final ProgressDialog mProgressBar = new ProgressDialog(getActivity());
 
             @Override
             public void run() {
-
                 getActivity().runOnUiThread(() -> {
-
                     dialog.show();
                 });
-
                 ArrayList<NewCorpusExpandWbwPOJO> corpusSurahWord;
                 corpusSurahWord = utils.getCorpusWbwBySurahAyahWordid(chapterid, ayanumber, 1);
                 ArrayList<NounCorpus> corpusNounWord = utils.getQuranNouns(chapterid, ayanumber, 1);
@@ -191,10 +172,7 @@ public class GrammerFragmentsBottomSheet extends BottomSheetDialogFragment {
                 expandableListDetail = expandableListData.getData();
                 kanaExpandableListDetail = expandableListData.getKana();
                 expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
-
-
                 ThulathiMazeedConjugatonList = new ArrayList<>();
-
                 setIsverbconjugaton(false);
                 setParticiples(false);
                 corpusNounWord.size();
@@ -204,32 +182,24 @@ public class GrammerFragmentsBottomSheet extends BottomSheetDialogFragment {
                         ex.shutdown();
                         dialog.dismiss();
                         GrammarFragmentsListAdapter grammarFragmentsListAdapter;
-
                         grammarFragmentsListAdapter = new GrammarFragmentsListAdapter(getContext(), expandableListTitle, expandableListDetail);
                         expandableListView.setAdapter(grammarFragmentsListAdapter);
                         for (int i = 0; i < grammarFragmentsListAdapter.getGroupCount(); i++) {
                             expandableListView.expandGroup(i);
                         }
 
-
                     }
                 });
 
-
             }
         });
-
-
         return view;
 
-
     }
-
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
 
     }
 
@@ -247,6 +217,5 @@ public class GrammerFragmentsBottomSheet extends BottomSheetDialogFragment {
          }
     }
 */
-
 
 }

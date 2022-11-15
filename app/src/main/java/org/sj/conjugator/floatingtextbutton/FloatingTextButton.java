@@ -18,12 +18,10 @@ import androidx.cardview.widget.CardView;
 import ru.dimorinny.floatingtextbutton.util.DimensionUtils;
 
 public class FloatingTextButton extends FrameLayout {
-
     private CardView container;
     private ImageView leftIconView;
     private ImageView rightIconView;
     private TextView titleView;
-
     private String title;
     private int titleColor;
     private Drawable leftIcon;
@@ -37,20 +35,22 @@ public class FloatingTextButton extends FrameLayout {
         initView();
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     public void setTitle(String newTitle) {
         title = newTitle;
-
         if (newTitle == null || newTitle.isEmpty()) {
             titleView.setVisibility(View.GONE);
         } else {
             titleView.setVisibility(View.VISIBLE);
         }
-
         titleView.setText(newTitle);
     }
 
-    public String getTitle() {
-        return title;
+    public @ColorInt int getTitleColor() {
+        return titleColor;
     }
 
     public void setTitleColor(@ColorInt int color) {
@@ -58,8 +58,8 @@ public class FloatingTextButton extends FrameLayout {
         titleView.setTextColor(color);
     }
 
-    public @ColorInt int getTitleColor() {
-        return titleColor;
+    public @ColorInt int getBackgroundColor() {
+        return background;
     }
 
     public void setBackgroundColor(@ColorInt int color) {
@@ -67,8 +67,8 @@ public class FloatingTextButton extends FrameLayout {
         container.setCardBackgroundColor(color);
     }
 
-    public @ColorInt int getBackgroundColor() {
-        return background;
+    public Drawable getLeftIconDrawable() {
+        return leftIcon;
     }
 
     public void setLeftIconDrawable(Drawable drawable) {
@@ -81,6 +81,10 @@ public class FloatingTextButton extends FrameLayout {
         }
     }
 
+    public Drawable getRightIconDrawable() {
+        return rightIcon;
+    }
+
     public void setRightIconDrawable(Drawable drawable) {
         rightIcon = drawable;
         if (drawable != null) {
@@ -89,14 +93,6 @@ public class FloatingTextButton extends FrameLayout {
         } else {
             rightIconView.setVisibility(GONE);
         }
-    }
-
-    public Drawable getLeftIconDrawable() {
-        return leftIcon;
-    }
-
-    public Drawable getRightIconDrawable() {
-        return rightIcon;
     }
 
     @Override
@@ -118,12 +114,9 @@ public class FloatingTextButton extends FrameLayout {
         LayoutInflater inflater = (LayoutInflater)
                 context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(ru.dimorinny.floatingtextbutton.R.layout.widget_floating_text_button, this, true);
-
         container = view.findViewById(ru.dimorinny.floatingtextbutton.R.id.layout_button_container);
-
         leftIconView = view.findViewById(ru.dimorinny.floatingtextbutton.R.id.layout_button_image_left);
         rightIconView = view.findViewById(ru.dimorinny.floatingtextbutton.R.id.layout_button_image_right);
-
         titleView = view.findViewById(ru.dimorinny.floatingtextbutton.R.id.layout_button_text);
     }
 
@@ -134,13 +127,11 @@ public class FloatingTextButton extends FrameLayout {
                 0,
                 0
         );
-
         title = styleable.getString(ru.dimorinny.floatingtextbutton.R.styleable.FloatingTextButton_floating_title);
         titleColor = styleable.getColor(ru.dimorinny.floatingtextbutton.R.styleable.FloatingTextButton_floating_title_color, Color.BLACK);
         leftIcon = styleable.getDrawable(ru.dimorinny.floatingtextbutton.R.styleable.FloatingTextButton_floating_left_icon);
         rightIcon = styleable.getDrawable(ru.dimorinny.floatingtextbutton.R.styleable.FloatingTextButton_floating_right_icon);
         background = styleable.getColor(ru.dimorinny.floatingtextbutton.R.styleable.FloatingTextButton_floating_background_color, Color.DKGRAY);
-
         styleable.recycle();
     }
 
@@ -150,8 +141,6 @@ public class FloatingTextButton extends FrameLayout {
         setLeftIconDrawable(leftIcon);
         setRightIconDrawable(rightIcon);
         setBackgroundColor(background);
-
-
         container.setContentPadding(
                 getHorizontalPaddingValue(16),
                 getVerticalPaddingValue(8),

@@ -1,33 +1,31 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 //primaryKeys ={"translation_id","verse_id"}
 
-
 @Entity(tableName = "hansdictionary")
 public class hanslexicon {
-
-
-
     @NonNull
-    private String     rootword ;
-  ;
+    private String rootword;
     @NonNull
-    private String      word  ;
-
+    private String word;
     @NonNull
-    private int     parentid;
+    private int parentid;
     @NonNull
-    private String    definition ;
-
-
-
+    private String definition;
     @PrimaryKey(autoGenerate = true)
     @NonNull
     private int id;
+
+    public hanslexicon(@NonNull String rootword, @NonNull String word, int parentid, @NonNull String definition, int id) {
+        this.rootword = rootword;
+        this.word = word;
+        this.parentid = parentid;
+        this.definition = definition;
+        this.id = id;
+    }
 
     @NonNull
     public String getRootword() {
@@ -72,23 +70,14 @@ public class hanslexicon {
         this.id = id;
     }
 
-    public hanslexicon(@NonNull String rootword, @NonNull String word, int parentid, @NonNull String definition, int id) {
-        this.rootword = rootword;
-        this.word = word;
-        this.parentid = parentid;
-        this.definition = definition;
-        this.id = id;
+    @Override
+    public String toString() {
+        return "lanelexicon{" +
+                "rootword='" + rootword + '\'' +
+                ", word='" + word + '\'' +
+                ", parentid=" + parentid +
+                ", definition='" + definition + '\'' +
+                ", id=" + id +
+                '}';
     }
-
-
-  @Override
-  public String toString() {
-    return "lanelexicon{" +
-          "rootword='" + rootword + '\'' +
-          ", word='" + word + '\'' +
-          ", parentid=" + parentid +
-          ", definition='" + definition + '\'' +
-          ", id=" + id +
-          '}';
-  }
 }

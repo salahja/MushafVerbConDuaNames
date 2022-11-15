@@ -1,18 +1,26 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 //primaryKeys ={"translation_id","verse_id"}
 
-
 @Entity(tableName = "quranexplorer")
 public class quranexplorer {
-
-@NonNull
-    private  String title;
+    @NonNull
+    private String title;
+    private String ayahref;
+    @Ignore
+    private boolean isSelected = false;
+    @PrimaryKey(autoGenerate = true)
+    @NonNull
+    private int id;
+    public quranexplorer(@NonNull String title, String ayahref, int id) {
+        this.title = title;
+        this.ayahref = ayahref;
+        this.id = id;
+    }
 
     public boolean isSelected() {
         return isSelected;
@@ -20,19 +28,6 @@ public class quranexplorer {
 
     public void setSelected(boolean selected) {
         isSelected = selected;
-    }
-
-    private  String ayahref;
-    @Ignore
-    private boolean isSelected = false;
-    @PrimaryKey(autoGenerate = true)
-    @NonNull
-    private  int id;
-
-    public quranexplorer(@NonNull String title, String ayahref, int id) {
-        this.title = title;
-        this.ayahref = ayahref;
-        this.id = id;
     }
 
     @NonNull

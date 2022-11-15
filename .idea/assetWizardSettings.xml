@@ -327,7 +327,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$PROJECT_DIR$/../../Android/Sdk/icons/material/materialicons/swipe_left/baseline_swipe_left_24.xml" />
+                                      <entry key="url" value="file:$PROJECT_DIR$/../../Android/Sdk/icons/material/materialicons/help/baseline_help_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -337,8 +337,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="0c0b0b" />
-                            <entry key="outputName" value="baseline_swipe_left_36" />
+                            <entry key="color" value="e72323" />
+                            <entry key="outputName" value="baseline_help_36" />
                           </map>
                         </option>
                       </PersistentState>

@@ -1,84 +1,79 @@
 package org.sj.verbConjugation.util;
 
-
 public class SelectionInfo {
+    private final int kov;
+    public boolean trilateral;
+    private boolean augmented;
+    private boolean active;
+    private Object root;
+    private int augmentationFormulaNo;
+    private String formulaText;
+    private String verbText;
 
-  public boolean trilateral;
-  private boolean augmented;
-  private boolean active;
-  private int kov;
+    public SelectionInfo(Object root, boolean trilateral, boolean augmented, int kov) {
+        this.root = root;
+        this.trilateral = trilateral;
+        this.augmented = augmented;
+        this.kov = kov;
+    }
 
-  private Object root;
+    public boolean isActive() {
+        return active;
+    }
 
-  private int augmentationFormulaNo;
+    public void setActive(boolean active) {
+        this.active = active;
+    }
 
-  private String formulaText;
-  private String verbText;
+    public boolean isTrilateral() {
+        return trilateral;
+    }
 
-  public SelectionInfo(Object root, boolean trilateral, boolean augmented, int kov) {
-    this.root = root;
-    this.trilateral = trilateral;
-    this.augmented = augmented;
-    this.kov = kov;
-  }
+    public void setTrilateral(boolean trilateral) {
+        this.trilateral = trilateral;
+    }
 
-  public boolean isActive() {
-    return active;
-  }
+    public boolean isAugmented() {
+        return augmented;
+    }
 
-  public boolean isTrilateral() {
-    return trilateral;
-  }
+    public void setAugmented(boolean augmented) {
+        this.augmented = augmented;
+    }
 
-  public boolean isAugmented() {
-    return augmented;
-  }
+    public Object getRoot() {
+        return root;
+    }
 
-  public Object getRoot() {
-    return root;
-  }
+    public void setRoot(Object root) {
+        this.root = root;
+    }
 
-  public int getAugmentationFormulaNo() {
-    return augmentationFormulaNo;
-  }
+    public int getAugmentationFormulaNo() {
+        return augmentationFormulaNo;
+    }
 
-  public String getFormulaText() {
-    return formulaText;
-  }
+    public void setAugmentationFormulaNo(int augmentationFormulaNo) {
+        this.augmentationFormulaNo = augmentationFormulaNo;
+    }
 
-  public String getVerbText() {
-    return verbText;
-  }
+    public String getFormulaText() {
+        return formulaText;
+    }
 
-  public int getKov() {
-    return kov;
-  }
+    public void setFormulaText(String formulaText) {
+        this.formulaText = formulaText;
+    }
 
-  public void setTrilateral(boolean trilateral) {
-    this.trilateral = trilateral;
-  }
+    public String getVerbText() {
+        return verbText;
+    }
 
-  public void setAugmented(boolean augmented) {
-    this.augmented = augmented;
-  }
+    public void setVerbText(String verbText) {
+        this.verbText = verbText;
+    }
 
-  public void setActive(boolean active) {
-    this.active = active;
-  }
-
-  public void setRoot(Object root) {
-    this.root = root;
-  }
-
-  public void setAugmentationFormulaNo(int augmentationFormulaNo) {
-    this.augmentationFormulaNo = augmentationFormulaNo;
-  }
-
-  public void setVerbText(String verbText) {
-    this.verbText = verbText;
-  }
-
-  public void setFormulaText(String formulaText) {
-    this.formulaText = formulaText;
-  }
+    public int getKov() {
+        return kov;
+    }
 }

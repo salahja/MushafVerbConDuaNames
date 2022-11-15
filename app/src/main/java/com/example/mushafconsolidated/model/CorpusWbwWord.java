@@ -2,8 +2,6 @@ package com.example.mushafconsolidated.model;
 
 import android.text.SpannableStringBuilder;
 
-
-
 public class CorpusWbwWord {
     private int id;
     private int surahId;
@@ -17,38 +15,6 @@ public class CorpusWbwWord {
     private String translateBn;
     private String rootword;
     private int passage_no;
-
-
-
-
-
-    public int getPassage_no() {
-        return passage_no;
-    }
-
-    public void setPassage_no(int passage_no) {
-        this.passage_no = passage_no;
-    }
-
-
-
-    public String getRootword() {
-        return rootword;
-    }
-
-    public void setRootword(String rootword) {
-        this.rootword = rootword;
-    }
-
-
-    public String getTranslationUrdu() {
-        return translationUrdu;
-    }
-
-    public void setTranslationUrdu(String translationUrdu) {
-        this.translationUrdu = translationUrdu;
-    }
-
     private String translateIndo;
     private String translationUrdu;
     private String quranErab;
@@ -61,6 +27,41 @@ public class CorpusWbwWord {
     private String arafour;
     private String arafive;
     private int wordindex;
+    private String tagone;
+    private String tagtwo;
+    private String tagthree;
+    private String tagfour;
+    private String tagfive;
+    private String detailsone;
+    private String detailstwo;
+    private String detailsthree;
+    private String detailsfour;
+    private String ayahend;
+    private String detailsfive;
+
+    public int getPassage_no() {
+        return passage_no;
+    }
+
+    public void setPassage_no(int passage_no) {
+        this.passage_no = passage_no;
+    }
+
+    public String getRootword() {
+        return rootword;
+    }
+
+    public void setRootword(String rootword) {
+        this.rootword = rootword;
+    }
+
+    public String getTranslationUrdu() {
+        return translationUrdu;
+    }
+
+    public void setTranslationUrdu(String translationUrdu) {
+        this.translationUrdu = translationUrdu;
+    }
 
     public String getQuranversestr() {
         return quranversestr;
@@ -70,14 +71,6 @@ public class CorpusWbwWord {
         this.quranversestr = quranversestr;
     }
 
-    private String tagone;
-    private String tagtwo;
-    private String tagthree;
-    private String tagfour;
-    private String tagfive;
-
-    private String detailsone;
-
     public int getWordindex() {
         return wordindex;
     }
@@ -85,13 +78,6 @@ public class CorpusWbwWord {
     public void setWordindex(int wordindex) {
         this.wordindex = wordindex;
     }
-
-    private String detailstwo;
-    private String detailsthree;
-    private String detailsfour;
-
-    private  String ayahend;
-    private String detailsfive;
 
     public String getAyahend() {
         return ayahend;

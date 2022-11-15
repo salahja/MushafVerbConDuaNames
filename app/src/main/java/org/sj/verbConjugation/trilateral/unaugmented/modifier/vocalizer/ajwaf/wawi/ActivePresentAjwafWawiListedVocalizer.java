@@ -1,9 +1,10 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.wawi;
 
-import java.util.List;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.AbstractAjwafWawiListedVocalizer;
+
 import java.util.LinkedList;
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.*;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -18,19 +19,18 @@ import org.sj.verbConjugation.trilateral.unaugmented.modifier.vocalizer.ajwaf.*;
  * @version 1.0
  */
 public class ActivePresentAjwafWawiListedVocalizer extends AbstractAjwafWawiListedVocalizer {
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public ActivePresentAjwafWawiListedVocalizer() {
-        substitutions.add(new ExpressionInfixSubstitution("ْوَC3ُ","َاC3ُ"));
-        substitutions.add(new ExpressionInfixSubstitution("ْوَC3ِ","َاC3ِ"));
-        substitutions.add(new ExpressionInfixSubstitution("ْوَC3َ","َاC3َ"));
-        substitutions.add(new ExpressionInfixSubstitution("ْوَC3ْ","َC3ْ"));
+        substitutions.add(new ExpressionInfixSubstitution("ْوَC3ُ", "َاC3ُ"));
+        substitutions.add(new ExpressionInfixSubstitution("ْوَC3ِ", "َاC3ِ"));
+        substitutions.add(new ExpressionInfixSubstitution("ْوَC3َ", "َاC3َ"));
+        substitutions.add(new ExpressionInfixSubstitution("ْوَC3ْ", "َC3ْ"));
 
     }
 
     public List getSubstitutions() {
         return substitutions;
     }
-
 
 }

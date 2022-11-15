@@ -1,26 +1,24 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.vocalizer.lafif.connected.active;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
-import org.sj.verbConjugation.trilateral.augmented.*;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
-   
+import java.util.LinkedList;
+import java.util.List;
+
 public class Past1Vocalizer extends SubstitutionsApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
-
+    private final List substitutions = new LinkedList();
 
     public Past1Vocalizer() {
-        substitutions.add(new SuffixSubstitution("َيَ","َا"));// EX: (أحْيَا، حَيَّا، حايا، ازدَيَا، تحايا، تحَيَّا، استحيا)
+        substitutions.add(new SuffixSubstitution("َيَ", "َا"));// EX: (أحْيَا، حَيَّا، حايا، ازدَيَا، تحايا، تحَيَّا، استحيا)
         substitutions.add(new InfixSubstitution("يُو", "وْ")); // EX: (أحْيَوْا، حَيَّوْا حايَوْا، ، ازدَيَوْا، تحايَوْا، تَحَيَّوْا، استَحْيَوْا)
         substitutions.add(new InfixSubstitution("يَت", "ت")); // EX: (أحْيَتْ، حيَّت، حايَتْ، ، ازدَيَتْ،  تحايتْ، تَحَيَّتْ، استحيَتْ)
 
-
     }
-
 
     public List getSubstitutions() {
         return substitutions;

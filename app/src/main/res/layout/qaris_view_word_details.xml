@@ -151,6 +151,45 @@
 
 
                         app:chipIcon="@drawable/ic_baseline_translate_24" />
+                    <TextView
+                        android:id="@id/mutlaq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15.0dip"
+                        android:elevation="8dp"
+                        android:hint="مفعول:"
+
+                        android:textSize="24.0sp"
+                        android:visibility="gone"
+
+
+                        app:chipIcon="@drawable/ic_baseline_translate_24" />
+                    <TextView
+                        android:id="@id/tameez"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15.0dip"
+                        android:elevation="8dp"
+                        android:hint="مفعول:"
+
+                        android:textSize="24.0sp"
+                        android:visibility="gone"
+
+
+                        app:chipIcon="@drawable/ic_baseline_translate_24" />
+                    <TextView
+                        android:id="@id/liajlihi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15.0dip"
+                        android:elevation="8dp"
+                        android:hint="مفعول:"
+
+                        android:textSize="24.0sp"
+                        android:visibility="gone"
+
+
+                        app:chipIcon="@drawable/ic_baseline_translate_24" />
 
                     <TextView
                         android:id="@id/haliya"
@@ -170,10 +209,10 @@
 
 
                         android:id="@id/wordDetails"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="15.0dip"
-                        android:lines="1"
+
                         android:text="Word"
                         android:textAlignment="center"
 
@@ -221,7 +260,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15.0dip"
-                        android:hint="noundetails"
+
                         android:textSize="18.0sp"
 
                         android:visibility="visible" />
@@ -232,7 +271,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15.0dip"
-
+                        android:layout_gravity="center"
                         android:textSize="18.0sp"
 
                         android:visibility="visible" />
@@ -244,7 +283,7 @@
                         android:layout_marginTop="15.0dip"
                         android:hint="lemma"
                         android:textSize="30.0sp"
-
+                        android:layout_gravity="center"
 
                         android:visibility="gone" />
 
@@ -256,7 +295,7 @@
                         android:hint="Root"
                         android:lines="1"
                         android:text="Root Word"
-
+                        android:layout_gravity="center"
                         android:textSize="20.0sp" />
 
                     <com.google.android.material.chip.Chip

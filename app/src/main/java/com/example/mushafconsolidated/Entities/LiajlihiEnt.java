@@ -1,31 +1,31 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 //primaryKeys ={"translation_id","verse_id"}
 
-
 @Entity(tableName = "liajlihi")
 public class LiajlihiEnt {
-
-
-
     @NonNull
-    private int     surah ;
+    private int surah;
     @NonNull
-    private int     ayah;
+    private int ayah;
     @NonNull
-    private int      wordno  ;
-
-
+    private int wordno;
     @NonNull
-    private String    word ;
-
+    private String word;
     @PrimaryKey(autoGenerate = true)
     @NonNull
     private int id;
+
+    public LiajlihiEnt(int surah, int ayah, int wordno, @NonNull String word, int id) {
+        this.surah = surah;
+        this.ayah = ayah;
+        this.wordno = wordno;
+        this.word = word;
+        this.id = id;
+    }
 
     public int getSurah() {
         return surah;
@@ -65,15 +65,6 @@ public class LiajlihiEnt {
     }
 
     public void setId(int id) {
-        this.id = id;
-    }
-
-
-    public LiajlihiEnt(int surah, int ayah, int wordno, @NonNull String word, int id) {
-        this.surah = surah;
-        this.ayah = ayah;
-        this.wordno = wordno;
-        this.word = word;
         this.id = id;
     }
 }

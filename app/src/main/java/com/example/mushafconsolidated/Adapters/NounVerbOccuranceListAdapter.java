@@ -23,17 +23,15 @@ import java.util.LinkedHashMap;
 import java.util.List;
 
 public class NounVerbOccuranceListAdapter extends BaseExpandableListAdapter {
-
     private final List<String> expandVerbTitles;
     private final LinkedHashMap<String, List<SpannableString>> expandVerbVerses;
-    // private   HashMap<String, List<SpannableStringBuilder>> expandableListDetail;
-    private Context context;
-    private List<String> expandableListTitle;
     LinkedHashMap<String, List<SpannableString>> expandNounVerses = new LinkedHashMap<>();
+    // private   HashMap<String, List<SpannableStringBuilder>> expandableListDetail;
+    private final Context context;
+    private final List<String> expandableListTitle;
 
     public NounVerbOccuranceListAdapter(Context context, List<String> expandableListTitle,
                                         LinkedHashMap<String, List<SpannableString>> expandNounVerses,
-
                                         LinkedHashMap<String, List<SpannableString>> expandVerbVerses, List<String> expandVerbTitles) {
         this.context = context;
         this.expandableListTitle = expandableListTitle;
@@ -42,12 +40,10 @@ public class NounVerbOccuranceListAdapter extends BaseExpandableListAdapter {
         this.expandVerbVerses = expandVerbVerses;
     }
 
-
     @Override
     public Object getChild(int listPosition, int expandedListPosition) {
         return this.expandNounVerses.get(this.expandableListTitle.get(listPosition))
                 .get(expandedListPosition);
-
 
     }
 
@@ -56,14 +52,11 @@ public class NounVerbOccuranceListAdapter extends BaseExpandableListAdapter {
         return expandedListPosition;
     }
 
-
     @Override
     public View getChildView(int listPosition, final int expandedListPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
         //  SpannableString expandedListText = (SpannableString) getChild(listPosition, expandedListPosition);
-
         Object child = getChild(listPosition, expandedListPosition);
-
         if (convertView == null) {
             LayoutInflater layoutInflater = (LayoutInflater) this.context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -76,20 +69,17 @@ public class NounVerbOccuranceListAdapter extends BaseExpandableListAdapter {
         TextView expandedListTextViewlane = (TextView) convertView
                 .findViewById(R.id.expandedListItemverb);
         boolean contains = false;
-        if(contains) {
+        if (contains) {
             //setTextDirection(View.TEXT_DIRECTION_ANY_RTL)
             expandedListTextView.setTextDirection(View.TEXT_DIRECTION_LTR);
             //  CharSequence start = " Arabic to English" + child;
             //   expandedListTextView.setText((CharSequence) child);
-            expandedListTextView.setText(HtmlCompat.fromHtml(String.valueOf(child),0));
-        }else {
-            expandedListTextView.setText(HtmlCompat.fromHtml(String.valueOf(child),0));
-
+            expandedListTextView.setText(HtmlCompat.fromHtml(String.valueOf(child), 0));
+        } else {
+            expandedListTextView.setText(HtmlCompat.fromHtml(String.valueOf(child), 0));
             //  expandedListTextView.setText((CharSequence) child);
         }
-
-
-      expandedListTextView.setText(HtmlCompat.fromHtml(String.valueOf(child), 0));
+        expandedListTextView.setText(HtmlCompat.fromHtml(String.valueOf(child), 0));
         expandedListTextView.setTypeface(mequran);
         return convertView;
     }
@@ -127,7 +117,6 @@ public class NounVerbOccuranceListAdapter extends BaseExpandableListAdapter {
         TextView listTitleTextView = (TextView) convertView
                 .findViewById(R.id.listTitle);
         listTitleTextView.setTypeface(null, Typeface.BOLD);
-
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(QuranGrammarApplication.getContext());
         String preferences = prefs.getString("theme", "dark");
         if (preferences.equals("dark") || preferences.equals("blue")) {
@@ -136,13 +125,10 @@ public class NounVerbOccuranceListAdapter extends BaseExpandableListAdapter {
             listTitleTextView.setTextColor(ContextCompat.getColor(QuranGrammarApplication.getContext(), R.color.burntamber));
 
         }
-
         listTitleTextView.setTextSize(18);
         listTitleTextView.setText(listTitle);
-
         return convertView;
     }
-
 
     @Override
     public boolean hasStableIds() {

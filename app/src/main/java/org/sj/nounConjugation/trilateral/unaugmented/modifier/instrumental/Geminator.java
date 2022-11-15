@@ -1,9 +1,10 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.instrumental;
 
-import java.util.*;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.AbstractGeminator;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -21,14 +22,13 @@ public class Geminator extends AbstractGeminator {
     List substitutions = new LinkedList();
 
     public Geminator() {
-        substitutions.add(new ExpressionInfixSubstitution("ْC3َC3","َC3ّ"));// EX: (مِجَنّ)
-        substitutions.add(new ExpressionInfixSubstitution("ْC3ُC3","ُC3ّ"));// EX: (مُدُقّ)
-        substitutions.add(new ExpressionInfixSubstitution("َC3ْC3","َC3ّ"));// EX: (دَفَّة)
-        substitutions.add(new ExpressionInfixSubstitution("ُC3ْC3","ُC3ّ"));// EX: (جُرَّة)
-        substitutions.add(new ExpressionInfixSubstitution("ِC3ْC3","ِC3ّ"));// EX: (سِكَّة)
-        substitutions.add(new ExpressionInfixSubstitution("اC3ِC3","اC3ّ"));// EX: (مَاصَّة)
+        substitutions.add(new ExpressionInfixSubstitution("ْC3َC3", "َC3ّ"));// EX: (مِجَنّ)
+        substitutions.add(new ExpressionInfixSubstitution("ْC3ُC3", "ُC3ّ"));// EX: (مُدُقّ)
+        substitutions.add(new ExpressionInfixSubstitution("َC3ْC3", "َC3ّ"));// EX: (دَفَّة)
+        substitutions.add(new ExpressionInfixSubstitution("ُC3ْC3", "ُC3ّ"));// EX: (جُرَّة)
+        substitutions.add(new ExpressionInfixSubstitution("ِC3ْC3", "ِC3ّ"));// EX: (سِكَّة)
+        substitutions.add(new ExpressionInfixSubstitution("اC3ِC3", "اC3ّ"));// EX: (مَاصَّة)
     }
-
 
     public List getSubstitutions() {
         return substitutions;

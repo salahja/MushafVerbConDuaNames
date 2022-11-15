@@ -6,13 +6,11 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 
 public class Config {
-
     public static final int FONT_QALAM_MAJEED = 0;
     public static final int FONT_HAFS = 1;
     public static final int FONT_NOOREHUDA = 2;
     public static final int FONT_ME_QURAN = 3;
     public static final int FONT_MAX = 3;
-
     public static final String LANG = "lang";
     public static final String LANG_BN = "bn";
     public static final String LANG_EN = "en";
@@ -27,7 +25,6 @@ public class Config {
     public static final String FONT_SIZE_ERAB = "fontSizeErab";
     public static final String FIRST_RUN = "firstRun";
     public static final String DATABASE_VERSION = "dbVersion";
-
     public static final String defaultLang = "en";
     public static final boolean defaultShowTranslation = true;
     public static final boolean defaultShowErab = true;
@@ -37,7 +34,6 @@ public class Config {
     public static final String defaultFontSizeArabic = "20";
     public static final String defaultFontSizeTranslation = "14";
     public static final String defaultFontSizeErab = "14";
-
     // public String lang;
     public boolean rtl;
     public boolean showTranslation;

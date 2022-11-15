@@ -1,8 +1,8 @@
 package org.sj.verbConjugation.trilateral.augmented.active.present.formula;
 
-import org.sj.verbConjugation.trilateral.augmented.*;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedPresentVerb;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
 import org.sj.verbConjugation.util.ArabCharUtil;
-
 
 public class AugmentedPresentVerb8 extends AugmentedPresentVerb {
     public AugmentedPresentVerb8(AugmentedTrilateralRoot root, String cp, String lastDpr, String connectedPronoun) {
@@ -10,9 +10,8 @@ public class AugmentedPresentVerb8 extends AugmentedPresentVerb {
     }
 
     public String form() {
-      //  return cp+ArabCharUtil.FATHA+"�"+ArabCharUtil.FATHA+root.getC1()+ArabCharUtil.FATHA+root.getC2()+ArabCharUtil.SHADDA+ArabCharUtil.FATHA+root.getC3()+lastDpr+connectedPronoun;
-        return cp+ArabCharUtil.FATHA+"ت"+ArabCharUtil.FATHA+root.getC1()+ArabCharUtil.FATHA+root.getC2()+ArabCharUtil.SHADDA+ArabCharUtil.FATHA+root.getC3()+lastDpr+connectedPronoun;
-
+        //  return cp+ArabCharUtil.FATHA+"�"+ArabCharUtil.FATHA+root.getC1()+ArabCharUtil.FATHA+root.getC2()+ArabCharUtil.SHADDA+ArabCharUtil.FATHA+root.getC3()+lastDpr+connectedPronoun;
+        return cp + ArabCharUtil.FATHA + "ت" + ArabCharUtil.FATHA + root.getC1() + ArabCharUtil.FATHA + root.getC2() + ArabCharUtil.SHADDA + ArabCharUtil.FATHA + root.getC3() + lastDpr + connectedPronoun;
 
     }
 }

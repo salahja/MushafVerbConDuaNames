@@ -1,11 +1,14 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.geminator.generic;
 
-import java.util.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionSuffixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class ActivePresentGeminator extends SubstitutionsApplier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public ActivePresentGeminator() {
         substitutions.add(new ExpressionInfixSubstitution("ْC3ِC3ُ", "ِC3ُّ")); // EX: (يُتِمُّ)

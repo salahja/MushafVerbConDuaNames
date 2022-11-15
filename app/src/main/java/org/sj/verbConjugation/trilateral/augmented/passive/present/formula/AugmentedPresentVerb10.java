@@ -1,6 +1,7 @@
 package org.sj.verbConjugation.trilateral.augmented.passive.present.formula;
 
-import org.sj.verbConjugation.trilateral.augmented.*;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedPresentVerb;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
 import org.sj.verbConjugation.util.ArabCharUtil;
 
 public class AugmentedPresentVerb10 extends AugmentedPresentVerb {
@@ -8,11 +9,9 @@ public class AugmentedPresentVerb10 extends AugmentedPresentVerb {
         super(root, cp, lastDpr, connectedPronoun);
     }
 
-
     public String form() {
-      //  return cp+ArabCharUtil.DAMMA+root.getC1()+ArabCharUtil.SKOON+root.getC2()+ArabCharUtil.FATHA+"�"+root.getC2()+ArabCharUtil.FATHA+root.getC3()+lastDpr+connectedPronoun;
-        return cp+ArabCharUtil.DAMMA+root.getC1()+ArabCharUtil.SKOON+root.getC2()+ArabCharUtil.FATHA+"و"+root.getC2()+ArabCharUtil.FATHA+root.getC3()+lastDpr+connectedPronoun;
-
+        //  return cp+ArabCharUtil.DAMMA+root.getC1()+ArabCharUtil.SKOON+root.getC2()+ArabCharUtil.FATHA+"�"+root.getC2()+ArabCharUtil.FATHA+root.getC3()+lastDpr+connectedPronoun;
+        return cp + ArabCharUtil.DAMMA + root.getC1() + ArabCharUtil.SKOON + root.getC2() + ArabCharUtil.FATHA + "و" + root.getC2() + ArabCharUtil.FATHA + root.getC3() + lastDpr + connectedPronoun;
 
     }
 }

@@ -6,12 +6,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 public class KeyboardUtil {
-
-
-
-
     /**
-     *
      * @param activity
      */
     public static void hideKeyboard(Activity activity) {
@@ -20,13 +15,11 @@ public class KeyboardUtil {
         if (view == null) {
             view = new View(activity);
         }
-     view.clearFocus();
+        view.clearFocus();
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
     /**
-     *
-     *
      * @param activity the activity instance
      */
     public static void showKeyboard(Activity activity) {

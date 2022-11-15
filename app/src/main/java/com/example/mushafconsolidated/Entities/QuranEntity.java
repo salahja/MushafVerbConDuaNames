@@ -1,6 +1,5 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import android.text.SpannableStringBuilder;
 
 import androidx.annotation.NonNull;
@@ -9,12 +8,13 @@ import androidx.room.ForeignKey;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
-
 @Entity(tableName = "qurans", foreignKeys = @ForeignKey(entity = ChaptersAnaEntity.class,
         parentColumns = "chapterid",
         childColumns = "surah",
         onDelete = ForeignKey.CASCADE))
 public class QuranEntity {
+    @Ignore
+    SpannableStringBuilder erabspnabble;
     @PrimaryKey
     @NonNull
     private int docid;
@@ -30,7 +30,6 @@ public class QuranEntity {
     private int has_prostration;
     @NonNull
     private String translation;
-
     @NonNull
     private String en_transliteration;
     @NonNull
@@ -38,17 +37,11 @@ public class QuranEntity {
     @NonNull
     private String en_arberry;
     private String ar_irab_two;
-
     @NonNull
     private String ur_jalalayn;
     @NonNull
     private String ur_junagarhi;
-
     private String tafsir_kathir;
-
-
-    @Ignore
-    SpannableStringBuilder erabspnabble;
 
     public QuranEntity(int docid, int surah, int ayah, @NonNull String qurantext, int passage_no, int has_prostration, @NonNull String translation, @NonNull String en_transliteration, @NonNull String en_jalalayn, @NonNull String en_arberry, String ar_irab_two, @NonNull String ur_jalalayn, @NonNull String ur_junagarhi, String tafsir_kathir) {
         this.docid = docid;
@@ -151,8 +144,6 @@ public class QuranEntity {
     public void setEn_jalalayn(@NonNull String en_jalalayn) {
         this.en_jalalayn = en_jalalayn;
     }
-
-
 
     public String getAr_irab_two() {
         return ar_irab_two;

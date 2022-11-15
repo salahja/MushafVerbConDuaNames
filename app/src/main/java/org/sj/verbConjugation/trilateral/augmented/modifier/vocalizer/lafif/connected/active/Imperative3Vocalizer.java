@@ -1,23 +1,23 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.vocalizer.lafif.connected.active;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
-import org.sj.verbConjugation.trilateral.augmented.*;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
-   
+import java.util.LinkedList;
+import java.util.List;
+
 public class Imperative3Vocalizer extends SubstitutionsApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public Imperative3Vocalizer() {
         substitutions.add(new SuffixSubstitution("يْ", "")); // EX: (تحايَ، تداوَ، تَحَيَّ، تَقَوَّ)
         substitutions.add(new InfixSubstitution("يِي", "يْ")); // EX: (أنتِ تَحايَيْ، تَداوَيْ، تَحَيَّيْ، تَقَوَّيْ)
         substitutions.add(new InfixSubstitution("يُو", "وْ")); // EX: (أنتم تَحايَوْا، تَدَاوَوْا، تَحَيَّوْا، تَقَوَّوْا)
-        substitutions.add(new InfixSubstitution("يُن","وُن"));// EX: (أنتم تَحايَوُنَّ، تداوَوُنَّ، تَحَيَّوُنَّ، تَقَوَّوُنَّ)
-
+        substitutions.add(new InfixSubstitution("يُن", "وُن"));// EX: (أنتم تَحايَوُنَّ، تداوَوُنَّ، تَحَيَّوُنَّ، تَقَوَّوُنَّ)
 
     }
 

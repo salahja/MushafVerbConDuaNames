@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.core.text.HtmlCompat;
 import androidx.core.view.ViewCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
@@ -20,7 +19,6 @@ import com.example.mushafconsolidated.Entities.GrammarRules;
 import com.example.mushafconsolidated.R;
 import com.example.mushafconsolidated.databinding.FragmentGrammarruleListBinding;
 import com.example.mushafconsolidated.databinding.GrammarruleListContentBinding;
-
 
 import java.util.List;
 
@@ -33,7 +31,6 @@ import java.util.List;
  * item details side-by-side using two vertical panes.
  */
 public class GrammarRuleListFragment extends Fragment {
-
     /**
      * Method to intercept global key events in the
      * item list fragment to trigger keyboard shortcuts
@@ -58,12 +55,11 @@ public class GrammarRuleListFragment extends Fragment {
         }
         return false;
     };
-
     private FragmentGrammarruleListBinding binding;
     private FragmentGrammarruleListBinding bindings;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         binding = FragmentGrammarruleListBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
@@ -72,30 +68,26 @@ public class GrammarRuleListFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         ViewCompat.addOnUnhandledKeyEventListener(view, unhandledKeyEventListenerCompat);
-
         RecyclerView recyclerView = binding.grammarruleList;
-
         // Leaving this not using view binding as it relies on if the view is visible the current
         // layout configuration (layout, layout-sw600dp)
-    //  View itemDetailFragmentContainer = view.findViewById(R.id.grammarrule_detail_nav_container);
-       View itemDetailFragmentContainer = view.findViewById(R.id.grammarrule_detail_nav_container);
+        //  View itemDetailFragmentContainer = view.findViewById(R.id.grammarrule_detail_nav_container);
+        View itemDetailFragmentContainer = view.findViewById(R.id.grammarrule_detail_nav_container);
         /* Click Listener to trigger navigation based on if you have
          * a single pane layout or two pane layout
          */
         View.OnClickListener onClickListener = itemView -> {
             GrammarRules item =
                     (GrammarRules) itemView.getTag();
-
             Bundle arguments = new Bundle();
             arguments.putString(GrammarRuleDetailFragment.ARG_ITEM_ID, String.valueOf(item.getId()));
-    //     if (itemDetailFragmentContainer != null) {
-        //      Navigation.findNavController(itemDetailFragmentContainer)
-          //            .navigate(R.id.fragment_grammarrule_detail, arguments);
-         //   } else {
-                Navigation.findNavController(itemView).navigate(R.id.show_grammarrule_detail, arguments);
-          //  }
+            //     if (itemDetailFragmentContainer != null) {
+            //      Navigation.findNavController(itemDetailFragmentContainer)
+            //            .navigate(R.id.fragment_grammarrule_detail, arguments);
+            //   } else {
+            Navigation.findNavController(itemView).navigate(R.id.show_grammarrule_detail, arguments);
+            //  }
         };
 
         /*
@@ -113,7 +105,6 @@ public class GrammarRuleListFragment extends Fragment {
             ).show();
             return true;
         };
-
         setupRecyclerView(recyclerView, onClickListener, onContextClickListener);
     }
 
@@ -122,7 +113,6 @@ public class GrammarRuleListFragment extends Fragment {
             View.OnClickListener onClickListener,
             View.OnContextClickListener onContextClickListener
     ) {
-
         recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(
                 PlaceholderContent.ITEMS,
                 onClickListener,
@@ -138,7 +128,6 @@ public class GrammarRuleListFragment extends Fragment {
 
     public static class SimpleItemRecyclerViewAdapter
             extends RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder> {
-
         private final List<GrammarRules> mValues;
         private final View.OnClickListener mOnClickListener;
         private final View.OnContextClickListener mOnContextClickListener;
@@ -153,7 +142,6 @@ public class GrammarRuleListFragment extends Fragment {
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
             GrammarruleListContentBinding binding =
                     GrammarruleListContentBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
             return new ViewHolder(binding);
@@ -165,12 +153,9 @@ public class GrammarRuleListFragment extends Fragment {
             int id = mValues.get(position).getId();
             String s = String.valueOf(id);
             holder.mIdView.setText(s);
-         //   holder.mContentView.setText(mValues.get(position).getHarf());
-        holder.mContentView.setText(mValues.get(position).getWorddetails());
-
-        //    holder.mContentView.setText(HtmlCompat.fromHtml(mValues.get(position).getWorddetails() ,0));
-
-
+            //   holder.mContentView.setText(mValues.get(position).getHarf());
+            holder.mContentView.setText(mValues.get(position).getWorddetails());
+            //    holder.mContentView.setText(HtmlCompat.fromHtml(mValues.get(position).getWorddetails() ,0));
             holder.itemView.setTag(mValues.get(position));
             holder.itemView.setOnClickListener(mOnClickListener);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

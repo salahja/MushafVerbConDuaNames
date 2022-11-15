@@ -1,30 +1,26 @@
 package com.example.mushafconsolidated.Entities;
 
-
-
-
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 //primaryKeys ={"translation_id","verse_id"}
 
-
 @Entity(tableName = "CorpusExpand")
 public class CorpusAndWbwTranslation {
-
-
-    @NonNull    private int       surah        ;
-    @NonNull    private int            ayah         ;
-    @NonNull    private int            wordno       ;
-    @NonNull   private int            wordcount    ;
-    private String          araone        ;
-     private String            aratwo        ;
-     private String          arathree      ;
-     private String          arafour       ;
-     private String          arafive       ;
-
-    @NonNull  public String en;
-
-
+    @NonNull
+    public String en;
+    @NonNull
+    private int surah;
+    @NonNull
+    private int ayah;
+    @NonNull
+    private int wordno;
+    @NonNull
+    private int wordcount;
+    private String araone;
+    private String aratwo;
+    private String arathree;
+    private String arafour;
+    private String arafive;
 
     public int getSurah() {
         return surah;

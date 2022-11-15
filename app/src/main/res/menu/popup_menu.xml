@@ -12,6 +12,7 @@
         android:id="@+id/bookmark"
         android:icon="@drawable/ic_baseline_bookmark_add_24"
         android:title="Bookmark"
+
         app:cnb_backgroundColor="@color/DeepPink"
         app:cnb_iconColor="@color/DarkGreen"
         app:cnb_iconTintMode="src_in"

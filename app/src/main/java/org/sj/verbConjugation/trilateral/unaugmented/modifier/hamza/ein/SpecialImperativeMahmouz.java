@@ -1,12 +1,12 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.hamza.ein;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
-import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 import org.sj.verbConjugation.trilateral.TrilateralRoot;
-import org.sj.verbConjugation.trilateral.unaugmented.*;
+import org.sj.verbConjugation.trilateral.unaugmented.ConjugationResult;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralModifier;
+
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -21,7 +21,6 @@ import org.sj.verbConjugation.trilateral.unaugmented.*;
  * @version 1.0
  */
 public class SpecialImperativeMahmouz extends SubstitutionsApplier implements IUnaugmentedTrilateralModifier {
-
     public SpecialImperativeMahmouz() {
     }
 
@@ -36,8 +35,9 @@ public class SpecialImperativeMahmouz extends SubstitutionsApplier implements IU
 
     /**
      * override this method to return the custom list
+     *
      * @param words List
-     * @param root TrilateralRoot
+     * @param root  TrilateralRoot
      */
     public void apply(List words, TrilateralRoot root) {
         words.set(2, "سَلْ/اسْأَلْ");

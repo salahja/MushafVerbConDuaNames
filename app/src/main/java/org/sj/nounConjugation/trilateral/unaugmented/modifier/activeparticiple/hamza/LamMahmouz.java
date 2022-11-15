@@ -1,9 +1,10 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.hamza;
 
-import java.util.*;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.AbstractLamMahmouz;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
 
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -23,9 +24,8 @@ public class LamMahmouz extends AbstractLamMahmouz {
     public LamMahmouz() {
         substitutions.add(new InfixSubstitution("ِء", "ِئ")); // EX: (ظَامِئ)
         substitutions.add(new InfixSubstitution("اءُ", "اؤُ")); // EX: (باؤون )
-        substitutions.add(new InfixSubstitution("ِآ","ِئَا"));// EX: (آثِئان)
+        substitutions.add(new InfixSubstitution("ِآ", "ِئَا"));// EX: (آثِئان)
     }
-
 
     public List getSubstitutions() {
         return substitutions;

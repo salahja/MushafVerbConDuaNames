@@ -1,8 +1,10 @@
 package org.sj.verbConjugation.trilateral.unaugmented;
 
-import java.util.*;
+import org.sj.verbConjugation.util.ImperativeConjugationDataContainer;
+import org.sj.verbConjugation.util.PresentConjugationDataContainer;
 
-import org.sj.verbConjugation.util.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * يقوم هذا الصف بتصريف الأفعال الثلاثية المجردة في صيغة الأمر
@@ -10,24 +12,26 @@ import org.sj.verbConjugation.util.*;
  * <p>Description: برنامج التصريف</p>
  * <p>Copyright: Copyright (c) 2006</p>
  * <p>Company: </p>
+ *
  * @author Haytham Mohtasseb Billah
  * @version 1.0
  */
 public class UnaugmentedImperativeConjugator {
 
-    private static UnaugmentedImperativeConjugator instance = new UnaugmentedImperativeConjugator();
+    private static final UnaugmentedImperativeConjugator instance = new UnaugmentedImperativeConjugator();
+
+    private UnaugmentedImperativeConjugator() {
+    }
 
     public static UnaugmentedImperativeConjugator getInstance() {
         return instance;
     }
 
-    private UnaugmentedImperativeConjugator() {
-    }
-
     /**
      * إنشاء صيغة الفعل الأمر غير المؤكد
+     *
      * @param pronounIndex int
-     * @param root TrilateralVerb
+     * @param root         TrilateralVerb
      * @return PresentConjugation
      */
     public ImperativeVerb createVerb(int pronounIndex, UnaugmentedTrilateralRoot root) {
@@ -41,8 +45,9 @@ public class UnaugmentedImperativeConjugator {
 
     /**
      * إنشاء صيغة الفعل الأمر  المؤكد
+     *
      * @param pronounIndex int
-     * @param root TrilateralVerb
+     * @param root         TrilateralVerb
      * @return PresentConjugation
      */
     public ImperativeVerb createEmphasizedVerb(int pronounIndex, UnaugmentedTrilateralRoot root) {
@@ -55,10 +60,10 @@ public class UnaugmentedImperativeConjugator {
     }
 
 
-
     /**
      * إنشاء قائمة تحتوي على صيغ تصريف الفعل حسب الضمائر
      * الأمر غير المؤكد
+     *
      * @param root TripleVerb
      * @return List
      */
@@ -73,20 +78,21 @@ public class UnaugmentedImperativeConjugator {
     }
 
     /**
-    * إنشاء قائمة تحتوي على صيغ تصريف الفعل حسب الضمائر
-    * الأمر  المؤكد
-    * @param root TripleVerb
-    * @return List
-    */
-   public List createEmphasizedVerbList(UnaugmentedTrilateralRoot root) {
-       List result = new LinkedList();
-       for (int i = 0; i < 13; i++) {
-           ImperativeVerb conj = createEmphasizedVerb(i, root);
-           result.add(conj);
-       }
+     * إنشاء قائمة تحتوي على صيغ تصريف الفعل حسب الضمائر
+     * الأمر  المؤكد
+     *
+     * @param root TripleVerb
+     * @return List
+     */
+    public List createEmphasizedVerbList(UnaugmentedTrilateralRoot root) {
+        List result = new LinkedList();
+        for (int i = 0; i < 13; i++) {
+            ImperativeVerb conj = createEmphasizedVerb(i, root);
+            result.add(conj);
+        }
 
-       return result;
-   }
+        return result;
+    }
 
 
     public List createVerbHua(UnaugmentedTrilateralRoot root) {
@@ -102,6 +108,7 @@ public class UnaugmentedImperativeConjugator {
     /**
      * إنشاء قائمة تحتوي على صيغ تصريف الفعل حسب الضمائر
      * الأمر  المؤكد
+     *
      * @param root TripleVerb
      * @return List
      */

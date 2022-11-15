@@ -16,19 +16,17 @@ import java.util.Map;
  * TODO: Replace all uses of this class before publishing your app.
  */
 public class PlaceholderContent {
-
     /**
      * An array of sample (placeholder) items.
      */
     public static final List<GrammarRules> ITEMS = new ArrayList<GrammarRules>();
-
     /**
      * A map of sample (placeholder) items, by ID.
      */
     //   public static final Map<String, PlaceholderItem> ITEM_MAP = new HashMap<String, PlaceholderItem>();
     public static final Map<String, GrammarRules> ITEM_MAP = new HashMap<String, GrammarRules>();
-
     private static final int COUNT = 25;
+
     /*
 
         static {
@@ -46,14 +44,12 @@ public class PlaceholderContent {
 
         }
 
-
     }
 
     private static void addItems(GrammarRules item) {
         ITEMS.add(item);
         ITEM_MAP.put(String.valueOf(item.getId()), item);
     }
-
 
     /*
         private static void addItem(PlaceholderItem item) {

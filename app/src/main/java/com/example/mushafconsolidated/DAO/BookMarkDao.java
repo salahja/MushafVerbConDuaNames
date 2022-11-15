@@ -12,20 +12,14 @@ import java.util.List;
 
 @Dao
 public interface BookMarkDao {
-
-
     @Query("SELECT * FROM bookmark ORDER BY datetime")
     List<BookMarks> getBookMarks();
 
-
-
-        @Insert(onConflict = OnConflictStrategy.REPLACE)
-        void insertBookmark (BookMarks entity);
-
-
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    void insertBookmark(BookMarks entity);
 
     @Delete
-       public void deletebookmark(BookMarks bookMarks);
+    void deletebookmark(BookMarks bookMarks);
 
     @Query("Delete from bookmark")
     void deleteAllBookMakrs();

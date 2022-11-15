@@ -2,7 +2,6 @@ package com.example.mushafconsolidated.model;
 
 import java.util.ArrayList;
 
-
 public class AyahWord {
     private ArrayList<Word> word;
     private int chapterno;
@@ -32,7 +31,6 @@ public class AyahWord {
         this.hasProstration = hasProstration;
     }
 
-
     public int getQuranVerseId() {
         return quranVerseId;
     }
@@ -40,8 +38,6 @@ public class AyahWord {
     public void setQuranVerseId(int quranVerseId) {
         this.quranVerseId = quranVerseId;
     }
-
-
 
     public int getChapterno() {
         return chapterno;
@@ -106,6 +102,5 @@ public class AyahWord {
     public void setQuranTranslate(String quranTranslate) {
         this.quranTranslate = quranTranslate;
     }
-
 
 }

@@ -10,11 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-
-
-;
 
 import com.example.mushafconsolidated.R;
 
@@ -22,39 +18,26 @@ import java.util.ArrayList;
 
 import sj.hisnul.entity.hduadetails;
 
-
 public class SelectedDuaViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    ArrayList<ArrayList<hduadetails>> duadetailsitems;
-    private int VIEW_ITEM = 0;
-    private int VIEW_PROG = 1;
     private static final int TYPE_HEADER = 0;
     private static final int TYPE_FOOTER = 1;
-    OnItemClickListener mItemClickListener;
     private static final int TYPE_ITEM = 2;
-
-    int rootcolor, weaknesscolor, wazancolor;
-    private Context context;
-    int bookmarkpostion;
-
-    //    private final Integer arabicTextColor;
-    Context mycontext;
-    String header;
-    ArrayList<String> subheaders = new ArrayList<>();
+    final ArrayList<ArrayList<hduadetails>> duadetailsitems;
+    OnItemClickListener mItemClickListener;
+    int weaknesscolor;
+    int wazancolor;
+    ArrayList<String> subheaders;
 
     public SelectedDuaViewAdapter(ArrayList<ArrayList<hduadetails>> duaItems, Context context, String name, ArrayList<String> subheaders) {
         this.duadetailsitems = duaItems;
-        this.context = context;
-        this.header = name;
         this.subheaders = subheaders;
     }
 
-
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
+    @NonNull
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (viewType == TYPE_ITEM) {
             //Inflating recycle view item layout
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.hfrag_duaitems, parent, false);
-
             return new ViewHolder(view);
         } else if (viewType == TYPE_HEADER) {
             //Inflating header view
@@ -66,24 +49,13 @@ public class SelectedDuaViewAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             return new FooterViewHolder(itemView);
         } else return null;
 
-
     }
-
-    public interface OnItemClickListener {
-        void onItemClick(View v, int position);
-
-
-    }
-
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        ;
-        String myToolbarTitle = "this";
         if (holder instanceof HeaderViewHolder) {
             ArrayList<hduadetails> items = duadetailsitems.get(position);
             HeaderViewHolder headerHolder = (HeaderViewHolder) holder;
-
             headerHolder.headerTitle.setText("Header View");
             if (!items.get(0).getTop().isEmpty()) {
                 headerHolder.headerTitle.setText(items.get(0).getBottom());
@@ -91,46 +63,33 @@ public class SelectedDuaViewAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             } else {
                 headerHolder.headerTitle.setVisibility(View.GONE);
             }
-            headerHolder.headerTitle.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    //      Toast.makeText(activity, "You clicked at Header View!", Toast.LENGTH_SHORT).show();
-                }
+            headerHolder.headerTitle.setOnClickListener(view -> {
+                //      Toast.makeText(activity, "You clicked at Header View!", Toast.LENGTH_SHORT).show();
             });
         } else if (holder instanceof FooterViewHolder) {
             FooterViewHolder footerHolder = (FooterViewHolder) holder;
-
             footerHolder.footerText.setText("footer");
-            footerHolder.footerText.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    //     Toast.makeText(activity, "You clicked at Footer View", Toast.LENGTH_SHORT).show();
-                }
+            footerHolder.footerText.setOnClickListener(view -> {
+                //     Toast.makeText(activity, "You clicked at Footer View", Toast.LENGTH_SHORT).show();
             });
         } else if (holder instanceof ViewHolder) {
             //   try {
             ArrayList<hduadetails> items = duadetailsitems.get(position - 1);
             String str = subheaders.get(position - 1);
             ViewHolder itemViewHolder = (ViewHolder) holder;
-
-
             //   final Integer arabicFontsize = Integer.valueOf(fonts);
             StringBuilder sb = new StringBuilder();
             sb.append(items.get(0).getID());
             itemViewHolder.duaheader.setText(str);
-
             //    holder.rulenumbe.r.setTextSize(arabicFontsize);
             itemViewHolder.tvDuaNumber.setText(sb);
             //  holder.title.setText(catOne.getTitle_en());
             //  holder.title.setTextSize(18);
             itemViewHolder.tvDuaNumber.setTextSize(18);
             itemViewHolder.duaheader.setTextSize(24);
-
-
             if (!items.get(0).getTop().isEmpty()) {
                 itemViewHolder.top.setText(items.get(0).getTop());
                 itemViewHolder.top.setTextSize(24);
-
                 itemViewHolder.top.setVisibility(View.VISIBLE);
 
             } else {
@@ -140,7 +99,6 @@ public class SelectedDuaViewAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             if (!items.get(0).getArabic().isEmpty()) {
                 itemViewHolder.tvDuaArabic.setText(items.get(0).getArabic());
                 itemViewHolder.tvDuaArabic.setTextSize(24);
-
                 itemViewHolder.tvDuaArabic.setVisibility(View.VISIBLE);
             } else {
                 itemViewHolder.tvDuaArabic.setVisibility(View.GONE);
@@ -148,22 +106,15 @@ public class SelectedDuaViewAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             if (!items.get(0).getArabic().isEmpty()) {
                 itemViewHolder.tvDuaTranslation.setText(items.get(0).getTranslations());
                 itemViewHolder.tvDuaTranslation.setTextSize(24);
-
                 itemViewHolder.tvDuaTranslation.setVisibility(View.VISIBLE);
             } else {
                 itemViewHolder.tvDuaTranslation.setVisibility(View.GONE);
             }
-
-
-
-
-
             if (!items.get(0).getTransliteration().isEmpty()) {
-
                 itemViewHolder.tvliteration.setText(Html.fromHtml(items.get(0).getTransliteration()));
                 itemViewHolder.tvliteration.setTextSize(24);
                 itemViewHolder.tvliteration.setVisibility(View.VISIBLE);
-            }else {
+            } else {
                 itemViewHolder.tvliteration.setVisibility(View.GONE);
             }
             if (!items.get(0).getBottom().isEmpty()) {
@@ -174,43 +125,36 @@ public class SelectedDuaViewAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                 itemViewHolder.tvbottom.setVisibility(View.GONE);
             }
             itemViewHolder.tvDuaReference.setText(items.get(0).getReference());
-            itemViewHolder.sharebtn.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View convertView) {
-                    Intent intent = new Intent();
-                    intent.setAction(Intent.ACTION_SEND);
-                    intent.putExtra(Intent.EXTRA_TEXT,
-                            itemViewHolder.duaheader.getText() + "\n\n" +
-                                    itemViewHolder.tvDuaArabic.getText() + "\n\n" +
-                                    itemViewHolder.tvDuaTranslation.getText() + "\n\n" +
-                                    itemViewHolder.tvDuaReference.getText() + "\n\n" +
-                                    convertView.getResources().getString(R.string.action_share_credit)
-                    );
-                    intent.setType("text/plain");
-                    convertView.getContext().startActivity(
-                            Intent.createChooser(
-                                    intent,
-                                    convertView.getResources().getString(R.string.action_share_title)
-                            )
-                    );
-                }
+            itemViewHolder.sharebtn.setOnClickListener(convertView -> {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_SEND);
+                intent.putExtra(Intent.EXTRA_TEXT,
+                        itemViewHolder.duaheader.getText() + "\n\n" +
+                                itemViewHolder.tvDuaArabic.getText() + "\n\n" +
+                                itemViewHolder.tvDuaTranslation.getText() + "\n\n" +
+                                itemViewHolder.tvDuaReference.getText() + "\n\n" +
+                                convertView.getResources().getString(R.string.action_share_credit)
+                );
+                intent.setType("text/plain");
+                convertView.getContext().startActivity(
+                        Intent.createChooser(
+                                intent,
+                                convertView.getResources().getString(R.string.action_share_title)
+                        )
+                );
             });
-
 
         }
 
-
     }
-
 
     @Override
     public long getItemId(int position) {
         //  Surah surah = surahArrayList.get(position);
-
         return duadetailsitems.size();
     }
 
     public Object getItem(int position) {
-
         return duadetailsitems.get(position);
     }
 
@@ -229,30 +173,46 @@ public class SelectedDuaViewAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         return duadetailsitems.size() + 2;
     }
 
-
-    private boolean isPositionItem(int position) {
-//    return position != getItemCount()-1; // last position
-        return position == duadetailsitems.size() + 1;
-    }
-
     public void SetOnItemClickListener(final OnItemClickListener mItemClickListener) {
         this.mItemClickListener = mItemClickListener;
     }
 
+    public interface OnItemClickListener {
+        void onItemClick(View v, int position);
+
+    }
+
+    static class HeaderViewHolder extends RecyclerView.ViewHolder {
+        final TextView headerTitle;
+
+        public HeaderViewHolder(View view) {
+            super(view);
+            headerTitle = (TextView) view.findViewById(R.id.header_text);
+        }
+    }
+
+    private static class FooterViewHolder extends RecyclerView.ViewHolder {
+        final TextView footerText;
+
+        public FooterViewHolder(View view) {
+            super(view);
+            footerText = view.findViewById(R.id.txtDuaReference);
+
+        }
+    }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
             // current clickListerner
     {
-
-
-        public CardView cardview;
-        TextView tvDuaNumber;
-        TextView tvDuaArabic;
-        TextView tvDuaReference;
-        TextView tvDuaTranslation;
-        TextView tvliteration;
-        TextView tvbottom, duaheader, sharebtn, top, bottom;
-
+        final TextView tvDuaNumber;
+        final TextView tvDuaArabic;
+        final TextView tvDuaReference;
+        final TextView tvDuaTranslation;
+        final TextView tvliteration;
+        final TextView tvbottom;
+        final TextView duaheader;
+        final TextView sharebtn;
+        final TextView top;
 
         public ViewHolder(View view) {
             super(view);
@@ -262,21 +222,13 @@ public class SelectedDuaViewAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             duaheader = view.findViewById(R.id.duaheader);
             tvDuaNumber = view.findViewById(R.id.txtDuaNumber);
             tvDuaArabic = (TextView) view.findViewById(R.id.txtDuaArabic);
-
-
             tvDuaTranslation = (TextView) view.findViewById(R.id.txtDuaTranslation);
-
-
             tvDuaReference = (TextView) view.findViewById(R.id.txtDuaReference);
-
             tvliteration = view.findViewById(R.id.transliteration);
             tvbottom = view.findViewById(R.id.txtbottom);
-
             view.setOnClickListener(this);
 
-
         }
-
 
         @Override
         public void onClick(View v) {
@@ -285,25 +237,5 @@ public class SelectedDuaViewAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             }
         }
     }
-
-    class HeaderViewHolder extends RecyclerView.ViewHolder {
-        TextView headerTitle;
-
-        public HeaderViewHolder(View view) {
-            super(view);
-            headerTitle = (TextView) view.findViewById(R.id.header_text);
-        }
-    }
-
-    private class FooterViewHolder extends RecyclerView.ViewHolder {
-        TextView footerText;
-
-        public FooterViewHolder(View view) {
-            super(view);
-            footerText = view.findViewById(R.id.txtDuaReference);
-
-        }
-    }
-
 
 }

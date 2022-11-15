@@ -1,10 +1,10 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.elative;
 
-import org.sj.verbConjugation.trilateral.unaugmented.*;
-import java.util.*;
-
+import org.sj.nounConjugation.trilateral.unaugmented.elative.ElativeSuffixContainer;
 import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
-import org.sj.nounConjugation.trilateral.unaugmented.elative.*;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -19,7 +19,6 @@ import org.sj.nounConjugation.trilateral.unaugmented.elative.*;
  * @version 1.0
  */
 public class AlSharModifier {
-
     public AlSharModifier() {
     }
 
@@ -27,38 +26,38 @@ public class AlSharModifier {
         List conjugations = conjResult.getFinalResult();
         //جدول تصريف اسم التفضيل المعرّف بـ (أل)
         if (ElativeSuffixContainer.getInstance().isDefinite()) {
-            for (int i=0;i<6; i++) {
+            for (int i = 0; i < 6; i++) {
                 conjugations.set(i, "الشَّرُّ");
             }
-            for (int i=6;i<12; i++) {
+            for (int i = 6; i < 12; i++) {
                 conjugations.set(i, "الشَّرَّ");
             }
-            for (int i=12;i<18; i++) {
+            for (int i = 12; i < 18; i++) {
                 conjugations.set(i, "الشَّرِّ");
             }
         }
         //- جدول تصريف اسم التفضيل المضاف إلى معرفة
         // جدول تصريف اسم التفضيل المضاف إلى نكرة
         else if (ElativeSuffixContainer.getInstance().isAnnexed() || ElativeSuffixContainer.getInstance().isIndefinite()) {
-            for (int i=0;i<6; i++) {
+            for (int i = 0; i < 6; i++) {
                 conjugations.set(i, "شَرُّ");
             }
-            for (int i=6;i<12; i++) {
+            for (int i = 6; i < 12; i++) {
                 conjugations.set(i, "شَرَّ");
             }
-            for (int i=12;i<18; i++) {
+            for (int i = 12; i < 18; i++) {
                 conjugations.set(i, "شَرِّ");
             }
         }
         // جدول تصريف اسم التفضيل غير المضاف
         else {
-            for (int i=0;i<6; i++) {
+            for (int i = 0; i < 6; i++) {
                 conjugations.set(i, "شَرٌّ");
             }
-            for (int i=6;i<12; i++) {
+            for (int i = 6; i < 12; i++) {
                 conjugations.set(i, "شَرًّا");
             }
-            for (int i=12;i<18; i++) {
+            for (int i = 12; i < 18; i++) {
                 conjugations.set(i, "شَرٍّ");
             }
 

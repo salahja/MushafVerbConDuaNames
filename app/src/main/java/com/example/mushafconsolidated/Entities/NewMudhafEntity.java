@@ -1,6 +1,5 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -8,13 +7,10 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "newmudhaf")
 public class NewMudhafEntity {
-
-
     @NonNull
     private int surah;
     @NonNull
     private int ayah;
-
     @NonNull
     private int startindex;
     @NonNull
@@ -23,10 +19,8 @@ public class NewMudhafEntity {
     private int wordfrom;
     @NonNull
     private int wordto;
-
     @NonNull
     private int disconnected;
-
     private String comment;
     @PrimaryKey(autoGenerate = true)
     @NonNull
@@ -43,7 +37,6 @@ public class NewMudhafEntity {
         this.comment = comment;
         this.id = id;
     }
-
 
     public int getSurah() {
         return surah;

@@ -1,27 +1,21 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
-import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 //primaryKeys ={"translation_id","verse_id"}
 
-
 @Entity(tableName = "surahsummary")
 public class surahsummary {
-
-@NonNull
-    private  String title;
-
     @NonNull
-    private  String summary;
+    private String title;
+    @NonNull
+    private String summary;
     @NonNull
     private String versesrange;
-
     @PrimaryKey(autoGenerate = true)
     @NonNull
-    private  int surahid;
+    private int surahid;
 
     public surahsummary(@NonNull String title, @NonNull String summary, @NonNull String versesrange, int surahid) {
         this.title = title;

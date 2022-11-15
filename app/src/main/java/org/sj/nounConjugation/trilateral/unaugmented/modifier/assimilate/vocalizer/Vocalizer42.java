@@ -1,11 +1,13 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.assimilate.vocalizer;
 
-import java.util.*;
+import org.sj.nounConjugation.TrilateralNounSubstitutionApplier;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
 
-import org.sj.nounConjugation.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -23,15 +25,14 @@ public class Vocalizer42 extends TrilateralNounSubstitutionApplier implements IU
     List substitutions = new LinkedList();
 
     public Vocalizer42() {
-        substitutions.add(new SuffixSubstitution("ِيُ","ِي"));// EX: (هذا الصّدِي )
-        substitutions.add(new SuffixSubstitution("ِيَ","ِيَ"));// EX: (رأيتُ الصّدِيَ)
-        substitutions.add(new SuffixSubstitution("ِيِ","ِي"));// EX: (مررت على الصّدِي)
-        substitutions.add(new InfixSubstitution("ِيٌ","ٍ"));// EX: (هذا صَدٍ، )
-        substitutions.add(new InfixSubstitution("ِيٍ","ٍ"));// EX: (مررت على صَدٍ، )
-        substitutions.add(new InfixSubstitution("ِيُو","ُو"));// EX: (صَدُونَ، )
-        substitutions.add(new InfixSubstitution("ِيِي","ِي"));// EX: (صَدِينَ )
+        substitutions.add(new SuffixSubstitution("ِيُ", "ِي"));// EX: (هذا الصّدِي )
+        substitutions.add(new SuffixSubstitution("ِيَ", "ِيَ"));// EX: (رأيتُ الصّدِيَ)
+        substitutions.add(new SuffixSubstitution("ِيِ", "ِي"));// EX: (مررت على الصّدِي)
+        substitutions.add(new InfixSubstitution("ِيٌ", "ٍ"));// EX: (هذا صَدٍ، )
+        substitutions.add(new InfixSubstitution("ِيٍ", "ٍ"));// EX: (مررت على صَدٍ، )
+        substitutions.add(new InfixSubstitution("ِيُو", "ُو"));// EX: (صَدُونَ، )
+        substitutions.add(new InfixSubstitution("ِيِي", "ِي"));// EX: (صَدِينَ )
     }
-
 
     public List getSubstitutions() {
         return substitutions;
@@ -41,7 +42,6 @@ public class Vocalizer42 extends TrilateralNounSubstitutionApplier implements IU
         String nounFormula = conjugationResult.getNounFormula();
         int kov = conjugationResult.getKov();
         int noc = Integer.parseInt(conjugationResult.getRoot().getConjugation());
-
         return nounFormula.equals("فَعِل") && (kov == 24 || kov == 26 || kov == 28) && noc == 4;
     }
 

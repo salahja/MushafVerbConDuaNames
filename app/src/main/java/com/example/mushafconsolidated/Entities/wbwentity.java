@@ -4,54 +4,35 @@ import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-
 @Entity(tableName = "wbw")
 public class wbwentity {
-
-
-
     @NonNull
     private int surah;
-
     @NonNull
     private int ayah;
     @NonNull
     private int wordno;
     @NonNull
     private int wordcount;
-
-    private String   araone    ;
-    private String   aratwo    ;
-    private String   arathree  ;
-    private String   arafour   ;
-    private String   arafive   ;
-
+    private String araone;
+    private String aratwo;
+    private String arathree;
+    private String arafour;
+    private String arafive;
     @NonNull
     private String en;
-
-    @NonNull
-    public String getUr() {
-        return ur;
-    }
-
-    public void setUr(@NonNull String ur) {
-        this.ur = ur;
-    }
-
     @NonNull
     private String bn;
     @NonNull
     private String in;
-
     private String ur;
     @NonNull
     @PrimaryKey(autoGenerate = true)
     private int id;
     @NonNull
     private int juz;
-
     public wbwentity(int surah, int ayah, int wordno, int wordcount, String araone, String aratwo, String arathree, String arafour, String arafive, @NonNull String en, @NonNull String bn, @NonNull String in,
-                 String ur,int id, int juz) {
+                     String ur, int id, int juz) {
         this.surah = surah;
         this.ayah = ayah;
         this.wordno = wordno;
@@ -64,11 +45,19 @@ public class wbwentity {
         this.en = en;
         this.bn = bn;
         this.in = in;
-        this.ur=ur;
+        this.ur = ur;
         this.id = id;
         this.juz = juz;
     }
 
+    @NonNull
+    public String getUr() {
+        return ur;
+    }
+
+    public void setUr(@NonNull String ur) {
+        this.ur = ur;
+    }
 
     public int getSurah() {
         return surah;

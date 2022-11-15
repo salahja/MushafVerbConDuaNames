@@ -1,11 +1,12 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.vocalizer;
 
-import java.util.*;
+import org.sj.nounConjugation.TrilateralNounSubstitutionApplier;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
 
-import org.sj.nounConjugation.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -23,9 +24,8 @@ public class Ajwaf3WawiVocalizer extends TrilateralNounSubstitutionApplier imple
     List substitutions = new LinkedList();
 
     public Ajwaf3WawiVocalizer() {
-        substitutions.add(new InfixSubstitution("اوِ","ائِ"));// EX: (قائِمٌ)
+        substitutions.add(new InfixSubstitution("اوِ", "ائِ"));// EX: (قائِمٌ)
     }
-
 
     public List getSubstitutions() {
         return substitutions;
@@ -34,7 +34,6 @@ public class Ajwaf3WawiVocalizer extends TrilateralNounSubstitutionApplier imple
     public boolean isApplied(ConjugationResult conjugationResult) {
         int kov = conjugationResult.getKov();
         int noc = Integer.parseInt(conjugationResult.getRoot().getConjugation());
-
         return kov == 17 && (noc == 1 || noc == 5);
     }
 }

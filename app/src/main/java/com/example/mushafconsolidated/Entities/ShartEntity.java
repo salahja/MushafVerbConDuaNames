@@ -1,23 +1,16 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 //primaryKeys ={"translation_id","verse_id"}
 
-
 @Entity(tableName = "shart")
 public class ShartEntity {
-
-
     @NonNull
     private int surah;
-
     @NonNull
     private int ayah;
-
-
     @NonNull
     private int indexstart;
     @NonNull
@@ -33,7 +26,6 @@ public class ShartEntity {
     @NonNull
     private String sharttype;
     private String comment;
-    ;;
     @PrimaryKey(autoGenerate = true)
     @NonNull
     private int id;

@@ -1,6 +1,5 @@
 package com.example.mushafconsolidated.Adapters;
 
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
@@ -23,44 +22,28 @@ import com.example.mushafconsolidated.intrface.OnItemClickListener;
 import java.util.ArrayList;
 
 public class WordLughatAdapter extends RecyclerView.Adapter<WordLughatAdapter.ItemViewAdapter> {
-
-
-  OnItemClickListener mItemClickListener;
+    OnItemClickListener mItemClickListener;
+    boolean isSarfSagheerMazeed;
+    String language;
     private Context context;
-
-
-
     private ArrayList<lughat> worddictorary;
+    // private ArrayList<GrammarWordEntity> grammarArayList = new ArrayList<>();
+    private ArrayList<ArrayList> sarfsagheer;
+    public WordLughatAdapter(ArrayList<lughat> dictionary, Context context, String language) {
+        this.worddictorary = dictionary;
+        this.context = context;
+        this.language = language;
+    }
 
     public boolean isSarfSagheerMazeed() {
         return isSarfSagheerMazeed;
     }
 
-    boolean isSarfSagheerMazeed;
-    // private ArrayList<GrammarWordEntity> grammarArayList = new ArrayList<>();
-
-
-    private ArrayList<ArrayList> sarfsagheer;
-    String language;
-
-
-    public WordLughatAdapter( ArrayList<lughat> dictionary, Context context, String language) {
-
-        this.worddictorary=dictionary;
-        this.context = context;
-        this.language=language;
-    }
-
-
     @NonNull
     @Override
     public ItemViewAdapter onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
-
-
-
-            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lughat_layout, parent, false);
-
+        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lughat_layout, parent, false);
         return new ItemViewAdapter(view);
     }
 
@@ -74,24 +57,13 @@ public class WordLughatAdapter extends RecyclerView.Adapter<WordLughatAdapter.It
                 PreferenceManager.getDefaultSharedPreferences(context);
         String quranFont = sharedPreferences.getString("quranFont", "kitab.ttf");
         Typeface mequran = Typeface.createFromAsset(context.getAssets(), quranFont);
-
-
-
-
-
-
-
-    //    holder.wordDictionary.setText(worddetails.get("word"));
-
-
-      ;
-        if(!worddictorary.isEmpty()){
-            String replace1="";
-            String replace2="";
-            String replace3="";
-            String replace4="";
-
-            if(language.equals("english")) {
+        //    holder.wordDictionary.setText(worddetails.get("word"));
+        if (!worddictorary.isEmpty()) {
+            String replace1 = "";
+            String replace2 = "";
+            String replace3 = "";
+            String replace4 = "";
+            if (language.equals("english")) {
                 String en_lughat = worddictorary.get(0).getEn_lughat();
                 String meanings = worddictorary.get(0).getMeaning();
                 String rootword = worddictorary.get(0).getRootword();
@@ -104,15 +76,12 @@ public class WordLughatAdapter extends RecyclerView.Adapter<WordLughatAdapter.It
                 holder.rootwowrd.setText(Html.fromHtml(replace2));
                 holder.arabicword.setText(Html.fromHtml(replace3));
                 holder.meaning.setText(Html.fromHtml(replace4));
-            }else if(language.equals("urdu")){
+            } else if (language.equals("urdu")) {
                 String ur_lughat = worddictorary.get(0).getUr_lughat();
-              String    urdu = ur_lughat.replace("\\n", "<br><p>").replaceAll("\\n","<br><p>");
-
-
+                String urdu = ur_lughat.replace("\\n", "<br><p>").replaceAll("\\n", "<br><p>");
                 String meanings = worddictorary.get(0).getMeaning();
                 String rootword = worddictorary.get(0).getRootword();
                 String arabicword = worddictorary.get(0).getArabicword();
-
                 replace2 = rootword.replace("\\n", "<br><p>");
                 replace3 = arabicword.replace("\\n", "<br><p>");
                 replace4 = meanings.replace("\\n", "<br><p>");
@@ -122,24 +91,13 @@ public class WordLughatAdapter extends RecyclerView.Adapter<WordLughatAdapter.It
                 holder.meaning.setText(Html.fromHtml(replace4));
 
             }
-                  //.replace("\\n", "<br>");
-
+            //.replace("\\n", "<br>");
         }
-
-
 
     }
 
-
-
-
-
-
-
     @Override
     public long getItemId(int position) {
-
-
         return worddictorary.get(position).getSurah();
     }
 
@@ -149,46 +107,34 @@ public class WordLughatAdapter extends RecyclerView.Adapter<WordLughatAdapter.It
     }
 
     public Object getItem(int position) {
-
         return worddictorary.get(position);
     }
 
     public void setRootWordsAndMeanings(ArrayList<lughat> dictionary,
-                                       Context context) {
-        this.worddictorary=dictionary;
-
-
-
-
+                                        Context context) {
+        this.worddictorary = dictionary;
         this.context = context;
 
     }
 
-
     public class ItemViewAdapter extends RecyclerView.ViewHolder
             implements View.OnClickListener // current clickListerner
     {
+        public final TextView wordDictionary, wordDictionaryUrdu, meaning, rootwowrd, arabicword;
         final TextView referenceView;
-
         ImageView dismissview;
-
-
-        public  final TextView wordDictionary,wordDictionaryUrdu,meaning,rootwowrd,arabicword;
+        int i = ContextCompat.getColor(context, R.color.kashmirigreen);
 
         public ItemViewAdapter(View view) {
             super(view);
-            rootwowrd=view.findViewById(R.id.rootward);
-            arabicword=view.findViewById(R.id.arabicword);
-            wordDictionary=view.findViewById(R.id.wordDictionary);
-            wordDictionaryUrdu=view.findViewById(R.id.wordDictionaryUrdu);
-meaning=view.findViewById(R.id.meaning);
+            rootwowrd = view.findViewById(R.id.rootward);
+            arabicword = view.findViewById(R.id.arabicword);
+            wordDictionary = view.findViewById(R.id.wordDictionary);
+            wordDictionaryUrdu = view.findViewById(R.id.wordDictionaryUrdu);
+            meaning = view.findViewById(R.id.meaning);
             referenceView = view.findViewById(R.id.referenceView);
 
-
-
         }
-
-        int i = ContextCompat.getColor(context, R.color.kashmirigreen);
 
         @Override
         public void onClick(View v) {

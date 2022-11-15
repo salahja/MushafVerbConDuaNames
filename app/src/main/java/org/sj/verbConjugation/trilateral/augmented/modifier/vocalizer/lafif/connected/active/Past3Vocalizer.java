@@ -1,29 +1,27 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.vocalizer.lafif.connected.active;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
+import org.sj.verbConjugation.trilateral.augmented.AugmentedTrilateralRoot;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
-import org.sj.verbConjugation.trilateral.augmented.*;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
+import java.util.LinkedList;
+import java.util.List;
 
 public class Past3Vocalizer extends SubstitutionsApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public Past3Vocalizer() {
-
-        substitutions.add(new SuffixSubstitution("َوَ","َى"));// EX: (أسوَى، سَوَّى ساوَى، انغوى، استوى، تساوى، تَسَوَّى استغوى احْوَوَّى)
-        substitutions.add(new InfixSubstitution("وْ","يْ"));// EX: (أسْوَيْتُ، سَوَّيْتُ ساوَيْتُ، انغويتُ، استوَيْتُ، تساويتُ، تسوَّيْتُ استغوَيْتُ احوَوَّيْتُ)
-        substitutions.add(new InfixSubstitution("وَا","يَا"));// EX: (أسْوَيَا، سَوَّيا ساوَيا، انغويا، استوَيا، تساوَيَا، تَسَوَّيَا، استغوَيَا، احْوَوَّيَا)
-        substitutions.add(new InfixSubstitution("وُو","وْ"));// EX: (أسْوَوْا، سَوَّوْا ساوَوْا، انغوَوْا، استوَوْا، تساوَوْا، تَسَوَّوْا، استغوَوْا، احْوَوَّوْا)
-        substitutions.add(new InfixSubstitution("وَوَ","وَ"));// EX: (أسْوَتْ، )
-        substitutions.add(new InfixSubstitution("وَّوَ","وَّ"));// EX: (سَوَّتْ، )
+        substitutions.add(new SuffixSubstitution("َوَ", "َى"));// EX: (أسوَى، سَوَّى ساوَى، انغوى، استوى، تساوى، تَسَوَّى استغوى احْوَوَّى)
+        substitutions.add(new InfixSubstitution("وْ", "يْ"));// EX: (أسْوَيْتُ، سَوَّيْتُ ساوَيْتُ، انغويتُ، استوَيْتُ، تساويتُ، تسوَّيْتُ استغوَيْتُ احوَوَّيْتُ)
+        substitutions.add(new InfixSubstitution("وَا", "يَا"));// EX: (أسْوَيَا، سَوَّيا ساوَيا، انغويا، استوَيا، تساوَيَا، تَسَوَّيَا، استغوَيَا، احْوَوَّيَا)
+        substitutions.add(new InfixSubstitution("وُو", "وْ"));// EX: (أسْوَوْا، سَوَّوْا ساوَوْا، انغوَوْا، استوَوْا، تساوَوْا، تَسَوَّوْا، استغوَوْا، احْوَوَّوْا)
+        substitutions.add(new InfixSubstitution("وَوَ", "وَ"));// EX: (أسْوَتْ، )
+        substitutions.add(new InfixSubstitution("وَّوَ", "وَّ"));// EX: (سَوَّتْ، )
 
     }
-
-
 
     public List getSubstitutions() {
         return substitutions;
@@ -49,6 +47,5 @@ public class Past3Vocalizer extends SubstitutionsApplier implements IAugmentedTr
         }
         return false;
     }
-
 
 }

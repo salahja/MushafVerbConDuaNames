@@ -1,27 +1,16 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 //primaryKeys ={"translation_id","verse_id"}
 
-
 @Entity(tableName = "newshart")
 public class NewShartEntity {
-
-
-
-
-
-
     @NonNull
     private int surah;
-
     @NonNull
     private int ayah;
-
-
     @NonNull
     private int indexstart;
     @NonNull
@@ -35,17 +24,16 @@ public class NewShartEntity {
     @NonNull
     private int jawabshartindexend;
     @NonNull
-    private int          harfwordno           ;
+    private int harfwordno;
     @NonNull
-    private int         shartstatwordno      ;
+    private int shartstatwordno;
     @NonNull
-    private int        shartendwordno       ;
+    private int shartendwordno;
     @NonNull
-    private int     jawabstartwordno     ;
+    private int jawabstartwordno;
     @NonNull
-    private int     jawabendwordno       ;
+    private int jawabendwordno;
     private String comment;
-
     @PrimaryKey(autoGenerate = true)
     @NonNull
     private int id;
@@ -67,7 +55,6 @@ public class NewShartEntity {
         this.comment = comment;
         this.id = id;
     }
-
 
     public int getSurah() {
         return surah;

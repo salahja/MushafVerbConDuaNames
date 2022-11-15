@@ -9,6 +9,6 @@ public class PrefixSubstitution extends Substitution {
     }
 
     public String apply(String word, TrilateralRoot root) {
-        return word.startsWith(segment)? word.replaceFirst(segment,result): null;
+        return word.startsWith(segment) ? word.replaceFirst(segment, result) : null;
     }
 }

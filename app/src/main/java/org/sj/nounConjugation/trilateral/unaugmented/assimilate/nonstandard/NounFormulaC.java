@@ -1,10 +1,10 @@
 package org.sj.nounConjugation.trilateral.unaugmented.assimilate.nonstandard;
 
+import org.sj.nounConjugation.INounSuffixContainer;
 import org.sj.nounConjugation.NounFormula;
-import org.sj.verbConjugation.trilateral.unaugmented.*;
-import org.sj.verbConjugation.util.*;
 import org.sj.nounConjugation.trilateral.unaugmented.assimilate.AssimilateFormulaCSuffixContainer;
-import org.sj.nounConjugation.*;
+import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+import org.sj.verbConjugation.util.ArabCharUtil;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -19,11 +19,10 @@ import org.sj.nounConjugation.*;
  * @version 1.0
  */
 public class NounFormulaC extends NounFormula {
-
     public NounFormulaC(UnaugmentedTrilateralRoot root, String suffixNo) {
         this.root = root;
-        this.suffixNo = Integer.parseInt(suffixNo)+1;
-        suffix = AssimilateFormulaCSuffixContainer.getInstance().get(this.suffixNo-1).replaceAll(" ","");
+        this.suffixNo = Integer.parseInt(suffixNo) + 1;
+        suffix = AssimilateFormulaCSuffixContainer.getInstance().get(this.suffixNo - 1).replaceAll(" ", "");
     }
 
     //to be used in refection getting the formula name
@@ -34,34 +33,30 @@ public class NounFormulaC extends NounFormula {
         return AssimilateFormulaCSuffixContainer.getInstance();
     }
 
-
     public String form() {
         switch (suffixNo) {
-        case 1:
-        case 3:
-        case 7:
-        case 9:
-        case 13:
-        case 15:
-            return "أ" + ArabCharUtil.FATHA + root.getC1() + ArabCharUtil.SKOON + root.getC2() + ArabCharUtil.FATHA + root.getC3() + suffix;
-
-        case 2:
-        case 4:
-        case 8:
-        case 10:
-        case 14:
-        case 16:
-            return root.getC1() + ArabCharUtil.FATHA + root.getC2() + ArabCharUtil.SKOON + root.getC3() +suffix;
-
-        case 5:
-        case 6:
-        case 11:
-        case 12:
-        case 17:
-        case 18:
-            return root.getC1()+ArabCharUtil.DAMMA+root.getC2()+ArabCharUtil.SKOON+root.getC3()+suffix;
+            case 1:
+            case 3:
+            case 7:
+            case 9:
+            case 13:
+            case 15:
+                return "أ" + ArabCharUtil.FATHA + root.getC1() + ArabCharUtil.SKOON + root.getC2() + ArabCharUtil.FATHA + root.getC3() + suffix;
+            case 2:
+            case 4:
+            case 8:
+            case 10:
+            case 14:
+            case 16:
+                return root.getC1() + ArabCharUtil.FATHA + root.getC2() + ArabCharUtil.SKOON + root.getC3() + suffix;
+            case 5:
+            case 6:
+            case 11:
+            case 12:
+            case 17:
+            case 18:
+                return root.getC1() + ArabCharUtil.DAMMA + root.getC2() + ArabCharUtil.SKOON + root.getC3() + suffix;
         }
-
         return "";
     }
 

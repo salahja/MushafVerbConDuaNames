@@ -1,38 +1,19 @@
 package com.example.mushafconsolidated.Entities;
 
 import android.text.SpannableString;
-import android.text.SpannableStringBuilder;
 
 public class MousufSifa {
-
-
     int surah;
     int ayah;
     int wordno;
     int startindex;
     int endindex;
-    int wordfrom,wordto;
+    int wordfrom, wordto;
     SpannableString verse;
     String translations;
     String phrasetype;
     int disconnected;
     String comment;
-
-    public int getWordfrom() {
-        return wordfrom;
-    }
-
-    public void setWordfrom(int wordfrom) {
-        this.wordfrom = wordfrom;
-    }
-
-    public int getWordto() {
-        return wordto;
-    }
-
-    public void setWordto(int wordto) {
-        this.wordto = wordto;
-    }
 
     public MousufSifa(int surah, int ayah, int startindex, int endindex, int wordfrom, int wordto, int disconnected, String comment) {
         this.surah = surah;
@@ -58,23 +39,34 @@ public class MousufSifa {
         this.comment = comment;
     }
 
-    public MousufSifa(int surah, int ayah, int wordno, int startindex, int endindex,    int disconnected, String comment) {
+    public MousufSifa(int surah, int ayah, int wordno, int startindex, int endindex, int disconnected, String comment) {
         this.surah = surah;
         this.ayah = ayah;
         this.wordno = wordno;
         this.startindex = startindex;
         this.endindex = endindex;
-
-
         this.disconnected = disconnected;
         this.comment = comment;
     }
 
-
     public MousufSifa() {
-
     }
 
+    public int getWordfrom() {
+        return wordfrom;
+    }
+
+    public void setWordfrom(int wordfrom) {
+        this.wordfrom = wordfrom;
+    }
+
+    public int getWordto() {
+        return wordto;
+    }
+
+    public void setWordto(int wordto) {
+        this.wordto = wordto;
+    }
 
     public int getSurah() {
         return surah;

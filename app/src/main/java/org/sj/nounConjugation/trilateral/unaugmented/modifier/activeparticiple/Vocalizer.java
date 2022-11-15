@@ -1,11 +1,21 @@
-
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple;
 
-import java.util.*;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.vocalizer.Ajwaf1Vocalizer;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.vocalizer.Ajwaf2Vocalizer;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.vocalizer.Ajwaf3WawiListedVocalizer;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.vocalizer.Ajwaf3WawiVocalizer;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.vocalizer.Ajwaf3YaeiListedVocalizer;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.vocalizer.Ajwaf3YaeiVocalizer;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.vocalizer.Ajwaf4Vocalizer;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.vocalizer.WawiLafifNakesVocalizer;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.vocalizer.YaeiLafifNakesVocalizer;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
 
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.vocalizer.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -20,7 +30,7 @@ import org.sj.verbConjugation.trilateral.Substitution.*;
  * @version 1.0
  */
 public class Vocalizer {
-    private List modifiers = new LinkedList();
+    private final List modifiers = new LinkedList();
 
     public Vocalizer() {
         modifiers.add(new WawiLafifNakesVocalizer());

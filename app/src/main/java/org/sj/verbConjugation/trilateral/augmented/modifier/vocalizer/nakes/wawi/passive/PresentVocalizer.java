@@ -1,15 +1,16 @@
 package org.sj.verbConjugation.trilateral.augmented.modifier.vocalizer.nakes.wawi.passive;
 
-import java.util.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.verbConjugation.trilateral.augmented.modifier.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
+import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
+import java.util.LinkedList;
+import java.util.List;
 
 public class PresentVocalizer extends SubstitutionsApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public PresentVocalizer() {
         substitutions.add(new SuffixSubstitution("وُ", "ى")); // EX: (يُدْنَى، يُسَمَّى، يحابَى، يرتضى، يرعوَى، يُتسامى، يُتزكَّى، يسترضى، يحلولى)
@@ -24,7 +25,6 @@ public class PresentVocalizer extends SubstitutionsApplier implements IAugmented
 
     }
 
-
     public List getSubstitutions() {
         return substitutions;
     }
@@ -32,45 +32,42 @@ public class PresentVocalizer extends SubstitutionsApplier implements IAugmented
     public boolean isApplied(MazeedConjugationResult mazeedConjugationResult) {
         int kov = mazeedConjugationResult.getKov();
         int formulaNo = mazeedConjugationResult.getFormulaNo();
-
         switch (kov) {
-        case 21:
-            switch (formulaNo) {
-            case 1:
-            case 2:
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 9:
-                return true;
-            }
-
-        case 22:
-            switch (formulaNo) {
-            case 1:
-            case 3:
-            case 4:
-            case 5:
-            case 7:
-            case 8:
-                return true;
-            }
-
-        case 23:
-            switch (formulaNo) {
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-            case 8:
-            case 9:
-            case 10:
-                return true;
-            }
+            case 21:
+                switch (formulaNo) {
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 9:
+                        return true;
+                }
+            case 22:
+                switch (formulaNo) {
+                    case 1:
+                    case 3:
+                    case 4:
+                    case 5:
+                    case 7:
+                    case 8:
+                        return true;
+                }
+            case 23:
+                switch (formulaNo) {
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 5:
+                    case 6:
+                    case 7:
+                    case 8:
+                    case 9:
+                    case 10:
+                        return true;
+                }
 
         }
         return false;

@@ -1,21 +1,14 @@
 package com.example.mushafconsolidated.Entities;
 
-
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
 //@Entity(indices = {@Index(value = {"chapterid"}, unique = true)})
-
-
 // @Entity(tableName = "ChaptersAnaEntity",indices = {@Index(value = {"chapterid"}, unique = true)},foreignKeys = @ForeignKey(entity=ChaptersAnaEntity.class, parentColumns="chapterid", childColumns="muqattatid"))
-
 
 @Entity(tableName = "chaptersana")
 public class ChaptersAnaEntity {
-
-
     @NonNull
     @ColumnInfo(defaultValue = "0")
     public int revelationnumber;
@@ -68,7 +61,6 @@ public class ChaptersAnaEntity {
         this.chapterid = chapterid;
         this.part_no = part_no;
     }
-
 
     public int getRevelationnumber() {
         return revelationnumber;

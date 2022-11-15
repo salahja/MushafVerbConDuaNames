@@ -1,17 +1,15 @@
 package org.sj.verbConjugation.trilateral.augmented;
 
-import java.util.*;
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class MazeedConjugationResult {
-    private int kov;
-    private int formulaNo;
-    private AugmentedTrilateralRoot root;
-
+    private final int kov;
+    private final int formulaNo;
+    private final AugmentedTrilateralRoot root;
     //13 conjugated verbs
-    private List originalResult;
-
-    private List finalResult;
+    private final List originalResult;
+    private final List finalResult;
 
     public MazeedConjugationResult(int kov, int formulaNo, AugmentedTrilateralRoot root, List originalResult) {
         this.kov = kov;

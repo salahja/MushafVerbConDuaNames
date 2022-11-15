@@ -1,10 +1,13 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.activeparticiple.vocalizer;
 
-import java.util.*;
+import org.sj.nounConjugation.TrilateralNounSubstitutionApplier;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
 
-import org.sj.nounConjugation.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -33,7 +36,6 @@ public class WawiLafifNakesVocalizer extends TrilateralNounSubstitutionApplier i
         substitutions.add(new InfixSubstitution("ِوِ", "ِ")); // EX: (غازِينَ، )
     }
 
-
     public List getSubstitutions() {
         return substitutions;
     }
@@ -41,28 +43,23 @@ public class WawiLafifNakesVocalizer extends TrilateralNounSubstitutionApplier i
     public boolean isApplied(ConjugationResult conjugationResult) {
         if (conjugationResult.getRoot().getC3() != 'و')
             return false;
-
         int kov = conjugationResult.getKov();
         int noc = Integer.parseInt(conjugationResult.getRoot().getConjugation());
-
         switch (kov) {
-        case 21:
-            return noc == 1 || noc == 5;
-
-        case 22:
-            return noc == 1 || noc == 3;
-
-        case 23:
-            switch (noc) {
-            case 1:
-            case 3:
-            case 4:
-            case 5:
-                return true;
-            }
-
-        case 28:
-            return noc == 4;
+            case 21:
+                return noc == 1 || noc == 5;
+            case 22:
+                return noc == 1 || noc == 3;
+            case 23:
+                switch (noc) {
+                    case 1:
+                    case 3:
+                    case 4:
+                    case 5:
+                        return true;
+                }
+            case 28:
+                return noc == 4;
         }
         return false;
     }

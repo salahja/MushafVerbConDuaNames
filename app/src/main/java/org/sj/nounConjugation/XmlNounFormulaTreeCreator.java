@@ -1,7 +1,6 @@
 package org.sj.nounConjugation;
 
-
-import java.io.*;
+import java.io.File;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -19,9 +18,8 @@ public class XmlNounFormulaTreeCreator {
     private XmlNounFormulaTreeCreator() {
     }
 
-    public static XmlNounFormulaTree buildNounFormulaTree(File xmlDiagramFile) throws Exception{
-
-     //todo xml
+    public static XmlNounFormulaTree buildNounFormulaTree(File xmlDiagramFile) throws Exception {
+        //todo xml
        /*
         Digester digester = new Digester();
         digester.setValidating( false );
@@ -40,7 +38,7 @@ public class XmlNounFormulaTreeCreator {
 
         return (XmlNounFormulaTree)digester.parse(xmlDiagramFile);
         */
-       return null;
+        return null;
     }
 
 }

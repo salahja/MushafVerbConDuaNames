@@ -1,7 +1,8 @@
 package org.sj.nounConjugation;
 
-import java.util.List;
 import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
+
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -16,6 +17,7 @@ import org.sj.verbConjugation.trilateral.unaugmented.UnaugmentedTrilateralRoot;
  * @version 1.0
  */
 public interface IUnaugmentedTrilateralNounConjugator {
-    public List createNounList(UnaugmentedTrilateralRoot root, String formulaName);
-    public List getAppliedFormulaList(UnaugmentedTrilateralRoot root);
+    List createNounList(UnaugmentedTrilateralRoot root, String formulaName);
+
+    List getAppliedFormulaList(UnaugmentedTrilateralRoot root);
 }

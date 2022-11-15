@@ -1,18 +1,9 @@
 package sj.hisnul.activity;
 
 public class Selected {
-
-   private String id;
-   private String name;
-   private String header;
-
-    public String getHeader() {
-        return header;
-    }
-
-    public void setHeader(String header) {
-        this.header = header;
-    }
+    private String id;
+    private String name;
+    private String header;
 
     public Selected() {
     }
@@ -20,6 +11,14 @@ public class Selected {
     public Selected(String id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public String getHeader() {
+        return header;
+    }
+
+    public void setHeader(String header) {
+        this.header = header;
     }
 
     public String getId() {

@@ -205,6 +205,7 @@
 
     <color name="odd_item_bg_brown">#fff7eed5</color>
     <color name="odd_item_bg_dark_blue">#ff1c2939</color>
+    <color name="even_item_bg_dark_blue">#283B51</color>
     <color name="odd_item_bg_green">#fff0f5f0</color>
     <color name="odd_item_bg_white">#fff8fafc</color>
     <color name="preference_fallback_accent_color">#ff008577</color>
@@ -376,6 +377,7 @@
     <color name="HotPink">#FF69B4</color>
     <color name="OrangeRed">#FF4500</color>
     <color name="DeepPink">#FF1493</color>
+    <color name="hotred">#D93375</color>
     <color name="Fuchsia">#FF00FF</color>
     <color name="Magenta">#FF00FF</color>
     <color name="Salmon">#FA8072</color>
@@ -480,5 +482,6 @@
     <color name="search_select_all_bar_bg_color">#D89E99</color>
     <color name="productGridBackgroundColor">#A390D6</color>
 
+    <color name="pink_skin">#ffb566</color>
 
 </resources>

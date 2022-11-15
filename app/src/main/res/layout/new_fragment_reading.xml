@@ -43,11 +43,12 @@
                 android:layout_height="@dimen/space_7"
                 android:layout_gravity="bottom"
                 android:background="?attr/colorSecondaryVariant"
-
+                app:itemTextAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                 app:itemBackground="?attr/colorPrimarySurface"
-                app:itemIconTint="@color/bottom_nav_item_bg"
+
                 app:itemTextColor="@color/bottom_nav_item_bg"
                 app:labelVisibilityMode="auto"
+                app:itemIconTint="?attr/colorSecondary"
                 app:menu="@menu/bottom_nav_menu" />
 
 
@@ -57,7 +58,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="bottom|end"
                 android:layout_marginStart="@dimen/fab_margin"
-
+                app:itemIconTint="?attr/colorPrimary"
                 android:layout_marginTop="@dimen/fab_margin"
                 android:layout_marginEnd="@dimen/fab_margin"
                 android:layout_marginBottom="@dimen/fab_margin"
@@ -73,7 +74,7 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"
-        style="@style/Widget.Design.NavigationView"
+
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
@@ -81,13 +82,13 @@
         android:fitsSystemWindows="true"
         android:paddingBottom="68dp"
 
-
+        style="@style/Widget.Design.NavigationView"
         app:elevation="5dp"
         app:headerLayout="@layout/nav_header_main"
         app:itemIconTint="?attr/colorPrimary"
-        app:itemTextAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        app:itemTextAppearance="@style/TextAppearance.MaterialComponents.Headline5"
 
-        app:itemTextColor="@color/drawable_selector_drawer_item"
+
         app:menu="@menu/navigation_drawer_menu">
 
         <LinearLayout

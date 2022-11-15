@@ -1,7 +1,6 @@
 package org.sj.nounConjugation.trilateral.unaugmented.timeandplace;
 
-
-import java.io.*;
+import java.io.File;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -19,7 +18,7 @@ public class XmlTimeAndPlaceNounFormulaTreeCreator {
     private XmlTimeAndPlaceNounFormulaTreeCreator() {
     }
 
-    public static XmlTimeAndPlaceNounFormulaTree buildNounFormulaTree(File xmlDiagramFile) throws Exception{
+    public static XmlTimeAndPlaceNounFormulaTree buildNounFormulaTree(File xmlDiagramFile) throws Exception {
         //todo xml
     /*
         Digester digester = new Digester();

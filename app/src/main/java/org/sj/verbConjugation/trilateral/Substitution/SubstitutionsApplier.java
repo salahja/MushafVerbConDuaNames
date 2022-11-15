@@ -1,16 +1,19 @@
-
 package org.sj.verbConjugation.trilateral.Substitution;
 
-import java.util.*;
-import org.sj.verbConjugation.trilateral.*;
+import org.sj.verbConjugation.trilateral.TrilateralRoot;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 
 public abstract class SubstitutionsApplier {
 
     protected static List defaultAppliedProunounsIndecies = new ArrayList(13);
+
     static {
-        for (int i=0; i<13; i++) {
-            defaultAppliedProunounsIndecies.add(i+1 +"");
+        for (int i = 0; i < 13; i++) {
+            defaultAppliedProunounsIndecies.add(i + 1 + "");
         }
     }
 
@@ -20,8 +23,8 @@ public abstract class SubstitutionsApplier {
 
 
     public void apply(List words, TrilateralRoot root) {
-        for (int i=0; i< getAppliedPronounsIndecies().size(); i++) {
-            int index = Integer.parseInt(getAppliedPronounsIndecies().get(i).toString())-1;
+        for (int i = 0; i < getAppliedPronounsIndecies().size(); i++) {
+            int index = Integer.parseInt(getAppliedPronounsIndecies().get(i).toString()) - 1;
             Object wordObj = words.get(index);
             if (wordObj == null) {
                 continue;
@@ -41,9 +44,10 @@ public abstract class SubstitutionsApplier {
             }
         }
     }
+
     public void applySarfSagheer(List words, TrilateralRoot root) {
-        for (int i=0; i< 1; i++) {
-            int index = Integer.parseInt(getAppliedPronounsIndecies().get(i).toString())-1;
+        for (int i = 0; i < 1; i++) {
+            int index = Integer.parseInt(getAppliedPronounsIndecies().get(i).toString()) - 1;
             Object wordObj = words.get(index);
             if (wordObj == null) {
                 continue;

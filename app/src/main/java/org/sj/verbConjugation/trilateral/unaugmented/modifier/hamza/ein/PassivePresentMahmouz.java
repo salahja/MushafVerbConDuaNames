@@ -1,8 +1,10 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.hamza.ein;
 
-import java.util.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.hamza.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.hamza.AbstractEinMahmouz;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -17,11 +19,11 @@ import org.sj.verbConjugation.trilateral.Substitution.*;
  * @version 1.0
  */
 public class PassivePresentMahmouz extends AbstractEinMahmouz {
-    private List substitutions = new ArrayList();
+    private final List substitutions = new ArrayList();
 
     public PassivePresentMahmouz() {
-        substitutions.add(new InfixSubstitution("يْءَ","ْئَ"));// EX: (يُيْئَس)
-        substitutions.add(new InfixSubstitution("ْءَ","ْأَ"));// EX: (يُسْأَل، يُنْأَم، يُضْأَل)
+        substitutions.add(new InfixSubstitution("يْءَ", "ْئَ"));// EX: (يُيْئَس)
+        substitutions.add(new InfixSubstitution("ْءَ", "ْأَ"));// EX: (يُسْأَل، يُنْأَم، يُضْأَل)
     }
 
     public List getSubstitutions() {

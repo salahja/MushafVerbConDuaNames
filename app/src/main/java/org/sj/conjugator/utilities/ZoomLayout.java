@@ -1,6 +1,5 @@
 package org.sj.conjugator.utilities;
 
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -10,31 +9,20 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 public class ZoomLayout extends FrameLayout implements ScaleGestureDetector.OnScaleGestureListener {
-
-    private enum Mode {
-        NONE,
-        DRAG,
-        ZOOM
-    }
-
     private static final String TAG = "ZoomLayout";
     private static final float MIN_ZOOM = 1.0f;
     private static final float MAX_ZOOM = 4.0f;
-
     private Mode mode = Mode.NONE;
     private float scale = 1.0f;
     private float lastScaleFactor = 0f;
-
     // Where the finger first  touches the screen
     private float startX = 0f;
     private float startY = 0f;
-
     // How much to translate the canvas
     private float dx = 0f;
     private float dy = 0f;
     private float prevDx = 0f;
     private float prevDy = 0f;
-
     // Custom vars to handle double tap
     private boolean firstTouch = false;
     private long time = System.currentTimeMillis();
@@ -56,17 +44,15 @@ public class ZoomLayout extends FrameLayout implements ScaleGestureDetector.OnSc
     }
 
     private void init(Context context) {
-
         final ScaleGestureDetector scaleDetector = new ScaleGestureDetector(context, this);
         this.setOnTouchListener(new OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-
                 switch (motionEvent.getAction() & MotionEvent.ACTION_MASK) {
                     case MotionEvent.ACTION_DOWN:
-                        if(firstTouch && (System.currentTimeMillis() - time) <= 300) {
+                        if (firstTouch && (System.currentTimeMillis() - time) <= 300) {
                             //do stuff here for double tap
-                            if(restore) {
+                            if (restore) {
                                 scale = 1.0f;
                                 restore = false;
                             } else {
@@ -106,30 +92,27 @@ public class ZoomLayout extends FrameLayout implements ScaleGestureDetector.OnSc
                         break;
                 }
                 scaleDetector.onTouchEvent(motionEvent);
-
                 if ((mode == Mode.DRAG && scale >= MIN_ZOOM) || mode == Mode.ZOOM) {
                     getParent().requestDisallowInterceptTouchEvent(true);
                     float maxDx = (child().getWidth() - (child().getWidth() / scale)) / 2 * scale;
-                    float maxDy = (child().getHeight() - (child().getHeight() / scale))/ 2 * scale;
+                    float maxDy = (child().getHeight() - (child().getHeight() / scale)) / 2 * scale;
                     dx = Math.min(Math.max(dx, -maxDx), maxDx);
                     dy = Math.min(Math.max(dy, -maxDy), maxDy);
                     Log.i(TAG, "Width: " + child().getWidth() + ", scale " + scale + ", dx " + dx
                             + ", max " + maxDx);
                     applyScaleAndTranslation();
                 }
-
                 return true;
             }
         });
     }
-
-    // ScaleGestureDetector
 
     @Override
     public boolean onScaleBegin(ScaleGestureDetector scaleDetector) {
         Log.i(TAG, "onScaleBegin");
         return true;
     }
+    // ScaleGestureDetector
 
     @Override
     public boolean onScale(ScaleGestureDetector scaleDetector) {
@@ -159,5 +142,11 @@ public class ZoomLayout extends FrameLayout implements ScaleGestureDetector.OnSc
 
     private View child() {
         return getChildAt(0);
+    }
+
+    private enum Mode {
+        NONE,
+        DRAG,
+        ZOOM
     }
 }

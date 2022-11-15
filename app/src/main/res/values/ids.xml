@@ -292,6 +292,8 @@
     <item name="selectAllRelatedWordsView" type="id" />
     <item name="relatedWordsRecyclerView" type="id" />
     <item name="relatedWordsProgressBar" type="id" />
+    <item name="liajlihi" type="id" />
+    <item name="mutlaq" type="id" />
 
 
 </resources>

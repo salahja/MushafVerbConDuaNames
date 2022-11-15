@@ -1,14 +1,13 @@
 package com.example.mushafconsolidated.fragments;
 
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.mushafconsolidated.databinding.FragmentDuaItemBinding;
 import com.example.mushafconsolidated.fragments.placeholder.PlaceholderContent.PlaceholderItem;
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +19,6 @@ import database.entity.DuaDetails;
  * TODO: Replace the implementation with code for your data type.
  */
 public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder> {
-
     private final List<DuaDetails> mValues;
 
     public MyItemRecyclerViewAdapter(ArrayList<DuaDetails> items) {
@@ -29,18 +27,15 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         return new ViewHolder(FragmentDuaItemBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
 
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-      DuaDetails mItem = mValues.get(position);
-      StringBuilder sb=new StringBuilder();
-      sb.append(mItem.get_id());
-      holder.mIdView.setText(sb.toString());
-      holder.mContentView.setText(mItem.getAr_dua());
+        DuaDetails mItem = mValues.get(position);
+        holder.mIdView.setText(String.valueOf(mItem.get_id()));
+        holder.mContentView.setText(mItem.getAr_dua());
 
     }
 

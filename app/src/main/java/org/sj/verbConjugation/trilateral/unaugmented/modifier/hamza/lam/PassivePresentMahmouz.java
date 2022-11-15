@@ -1,8 +1,11 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.hamza.lam;
 
-import java.util.*;
-import org.sj.verbConjugation.trilateral.unaugmented.modifier.hamza.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
+import org.sj.verbConjugation.trilateral.unaugmented.modifier.hamza.AbstractLamMahmouz;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -17,7 +20,7 @@ import org.sj.verbConjugation.trilateral.Substitution.*;
  * @version 1.0
  */
 public class PassivePresentMahmouz extends AbstractLamMahmouz {
-    private List substitutions = new ArrayList();
+    private final List substitutions = new ArrayList();
 
     public PassivePresentMahmouz() {
         substitutions.add(new SuffixSubstitution("َءُ", "َأُ")); // EX: (هو يُوطَأُ)

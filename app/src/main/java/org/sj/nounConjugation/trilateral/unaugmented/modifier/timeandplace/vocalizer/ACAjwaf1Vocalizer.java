@@ -1,11 +1,12 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.timeandplace.vocalizer;
 
-import java.util.*;
+import org.sj.nounConjugation.TrilateralNounSubstitutionApplier;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
 
-import org.sj.nounConjugation.*;
-
-import org.sj.verbConjugation.trilateral.Substitution.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -23,9 +24,8 @@ public class ACAjwaf1Vocalizer extends TrilateralNounSubstitutionApplier impleme
     List substitutions = new LinkedList();
 
     public ACAjwaf1Vocalizer() {
-        substitutions.add(new InfixSubstitution("ْوَ","َا"));// EX: (مَزَار، مَقامَة)
+        substitutions.add(new InfixSubstitution("ْوَ", "َا"));// EX: (مَزَار، مَقامَة)
     }
-
 
     public List getSubstitutions() {
         return substitutions;
@@ -35,22 +35,19 @@ public class ACAjwaf1Vocalizer extends TrilateralNounSubstitutionApplier impleme
         String nounFormula = conjugationResult.getNounFormula();
         if (!nounFormula.equals("مَفْعَل") && !nounFormula.equals("مَفْعَلَة"))
             return false;
-
         int kov = conjugationResult.getKov();
         int noc = Integer.parseInt(conjugationResult.getRoot().getConjugation());
-
         switch (kov) {
-        case 15:
-        case 16:
-            return noc == 1 || noc == 4;
-
-        case 17:
-            switch (noc) {
-            case 1:
-            case 4:
-            case 5:
-                return true;
-            }
+            case 15:
+            case 16:
+                return noc == 1 || noc == 4;
+            case 17:
+                switch (noc) {
+                    case 1:
+                    case 4:
+                    case 5:
+                        return true;
+                }
 
         }
         return false;

@@ -1,10 +1,21 @@
 package org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration;
 
-import java.util.*;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration.vocalizer.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
 import org.sj.nounConjugation.trilateral.unaugmented.modifier.ConjugationResult;
-import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.IUnaugmentedTrilateralNounModificationApplier;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration.vocalizer.AVocalizer;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration.vocalizer.B1Vocalizer;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration.vocalizer.B2Vocalizer;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration.vocalizer.C1Vocalizer;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration.vocalizer.C2Vocalizer;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration.vocalizer.C3Vocalizer;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration.vocalizer.I1Vocalizer;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration.vocalizer.I2Vocalizer;
+import org.sj.nounConjugation.trilateral.unaugmented.modifier.exaggeration.vocalizer.JVocalizer;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -19,7 +30,7 @@ import org.sj.nounConjugation.trilateral.unaugmented.modifier.*;
  * @version 1.0
  */
 public class Vocalizer {
-    private List modifiers = new LinkedList();
+    private final List modifiers = new LinkedList();
 
     public Vocalizer() {
         modifiers.add(new AVocalizer());

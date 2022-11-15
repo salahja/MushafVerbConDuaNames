@@ -1,12 +1,13 @@
 package org.sj.nounConjugation.trilateral.augmented.modifier.passiveparticiple.vocalizer;
 
-import java.util.*;
-
-import org.sj.nounConjugation.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import org.sj.nounConjugation.TrilateralNounSubstitutionApplier;
+import org.sj.verbConjugation.trilateral.Substitution.InfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SuffixSubstitution;
 import org.sj.verbConjugation.trilateral.augmented.MazeedConjugationResult;
 import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateralModifier;
 
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -21,33 +22,29 @@ import org.sj.verbConjugation.trilateral.augmented.modifier.IAugmentedTrilateral
  * @version 1.0
  */
 public class WawiNakesLafifVocalizer extends TrilateralNounSubstitutionApplier implements IAugmentedTrilateralModifier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public WawiNakesLafifVocalizer() {
-        substitutions.add(new InfixSubstitution("َوَة","َاة"));// EX: (مُدْناةٌ،)
-        substitutions.add(new InfixSubstitution("َوَت","َات"));// EX: (مُدْناتان، مُدْناتَيْنِ)
-        substitutions.add(new InfixSubstitution("َوَا","َيَا"));// EX: (مُدْنَيَانِ، مُدْنَيَاتٌ)
-        substitutions.add(new InfixSubstitution("َوَي","َيَي"));// EX: (مُدْنَيَيْنِ،)
-        substitutions.add(new InfixSubstitution("َوُو","َوْ"));// EX: (مُدْنَوْنَ)
-        substitutions.add(new InfixSubstitution("َوِي","َيْ"));// EX: (مُدْنَيْنَ)
-        substitutions.add(new SuffixSubstitution("َوُ","َى"));// EX: (هذا المُدْنَى،)
-        substitutions.add(new SuffixSubstitution("َوَ","َى"));// EX: (رأيتُ المُدْنَى ،  )
-        substitutions.add(new SuffixSubstitution("َوِ","َى"));// EX: (مررتُ على المُدْنَى ، )
-        substitutions.add(new InfixSubstitution("َوٌ","ًى"));// EX: (هذا مُدْنًى)
-        substitutions.add(new InfixSubstitution("َوًا","ًى"));// EX: (رأيتُ مُدْنًى)
-        substitutions.add(new InfixSubstitution("َوٍ","ًى"));// EX: (مررتُ على مُدْنًى)
-
+        substitutions.add(new InfixSubstitution("َوَة", "َاة"));// EX: (مُدْناةٌ،)
+        substitutions.add(new InfixSubstitution("َوَت", "َات"));// EX: (مُدْناتان، مُدْناتَيْنِ)
+        substitutions.add(new InfixSubstitution("َوَا", "َيَا"));// EX: (مُدْنَيَانِ، مُدْنَيَاتٌ)
+        substitutions.add(new InfixSubstitution("َوَي", "َيَي"));// EX: (مُدْنَيَيْنِ،)
+        substitutions.add(new InfixSubstitution("َوُو", "َوْ"));// EX: (مُدْنَوْنَ)
+        substitutions.add(new InfixSubstitution("َوِي", "َيْ"));// EX: (مُدْنَيْنَ)
+        substitutions.add(new SuffixSubstitution("َوُ", "َى"));// EX: (هذا المُدْنَى،)
+        substitutions.add(new SuffixSubstitution("َوَ", "َى"));// EX: (رأيتُ المُدْنَى ،  )
+        substitutions.add(new SuffixSubstitution("َوِ", "َى"));// EX: (مررتُ على المُدْنَى ، )
+        substitutions.add(new InfixSubstitution("َوٌ", "ًى"));// EX: (هذا مُدْنًى)
+        substitutions.add(new InfixSubstitution("َوًا", "ًى"));// EX: (رأيتُ مُدْنًى)
+        substitutions.add(new InfixSubstitution("َوٍ", "ًى"));// EX: (مررتُ على مُدْنًى)
 
     }
 
     public boolean isApplied(MazeedConjugationResult mazeedConjugationResult) {
         if (mazeedConjugationResult.getRoot().getC3() != 'و')
             return false;
-
         int kov = mazeedConjugationResult.getKov();
         int formulaNo = mazeedConjugationResult.getFormulaNo();
-
         switch (kov) {
             case 21:
                 switch (formulaNo) {
@@ -60,7 +57,6 @@ public class WawiNakesLafifVocalizer extends TrilateralNounSubstitutionApplier i
                     case 9:
                         return true;
                 }
-
             case 22:
                 switch (formulaNo) {
                     case 1:
@@ -71,7 +67,6 @@ public class WawiNakesLafifVocalizer extends TrilateralNounSubstitutionApplier i
                     case 8:
                         return true;
                 }
-
             case 23:
                 switch (formulaNo) {
                     case 1:
@@ -86,7 +81,6 @@ public class WawiNakesLafifVocalizer extends TrilateralNounSubstitutionApplier i
                     case 10:
                         return true;
                 }
-
             case 28:
                 switch (formulaNo) {
                     case 1:

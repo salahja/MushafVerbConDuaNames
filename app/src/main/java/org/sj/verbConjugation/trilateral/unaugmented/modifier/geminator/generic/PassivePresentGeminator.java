@@ -1,7 +1,11 @@
 package org.sj.verbConjugation.trilateral.unaugmented.modifier.geminator.generic;
 
-import java.util.*;
-import org.sj.verbConjugation.trilateral.Substitution.*;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionInfixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.ExpressionSuffixSubstitution;
+import org.sj.verbConjugation.trilateral.Substitution.SubstitutionsApplier;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * <p>Title: Sarf Program</p>
@@ -16,8 +20,7 @@ import org.sj.verbConjugation.trilateral.Substitution.*;
  * @version 1.0
  */
 public class PassivePresentGeminator extends SubstitutionsApplier {
-
-    private List substitutions = new LinkedList();
+    private final List substitutions = new LinkedList();
 
     public PassivePresentGeminator() {
         substitutions.add(new ExpressionInfixSubstitution("ْC3َC3ُ", "َC3ُّ"));
