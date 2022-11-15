@@ -151,6 +151,7 @@
     </style>
 
     <style name="Theme.Black" parent="@style/Theme.MaterialComponents.NoActionBar">
+        <item name="bottomSheetDialogTheme">@style/MyBottomSheetStyle</item>
         <item name="android:windowBackground">@color/bg_black</item>
         <item name="android:textViewStyle">@style/Base.Widget.TextView</item>
         <item name="android:textColor">@color/neutral1</item>
@@ -291,6 +292,7 @@
     </style>
 
     <style name="Theme.Purple" parent="@style/Theme.MaterialComponents.NoActionBar">
+        <item name="bottomSheetDialogTheme">@style/MyBottomSheetStyle</item>
         <item name="dialog_bg">@color/odd_item_bg_dark_blue_light</item>
         <item name="colorOnErrorContainer">@color/md_theme_dark_onErrorContainer</item>
         <item name="colorOnError">@color/md_theme_dark_onError</item>
@@ -321,6 +323,7 @@
     </style>
 
     <style name="Theme.Brown" parent="@style/Theme.MaterialComponents.Light.NoActionBar">
+        <item name="bottomSheetDialogTheme">@style/MyBottomSheetStyle</item>
         <item name="dialog_bg">@color/background_color_light_brown</item>
         <item name="android:colorBackground">@color/bg_brown</item>
         <item name="android:windowBackground">@color/bg_brown</item>
@@ -365,6 +368,7 @@
 
 
     <style name="Theme.White" parent="@style/Theme.MaterialComponents.Light.NoActionBar">
+        <item name="bottomSheetDialogTheme">@style/MyBottomSheetStyle</item>
         <item name="tabStyle">@style/RoundedTabLayoutStyleBrown</item>
         <item name="android:colorBackground">@color/bg_white</item>
         <item name="android:windowBackground">@color/bg_white</item>
@@ -488,6 +492,7 @@
     </style>
 
     <style name="Theme.Green" parent="@style/Theme.MaterialComponents.Light.NoActionBar">
+        <item name="bottomSheetDialogTheme">@style/GreenThemeSheetDesign</item>
         <item name="android:colorBackground">@color/bg_green</item>
         <item name="android:windowBackground">@color/bg_green</item>
         <item name="android:textViewStyle">@style/Base.Widget.TextView</item>
@@ -597,8 +602,91 @@
         <item name="android:background">?attr/colorAccent</item>
     </style>
 
+    <style name="CustomBottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
 
-    <style name="Theme.DarkBlue" parent="@style/Theme.MaterialComponents.NoActionBar">
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+    </style>
+    <style name="Theme.Design.BottomSheetDialog" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="bottomSheetStyle">@style/Widget.Design.BottomSheet.Modal</item>
+    </style>
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">30dp</item>
+        <item name="cornerSizeTopLeft">30dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="Theme.MaterialComponents.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/Animation.MaterialComponents.BottomSheetDialog</item>
+        <item name="bottomSheetStyle">@style/Widget.MaterialComponents.BottomSheet.Modal</item>
+    </style>
+
+    <style name="bstyle" parent="Theme.Material3.DayNight.BottomSheetDialog">
+
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheetDialog</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomSheetDialog" parent="ThemeOverlay.Material3.BottomSheetDialog">
+      
+        <item name="bottomSheetStyle">@style/BlueThemeSheetDesign</item>
+    </style>
+
+
+
+    <style name="ModalBottomSheetDialog" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">@color/shrine_pink_light</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.LargeComponent</item>
+    </style>
+
+    <style name="ShapeAppearance.App.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+
+<!--    MyBottomSheetStyle-->
+    <style name="MyBottomSheetStyle" parent="Theme.Material3.DayNight.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BrownThemeSheetDesign</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Material3.BottomSheetDialog</item>
+
+    </style>
+    <style name="BrownThemeSheetDesign" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/brown_bottom_corners</item>
+    </style>
+<!--   END MyBottomSheetStyle-->
+
+<!--    BlueBottomSheetStyle-->
+    <style name="BlueBottomSheetStyle" parent="Theme.Material3.DayNight.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BlueThemeSheetDesign</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Material3.BottomSheetDialog</item>
+
+    </style>
+    <style name="BlueThemeSheetDesign" parent="Widget.Design.BottomSheet.Modal">
+       <item name="android:background">@drawable/blue_bottom_corners</item>
+    </style>
+<!--  END BlueBottomSheetStyle-->
+
+    <!--    BlueBottomSheetStyle-->
+    <style name="GreenBottomSheetStyle" parent="Theme.Material3.DayNight.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BlueThemeSheetDesign</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Material3.BottomSheetDialog</item>
+
+    </style>
+    <style name="GreenThemeSheetDesign" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/green_bottom_corners</item>
+    </style>
+    <!--  END BlueBottomSheetStyle-->
+
+
+    <style name="Theme.DarkBlue" parent="@style/Theme.MaterialComponents.Light.NoActionBar">
+        <item name="bottomSheetDialogTheme">@style/BlueBottomSheetStyle</item>
+
         <item name="android:colorBackground">@color/bg_dark_blue</item>
         <item name="android:windowBackground">@color/bg_dark_blue</item>
         <item name="android:textViewStyle">@style/Base.Widget.TextView</item>
@@ -719,4 +807,7 @@
         <item name="tabMode">scrollable</item>
         <item name="tabSelectedTextColor">@color/black</item>
     </style>
+
+
+    <color name="shrine_pink_light">#C979EB</color>
 </resources>

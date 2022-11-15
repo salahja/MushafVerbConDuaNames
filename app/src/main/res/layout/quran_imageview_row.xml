@@ -79,6 +79,28 @@
             app:srcCompat="@drawable/baseline_menu_open_24">
 
         </ImageView>
+        <ImageView
+            android:id="@id/ivActionOverflowtwo"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dip"
+
+            android:background="?attr/selectableItemBackground"
+            android:backgroundTint="@color/white"
+            android:layout_marginEnd="30dp"
+            android:elevation="10dp"
+
+            android:padding="1dp"
+            android:paddingStart="@dimen/space_1"
+            android:paddingEnd="@dimen/space_1"
+
+
+            android:visibility="visible"
+            app:srcCompat="@drawable/xldabc_ic_menu_overflow_material">
+
+        </ImageView>
+
     </RelativeLayout>
 
     <LinearLayout

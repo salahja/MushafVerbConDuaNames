@@ -12,7 +12,7 @@
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
-    <include layout="@layout/appbar" />
+     <include layout="@layout/appbartafsir"  />
 
     <include layout="@layout/activity_tafsir_ayah">
 

@@ -94,7 +94,7 @@ public class GrammarFragmentsListAdapter extends BaseExpandableListAdapter {
                 .findViewById(R.id.listTitle);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(QuranGrammarApplication.getContext());
         String preferences = prefs.getString("theme", "dark");
-        if (preferences.equals("dark") || preferences.equals("blue")) {
+        if (preferences.equals("dark") || preferences.equals("blue")||preferences.equals("purple")) {
             listTitleTextView.setTextColor(CYAN);
         } else {
             listTitleTextView.setTextColor(ContextCompat.getColor(QuranGrammarApplication.getContext(), R.color.burntamber));

@@ -9,13 +9,13 @@ import androidx.preference.PreferenceManager;
 import com.example.mushafconsolidated.R;
 
 public abstract class BaseActivity extends AppCompatActivity {
-    public static final String LIGHT_THEME = "white";
+    public static final String PURPLE_THEME = "purple";
     public static final String DARK_THEME = "dark";
     public static final String DARK_BLUE = "blue";
     public static final String GREEN_MODE = "green";
     public static final String BROWN_MODE = "brown";
-    public static final String SHRINE_MODE = "shrine";
-    private static final String sCurrentTheme = LIGHT_THEME;
+
+
     public String currenttheme;
 
     @Override
@@ -31,7 +31,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void switchTheme(String currenttheme) {
         switch (currenttheme) {
             default:
-            case LIGHT_THEME:
+            case PURPLE_THEME:
                 setTheme(R.style.Theme_Purple);
                 break;
             case DARK_THEME:

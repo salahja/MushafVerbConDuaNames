@@ -17,7 +17,7 @@
         android:paddingTop="5.0dip"
         android:paddingEnd="5.0dip"
         android:paddingBottom="5.0dip"
-        android:src="@drawable/bottomsheet_back" />
+          />
 
     <TextView
 

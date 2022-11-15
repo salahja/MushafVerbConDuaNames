@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
@@ -10,6 +9,7 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/bookmark"
+
         android:icon="@drawable/ic_baseline_bookmark_add_24"
         android:title="Bookmark"
 
@@ -31,6 +31,13 @@
 
         app:actionViewClass="androidx.appcompat.widget.SwitchCompat"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/ivHelp"
+        android:enabled="true"
+        android:icon="@drawable/baseline_help_36"
+        android:title="@string/colorize"
 
+        app:actionViewClass="androidx.appcompat.widget.SwitchCompat"
+        app:showAsAction="always" />
 
 </menu>

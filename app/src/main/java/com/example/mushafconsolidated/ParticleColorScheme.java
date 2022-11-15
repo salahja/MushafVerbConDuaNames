@@ -55,7 +55,7 @@ public class ParticleColorScheme extends BottomSheetDialogFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.colorschemelayout, container, false);
-        //   return inflater.inflate(R.layout.quranFontselection, container, false);
+
     }
 
     @Override

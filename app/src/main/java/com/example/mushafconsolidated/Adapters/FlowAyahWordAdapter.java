@@ -22,6 +22,7 @@ import static com.example.Constant.WORDNUMBER;
 import static com.example.utility.CorpusUtilityorig.getStringForegroundColorSpanMap;
 import static com.example.utility.QuranGrammarApplication.getContext;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -190,6 +191,7 @@ public class FlowAyahWordAdapter extends RecyclerView.Adapter<FlowAyahWordAdapte
         //    return allofQuran.get(position);
     }
 
+    @SuppressLint("ResourceType")
     @Override
     public void onBindViewHolder(@NonNull ItemViewAdapter holder, int position) {
         SharedPreferences sharedPreferences =
@@ -212,8 +214,8 @@ public class FlowAyahWordAdapter extends RecyclerView.Adapter<FlowAyahWordAdapte
         if (position % 2 == 1) {
             switch (isNightmode) {
                 case "green":
-                case "purple":
-                    holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.md_theme_dark_inverseOnSurface));
+
+                    holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.background_color_light_green));
                     break;
                 case "brown":
                     holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.bg_brown));
@@ -221,18 +223,21 @@ public class FlowAyahWordAdapter extends RecyclerView.Adapter<FlowAyahWordAdapte
                 case "dark":
                     holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.odd_item_bg_black));
                     break;
-                default:
-                    holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.odd_item_bg_dark_blue));
-
+                case "blue":
+                    holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.bg_dark_blue));
                     break;
+//                default:
+//                    holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.bg_dark_blue));
+//
+//                    break;
             }
             //  holder.imageView.setBackgroundColor(Color.parseColor("#FFFFFF"));
         } else {
             switch (isNightmode) {
                 case "green":
-                case "purple":
 
-                    holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.md_theme_dark_surface));
+
+                    holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.odd_item_bg_green));
                     break;
                 case "brown":
                     holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.odd_item_bg_brown));
@@ -240,10 +245,13 @@ public class FlowAyahWordAdapter extends RecyclerView.Adapter<FlowAyahWordAdapte
                 case "dark":
                     holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.bg_black));
                     break;
-                default:
+                case "blue":
+                    holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.bg_dark_blue));
+                    break;
+               /* default:
                     holder.itemView.setBackgroundColor(ContextCompat.getColor(context, R.color.even_item_bg_dark_blue));
                     //  holder.imageView.setBackgroundColor(Color.parseColor("#FFFAF8FD"));
-                    break;
+                    break;*/
             }
         }
         String whichtranslation = sharedPreferences.getString("selecttranslation", "en_sahih");
@@ -781,7 +789,7 @@ public class FlowAyahWordAdapter extends RecyclerView.Adapter<FlowAyahWordAdapte
         public ImageView bookmark, jumpto, makkimadaniicon, ivSummary;
         public ImageView expandImageButton, ivBismillah, erabexpand, erab_notes_expand;
         TextView tvSura, tvRukus, tvVerses;
-        ImageView ivSurahIcon, ivLocationmakki, ivLocationmadani, ivhelp, ivoverflow, arrowforward, arrowback;
+        ImageView ivSurahIcon, ivLocationmakki, ivLocationmadani, ivhelp, ivoverflow, ivoverflow2,arrowforward, arrowback;
         //  public   com.nex3z.flowlayout.FlowLayout  flow_word_by_word;
         com.example.utility.FlowLayout flow_word_by_word;
         //   RelativeLayout colllayout;
@@ -815,6 +823,18 @@ public class FlowAyahWordAdapter extends RecyclerView.Adapter<FlowAyahWordAdapte
                 ivhelp.setOnClickListener(this);
                 ivoverflow.setOnClickListener(this);
                 ivoverflow.setTag("overflow_img");
+
+
+                ivoverflow2 = view.findViewById(R.id.ivActionOverflowtwo);
+                ivoverflow2.setOnClickListener(this);
+
+                ivoverflow2.setTag("overflowbottom");
+
+
+
+
+
+
                 makkimadaniicon = view.findViewById(R.id.makkimadaniicon);
                 //    jumpto = view.findViewById(R.id.jumpto);
                 bismilla = view.findViewById(R.id.bismillah);

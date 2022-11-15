@@ -327,7 +327,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$PROJECT_DIR$/../../Android/Sdk/icons/material/materialicons/help/baseline_help_24.xml" />
+                                      <entry key="url" value="file:$PROJECT_DIR$/../../Android/Sdk/icons/material/materialicons/content_copy/baseline_content_copy_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -338,7 +338,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="e72323" />
-                            <entry key="outputName" value="baseline_help_36" />
+                            <entry key="outputName" value="baseline_content_copy_36" />
                           </map>
                         </option>
                       </PersistentState>

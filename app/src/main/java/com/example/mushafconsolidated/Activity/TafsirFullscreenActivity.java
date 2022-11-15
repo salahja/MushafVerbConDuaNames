@@ -92,7 +92,7 @@ public class TafsirFullscreenActivity extends BaseActivity {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
         List<QuranEntity> list = Utils.getsurahayahVerses(sura, ayah);
-        binding = ActivityTafsirFullscreenBinding.inflate(getLayoutInflater());
+       // binding = ActivityTafsirFullscreenBinding.inflate(getLayoutInflater());
         ActionBar actionBar = getSupportActionBar();
         //  actionBar.show();
         //  mControlsView = binding.fullscreenContentControls;

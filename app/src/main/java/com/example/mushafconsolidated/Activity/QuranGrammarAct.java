@@ -11,6 +11,7 @@ import static com.example.Constant.SURAH_ARABIC_NAME;
 import static com.example.Constant.SURAH_ID;
 import static com.example.Constant.VERSESCOUNT;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.SearchManager;
 import android.content.Context;
@@ -53,6 +54,8 @@ import android.widget.TextView;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.view.menu.MenuBuilder;
+import androidx.appcompat.view.menu.MenuPopupHelper;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.SwitchCompat;
@@ -77,11 +80,13 @@ import com.example.mushafconsolidated.Entities.MafoolBihi;
 import com.example.mushafconsolidated.Entities.MafoolMutlaqEnt;
 import com.example.mushafconsolidated.Entities.QuranEntity;
 import com.example.mushafconsolidated.Entities.TameezEnt;
+import com.example.mushafconsolidated.FontQuranListDialogFragment;
 import com.example.mushafconsolidated.NamesDetail;
 import com.example.mushafconsolidated.ParticleColorScheme;
 import com.example.mushafconsolidated.R;
 import com.example.mushafconsolidated.SurahSummary;
 import com.example.mushafconsolidated.Utils;
+
 import com.example.mushafconsolidated.fragments.BookmarkFragment;
 import com.example.mushafconsolidated.fragments.GrammerFragmentsBottomSheet;
 import com.example.mushafconsolidated.fragments.NewSurahDisplayFrag;
@@ -95,6 +100,7 @@ import com.example.utility.QuranGrammarApplication;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -259,6 +265,7 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
         if (id == R.id.bookmark) {
         } else if (id == R.id.jumpto) {
             SurahAyahPicker();
+
         } else if (id == R.id.settings) {
             Intent settingint = new Intent(this, ActivitySettings.class);
             startActivity(settingint);
@@ -1163,9 +1170,12 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
 
     @Override
     public void onItemClick(View view, int position) {
-        qurangrammarmenu(view, position);
+      qurangrammarmenu(view, position);
+      //  popupWindow(view);
+
 
     }
+    @SuppressLint("RestrictedApi")
     void qurangrammarmenu(View view, int position) {
         Object tag = view.getTag();
         QuranEntity quranEntity;
@@ -1239,7 +1249,108 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
         } else if (tag.equals("jumpto")) {
             //  SurahAyahPicker();
             initDialogComponents(position);
-        } else if (tag.equals("overflow_img")) {
+        }    else if (tag.equals("overflowbottom")) {
+          /*  FragmentManager fragmentManager =  getSupportFragmentManager();
+            int data = 3;
+    ;
+            bottomoptionsListDialogFragment.newInstance(data).show(getSupportFragmentManager(), FontQuranListDialogFragment.TAG);
+          */
+            int chapter_no = corpusayahWordArrayList.get(position - 1).getWord().get(0).getSurahId();
+            int verse = corpusayahWordArrayList.get(position - 1).getWord().get(0).getVerseId();
+            String name = getSurahArabicName();
+            FragmentManager fragmentManager = QuranGrammarAct.this.getSupportFragmentManager();
+            String sample = "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ";
+            String[] data = new String[]{String.valueOf(chapter_no), String.valueOf(verse), name};
+        //    FragmentTransaction transactions = fragmentManager.beginTransaction().setCustomAnimations(R.anim.abc_slide_in_top, android.R.anim.fade_out);
+            //   transactions.show(item);
+            FontQuranListDialogFragment.newInstance(data).show(QuranGrammarAct.this.getSupportFragmentManager(), WordAnalysisBottomSheet.TAG);
+
+
+        }
+
+
+
+
+        else if (tag.equals("overflow_img")) {
+
+            @SuppressLint("RestrictedApi") MenuBuilder menuBuilder =new MenuBuilder(this);
+            MenuInflater inflater = new MenuInflater(this);
+            inflater.inflate(R.menu.popup_menu, menuBuilder);
+            @SuppressLint("RestrictedApi") MenuPopupHelper optionsMenu = new MenuPopupHelper(this, menuBuilder, view);
+            optionsMenu.setForceShowIcon(true);
+
+// Set Item Click Listener
+            menuBuilder.setCallback(new MenuBuilder.Callback() {
+                @Override
+                public boolean onMenuItemSelected(MenuBuilder menu, MenuItem item) {
+                    switch (item.getItemId()) {
+                        case R.id.actionTafsir: // Handle option1 Click
+                            Intent readingintent = new Intent(QuranGrammarAct.this, TafsirFullscreenActivity.class);
+                            //  flowAyahWordAdapter.getItem(position);
+                            int chapter_no = corpusayahWordArrayList.get(position - 1).getWord().get(0).getSurahId();
+                            int verse = corpusayahWordArrayList.get(position - 1).getWord().get(0).getVerseId();
+                            String name = getSurahArabicName();
+                            readingintent.putExtra(SURAH_ID, chapter_no);
+                            readingintent.putExtra(AYAH_ID, verse);
+                            readingintent.putExtra(SURAH_ARABIC_NAME, name);
+                            startActivity(readingintent);
+                            optionsMenu.dismiss();
+                            return true;
+                        case R.id.bookmark: // Handle option2 Click
+                            bookMarkSelected(position);
+                            optionsMenu.dismiss();
+                            return true;
+
+                        case R.id.jumpto: // Handle option2 Click
+                          //  SurahAyahPicker();
+                               initDialogComponents(position);
+                            optionsMenu.dismiss();
+                            return true;
+                        case R.id.ivHelp: // Handle option2 Click
+                            //  SurahAyahPicker();
+                         //   ParticleColorScheme item = new ParticleColorScheme();
+                            //    item.setdata(rootWordMeanings,wbwRootwords,grammarRootsCombined);
+                            FragmentManager fragmentManager = QuranGrammarAct.this.getSupportFragmentManager();
+                            String sample = "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ";
+                            String[] data = {sample, sample, sample};
+                        //    FragmentTransaction transactions = fragmentManager.beginTransaction().setCustomAnimations(R.anim.abc_slide_in_top, android.R.anim.fade_out);
+                            //   transactions.show(item);
+                            ParticleColorScheme.newInstance(data).show(QuranGrammarAct.this.getSupportFragmentManager(), WordAnalysisBottomSheet.TAG);
+                            optionsMenu.dismiss();
+                            return true;
+                        case R.id.colorized: // Handle option2 Click
+                            if (colortag) {
+                                SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(QuranGrammarAct.this).edit();
+                                //     SharedPreferences.Editor editor = getActivity().getSharedPreferences("properties", 0).edit();
+                                editor.putBoolean("colortag", false);
+                                editor.apply();
+                                RefreshActivity();
+                            } else {
+                                SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(QuranGrammarAct.this).edit();
+                                //     SharedPreferences.Editor editor = getActivity().getSharedPreferences("properties", 0).edit();
+                                editor.putBoolean("colortag", true);
+                                editor.apply();
+                                RefreshActivity();
+                            }
+                            optionsMenu.dismiss();
+
+                            return true;
+
+
+
+                        default:
+                            return false;
+                    }
+                }
+
+                @Override
+                public void onMenuModeChange(MenuBuilder menu) {}
+            });
+
+            optionsMenu.show();
+
+
+        }    else if (tag.equals("overflow_img")) {
             boolean issentencesanalysis = shared.getBoolean("grammarsentence", true);
             AlertDialog.Builder builder = new AlertDialog.Builder(QuranGrammarAct.this);
             LayoutInflater factory = LayoutInflater.from(QuranGrammarAct.this);
@@ -1252,15 +1363,6 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
             //  View surahsummary = view.findViewById(R.id.surahsummary);
             builder.setView(view);
             colorized.setChecked(colortag);
-            //  sentencesana.setChecked(issentencesanalysis);
-
-
-      /*
-            builder.setNeutralButton("Exit", (dlg, sumthin) -> {
-
-
-            });
-       */
             int[] location = new int[2];
             overflow.getLocationOnScreen(location);
             AlertDialog dialog = builder.create();
@@ -1430,60 +1532,7 @@ public class QuranGrammarAct extends BaseActivity implements PassdataInterface, 
 
     }
 
-    private void popupMenu(View overflow) {
-        PopupMenu popupMenu = new PopupMenu(this, overflow);
-        MenuInflater inflater = popupMenu.getMenuInflater();
-        inflater.inflate(R.menu.popup_menu, popupMenu.getMenu());
-        SwitchCompat switcher;
-        boolean isChecked = false;
-        SwitchCompat colorSwitch = overflow.findViewById(R.id.colorized);
-        Object menuHelper;
-        Class[] argTypes;
-        try {
-            Field fMenuHelper = PopupMenu.class.getDeclaredField("mPopup");
-            fMenuHelper.setAccessible(true);
-            menuHelper = fMenuHelper.get(popupMenu);
-            argTypes = new Class[]{boolean.class};
-            menuHelper.getClass().getDeclaredMethod("setForceShowIcon", argTypes).invoke(menuHelper, true);
-            popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                @Override
-                public boolean onMenuItemClick(MenuItem menuItem) {
-                    popupMenuAction(menuItem.getItemId());
-                    //      Toast.makeText(QuranGrammarAct.this, "You Clicked " + menuItem.getTitle(), Toast.LENGTH_SHORT).show();
-                    return true;
-                }
 
-                private void popupMenuAction(int itemId) {
-                    if (itemId == R.id.jumpto) {
-                        initDialogComponents(2);
-
-                    } else if (itemId == R.id.bookmark) {
-                        //      bookMarkSelected(position);
-                    } else if (itemId == R.id.colorized) {
-                        boolean colortag = shared.getBoolean("colortag", true);
-                        boolean issentencesanalysis = shared.getBoolean("grammarsentence", true);
-                        if (colortag) {
-                            SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(QuranGrammarAct.this).edit();
-                            //     SharedPreferences.Editor editor = getActivity().getSharedPreferences("properties", 0).edit();
-                            editor.putBoolean("colortag", false);
-                            editor.apply();
-                            RefreshActivity();
-                        } else {
-                            SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(QuranGrammarAct.this).edit();
-                            //     SharedPreferences.Editor editor = getActivity().getSharedPreferences("properties", 0).edit();
-                            editor.putBoolean("colortag", true);
-                            editor.apply();
-                            RefreshActivity();
-                        }
-                    }
-
-                }
-            });
-
-        } catch (Exception e) {
-        }
-        popupMenu.show();
-    }
 
     private void RefreshActivity(SwitchCompat colorsentence) {
         Log.e(TAG, "onClick called");
